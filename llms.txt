@@ -1,16 +1,22 @@
 # PanPanTech
 
-> PanPanTech supplies commercial cleaning robots, autonomous floor scrubbers, multifunction cleaning robots, sweeping robots, and industrial AMR solutions for warehouses, retail, airports, hospitals, hotels, factories, and OEM / ODM distributors.
+> PanPanTech supplies commercial cleaning robots, autonomous floor scrubbers, outdoor sweeping robots, facade cleaning robots, and warehouse AMR solutions for warehouses, retail, airports, hospitals, hotels, factories, and OEM / ODM distributors.
 
 ## Products
 - [Commercial Cleaning Robots](https://panpantechnology.com/products/): product range overview.
 - [P060 All-in-One Cleaning Robot](https://panpantechnology.com/products/p060/): compact 6-in-1 robot for indoor commercial cleaning.
 - [PT90 Autonomous Floor Scrubber](https://panpantechnology.com/products/pt90/): large-area floor scrubbing robot for warehouses and public facilities.
+- [IQ70B Floor Scrubber](https://panpantechnology.com/products/iq70b-autonomous-scrubber/): autonomous scrubber with service-station option.
+- [XG1 Outdoor Sweeper](https://panpantechnology.com/products/xg1-outdoor-sweeping-robot/): outdoor sweeping robot for campuses and logistics parks.
+- [FW1 Facade Cleaning Robot](https://panpantechnology.com/products/fw1-facade-cleaning-robot/): facade and glass curtain wall cleaning robot.
+- [T300 Delivery AMR](https://panpantechnology.com/products/t300-industrial-delivery-amr/): 300 kg payload material-handling AMR.
+- [T600 Heavy-Payload AMR](https://panpantechnology.com/products/t600-heavy-payload-amr/): 600 kg payload warehouse AMR.
 
 ## Buying And OEM
 - [Commercial Cleaning Robot Manufacturer](https://panpantechnology.com/commercial-cleaning-robot-manufacturer/): manufacturing, QC, export, and certification information.
 - [OEM / ODM Cleaning Robots](https://panpantechnology.com/oem-odm-cleaning-robots/): private-label and distributor support.
 - [Request a Quote](https://panpantechnology.com/request-a-quote/): RFQ path for facility buyers and distributors.
+- [Blog](https://panpantechnology.com/blog/): buyer guides for cleaning robots, warehouse AMRs, facade robots, sourcing, and certification checks.
 
 ## Facility Solutions
 - [Warehouse Cleaning Robots](https://panpantechnology.com/industries/warehouse-cleaning-robots/): recommended models and ROI guidance for warehouses.

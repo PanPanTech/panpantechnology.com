@@ -125,6 +125,19 @@ for (const filePath of htmlFiles) {
     if (!attrs.alt) warnings.push(`${relative}: image missing alt ${src}`);
     if (!attrs.width || !attrs.height) warnings.push(`${relative}: image missing width/height ${src}`);
   }
+
+  const videoTags = [...content.matchAll(/<video\b[^>]*>/g)];
+  for (const match of videoTags) {
+    const attrs = getAttrs(match[0]);
+    const src = attrs.src;
+    if (!src || src.startsWith("http") || src.startsWith("data:")) continue;
+    if (!(await exists(path.join(root, src.replace(/^\//, ""))))) {
+      errors.push(`${relative}: missing video ${src}`);
+    }
+    if (attrs.poster && !(await exists(path.join(root, attrs.poster.replace(/^\//, ""))))) {
+      errors.push(`${relative}: missing video poster ${attrs.poster}`);
+    }
+  }
 }
 
 for (const required of ["robots.txt", "llms.txt", "sitemap.xml", "CNAME", ".nojekyll", "_headers"]) {

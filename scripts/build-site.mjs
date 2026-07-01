@@ -5,11 +5,13 @@ const root = process.cwd();
 const site = {
   name: "PanPanTech",
   domain: "https://panpantechnology.com",
-  email: "sales@panpantech.com",
-  city: "Shenzhen",
+  address: "Building A1, Yuexiu iPARK Yuegang Zhigu, Nansha District, Guangzhou, Guangdong Province, China",
+  email: "info@einksmart.com",
+  phone: "+86-13925118851",
+  city: "Guangzhou",
   country: "CN",
   description:
-    "PanPanTech supplies commercial cleaning robots, autonomous floor scrubbers, multifunction cleaning robots, sweeping robots, and industrial AMR solutions for global B2B buyers and OEM / ODM partners.",
+    "PanPanTech supplies commercial cleaning robots, facade cleaning robots, autonomous floor scrubbers, sweeping robots, and warehouse AMR solutions for global B2B buyers and OEM / ODM partners.",
 };
 
 const nav = [
@@ -17,7 +19,7 @@ const nav = [
   ["OEM / ODM", "/oem-odm-cleaning-robots/"],
   ["Manufacturer", "/commercial-cleaning-robot-manufacturer/"],
   ["Warehouse", "/industries/warehouse-cleaning-robots/"],
-  ["Resources", "/resources/"],
+  ["Blog", "/blog/"],
   ["FAQ", "/faqs/"],
 ];
 
@@ -27,6 +29,7 @@ const products = [
     title: "P060 All-in-One Commercial Cleaning Robot",
     shortTitle: "P060 All-in-One Cleaning Robot",
     model: "P060",
+    category: "Indoor Cleaning",
     type: "Multifunction commercial cleaning robot",
     excerpt:
       "A compact 6-in-1 robot for sweeping, scrubbing, vacuuming, mopping, self-cleaning, and sanitizing commercial floors.",
@@ -51,16 +54,17 @@ const products = [
     title: "PT90 Autonomous Floor Scrubber",
     shortTitle: "PT90 Autonomous Floor Scrubber",
     model: "PT90",
+    category: "Large-Area Scrubbing",
     type: "Large-area autonomous floor scrubber",
     excerpt:
       "A driverless ride-on scrubber concept for warehouses, factories, malls, and high-traffic facilities.",
-    image: "/assets/images/robot-dark-hero.jpg",
+    image: "/assets/images/pt90-scrubber.jpg",
     url: "/products/pt90/",
     efficiency: "Up to 4,000 m2/h",
-    runtime: "Project dependent",
-    dimensions: "Final dimensions confirmed with datasheet",
-    cleaningWidth: "800 mm class",
-    tanks: "140 L / 170 L class",
+    runtime: "4-6 h per charge",
+    dimensions: "1340 x 1024 x 1350 mm",
+    cleaningWidth: "800 mm scrubbing / 1160 mm sweeping",
+    tanks: "140 L clean / 170 L recovery",
     navigation: "LiDAR, depth sensing, ultrasonic sensors",
     certifications: "Certification documents confirmed per order",
     bestFor: "Warehouses, factories, malls, transport hubs, and large public facilities.",
@@ -71,52 +75,223 @@ const products = [
     ],
   },
   {
-    slug: "outdoor-sweeping-robot",
-    title: "Outdoor Sweeping Robot",
-    shortTitle: "Outdoor Sweeping Robot",
-    model: "Outdoor",
-    type: "Outdoor sweeper",
+    slug: "s55-compact-cleaning-robot",
+    title: "S55 Compact Commercial Cleaning Robot",
+    shortTitle: "S55 Compact Cleaning Robot",
+    model: "S55",
+    category: "Indoor Cleaning",
+    type: "Compact floor cleaning robot",
     excerpt:
-      "Autonomous sweeping for campuses, logistics parks, transport hubs, and industrial outdoor zones.",
-    image: "/assets/images/p060-studio.jpg",
-    url: "/products/#outdoor-sweeping-robot",
-    efficiency: "Large-area outdoor cleaning",
-    runtime: "Project dependent",
-    dimensions: "Project dependent",
-    cleaningWidth: "Outdoor sweeper class",
-    tanks: "Dust collection class confirmed per order",
-    navigation: "Autonomous route planning options",
-    certifications: "Certification documents confirmed per order",
-    bestFor: "Campuses, logistics parks, public squares, and outdoor industrial spaces.",
+      "A compact indoor cleaning robot for offices, retail aisles, clinics, apartments, and mixed commercial interiors.",
+    image: "/assets/images/s55-compact-cleaner.jpg",
+    url: "/products/s55-compact-cleaning-robot/",
+    efficiency: "Up to 1,368 m2/h",
+    runtime: "Up to 4.5 h standard cleaning",
+    dimensions: "650 x 580 x 550 mm",
+    cleaningWidth: "520 mm scrubbing width",
+    tanks: "22 L clean / 15 L waste",
+    navigation: "360-degree multi-sensor perception",
+    certifications: "CE / FCC / IEC documentation confirmed per order",
+    bestFor: "Small and medium indoor commercial areas, mixed floor materials, low-noise public spaces, and distributor starter lines.",
     highlights: [
-      "Outdoor sweeping option for buyers comparing beyond indoor floor scrubbers.",
-      "Useful for logistics parks and campus environments with repeatable outdoor routes.",
-      "Can be packaged into distributor catalogs alongside indoor cleaning robots.",
+      "Compact body with sweep, scrub, vacuum, dust-push, and combo cleaning modes.",
+      "One-tap mode switching helps one robot cover several floor conditions.",
+      "Suitable for distributor catalogs where compact size and easy maintenance matter.",
     ],
   },
   {
-    slug: "industrial-amr-platform",
-    title: "Industrial AMR Platform",
-    shortTitle: "Industrial AMR Platform",
-    model: "AMR",
-    type: "Material-handling robot",
+    slug: "iq70b-autonomous-scrubber",
+    title: "IQ70B Autonomous Floor Scrubber",
+    shortTitle: "IQ70B Floor Scrubber",
+    model: "IQ70B",
+    category: "Large-Area Scrubbing",
+    type: "Autonomous floor scrubber with service station option",
     excerpt:
-      "Autonomous mobile robots for warehouse transport, picking support, and factory material movement.",
-    image: "/assets/images/p060-hero.jpg",
-    url: "/products/#industrial-amr-platform",
-    efficiency: "Up to 600 kg payload class",
+      "A mid-to-large autonomous scrubber for airports, factories, hospitals, stations, malls, office buildings, and warehouse floors.",
+    image: "/assets/images/iq70b-floor-scrubber.jpg",
+    url: "/products/iq70b-autonomous-scrubber/",
+    efficiency: "Up to 2,160 m2/h",
+    runtime: "Up to 5 h",
+    dimensions: "940 x 800 x 1170 mm",
+    cleaningWidth: "Project confirmed",
+    tanks: "65 L class water capacity",
+    navigation: "2D LiDAR, depth cameras, ultrasonic sensors",
+    certifications: "Project documentation confirmed per order",
+    bestFor: "Large indoor facilities that need autonomous scrubbing plus optional automatic charging, water refill, drainage, and standby workflows.",
+    highlights: [
+      "Service-station workflow can reduce manual charging and water handling.",
+      "Designed for large indoor routes in factories, stations, hospitals, malls, and offices.",
+      "Multi-sensor obstacle handling supports mixed human and machine environments.",
+    ],
+  },
+  {
+    slug: "xg1-outdoor-sweeping-robot",
+    title: "XG1 Outdoor Sweeping Robot",
+    shortTitle: "XG1 Outdoor Sweeper",
+    model: "XG1",
+    category: "Outdoor Sweeping",
+    type: "Outdoor sweeper",
+    excerpt:
+      "Autonomous sweeping for campuses, logistics parks, transport hubs, and industrial outdoor zones.",
+    image: "/assets/images/outdoor-sweeper.jpg",
+    url: "/products/xg1-outdoor-sweeping-robot/",
+    efficiency: "Up to 100,000 m2 scenario coverage",
+    runtime: "4-6 h average battery life",
+    dimensions: "Final dimensions confirmed with datasheet",
+    cleaningWidth: "Outdoor sweeper class",
+    tanks: "100 L trash bin class",
+    navigation: "LiDAR, ultrasonic sensing, autonomous route planning",
+    certifications: "Certification documents confirmed per order",
+    bestFor: "Campuses, logistics parks, public squares, and outdoor industrial spaces.",
+    highlights: [
+      "Outdoor sweeper option for buyers comparing beyond indoor floor scrubbers.",
+      "Supports scheduled work areas, cloud monitoring, and low-battery return-to-charge workflows.",
+      "Useful for logistics parks, campuses, and public outdoor spaces with repeatable routes.",
+    ],
+  },
+  {
+    slug: "fw1-facade-cleaning-robot",
+    title: "FW1 Facade Cleaning Robot",
+    shortTitle: "FW1 Facade Cleaning Robot",
+    model: "FW1",
+    category: "Facade Cleaning",
+    type: "High-rise facade and glass cleaning robot",
+    excerpt:
+      "A facade cleaning robot concept for glass curtain wall maintenance, high-rise exterior cleaning, and property service teams.",
+    image: "/assets/images/facade-cleaning-robot.jpg",
+    url: "/products/fw1-facade-cleaning-robot/",
+    efficiency: "Project dependent",
     runtime: "Project dependent",
-    dimensions: "Project dependent",
+    dimensions: "Final dimensions confirmed with datasheet",
+    cleaningWidth: "Facade cleaning module",
+    tanks: "Water / cleaning module confirmed per project",
+    navigation: "Remote operation and safety support systems",
+    certifications: "Project safety documentation confirmed per order",
+    bestFor: "Office towers, hotel facades, shopping centers, commercial properties, and exterior glass maintenance providers.",
+    highlights: [
+      "Expands the PanPanTech catalog from floor cleaning to building exterior maintenance.",
+      "Designed for property teams comparing safer and more repeatable high-rise cleaning methods.",
+      "Best quoted after reviewing facade height, surface material, anchoring conditions, and local safety rules.",
+    ],
+  },
+  {
+    slug: "t300-industrial-delivery-amr",
+    title: "T300 Industrial Delivery AMR",
+    shortTitle: "T300 Delivery AMR",
+    model: "T300",
+    category: "Warehouse AMR",
+    type: "Industrial delivery and material-handling robot",
+    excerpt:
+      "A 300 kg payload AMR platform for line-side delivery, work-in-progress transfer, warehouse picking support, and factory material movement.",
+    image: "/assets/images/t300-amr.jpg",
+    url: "/products/t300-industrial-delivery-amr/",
+    efficiency: "Up to 300 kg payload",
+    runtime: "8 h full-load / 12 h no-load class",
+    dimensions: "835 x 500 x 1350 mm",
     cleaningWidth: "Not applicable",
     tanks: "Not applicable",
-    navigation: "Autonomous mobile robot navigation",
-    certifications: "Project documentation confirmed per order",
-    bestFor: "Warehouse transport, factory material movement, and picking support.",
+    navigation: "VSLAM + LiDAR SLAM",
+    certifications: "ISO 3691-4 class safety documentation confirmed per order",
+    bestFor: "Line-side delivery, quality inspection transfer, warehouse picking support, factory logistics, and commercial heavy-load delivery.",
     highlights: [
-      "Adds warehouse automation coverage beyond cleaning tasks.",
-      "Useful for buyers planning both clean floors and material movement workflows.",
-      "Supports PanPanTech's broader commercial robotics positioning.",
+      "High-load chassis with open architecture for industrial delivery workflows.",
+      "Supports standard, lifting, tray, towing, and other project configurations.",
+      "Useful for buyers combining cleaning automation with material movement.",
     ],
+  },
+  {
+    slug: "t300-conveyor-amr",
+    title: "T300 Conveyor AMR",
+    shortTitle: "T300 Conveyor AMR",
+    model: "T300 Conveyor",
+    category: "Warehouse AMR",
+    type: "Conveyor AMR for production-line transfer",
+    excerpt:
+      "A conveyor-top AMR for automatic docking, material transfer between stations, and warehouse or factory conveyor-line integration.",
+    image: "/assets/images/t300-conveyor-amr.jpg",
+    url: "/products/t300-conveyor-amr/",
+    efficiency: "80 kg per layer / 160 kg double-layer class",
+    runtime: "8-10 h full-load class",
+    dimensions: "835 x 650-665 x 1350 mm",
+    cleaningWidth: "Not applicable",
+    tanks: "Not applicable",
+    navigation: "VSLAM + LiDAR SLAM with docking support",
+    certifications: "Project documentation confirmed per order",
+    bestFor: "Factories, warehouses, production lines, material stations, and automated transfer points.",
+    highlights: [
+      "Self-powered roller system supports direct station-to-station material transfer.",
+      "Adjustable roller width and working height help fit different conveyor lines.",
+      "A strong fit for picking, buffering, assembly, and line-side delivery workflows.",
+    ],
+  },
+  {
+    slug: "t600-heavy-payload-amr",
+    title: "T600 Heavy-Payload AMR",
+    shortTitle: "T600 Heavy-Payload AMR",
+    model: "T600",
+    category: "Warehouse AMR",
+    type: "Heavy-payload industrial delivery robot",
+    excerpt:
+      "A 600 kg payload AMR platform for heavier warehouse racks, industrial delivery routes, and flexible material-handling automation.",
+    image: "/assets/images/t600-heavy-amr.jpg",
+    url: "/products/t600-heavy-payload-amr/",
+    efficiency: "Up to 600 kg payload",
+    runtime: "12 h no-load class",
+    dimensions: "960 x 500 x 1350 mm / underride 845 x 500 x 255 mm",
+    cleaningWidth: "Not applicable",
+    tanks: "Not applicable",
+    navigation: "VSLAM + LiDAR SLAM or LiDAR SLAM",
+    certifications: "Project documentation confirmed per order",
+    bestFor: "Heavy rack movement, warehouse transport, factory material movement, and flexible picking support.",
+    highlights: [
+      "Heavy-payload platform for buyers that need more capacity than standard AMRs.",
+      "Supports lifting, following, conveyor, towing, and underride project configurations.",
+      "Designed for warehouse workflows where rack recognition, scheduling, and access control matter.",
+    ],
+  },
+];
+
+const productCategories = [
+  {
+    label: "Indoor Cleaning",
+    text: "Compact robots for offices, retail, healthcare, hotel public areas, and mixed commercial interiors.",
+  },
+  {
+    label: "Large-Area Scrubbing",
+    text: "Autonomous scrubbers for warehouses, factories, malls, stations, airports, and high-traffic facilities.",
+  },
+  {
+    label: "Outdoor Sweeping",
+    text: "Outdoor sweepers for campuses, logistics parks, public squares, loading areas, and industrial parks.",
+  },
+  {
+    label: "Facade Cleaning",
+    text: "Specialized robots for glass curtain walls, commercial building facades, and exterior property maintenance.",
+  },
+  {
+    label: "Warehouse AMR",
+    text: "Delivery, conveyor, towing, lifting, and heavy-payload AMR platforms for picking and material handling.",
+  },
+];
+
+const videos = [
+  {
+    title: "Compact Cleaning Demo",
+    text: "Short indoor cleaning clip for compact commercial spaces.",
+    src: "/assets/videos/compact-cleaner-demo.mp4",
+    poster: "/assets/images/s55-compact-cleaner.jpg",
+  },
+  {
+    title: "Floor Cleaning Route",
+    text: "Autonomous route demonstration for hard-floor cleaning tasks.",
+    src: "/assets/videos/floor-cleaning-demo.mp4",
+    poster: "/assets/images/p060-product.jpg",
+  },
+  {
+    title: "Warehouse AMR Movement",
+    text: "Material-handling robot movement for warehouse and factory workflows.",
+    src: "/assets/videos/warehouse-amr-demo.mp4",
+    poster: "/assets/images/t300-amr.jpg",
   },
 ];
 
@@ -172,6 +347,432 @@ const resources = [
   },
 ];
 
+const blogPosts = [
+  {
+    slug: "commercial-robot-vacuum",
+    keyword: "commercial robot vacuum",
+    title: "Commercial Robot Vacuum",
+    metaTitle: "Commercial Robot Vacuum Guide | PanPanTech",
+    description:
+      "A buyer guide to commercial robot vacuum systems, floor scrubbers, sweepers, use cases, costs, safety checks, and supplier selection.",
+    date: "2026-07-01",
+    readTime: "8 min read",
+    category: "Commercial Cleaning",
+    image: "/assets/images/p060-product.jpg",
+    imageAlt: "Compact commercial robot vacuum and scrubber for indoor facilities",
+    intro:
+      "A commercial robot vacuum is an autonomous floor-cleaning machine built for offices, retail stores, hospitals, hotels, warehouses, and public buildings. Unlike a home robot vacuum, a commercial model is selected by floor area, cleaning mode, runtime, tank capacity, route reporting, safety sensors, and after-sales support. Buyers should compare the real cleaning task first: dust pickup, sweeping, scrubbing, mopping, or a combined workflow.",
+    toc: [
+      ["What is a commercial robot vacuum?", "what-is"],
+      ["Which robot type fits each facility?", "types"],
+      ["What should buyers compare?", "compare"],
+      ["How much does a commercial robot vacuum cost?", "cost"],
+      ["Deployment checklist", "deployment"],
+      ["FAQ", "faq"],
+    ],
+    sections: [
+      {
+        id: "what-is",
+        h2: "What is a commercial robot vacuum?",
+        html: `<p>A commercial robot vacuum is a professional autonomous cleaning robot designed for repeatable facility cleaning. Some models focus on vacuuming and sweeping. Others combine vacuuming with scrubbing, dust-pushing, mopping, disinfection, route reports, and fleet management.</p>
+        <p>For B2B buyers, the important question is not whether the robot can move by itself. The important question is whether it can clean the required floor type, finish within the shift window, work around people safely, and provide service records that the facility team can trust.</p>`,
+      },
+      {
+        id: "types",
+        h2: "Which robot type fits each facility?",
+        html: `<div class="ppt-table-wrap"><table><thead><tr><th>Facility need</th><th>Best-fit robot class</th><th>What to confirm</th></tr></thead><tbody>
+        <tr><td>Office, clinic, hotel corridor, showroom</td><td>Compact multi-function robot</td><td>Noise, edge cleaning, narrow passage width, maintenance access</td></tr>
+        <tr><td>Warehouse support areas and retail aisles</td><td>Commercial vacuum and mop robot</td><td>Dust load, floor material, route scheduling, staff handoff</td></tr>
+        <tr><td>Warehouse, mall, station, airport</td><td>Autonomous floor scrubber</td><td>Tank size, scrubbing width, runtime, recharge and water workflow</td></tr>
+        <tr><td>Campus, loading zone, outdoor route</td><td>Outdoor sweeper</td><td>Debris type, slope, weather exposure, trash-bin capacity</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "compare",
+        h2: "What should buyers compare?",
+        html: `<p>Start with measurable constraints: square meters per shift, aisle width, floor material, obstacle density, cleaning frequency, staff availability, and required proof-of-work reports. A smaller robot can be better than a larger scrubber if the site has tight spaces or mixed public traffic.</p>
+        <div class="ppt-table-wrap"><table><thead><tr><th>Data point</th><th>Why it matters</th><th>Source to verify</th></tr></thead><tbody>
+        <tr><td>Clean and dry walking surfaces</td><td>Robotic cleaning should support, not replace, a facility's slip and trip prevention plan.</td><td><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22" target="_blank" rel="noopener">OSHA 1910.22</a></td></tr>
+        <tr><td>Autonomous navigation and safety zones</td><td>Robots working around people need controlled routes, sensors, and stop procedures.</td><td><a href="https://www.iso.org/standard/70660.html" target="_blank" rel="noopener">ISO 3691-4</a></td></tr>
+        <tr><td>Professional service robot market context</td><td>Commercial cleaning and logistics robots are part of a broader professional service robot category.</td><td><a href="https://ifr.org/wr-service-robots/" target="_blank" rel="noopener">International Federation of Robotics</a></td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "cost",
+        h2: "How much does a commercial robot vacuum cost?",
+        html: `<p>Commercial robot vacuum pricing depends on the robot class, sensors, cleaning modules, battery, service plan, spare parts, and order quantity. A compact robot is usually quoted differently from a large autonomous floor scrubber with a docking or water station.</p>
+        <p>Ask suppliers to quote the robot, consumables, warranty, spare parts, training, shipping, customs documents, and optional software separately. This makes total cost of ownership easier to compare across suppliers.</p>`,
+      },
+      {
+        id: "deployment",
+        h2: "Deployment checklist for buyers",
+        html: `<ul class="ppt-check-list"><li>Send a floor map, photos, floor material, and daily cleaning schedule.</li><li>Measure the narrowest passage, elevator route, and storage location.</li><li>Confirm water refill, drainage, charging, and staff handoff workflow.</li><li>Request a final datasheet, certification package, spare-part list, and warranty terms before purchase.</li></ul>`,
+      },
+    ],
+    faqs: [
+      ["Can a commercial robot vacuum replace cleaners?", "It usually replaces repetitive floor routes, not the whole cleaning team. Staff still handle detail cleaning, exceptions, safety checks, and guest-facing tasks."],
+      ["Is a robot vacuum enough for commercial floors?", "It depends on the soil. Dry dust and debris may fit vacuum or sweep modes. Spills, grease, and heavy traffic often require scrubbing or combined cleaning."],
+      ["What floor types can commercial cleaning robots handle?", "Common indoor targets include tile, PVC, terrazzo, marble, epoxy, concrete, and short carpet. Final compatibility should be confirmed against the model datasheet."],
+      ["Do commercial robot vacuums work around people?", "Professional robots use sensors, route rules, and emergency stops, but the site still needs a deployment plan and trained staff."],
+      ["What should I send for a quote?", "Send floor area, floor type, cleaning frequency, site photos, aisle width, destination country, quantity, and any OEM or distributor requirements."],
+    ],
+    related: ["/products/p060/", "/products/s55-compact-cleaning-robot/", "/request-a-quote/"],
+  },
+  {
+    slug: "autonomous-floor-scrubber",
+    keyword: "autonomous floor scrubber",
+    title: "Autonomous Floor Scrubber",
+    metaTitle: "Autonomous Floor Scrubber Buyer Guide | PanPanTech",
+    description:
+      "Learn how autonomous floor scrubbers work, where they fit, what specifications matter, and how to compare scrubber robots for large facilities.",
+    date: "2026-07-01",
+    readTime: "9 min read",
+    category: "Floor Scrubbing",
+    image: "/assets/images/pt90-scrubber.jpg",
+    imageAlt: "Large autonomous floor scrubber for warehouses and public facilities",
+    intro:
+      "An autonomous floor scrubber is a driverless cleaning robot that applies solution, scrubs the floor, recovers dirty water, and follows planned routes with obstacle detection. It is best suited to large, repeatable hard-floor areas such as warehouses, factories, airports, malls, hospitals, and transport hubs. Buyers should compare tank capacity, scrubbing width, route control, runtime, safety, and water-handling workflow.",
+    toc: [
+      ["How does an autonomous floor scrubber work?", "how-it-works"],
+      ["Where does it fit best?", "use-cases"],
+      ["Which specifications matter?", "specs"],
+      ["What does a service station change?", "station"],
+      ["Supplier questions", "supplier"],
+      ["FAQ", "faq"],
+    ],
+    sections: [
+      {
+        id: "how-it-works",
+        h2: "How does an autonomous floor scrubber work?",
+        html: `<p>The robot maps the facility, creates repeatable cleaning routes, detects obstacles, dispenses clean solution, scrubs the floor, and recovers wastewater through a squeegee or recovery system. Operators usually define zones, schedules, no-go areas, and manual intervention rules.</p>
+        <p>The value comes from consistency. A scrubber robot can run the same route every night, record area coverage, and reduce the amount of staff time spent on broad repeated floor routes.</p>`,
+      },
+      {
+        id: "use-cases",
+        h2: "Where does an autonomous floor scrubber fit best?",
+        html: `<div class="ppt-table-wrap"><table><thead><tr><th>Site</th><th>Why it fits</th><th>Typical constraint</th></tr></thead><tbody>
+        <tr><td>Warehouse</td><td>Large repeated hard-floor routes</td><td>Aisle width, pallets, forklifts, shift windows</td></tr>
+        <tr><td>Airport or station</td><td>High-traffic floor cleaning with audit needs</td><td>Passenger flow, operating hours, safety zoning</td></tr>
+        <tr><td>Hospital</td><td>Consistent public-area cleaning</td><td>Noise, staff handoff, infection-control procedures</td></tr>
+        <tr><td>Mall or supermarket</td><td>Visible floor quality and night cleaning</td><td>Mixed obstacles, store schedules, wet-floor controls</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "specs",
+        h2: "Which specifications matter?",
+        html: `<p>Do not choose only by headline cleaning efficiency. A wider scrub path can still underperform if the robot must stop often, cannot navigate a narrow route, or requires too much manual water handling.</p>
+        <div class="ppt-table-wrap"><table><thead><tr><th>Specification</th><th>Buying meaning</th><th>Verification source</th></tr></thead><tbody>
+        <tr><td>Scrubbing width and tank size</td><td>Determines route duration and refill frequency.</td><td>Final signed datasheet</td></tr>
+        <tr><td>Clean floor and dry surface workflow</td><td>Supports facility slip prevention and inspection routines.</td><td><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22" target="_blank" rel="noopener">OSHA walking-working surfaces</a></td></tr>
+        <tr><td>Driverless operation</td><td>Requires safety planning for people, routes, speed, and emergency stop behavior.</td><td><a href="https://www.iso.org/standard/70660.html" target="_blank" rel="noopener">ISO 3691-4</a></td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "station",
+        h2: "What does a service station change?",
+        html: `<p>A service station can reduce manual charging, water refill, wastewater discharge, and standby tasks. It matters most where the facility wants longer unattended operation or where staff cannot repeatedly support the robot during a shift.</p>
+        <p>Before buying a station, confirm water access, drainage, installation space, local plumbing rules, and service responsibility.</p>`,
+      },
+      {
+        id: "supplier",
+        h2: "Supplier questions before purchase",
+        html: `<ul class="ppt-check-list"><li>Which floors and cleaning chemicals are approved?</li><li>What happens if the route is blocked?</li><li>Can the robot export cleaning reports?</li><li>How are spare parts, brushes, squeegees, batteries, and filters supplied?</li><li>Which certificates and battery documents are available for the destination country?</li></ul>`,
+      },
+    ],
+    faqs: [
+      ["What is the difference between a robotic scrubber and a robot vacuum?", "A robotic scrubber uses water or solution, brushes, and recovery to clean hard floors. A robot vacuum focuses on dry debris pickup."],
+      ["Can autonomous floor scrubbers work in warehouses?", "Yes, when routes, aisle width, floor condition, people, and forklift interactions are planned carefully."],
+      ["Do scrubber robots need operators?", "They need trained operators for setup, exception handling, maintenance, water workflow, and safety checks."],
+      ["How do I compare runtime claims?", "Ask what mode, speed, floor condition, tank workflow, and battery state were used for the runtime claim."],
+      ["Which PanPanTech models fit large areas?", "PT90 and IQ70B class robots are the main large-area scrubbing options in the current PanPanTech range."],
+    ],
+    related: ["/products/pt90/", "/products/iq70b-autonomous-scrubber/", "/industries/warehouse-cleaning-robots/"],
+  },
+  {
+    slug: "industrial-robot-vacuum-for-warehouse",
+    keyword: "industrial robot vacuum for warehouse",
+    title: "Industrial Robot Vacuum for Warehouse",
+    metaTitle: "Industrial Robot Vacuum for Warehouse | PanPanTech",
+    description:
+      "A warehouse buyer guide to industrial robot vacuums, scrubbers, sweepers, AMR workflows, safety planning, and supplier questions.",
+    date: "2026-07-01",
+    readTime: "8 min read",
+    category: "Warehouse Cleaning",
+    image: "/assets/images/warehouse-amr-scene.jpg",
+    imageAlt: "Warehouse automation scene with autonomous mobile robots",
+    intro:
+      "An industrial robot vacuum for warehouse use should be evaluated as part of a facility workflow, not as a standalone gadget. Warehouses need dust pickup, floor scrubbing, outdoor sweeping, route scheduling, and sometimes material movement with AMRs. The right solution depends on floor area, dust load, forklift traffic, aisle width, shift timing, and whether the robot must produce cleaning records.",
+    toc: [
+      ["What warehouse problem are you solving?", "problem"],
+      ["Robot vacuum, sweeper, or scrubber?", "types"],
+      ["Warehouse safety and traffic planning", "safety"],
+      ["Cleaning and AMR coordination", "amr"],
+      ["Buying checklist", "checklist"],
+      ["FAQ", "faq"],
+    ],
+    sections: [
+      {
+        id: "problem",
+        h2: "What warehouse problem are you solving?",
+        html: `<p>Warehouse cleaning problems usually fall into four groups: dust and debris, tire marks and spills, outdoor loading-area debris, and proof-of-work reporting. A robot vacuum may be enough for dry debris in support areas, while high-traffic logistics floors often need scrubbing or sweeping.</p>
+        <p>Start by mapping where dirt is generated: inbound docks, packaging lines, forklift lanes, pedestrian corridors, and production-side transfer routes.</p>`,
+      },
+      {
+        id: "types",
+        h2: "Robot vacuum, sweeper, or scrubber?",
+        html: `<div class="ppt-table-wrap"><table><thead><tr><th>Robot type</th><th>Best warehouse use</th><th>Limitation to check</th></tr></thead><tbody>
+        <tr><td>Commercial vacuum robot</td><td>Dry dust and light debris in offices or support areas</td><td>Not designed for wet or heavy soil</td></tr>
+        <tr><td>Autonomous scrubber</td><td>Hard-floor cleaning in large indoor routes</td><td>Needs water, drainage, and wet-floor controls</td></tr>
+        <tr><td>Outdoor sweeper</td><td>Loading areas, yards, campuses, logistics parks</td><td>Weather, debris type, slope, bin size</td></tr>
+        <tr><td>Warehouse AMR</td><td>Material movement and picking support</td><td>Not a cleaning robot, but route planning may overlap</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "safety",
+        h2: "Warehouse safety and traffic planning",
+        html: `<p>Robots must be deployed around forklifts, pallets, workers, and temporary obstacles. Safety planning should include speed limits, stop zones, blocked-route behavior, charging locations, and staff training.</p>
+        <div class="ppt-table-wrap"><table><thead><tr><th>Control point</th><th>Why it matters</th><th>Reference</th></tr></thead><tbody>
+        <tr><td>Walkway condition</td><td>Floors should be kept clean, orderly, and dry where possible.</td><td><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22" target="_blank" rel="noopener">OSHA 1910.22</a></td></tr>
+        <tr><td>Driverless industrial vehicles</td><td>Warehouse AMRs and AGVs require safety design and operational controls.</td><td><a href="https://www.iso.org/standard/70660.html" target="_blank" rel="noopener">ISO 3691-4</a></td></tr>
+        <tr><td>Industrial mobile robot safety</td><td>Mobile robot risk assessment should address people, payload, and work area.</td><td><a href="https://webstore.ansi.org/standards/ria/ansiriar15082020" target="_blank" rel="noopener">ANSI/RIA R15.08</a></td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "amr",
+        h2: "Cleaning and AMR coordination",
+        html: `<p>Many warehouses need both clean floors and material movement. Cleaning robots should avoid peak forklift routes, while AMRs should avoid wet cleaning zones until the floor is ready. A good deployment plan separates cleaning schedules, delivery routes, charging locations, and exception handling.</p>
+        <p>PanPanTech can pair warehouse cleaning products with T300 and T600 AMR discussions when the buyer wants a broader facility automation roadmap.</p>`,
+      },
+      {
+        id: "checklist",
+        h2: "Buying checklist",
+        html: `<ul class="ppt-check-list"><li>Send floor area, aisle width, dock photos, and peak traffic hours.</li><li>Identify dry debris, wet soil, tire marks, and outdoor cleaning needs separately.</li><li>Confirm whether the robot needs route reports for contractor or facility audits.</li><li>Ask for a pilot plan before scaling across several buildings.</li></ul>`,
+      },
+    ],
+    faqs: [
+      ["Is a warehouse robot vacuum the same as an autonomous scrubber?", "No. A vacuum handles dry debris. An autonomous scrubber uses liquid and recovery to clean hard floors."],
+      ["Can robots clean around forklifts?", "They can work in warehouses when routes, speed, timing, and safety controls are planned around forklift traffic."],
+      ["Which model fits a dusty warehouse?", "For support areas, a compact cleaning robot may fit. For large hard floors, compare PT90 or IQ70B class scrubbers."],
+      ["Can one supplier provide cleaning robots and AMRs?", "A single supplier can coordinate both categories, but cleaning performance and material-handling performance should be evaluated separately."],
+      ["What is the first step for a warehouse quote?", "Share a floor map, photos, floor area, soil type, aisle width, shift schedule, and target country."],
+    ],
+    related: ["/industries/warehouse-cleaning-robots/", "/products/pt90/", "/products/t300-industrial-delivery-amr/"],
+  },
+  {
+    slug: "amr-robot-vs-agv",
+    keyword: "AMR robot vs AGV",
+    title: "AMR Robot vs AGV",
+    metaTitle: "AMR Robot vs AGV: Warehouse Buyer Guide | PanPanTech",
+    description:
+      "Compare AMR robots and AGVs for warehouses, factories, picking support, conveyor integration, payload, navigation, safety, and cost planning.",
+    date: "2026-07-01",
+    readTime: "8 min read",
+    category: "Warehouse AMR",
+    image: "/assets/images/t300-conveyor-amr.jpg",
+    imageAlt: "Conveyor-top autonomous mobile robot for warehouse material handling",
+    intro:
+      "An AMR robot is usually more flexible than an AGV because it can plan routes with onboard perception and adapt to changing warehouse layouts. An AGV often follows fixed paths, markers, wires, or predefined guidance. The best choice depends on route stability, payload, docking accuracy, traffic complexity, integration needs, safety requirements, and how often the operation changes.",
+    toc: [
+      ["What is the difference between AMR and AGV?", "difference"],
+      ["Which technology fits each workflow?", "workflow"],
+      ["Navigation and safety standards", "safety"],
+      ["Payload and docking questions", "payload"],
+      ["How to choose", "choose"],
+      ["FAQ", "faq"],
+    ],
+    sections: [
+      {
+        id: "difference",
+        h2: "What is the difference between AMR and AGV?",
+        html: `<p>An AGV is typically built around fixed guidance. It is strong for stable, repetitive routes where the environment changes slowly. An AMR uses sensors and software to localize, avoid obstacles, and plan routes with more flexibility.</p>
+        <p>For a warehouse buyer, the difference is operational. If routes change often or the site needs multiple workflows, an AMR may reduce layout friction. If the route is fixed and highly controlled, an AGV can still be practical.</p>`,
+      },
+      {
+        id: "workflow",
+        h2: "Which technology fits each workflow?",
+        html: `<div class="ppt-table-wrap"><table><thead><tr><th>Workflow</th><th>AMR fit</th><th>AGV fit</th></tr></thead><tbody>
+        <tr><td>Line-side delivery</td><td>Good when routes change or people share aisles</td><td>Good when route is fixed and controlled</td></tr>
+        <tr><td>Conveyor docking</td><td>Good with precise docking and integration plan</td><td>Good with fixed station layouts</td></tr>
+        <tr><td>Heavy rack movement</td><td>Good for flexible rack dispatching</td><td>Good for fixed heavy transport routes</td></tr>
+        <tr><td>Mixed warehouse picking support</td><td>Usually stronger because task flow changes</td><td>Possible but less flexible</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "safety",
+        h2: "Navigation and safety standards",
+        html: `<p>Both AMRs and AGVs are industrial mobile machines. Buyers should ask for a risk assessment, safety function explanation, emergency stop behavior, obstacle detection limits, payload limits, and staff training plan.</p>
+        <div class="ppt-table-wrap"><table><thead><tr><th>Reference</th><th>Why buyers should care</th><th>Use in RFQ</th></tr></thead><tbody>
+        <tr><td><a href="https://www.iso.org/standard/70660.html" target="_blank" rel="noopener">ISO 3691-4</a></td><td>Covers driverless industrial trucks and their systems.</td><td>Ask how the offered robot aligns with the relevant safety requirements.</td></tr>
+        <tr><td><a href="https://webstore.ansi.org/standards/ria/ansiriar15082020" target="_blank" rel="noopener">ANSI/RIA R15.08</a></td><td>Addresses industrial mobile robot safety in the United States context.</td><td>Ask for documented risk assessment and safety procedures.</td></tr>
+        <tr><td>Final robot datasheet</td><td>Payload, speed, obstacle handling, and docking accuracy vary by model.</td><td>Do not rely on category labels alone.</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "payload",
+        h2: "Payload and docking questions",
+        html: `<p>Payload is not only a maximum kilogram number. Buyers must confirm payload center of gravity, rack dimensions, turning radius, path clearance, docking tolerance, charging workflow, and whether accessories change runtime.</p>
+        <p>For PanPanTech discussions, the T300 class supports 300 kg delivery workflows, conveyor variants support station transfer, and the T600 class targets heavier rack and industrial delivery needs.</p>`,
+      },
+      {
+        id: "choose",
+        h2: "How to choose between AMR and AGV",
+        html: `<ul class="ppt-check-list"><li>Choose AMR when route flexibility, mixed traffic, and fast deployment matter.</li><li>Choose AGV when routes are fixed, controlled, and unlikely to change.</li><li>Ask for a site simulation or pilot route before scaling.</li><li>Compare payload, integration, safety documentation, and service response as a package.</li></ul>`,
+      },
+    ],
+    faqs: [
+      ["Is an AMR better than an AGV?", "Not always. AMRs are usually more flexible, while AGVs can be effective on stable fixed routes."],
+      ["Do AMRs need warehouse management software integration?", "Some projects can start with onboard operation, but larger deployments often need integration with WMS, conveyors, elevators, or access control."],
+      ["What payload should I choose?", "Choose by real load weight, rack dimensions, route width, docking needs, and future expansion plans."],
+      ["Can AMRs support picking?", "Yes, AMRs can support goods movement, line-side delivery, and picking workflows, depending on accessories and software."],
+      ["What should an AMR quote include?", "It should include robot configuration, payload module, batteries, charger, software, integration, training, spare parts, warranty, and shipping documents."],
+    ],
+    related: ["/products/t300-industrial-delivery-amr/", "/products/t300-conveyor-amr/", "/products/t600-heavy-payload-amr/"],
+  },
+  {
+    slug: "best-robotic-window-cleaner",
+    keyword: "best robotic window cleaner",
+    title: "Best Robotic Window Cleaner for Commercial Buildings",
+    metaTitle: "Best Robotic Window Cleaner for Commercial Buildings | PanPanTech",
+    description:
+      "A commercial buyer guide to robotic window cleaners, facade cleaning robots, high-rise glass workflows, safety checks, and supplier questions.",
+    date: "2026-07-01",
+    readTime: "7 min read",
+    category: "Facade Cleaning",
+    image: "/assets/images/facade-cleaning-robot.jpg",
+    imageAlt: "Facade cleaning robot for commercial glass curtain wall maintenance",
+    intro:
+      "The best robotic window cleaner for a commercial building is the one that matches the facade, height, glass type, anchoring method, water workflow, operator plan, and local safety rules. Small consumer window robots are not the same as commercial facade cleaning systems. For offices, hotels, malls, and high-rise properties, buyers should start with a site assessment before comparing robot models.",
+    toc: [
+      ["Commercial vs consumer window robots", "commercial"],
+      ["Which buildings fit facade robots?", "buildings"],
+      ["Safety and site assessment", "safety"],
+      ["Comparison table", "comparison"],
+      ["Supplier checklist", "supplier"],
+      ["FAQ", "faq"],
+    ],
+    sections: [
+      {
+        id: "commercial",
+        h2: "Commercial vs consumer window robots",
+        html: `<p>Consumer window robots are usually designed for individual indoor windows. Commercial facade cleaning robots address larger surfaces, exterior conditions, operator workflows, and building maintenance requirements.</p>
+        <p>For B2B procurement, the evaluation should cover the whole cleaning method: access, anchors, water, power, safety backup, operator training, and weather limits.</p>`,
+      },
+      {
+        id: "buildings",
+        h2: "Which buildings fit facade robots?",
+        html: `<div class="ppt-table-wrap"><table><thead><tr><th>Building type</th><th>Potential fit</th><th>What to verify</th></tr></thead><tbody>
+        <tr><td>Office tower</td><td>Large repeated glass surfaces</td><td>Facade geometry, anchor points, roof access, wind limits</td></tr>
+        <tr><td>Hotel</td><td>Image-sensitive exterior cleaning</td><td>Guest-area timing, noise, safety perimeter</td></tr>
+        <tr><td>Shopping center</td><td>Public-facing glass and atriums</td><td>Indoor/outdoor access, operating hours, crowd control</td></tr>
+        <tr><td>Industrial building</td><td>Hard-to-reach exterior surfaces</td><td>Dust, water access, surface material</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "safety",
+        h2: "Safety and site assessment",
+        html: `<p>Facade cleaning is a safety-critical job. A robot can reduce some manual exposure, but it does not remove the need for a safety plan. Buyers should ask for local compliance review, operator training, fall-prevention planning, emergency procedures, and weather restrictions.</p>
+        <div class="ppt-table-wrap"><table><thead><tr><th>Assessment item</th><th>Why it matters</th><th>Source</th></tr></thead><tbody>
+        <tr><td>Fall protection and work area controls</td><td>Exterior maintenance may involve elevated work and controlled access zones.</td><td><a href="https://www.osha.gov/fall-protection" target="_blank" rel="noopener">OSHA fall protection</a></td></tr>
+        <tr><td>Machine safety documentation</td><td>Robot operation should be supported by clear instructions and risk controls.</td><td>Supplier safety manual and local rules</td></tr>
+        <tr><td>Building-specific conditions</td><td>Glass type, frame geometry, height, and wind affect feasibility.</td><td>Site inspection report</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "comparison",
+        h2: "Comparison table for buyers",
+        html: `<div class="ppt-table-wrap"><table><thead><tr><th>Option</th><th>Best for</th><th>Main limitation</th></tr></thead><tbody>
+        <tr><td>Manual rope access</td><td>Complex facades and spot work</td><td>Labor availability and safety management</td></tr>
+        <tr><td>Lift or platform cleaning</td><td>Accessible low and mid-rise areas</td><td>Equipment access and disruption</td></tr>
+        <tr><td>Commercial facade robot</td><td>Repeatable glass curtain wall cleaning</td><td>Requires site assessment and trained operators</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "supplier",
+        h2: "Supplier checklist",
+        html: `<ul class="ppt-check-list"><li>Share building height, facade photos, roof access, glass type, and local safety requirements.</li><li>Ask for cleaning method, safety backup, operator count, and weather limits.</li><li>Confirm spare parts, training, warranty, and local service responsibilities.</li><li>Request a project-specific feasibility review before public claims or final quotation.</li></ul>`,
+      },
+    ],
+    faqs: [
+      ["Do robotic window cleaners work on high-rise buildings?", "Commercial facade robots can support some high-rise cleaning projects, but feasibility depends on the building and safety plan."],
+      ["Are consumer window robots suitable for commercial facades?", "Usually no. Consumer models are not a substitute for commercial facade cleaning systems and safety procedures."],
+      ["What information is needed for a facade robot quote?", "Send facade photos, building height, surface material, access points, local safety rules, and cleaning frequency."],
+      ["Can a facade robot clean all glass buildings?", "No. Geometry, anchors, weather, water access, and surface condition can limit feasibility."],
+      ["Which PanPanTech product fits facade cleaning?", "The FW1 facade cleaning robot page is the starting point for project review and quotation."],
+    ],
+    related: ["/products/fw1-facade-cleaning-robot/", "/request-a-quote/", "/contact/"],
+  },
+  {
+    slug: "certifications-for-commercial-cleaning-robots",
+    keyword: "certifications for commercial cleaning robots",
+    title: "Certifications for Commercial Cleaning Robots",
+    metaTitle: "Certifications for Commercial Cleaning Robots | PanPanTech",
+    description:
+      "A practical guide to CE, FCC, IEC, battery, safety, radio, and import documents for commercial cleaning robots and warehouse AMRs.",
+    date: "2026-07-01",
+    readTime: "9 min read",
+    category: "Sourcing",
+    image: "/assets/images/robot-dark-hero.jpg",
+    imageAlt: "Commercial floor cleaning robot used for sourcing and certification review",
+    intro:
+      "Commercial cleaning robot certifications depend on the destination market, product configuration, battery, charger, wireless module, and safety design. Buyers should not accept a generic claim such as CE or FCC without matching the certificate to the exact model, version, adapter, battery, and shipment country. The safest RFQ asks for a document list before payment.",
+    toc: [
+      ["Which documents matter?", "documents"],
+      ["CE, FCC, IEC, and battery documents", "certs"],
+      ["How to verify a certificate", "verify"],
+      ["Cleaning robots vs AMRs", "amr"],
+      ["RFQ document checklist", "checklist"],
+      ["FAQ", "faq"],
+    ],
+    sections: [
+      {
+        id: "documents",
+        h2: "Which documents matter?",
+        html: `<p>Most buyers need a combination of electrical safety, EMC, radio, battery, charger, manual, label, packing, customs, and warranty documents. The exact list changes by destination country and product configuration.</p>
+        <p>For distributor programs, request neutral model names and final document copies before printing catalogs or publishing public claims.</p>`,
+      },
+      {
+        id: "certs",
+        h2: "CE, FCC, IEC, and battery documents",
+        html: `<div class="ppt-table-wrap"><table><thead><tr><th>Document family</th><th>Why it matters</th><th>Authoritative reference</th></tr></thead><tbody>
+        <tr><td>CE / EU conformity</td><td>Relevant for products placed on the EU market, depending on applicable directives and regulations.</td><td><a href="https://single-market-economy.ec.europa.eu/single-market/ce-marking_en" target="_blank" rel="noopener">European Commission CE marking</a></td></tr>
+        <tr><td>FCC radio / EMC</td><td>Relevant for wireless and electronic products marketed in the United States.</td><td><a href="https://www.fcc.gov/oet/ea" target="_blank" rel="noopener">FCC equipment authorization</a></td></tr>
+        <tr><td>Driverless industrial truck safety</td><td>Relevant when the robot is an AMR or industrial mobile platform.</td><td><a href="https://www.iso.org/standard/70660.html" target="_blank" rel="noopener">ISO 3691-4</a></td></tr>
+        <tr><td>Workplace floor safety</td><td>Deployment must support clean, orderly, and dry walking-working surfaces where applicable.</td><td><a href="https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.22" target="_blank" rel="noopener">OSHA 1910.22</a></td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "verify",
+        h2: "How to verify a certificate",
+        html: `<p>Match the certificate holder, model number, product photos, rating label, adapter, wireless module, battery, and report number to the actual robot being purchased. If a supplier offers multiple shell colors, docking stations, or battery packs, ask whether the document still applies.</p>
+        <p>For private-label projects, verify whether the certificate can be used with the private-label model name or whether additional documentation is required.</p>`,
+      },
+      {
+        id: "amr",
+        h2: "Cleaning robots vs warehouse AMRs",
+        html: `<p>A compact cleaning robot and a warehouse AMR may need different safety files. Cleaning robots are evaluated for electrical, radio, battery, charger, and cleaning-machine concerns. AMRs add payload, vehicle movement, docking, traffic, and industrial mobile robot safety questions.</p>
+        <div class="ppt-table-wrap"><table><thead><tr><th>Robot class</th><th>Extra document focus</th><th>Buyer action</th></tr></thead><tbody>
+        <tr><td>Compact cleaning robot</td><td>Wireless, charger, battery, cleaning module</td><td>Request model-specific CE/FCC/IEC and battery documents</td></tr>
+        <tr><td>Autonomous scrubber</td><td>Water recovery, wet floor controls, battery, charger</td><td>Confirm manual, maintenance, and safety warnings</td></tr>
+        <tr><td>Warehouse AMR</td><td>Payload, speed, obstacle detection, docking, route controls</td><td>Request risk assessment and industrial mobile robot safety documentation</td></tr>
+        </tbody></table></div>`,
+      },
+      {
+        id: "checklist",
+        h2: "RFQ document checklist",
+        html: `<ul class="ppt-check-list"><li>Final datasheet with model, dimensions, battery, charger, and wireless configuration.</li><li>CE, FCC, IEC, EMC, radio, and battery documents where relevant.</li><li>User manual, maintenance guide, warning label, and packing list.</li><li>Spare-part list and consumable replacement schedule.</li><li>Warranty, service workflow, and destination-country shipping documents.</li></ul>`,
+      },
+    ],
+    faqs: [
+      ["Is CE enough for a commercial cleaning robot?", "Not by itself. Buyers need to confirm which EU requirements apply and whether the document matches the exact model and configuration."],
+      ["Do commercial cleaning robots need FCC?", "Wireless and electronic products marketed in the United States may require FCC-related authorization or compliance documentation."],
+      ["What should distributors verify before publishing a product page?", "Verify model name, datasheet, certificate scope, photos, claims, warranty terms, and destination-market requirements."],
+      ["Are AMR certifications different from cleaning robot certifications?", "They can be. AMRs add payload, traffic, route, docking, and industrial mobile robot safety concerns."],
+      ["Can PanPanTech provide certification documents?", "PanPanTech can prepare model-specific documentation for review, but buyers should verify final documents for the destination country before order."],
+    ],
+    related: ["/commercial-cleaning-robot-manufacturer/", "/oem-odm-cleaning-robots/", "/request-a-quote/"],
+  },
+];
+
 const html = (value) =>
   String(value)
     .replaceAll("&", "&amp;")
@@ -196,8 +797,10 @@ function organizationSchema() {
     logo: url("/assets/images/p060-product.jpg"),
     description: site.description,
     email: site.email,
+    telephone: site.phone,
     address: {
       "@type": "PostalAddress",
+      streetAddress: site.address,
       addressLocality: site.city,
       addressCountry: site.country,
     },
@@ -227,15 +830,7 @@ function productSchema(product) {
     brand: { "@type": "Brand", name: site.name },
     sku: product.model,
     category: product.type,
-    additionalProperty: [
-      ["Cleaning efficiency", product.efficiency],
-      ["Runtime", product.runtime],
-      ["Dimensions", product.dimensions],
-      ["Cleaning width", product.cleaningWidth],
-      ["Clean / waste tank", product.tanks],
-      ["Navigation", product.navigation],
-      ["Certifications", product.certifications],
-    ].map(([name, value]) => ({ "@type": "PropertyValue", name, value })),
+    additionalProperty: productSpecs(product).map(([name, value]) => ({ "@type": "PropertyValue", name, value })),
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
@@ -243,6 +838,18 @@ function productSchema(product) {
       url: url(product.url.split("#")[0]),
     },
   };
+}
+
+function productSpecs(product) {
+  return [
+    [product.category === "Warehouse AMR" ? "Payload / capacity" : "Cleaning efficiency", product.efficiency],
+    ["Runtime", product.runtime],
+    ["Dimensions", product.dimensions],
+    [product.category === "Warehouse AMR" ? "Robot configuration" : "Cleaning width", product.cleaningWidth],
+    [product.category === "Warehouse AMR" ? "Payload module" : "Clean / waste tank", product.tanks],
+    ["Navigation", product.navigation],
+    ["Certifications", product.certifications],
+  ];
 }
 
 function faqSchema() {
@@ -287,19 +894,21 @@ function header(currentPath = "/") {
 }
 
 function footer() {
+  const footerProducts = products
+    .slice(0, 6)
+    .map((product) => `<a href="${product.url}">${html(product.shortTitle)}</a>`)
+    .join("");
   return `<footer class="ppt-footer">
   <div class="ppt-container ppt-footer__grid">
     <div class="ppt-footer__brand">
       <a class="ppt-logo ppt-logo--footer" href="/"><span>PanPan</span>Tech</a>
-      <p>Commercial cleaning robots and industrial automation solutions for global B2B buyers, distributors, and OEM / ODM partners.</p>
+      <p>Commercial cleaning robots, facade cleaning robots, and warehouse AMR solutions for global B2B buyers, distributors, and OEM / ODM partners.</p>
       <ul class="ppt-cert-list" aria-label="Certification categories"><li>CE</li><li>FCC</li><li>IEC</li></ul>
     </div>
     <div>
       <h2>Products</h2>
       <a href="/products/">Commercial Cleaning Robots</a>
-      <a href="/products/p060/">P060 All-in-One Robot</a>
-      <a href="/products/pt90/">PT90 Floor Scrubber</a>
-      <a href="/products/#industrial-amr-platform">Industrial AMR</a>
+      ${footerProducts}
     </div>
     <div>
       <h2>Solutions</h2>
@@ -311,14 +920,14 @@ function footer() {
     <div>
       <h2>Company</h2>
       <a href="/about/">About</a>
-      <a href="/resources/">Resources</a>
+      <a href="/blog/">Blog</a>
       <a href="/faqs/">FAQ</a>
       <a href="/contact/">Contact</a>
     </div>
   </div>
   <div class="ppt-container ppt-footer__bottom">
     <p>Copyright 2026 PanPanTech. All rights reserved.</p>
-    <p>Shenzhen, China | ${site.email}</p>
+    <p>${site.city}, China | <a href="mailto:${site.email}">${site.email}</a> | <a href="tel:${site.phone.replaceAll("-", "")}">${site.phone}</a></p>
   </div>
 </footer>`;
 }
@@ -378,7 +987,7 @@ ${items
     <img src="${product.image}" alt="${html(product.shortTitle)}" width="900" height="900" loading="lazy" decoding="async">
   </a>
   <div class="cleanbot-product-card__body">
-    <p class="cleanbot-kicker">${html(product.model)}</p>
+    <p class="cleanbot-kicker">${html(product.category)} / ${html(product.model)}</p>
     <h3><a href="${product.url}">${html(product.shortTitle)}</a></h3>
     <p>${html(product.excerpt)}</p>
     <dl class="cleanbot-mini-specs">
@@ -404,11 +1013,211 @@ ${industries
 </div>`;
 }
 
+function categoryOverview() {
+  return `<div class="ppt-category-grid">
+${productCategories
+  .map(
+    (category) => `<article class="ppt-category-tile">
+  <span>${html(category.label)}</span>
+  <p>${html(category.text)}</p>
+</article>`
+  )
+  .join("\n")}
+</div>`;
+}
+
+function productCategorySections() {
+  return productCategories
+    .map((category) => {
+      const categoryProducts = products.filter((product) => product.category === category.label);
+      if (!categoryProducts.length) return "";
+      return `<section class="ppt-product-band" id="${category.label.toLowerCase().replaceAll(" ", "-")}">
+  <div class="ppt-section-head">
+    <p class="ppt-eyebrow">${html(category.label)}</p>
+    <h2>${html(category.label)} Robots</h2>
+    <p>${html(category.text)}</p>
+  </div>
+  ${productCards(categoryProducts)}
+</section>`;
+    })
+    .join("\n");
+}
+
+function videoShowcase() {
+  return `<div class="ppt-video-grid">
+${videos
+  .map(
+    (video) => `<article class="ppt-video-card">
+  <video src="${video.src}" poster="${video.poster}" controls preload="metadata" playsinline></video>
+  <div>
+    <h3>${html(video.title)}</h3>
+    <p>${html(video.text)}</p>
+  </div>
+</article>`
+  )
+  .join("\n")}
+</div>`;
+}
+
 function faqBlock(withHeading = true) {
   return `<section class="cleanbot-faq-block" aria-labelledby="cleanbot-faq-title">
   ${withHeading ? '<h2 id="cleanbot-faq-title">Frequently Asked Questions</h2>' : ""}
   ${faq.map((item) => `<h3>${html(item.question)}</h3><p>${html(item.answer)}</p>`).join("\n")}
 </section>`;
+}
+
+function blogFaqSchema(post) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
+  };
+}
+
+function blogPostSchema(post) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: url(post.image),
+    datePublished: post.date,
+    dateModified: post.date,
+    author: { "@type": "Organization", name: site.name },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      logo: { "@type": "ImageObject", url: url("/assets/images/p060-product.jpg") },
+    },
+    articleSection: post.category,
+    keywords: post.keyword,
+    mainEntityOfPage: url(`/blog/${post.slug}/`),
+  };
+}
+
+function blogCards() {
+  return `<div class="ppt-blog-grid">
+${blogPosts
+  .map(
+    (post) => `<article class="ppt-blog-card">
+  <a class="ppt-blog-card__media" href="/blog/${post.slug}/">
+    <img src="${post.image}" alt="${html(post.imageAlt)}" width="900" height="620" loading="lazy" decoding="async">
+  </a>
+  <div class="ppt-blog-card__body">
+    <p class="cleanbot-kicker">${html(post.category)} / ${html(post.readTime)}</p>
+    <h2><a href="/blog/${post.slug}/">${html(post.title)}</a></h2>
+    <p>${html(post.description)}</p>
+    <a class="cleanbot-link" href="/blog/${post.slug}/">Read guide</a>
+  </div>
+</article>`
+  )
+  .join("\n")}
+</div>`;
+}
+
+function relatedLinkLabel(pathName) {
+  const product = products.find((item) => item.url === pathName);
+  if (product) return product.shortTitle;
+  const known = {
+    "/products/": "Product Range",
+    "/request-a-quote/": "Request a Quote",
+    "/contact/": "Contact PanPanTech",
+    "/commercial-cleaning-robot-manufacturer/": "Manufacturer Support",
+    "/oem-odm-cleaning-robots/": "OEM / ODM Program",
+    "/industries/warehouse-cleaning-robots/": "Warehouse Cleaning Robots",
+  };
+  return known[pathName] ?? pathName;
+}
+
+function blogIndexPage() {
+  const body = `<main id="main-content" class="ppt-main">
+  <section class="ppt-page-hero ppt-section--dark">
+    <div class="ppt-container">
+      <p class="ppt-eyebrow">Buyer Guides</p>
+      <h1>Commercial Cleaning and Warehouse Robot Blog</h1>
+      <p class="ppt-lead">Practical guides for facility managers, distributors, and importers comparing cleaning robots, autonomous scrubbers, facade robots, warehouse AMRs, and sourcing documents.</p>
+    </div>
+  </section>
+  <section class="ppt-section ppt-section--soft">
+    <div class="ppt-container">
+      ${blogCards()}
+    </div>
+  </section>
+  ${finalCta("Send the guide you are reading, your site type, and your target robot class. PanPanTech will map the right model and sourcing documents.")}</main>`;
+
+  return layout({
+    path: "/blog/",
+    title: "Commercial Robot Blog | PanPanTech",
+    description:
+      "Buyer guides for commercial cleaning robots, autonomous floor scrubbers, facade cleaning robots, warehouse AMRs, certifications, and sourcing.",
+    body,
+    schemas: [breadcrumbSchema([["Home", "/"], ["Blog", "/blog/"]])],
+  });
+}
+
+function blogArticlePage(post) {
+  const toc = post.toc
+    .map(([label, id]) => `<a href="#${id}">${html(label)}</a>`)
+    .join("");
+  const related = post.related
+    .map((href) => `<a class="ppt-resource-card" href="${href}"><span>Related</span><h3>${html(relatedLinkLabel(href))}</h3><p>Continue from this guide to the relevant product, solution, or RFQ page.</p></a>`)
+    .join("\n");
+  const body = `<main id="main-content" class="ppt-main">
+  <article class="ppt-article">
+    <header class="ppt-article-hero ppt-section--dark">
+      <div class="ppt-container ppt-article-hero__grid">
+        <div>
+          <p class="ppt-eyebrow">${html(post.category)}</p>
+          <h1>${html(post.title)}</h1>
+          <p class="ppt-lead">${html(post.intro)}</p>
+          <p class="ppt-article-meta">Updated ${html(post.date)} | ${html(post.readTime)}</p>
+        </div>
+        <figure class="ppt-article-hero__media">
+          <img src="${post.image}" width="1100" height="760" alt="${html(post.imageAlt)}" decoding="async" fetchpriority="high">
+        </figure>
+      </div>
+    </header>
+    <div class="ppt-container ppt-article-layout">
+      <aside class="ppt-article-toc" aria-label="Table of contents">
+        <h2>Contents</h2>
+        ${toc}
+      </aside>
+      <div class="ppt-article-body">
+        ${post.sections.map((section) => `<section id="${section.id}"><h2>${html(section.h2)}</h2>${section.html}</section>`).join("\n")}
+        <section id="faq" class="ppt-article-faq">
+          <h2>FAQ</h2>
+          ${post.faqs.map(([question, answer]) => `<h3>${html(question)}</h3><p>${html(answer)}</p>`).join("\n")}
+        </section>
+        <section class="ppt-article-related">
+          <h2>Related PanPanTech pages</h2>
+          <div class="ppt-resource-grid">${related}</div>
+        </section>
+      </div>
+    </div>
+  </article>
+  ${finalCta(`Send your site details and ask for the ${post.title} checklist. PanPanTech will recommend the right configuration and documents.`)}
+</main>`;
+
+  return layout({
+    path: `/blog/${post.slug}/`,
+    title: post.metaTitle,
+    description: post.description,
+    body,
+    image: post.image,
+    schemas: [
+      breadcrumbSchema([
+        ["Home", "/"],
+        ["Blog", "/blog/"],
+        [post.title, `/blog/${post.slug}/`],
+      ]),
+      blogPostSchema(post),
+      blogFaqSchema(post),
+    ],
+  });
 }
 
 function finalCta(text = "Send your floor area, cleaning frequency, destination country, and OEM requirements. PanPanTech will recommend the right configuration and next steps.") {
@@ -427,20 +1236,20 @@ function homePage() {
     <div class="ppt-container ppt-hero__grid">
       <div class="ppt-hero__copy">
         <p class="ppt-eyebrow">Commercial Cleaning & Logistics Robots</p>
-        <h1>Commercial cleaning robots for facilities that need proof, not promises</h1>
-        <p class="ppt-lead">PanPanTech supplies autonomous floor scrubbers, multifunction cleaning robots, robotic sweepers, facade robots, and industrial AMRs for warehouses, retail, airports, hospitals, hotels, factories, and OEM / ODM partners.</p>
+        <h1>Commercial robots for cleaning, facade care, and warehouse automation</h1>
+        <p class="ppt-lead">PanPanTech supplies autonomous floor scrubbers, compact cleaning robots, outdoor sweepers, facade cleaning robots, and warehouse AMRs for facilities, distributors, and OEM / ODM partners.</p>
         <div class="ppt-actions">
           <a class="ppt-button ppt-button--primary" href="/products/">Explore Products</a>
           <a class="ppt-button ppt-button--outline-on-dark" href="/request-a-quote/">Get a Quote</a>
         </div>
         <div class="ppt-stat-row" aria-label="Key capabilities">
-          <div><strong>4,000</strong><span>m2/h max scrubber class</span></div>
-          <div><strong>6-in-1</strong><span>P060 compact cleaning modes</span></div>
-          <div><strong>OEM</strong><span>Private-label ready</span></div>
+          <div><strong>9</strong><span>robot products now listed</span></div>
+          <div><strong>600 kg</strong><span>heavy-payload AMR class</span></div>
+          <div><strong>4,000</strong><span>m2/h scrubber class</span></div>
         </div>
       </div>
       <figure class="ppt-hero__media">
-        <img src="/assets/images/p060-hero.jpg" width="930" height="1120" alt="PanPanTech commercial cleaning robot in a white studio scene" decoding="async" fetchpriority="high">
+        <img src="/assets/images/p060-product.jpg" width="930" height="1120" alt="PanPanTech commercial cleaning robot in a white studio scene" decoding="async" fetchpriority="high">
       </figure>
     </div>
   </section>
@@ -449,12 +1258,39 @@ function homePage() {
     <div class="ppt-container ppt-answer-grid">
       <div>
         <p class="ppt-eyebrow">Answer first</p>
-        <h2>Robotic cleaning cuts repetitive floor labor while keeping your team in control</h2>
+        <h2>Robots cut repetitive facility work while keeping your team in control</h2>
       </div>
       <div>
-        <p>A commercial cleaning robot handles large, repeated cleaning routes and records the work. Your staff stay focused on exceptions, detail cleaning, guest-facing tasks, and safety checks. That is the value buyers need to see before a demo.</p>
+        <p>Cleaning robots handle repeated floor routes and record the work. AMRs move materials between warehouse and production points. Your team stays focused on exceptions, safety checks, customer-facing tasks, and process control.</p>
         <a class="ppt-link" href="/commercial-cleaning-robot-manufacturer/">See manufacturer capabilities</a>
       </div>
+    </div>
+  </section>
+
+  <section class="ppt-section ppt-section--soft">
+    <div class="ppt-container ppt-manufacturer-system">
+      <div class="ppt-section-head">
+        <p class="ppt-eyebrow">B2B Manufacturer Framework</p>
+        <h2>From robot selection to deployable facility system</h2>
+        <p>PanPanTech presents commercial robots as configurable projects: model fit, documentation, quality checks, logistics, training, and support are handled before the buyer commits to scale.</p>
+      </div>
+      <div class="ppt-system-grid">
+        <article><span>01</span><h3>Scope</h3><p>Floor area, payload, site photos, traffic pattern, route timing, and destination-country requirements.</p></article>
+        <article><span>02</span><h3>Configure</h3><p>Cleaning modules, AMR payload options, docking workflow, spare parts, labels, and OEM model naming.</p></article>
+        <article><span>03</span><h3>Verify</h3><p>Datasheets, certifications, inspection points, packing details, and proof-of-work reporting expectations.</p></article>
+        <article><span>04</span><h3>Deploy</h3><p>Training, route setup, maintenance workflow, warranty terms, and distributor after-sales responsibilities.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ppt-section">
+    <div class="ppt-container">
+      ${sectionHead(
+        "Video Demos",
+        "See robots in motion before the RFQ",
+        "Short local demo clips give buyers a faster feel for cleaning routes, compact robot behavior, and warehouse AMR movement."
+      )}
+      ${videoShowcase()}
     </div>
   </section>
 
@@ -462,9 +1298,10 @@ function homePage() {
     <div class="ppt-container">
       ${sectionHead(
         "Product Range",
-        "One PanPanTech range for every facility format",
-        "Start with your cleaning environment. Then map to robot size, cleaning mode, runtime, water capacity, and OEM requirements."
+        "Commercial robots by facility task",
+        "Start with the work to automate: indoor cleaning, large-area scrubbing, outdoor sweeping, facade care, or warehouse material movement."
       )}
+      ${categoryOverview()}
       ${productCards(products)}
     </div>
   </section>
@@ -474,7 +1311,7 @@ function homePage() {
       <div>
         <p class="ppt-eyebrow">Manufacturing & QC</p>
         <h2>Built for B2B sourcing checks</h2>
-        <p>PanPanTech presents a unified product family with manufacturing partners, quality control, export documentation, spare parts planning, and clear OEM / ODM cooperation terms. Public certification claims should be verified against final white-label documents before launch.</p>
+        <p>PanPanTech presents a unified product family with manufacturing partners, quality control, export documentation, spare parts planning, and clear OEM / ODM cooperation terms. Final certification claims should be verified against signed model documents before launch.</p>
         <a class="ppt-button ppt-button--outline-on-dark" href="/oem-odm-cleaning-robots/">OEM / ODM Program</a>
       </div>
       <div class="ppt-process-list">
@@ -529,16 +1366,16 @@ function homePage() {
   <section class="ppt-section ppt-section--soft">
     <div class="ppt-container ppt-resource-grid">
       ${sectionHead(
-        "SEO / GEO Resources",
-        "Buyer guides that answer real search questions",
-        "Use these resources to compare cleaning robot types, sourcing paths, and facility use cases."
+        "Buyer Guides",
+        "Practical robot sourcing guides",
+        "Use these guides to compare cleaning robot types, warehouse AMR workflows, certification documents, and facility use cases."
       )}
-      ${resources
+      ${blogPosts.slice(0, 3)
         .map(
-          (item) => `<a class="ppt-resource-card" href="/resources/">
-        <span>${html(item.label)}</span>
-        <h3>${html(item.title)}</h3>
-        <p>${html(item.text)}</p>
+          (post) => `<a class="ppt-resource-card" href="/blog/${post.slug}/">
+        <span>${html(post.category)}</span>
+        <h3>${html(post.title)}</h3>
+        <p>${html(post.description)}</p>
       </a>`
         )
         .join("\n")}
@@ -577,12 +1414,15 @@ function productsPage() {
   <section class="ppt-page-hero ppt-section--dark">
     <div class="ppt-container">
       <p class="ppt-eyebrow">Product Range</p>
-      <h1>Commercial Cleaning Robots</h1>
-      <p class="ppt-lead">Compare PanPanTech robot classes by facility type, cleaning task, efficiency, runtime, and OEM requirements.</p>
+      <h1>Commercial Cleaning, Facade, and Warehouse Robots</h1>
+      <p class="ppt-lead">Compare PanPanTech robot classes by facility task, payload, cleaning performance, runtime, navigation, and OEM requirements.</p>
     </div>
   </section>
   <section class="ppt-section ppt-section--soft">
-    <div class="ppt-container">${productCards(products)}</div>
+    <div class="ppt-container">
+      ${categoryOverview()}
+      ${productCategorySections()}
+    </div>
   </section>
   <section class="ppt-section">
     <div class="ppt-container ppt-content">
@@ -590,35 +1430,28 @@ function productsPage() {
       <table>
         <thead><tr><th>Buying question</th><th>What to compare</th></tr></thead>
         <tbody>
-          <tr><td>How large is the floor area?</td><td>Match square meters per hour, tank size, route time, and charging workflow.</td></tr>
+          <tr><td>Which task should be automated?</td><td>Choose indoor cleaning, large-area scrubbing, outdoor sweeping, facade cleaning, delivery AMR, conveyor AMR, or heavy-payload AMR first.</td></tr>
+          <tr><td>How large is the floor area or payload?</td><td>For cleaning robots, compare square meters per hour, tank size, route time, and charging workflow. For AMRs, compare payload, path clearance, docking, and scheduling.</td></tr>
           <tr><td>Does the robot work around people?</td><td>Compare navigation sensors, obstacle handling, operating speed, and safety procedures.</td></tr>
           <tr><td>Is this a distributor or OEM project?</td><td>Confirm model codes, neutral datasheets, packaging, certifications, and support terms.</td></tr>
         </tbody>
       </table>
     </div>
   </section>
-  ${finalCta("Send your floor area, site type, and target robot class. PanPanTech will recommend the right model mix and next steps.")}</main>`;
+  ${finalCta("Send your site type, floor area, payload, target task, and destination country. PanPanTech will recommend the right model mix and next steps.")}</main>`;
 
   return layout({
     path: "/products/",
-    title: "Commercial Cleaning Robots | PanPanTech Product Range",
+    title: "Commercial Cleaning and Warehouse Robots | PanPanTech Product Range",
     description:
-      "Compare PanPanTech P060, PT90, outdoor sweeping robots, and industrial AMR platforms by facility type, efficiency, runtime, and OEM requirements.",
+      "Compare PanPanTech cleaning robots, scrubbers, outdoor sweepers, facade cleaning robots, and warehouse AMRs by task, payload, efficiency, runtime, and OEM requirements.",
     body,
     schemas: [breadcrumbSchema([["Home", "/"], ["Products", "/products/"]])],
   });
 }
 
 function productPage(product) {
-  const specs = [
-    ["Cleaning efficiency", product.efficiency],
-    ["Runtime", product.runtime],
-    ["Dimensions", product.dimensions],
-    ["Cleaning width", product.cleaningWidth],
-    ["Clean / waste tank", product.tanks],
-    ["Navigation", product.navigation],
-    ["Certifications", product.certifications],
-  ];
+  const specs = productSpecs(product);
   const body = `<main id="main-content" class="ppt-main ppt-product">
   <nav class="ppt-container ppt-breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a><span>/</span><a href="/products/">Products</a><span>/</span><span>${html(product.shortTitle)}</span>
@@ -633,7 +1466,7 @@ function productPage(product) {
         <h1>${html(product.title)}</h1>
         <p class="ppt-lead">${html(product.excerpt)}</p>
         <div class="ppt-product-kpis">
-          <div><strong>${html(product.efficiency)}</strong><span>Cleaning efficiency</span></div>
+          <div><strong>${html(product.efficiency)}</strong><span>${product.category === "Warehouse AMR" ? "Payload / capacity" : "Cleaning efficiency"}</span></div>
           <div><strong>${html(product.runtime)}</strong><span>Runtime</span></div>
           <div><strong>${html(product.navigation)}</strong><span>Navigation</span></div>
         </div>
@@ -745,7 +1578,7 @@ function manufacturerPage() {
       ]),
     ],
     content: `<section class="ppt-section ppt-section--soft">
-  <div class="ppt-container">${productCards(products.slice(0, 2))}</div>
+  <div class="ppt-container">${productCards(products.slice(0, 6))}</div>
 </section>
 <section class="ppt-section">
   <div class="ppt-container ppt-content">
@@ -783,10 +1616,11 @@ function warehousePage() {
   <div class="ppt-container ppt-split">
     <div>
       <h2>Best-fit models for warehouse floors</h2>
-      <p>PT90 class scrubbers fit broad indoor logistics floors. Outdoor sweeping robots support campuses and loading areas. P060 fits offices, showrooms, and support spaces attached to the warehouse.</p>
+      <p>PT90 and IQ70B scrubbers fit broad indoor logistics floors. Outdoor sweeping robots support campuses and loading areas. T300 and T600 AMRs support line-side delivery, picking support, and heavy material movement.</p>
       <ul class="ppt-check-list">
         <li>Map cleaning routes by floor area, shift time, and aisle width.</li>
         <li>Compare tank size, cleaning width, runtime, and recharge workflow.</li>
+        <li>For AMR projects, compare payload, path clearance, docking points, and line-side delivery routes.</li>
         <li>Use route reports as proof of work for facility managers and clients.</li>
       </ul>
     </div>
@@ -864,13 +1698,13 @@ function aboutPage() {
 function quotePage() {
   return simplePage({
     path: "/request-a-quote/",
-    title: "Request a Cleaning Robot Quote | PanPanTech",
+    title: "Request a Commercial Robot Quote | PanPanTech",
     description:
-      "Request a quote for PanPanTech commercial cleaning robots. Share floor area, site type, product interest, quantity, destination country, and OEM needs.",
+      "Request a quote for PanPanTech cleaning robots, facade cleaning robots, and warehouse AMRs with site, payload, quantity, and OEM details.",
     eyebrow: "RFQ",
-    h1: "Request a cleaning robot quote",
+    h1: "Request a commercial robot quote",
     lead:
-      "Tell us your floor area, cleaning schedule, product interest, and destination country. PanPanTech will recommend the right model and confirm OEM or distributor options.",
+      "Tell us your site type, cleaning schedule, payload or product interest, and destination country. PanPanTech will recommend the right model and confirm OEM or distributor options.",
     schemas: [breadcrumbSchema([["Home", "/"], ["Request a Quote", "/request-a-quote/"]])],
     content: `<section class="ppt-section">
   <div class="ppt-container ppt-product-overview">
@@ -879,15 +1713,16 @@ function quotePage() {
       <p><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></p>
       <p><label for="company">Company</label><input id="company" name="company" autocomplete="organization"></p>
       <p><label for="country">Country</label><input id="country" name="country" autocomplete="country-name"></p>
-      <p><label for="interest">Product interest</label><input id="interest" name="product_interest" placeholder="P060, PT90, OEM / ODM, warehouse project"></p>
-      <p><label for="quantity">Purchase quantity</label><input id="quantity" name="quantity" placeholder="Pilot, 5 units, 20 units, distributor launch"></p>
-      <p class="cleanbot-form-wrap__wide"><label for="message">Project details</label><textarea id="message" name="message" rows="6" placeholder="Floor area, site type, cleaning schedule, destination country, certifications, and OEM needs."></textarea></p>
+      <p><label for="interest">Product interest</label><input id="interest" name="product_interest" aria-describedby="interest-help"><small id="interest-help">P060, PT90, IQ70B, XG1, FW1, T300, T600, or OEM / ODM.</small></p>
+      <p><label for="quantity">Purchase quantity</label><input id="quantity" name="quantity" aria-describedby="quantity-help"><small id="quantity-help">Pilot order, 5 units, 20 units, or distributor launch.</small></p>
+      <p class="cleanbot-form-wrap__wide"><label for="message">Project details</label><textarea id="message" name="message" rows="6" aria-describedby="message-help"></textarea><small id="message-help">Include floor area, payload, site type, cleaning schedule, destination country, certifications, and OEM needs.</small></p>
       <p class="cleanbot-form-wrap__wide"><button class="cleanbot-button cleanbot-button--primary" type="submit">Email RFQ</button></p>
     </form>
     <aside class="ppt-note-card">
-      <h2>Static-site note</h2>
-      <p>This GitHub-ready version uses an email RFQ form. For production lead capture, connect Formspree, Tally, HubSpot, Fluent Forms on WordPress, or another CRM endpoint.</p>
+      <h2>Direct contact</h2>
+      <p>Use the form or contact PanPanTech directly for model selection, distributor cooperation, and OEM / ODM requests.</p>
       <p>Email: <a href="mailto:${site.email}">${site.email}</a></p>
+      <p>Phone: <a href="tel:${site.phone.replaceAll("-", "")}">${site.phone}</a></p>
     </aside>
   </div>
 </section>`,
@@ -897,17 +1732,23 @@ function quotePage() {
 function contactPage() {
   return simplePage({
     path: "/contact/",
-    title: "Contact PanPanTech | Commercial Cleaning Robots",
+    title: "Contact PanPanTech | Commercial Robots",
     description:
-      "Contact PanPanTech for commercial cleaning robot model selection, OEM / ODM programs, distributor support, and warehouse cleaning robot projects.",
+      "Contact PanPanTech for commercial cleaning robot model selection, facade cleaning robots, warehouse AMR projects, OEM / ODM programs, and distributor support.",
     eyebrow: "Contact",
     h1: "Contact PanPanTech",
     lead:
-      `Email ${site.email} or use the RFQ page for model selection and OEM / ODM requests.`,
+      `Email ${site.email}, call ${site.phone}, or use the RFQ page for model selection and OEM / ODM requests.`,
     schemas: [breadcrumbSchema([["Home", "/"], ["Contact", "/contact/"]])],
     content: `<section class="ppt-section">
   <div class="ppt-container ppt-cta-panel">
-    <div><h2>Need a product recommendation?</h2><p>Share your facility type, floor area, cleaning schedule, destination country, and purchase plan.</p></div>
+    <div>
+      <h2>Need a product recommendation?</h2>
+      <p>Share your facility type, floor area, payload, cleaning schedule, destination country, and purchase plan.</p>
+      <p><strong>Address:</strong> ${html(site.address)}</p>
+      <p><strong>Email:</strong> <a href="mailto:${site.email}">${site.email}</a></p>
+      <p><strong>Phone:</strong> <a href="tel:${site.phone.replaceAll("-", "")}">${site.phone}</a></p>
+    </div>
     <a class="ppt-button ppt-button--primary" href="/request-a-quote/">Request a Quote</a>
   </div>
 </section>`,
@@ -924,7 +1765,7 @@ function placeholderIndustryPage(label, pathName) {
     lead:
       "This static landing page gives buyers a direct path to compare robot classes and request a facility-specific recommendation.",
     schemas: [breadcrumbSchema([["Home", "/"], [label, pathName]])],
-    content: `<section class="ppt-section ppt-section--soft"><div class="ppt-container">${productCards(products.slice(0, 2))}</div></section>${finalCta()}`,
+    content: `<section class="ppt-section ppt-section--soft"><div class="ppt-container">${productCards(products.slice(0, 6))}</div></section>${finalCta()}`,
   });
 }
 
@@ -970,6 +1811,7 @@ body {
   letter-spacing: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 body.ppt-menu-open { overflow: hidden; }
 img { display: block; max-width: 100%; height: auto; }
@@ -981,14 +1823,15 @@ h1, h2, h3, h4 {
   font-weight: 650;
   line-height: 1.16;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
-h1 { font-size: 38px; }
+h1 { font-size: 34px; }
 h2 { font-size: 30px; }
 h3 { font-size: 20px; }
-p { margin: 0 0 16px; }
+p { margin: 0 0 16px; overflow-wrap: anywhere; }
 ul, ol { margin: 0 0 20px; padding-left: 22px; }
 table { border-collapse: collapse; width: 100%; }
-.ppt-container { width: min(100% - 32px, var(--ppt-container)); margin-inline: auto; }
+.ppt-container { width: calc(100% - 32px); max-width: var(--ppt-container); margin-inline: auto; }
 .ppt-main { background: var(--ppt-canvas); }
 .ppt-section { padding: var(--ppt-section) 0; }
 .ppt-section--soft { background: var(--ppt-soft); }
@@ -1074,6 +1917,7 @@ table { border-collapse: collapse; width: 100%; }
   color: var(--ppt-blue);
 }
 .ppt-header__actions { display: flex; align-items: center; gap: 10px; }
+.ppt-header__actions > .ppt-button { display: none; }
 .ppt-menu-toggle {
   display: inline-grid;
   width: 44px;
@@ -1125,7 +1969,7 @@ table { border-collapse: collapse; width: 100%; }
 }
 .ppt-hero { position: relative; overflow: hidden; padding: 48px 0; background: linear-gradient(115deg, #070b12 0%, #101827 58%, #0a3f94 100%); }
 .ppt-hero__grid { position: relative; display: grid; gap: 32px; align-items: center; }
-.ppt-hero h1 { max-width: 760px; font-size: 42px; }
+.ppt-hero h1 { max-width: 760px; font-size: 36px; }
 .ppt-hero__copy { position: relative; z-index: 2; }
 .ppt-hero__media {
   position: relative;
@@ -1195,6 +2039,107 @@ table { border-collapse: collapse; width: 100%; }
   padding: 16px;
 }
 .cleanbot-industry-tile span { width: 10px; height: 10px; flex: none; background: var(--ppt-teal); }
+.ppt-manufacturer-system { display: grid; gap: 8px; }
+.ppt-system-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.ppt-system-grid article {
+  border: 1px solid var(--ppt-line);
+  border-radius: var(--ppt-radius);
+  background: #ffffff;
+  padding: 20px;
+}
+.ppt-system-grid span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--ppt-teal);
+  font-size: 13px;
+  font-weight: 800;
+}
+.ppt-system-grid h3 { margin-bottom: 8px; }
+.ppt-system-grid p { margin: 0; }
+.ppt-category-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 28px; }
+.ppt-category-tile {
+  border: 1px solid var(--ppt-line);
+  border-radius: var(--ppt-radius);
+  background: #ffffff;
+  padding: 18px;
+}
+.ppt-category-tile span { display: block; margin-bottom: 8px; color: var(--ppt-ink); font-weight: 800; }
+.ppt-category-tile p { margin: 0; color: var(--ppt-body); }
+.ppt-product-band { margin-top: 44px; }
+.ppt-product-band:first-of-type { margin-top: 28px; }
+.ppt-video-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.ppt-video-card {
+  overflow: hidden;
+  border: 1px solid var(--ppt-line);
+  border-radius: var(--ppt-radius);
+  background: #ffffff;
+}
+.ppt-video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--ppt-dark-2);
+  object-fit: cover;
+}
+.ppt-video-card div { padding: 18px; }
+.ppt-video-card h3 { margin-bottom: 8px; font-size: 18px; }
+.ppt-video-card p { margin: 0; color: var(--ppt-body); }
+.ppt-blog-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.ppt-blog-card {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--ppt-line);
+  border-radius: var(--ppt-radius);
+  background: #ffffff;
+}
+.ppt-blog-card__media {
+  display: block;
+  background: #f8fafc;
+  aspect-ratio: 16 / 10;
+}
+.ppt-blog-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.ppt-blog-card__body { display: grid; gap: 12px; padding: 22px; }
+.ppt-blog-card__body h2 { margin: 0; font-size: 22px; }
+.ppt-blog-card__body h2 a { color: var(--ppt-ink); }
+.ppt-blog-card__body p { margin: 0; }
+.ppt-article-hero { padding: 52px 0; }
+.ppt-article-hero__grid { display: grid; gap: 28px; align-items: center; }
+.ppt-article-hero__media {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--ppt-radius);
+  background: #ffffff;
+  aspect-ratio: 16 / 10;
+}
+.ppt-article-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+.ppt-article-meta { color: var(--ppt-on-dark-muted); font-size: 14px; font-weight: 700; }
+.ppt-article-layout { display: grid; gap: 28px; min-width: 0; padding: 42px 0 12px; }
+.ppt-article-toc {
+  border: 1px solid var(--ppt-line);
+  border-radius: var(--ppt-radius);
+  background: #ffffff;
+  padding: 18px;
+  min-width: 0;
+  overflow: hidden;
+}
+.ppt-article-toc h2 { margin-bottom: 12px; font-size: 18px; }
+.ppt-article-toc a { display: block; border-top: 1px solid var(--ppt-line); color: var(--ppt-body); padding: 10px 0; font-weight: 700; overflow-wrap: anywhere; }
+.ppt-article-toc a:first-of-type { border-top: 0; }
+.ppt-article-body {
+  max-width: 860px;
+  color: var(--ppt-body);
+  min-width: 0;
+}
+.ppt-article-body section { margin-bottom: 42px; }
+.ppt-article-body h2 { margin-top: 0; }
+.ppt-article-body h3 { margin-top: 22px; font-size: 19px; }
+.ppt-table-wrap { overflow-x: auto; width: 100%; max-width: 100%; margin: 20px 0; border: 1px solid var(--ppt-line); border-radius: var(--ppt-radius); background: #ffffff; }
+.ppt-table-wrap table { min-width: 680px; }
+.ppt-table-wrap th, .ppt-table-wrap td { border-bottom: 1px solid var(--ppt-line); padding: 13px 14px; text-align: left; vertical-align: top; }
+.ppt-table-wrap th { background: #fbfcff; color: var(--ppt-ink); font-weight: 800; }
+.ppt-table-wrap tr:last-child th, .ppt-table-wrap tr:last-child td { border-bottom: 0; }
+.ppt-article-related .ppt-resource-grid { margin-top: 16px; }
 .ppt-check-list { display: grid; gap: 12px; padding: 0; list-style: none; }
 .ppt-check-list li { position: relative; border-top: 1px solid var(--ppt-line); padding: 12px 0 0 26px; }
 .ppt-check-list li::before {
@@ -1269,6 +2214,7 @@ table { border-collapse: collapse; width: 100%; }
 .cleanbot-quote-form { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .cleanbot-quote-form p { margin: 0; }
 .cleanbot-quote-form label { display: block; margin-bottom: 6px; color: var(--ppt-ink); font-size: 14px; font-weight: 700; }
+.cleanbot-quote-form small { display: block; margin-top: 6px; color: var(--ppt-muted); font-size: 13px; line-height: 1.4; }
 .cleanbot-quote-form input, .cleanbot-quote-form textarea {
   width: 100%;
   min-height: 44px;
@@ -1310,6 +2256,8 @@ table { border-collapse: collapse; width: 100%; }
   padding-top: 18px;
 }
 .ppt-footer__bottom p { margin: 0; color: rgba(255, 255, 255, 0.55); font-size: 13px; }
+.ppt-footer__bottom a { display: inline; margin: 0; color: rgba(255, 255, 255, 0.72); font-size: inherit; }
+.ppt-cta-panel a:not(.ppt-button) { color: #ffffff; text-decoration: underline; text-underline-offset: 3px; }
 .screen-reader-text {
   position: absolute;
   width: 1px;
@@ -1318,26 +2266,53 @@ table { border-collapse: collapse; width: 100%; }
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
+@media (max-width: 559px) {
+  .ppt-container {
+    width: calc(100% - 32px);
+    max-width: 358px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .ppt-hero h1 { font-size: 32px; }
+  .ppt-actions .ppt-button { flex: 1 1 0; padding-inline: 12px; }
+  .ppt-table-wrap table { min-width: 0; table-layout: fixed; }
+  .ppt-table-wrap th,
+  .ppt-table-wrap td {
+    padding: 10px 8px;
+    font-size: 12px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+}
 @media (min-width: 560px) {
   h1 { font-size: 46px; }
   h2 { font-size: 34px; }
+  .ppt-header__actions > .ppt-button { display: inline-flex; }
   .ppt-stat-row, .ppt-product-kpis { grid-template-columns: repeat(3, 1fr); }
-  .cleanbot-product-grid, .cleanbot-industry-grid, .ppt-feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .cleanbot-product-grid, .cleanbot-industry-grid, .ppt-feature-grid, .ppt-video-grid, .ppt-system-grid, .ppt-blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .ppt-category-grid { grid-template-columns: repeat(2, 1fr); }
   .cleanbot-quote-form { grid-template-columns: repeat(2, 1fr); }
   .cleanbot-form-wrap__wide { grid-column: 1 / -1; }
 }
 @media (min-width: 820px) {
   :root { --ppt-section: 78px; }
-  .ppt-container { width: min(100% - 48px, var(--ppt-container)); }
+  .ppt-container { width: calc(100% - 48px); max-width: var(--ppt-container); }
   .ppt-menu-toggle { display: none; }
   .ppt-nav { position: static; display: block; border: 0; background: transparent; padding: 0; }
   .ppt-nav__list { display: flex; align-items: center; gap: 2px; }
   .ppt-nav__list a { padding: 10px 11px; font-size: 14px; }
   .ppt-hero { padding: 82px 0; }
   .ppt-hero__grid, .ppt-answer-grid, .ppt-split, .ppt-product-overview, .ppt-product-hero__grid { grid-template-columns: 1fr 1fr; }
+  .ppt-article-hero__grid { grid-template-columns: 1.1fr 0.9fr; }
+  .ppt-article-layout { grid-template-columns: 240px minmax(0, 1fr); align-items: start; }
+  .ppt-article-toc { position: sticky; top: 92px; }
   .ppt-hero h1 { font-size: 56px; }
-  .cleanbot-product-grid { grid-template-columns: repeat(4, 1fr); }
+  .cleanbot-product-grid { grid-template-columns: repeat(3, 1fr); }
   .cleanbot-industry-grid { grid-template-columns: repeat(4, 1fr); }
+  .ppt-system-grid { grid-template-columns: repeat(4, 1fr); }
+  .ppt-category-grid { grid-template-columns: repeat(5, 1fr); }
+  .ppt-video-grid { grid-template-columns: repeat(3, 1fr); }
+  .ppt-blog-grid { grid-template-columns: repeat(3, 1fr); }
   .ppt-cta-panel { grid-template-columns: 1fr auto; padding: 38px; }
   .ppt-resource-grid { grid-template-columns: repeat(3, 1fr); }
   .ppt-resource-grid .ppt-section-head { grid-column: 1 / -1; }
@@ -1409,17 +2384,23 @@ Sitemap: ${site.domain}/sitemap.xml
 function llmsTxt() {
   return `# PanPanTech
 
-> PanPanTech supplies commercial cleaning robots, autonomous floor scrubbers, multifunction cleaning robots, sweeping robots, and industrial AMR solutions for warehouses, retail, airports, hospitals, hotels, factories, and OEM / ODM distributors.
+> PanPanTech supplies commercial cleaning robots, autonomous floor scrubbers, outdoor sweeping robots, facade cleaning robots, and warehouse AMR solutions for warehouses, retail, airports, hospitals, hotels, factories, and OEM / ODM distributors.
 
 ## Products
 - [Commercial Cleaning Robots](${site.domain}/products/): product range overview.
 - [P060 All-in-One Cleaning Robot](${site.domain}/products/p060/): compact 6-in-1 robot for indoor commercial cleaning.
 - [PT90 Autonomous Floor Scrubber](${site.domain}/products/pt90/): large-area floor scrubbing robot for warehouses and public facilities.
+- [IQ70B Floor Scrubber](${site.domain}/products/iq70b-autonomous-scrubber/): autonomous scrubber with service-station option.
+- [XG1 Outdoor Sweeper](${site.domain}/products/xg1-outdoor-sweeping-robot/): outdoor sweeping robot for campuses and logistics parks.
+- [FW1 Facade Cleaning Robot](${site.domain}/products/fw1-facade-cleaning-robot/): facade and glass curtain wall cleaning robot.
+- [T300 Delivery AMR](${site.domain}/products/t300-industrial-delivery-amr/): 300 kg payload material-handling AMR.
+- [T600 Heavy-Payload AMR](${site.domain}/products/t600-heavy-payload-amr/): 600 kg payload warehouse AMR.
 
 ## Buying And OEM
 - [Commercial Cleaning Robot Manufacturer](${site.domain}/commercial-cleaning-robot-manufacturer/): manufacturing, QC, export, and certification information.
 - [OEM / ODM Cleaning Robots](${site.domain}/oem-odm-cleaning-robots/): private-label and distributor support.
 - [Request a Quote](${site.domain}/request-a-quote/): RFQ path for facility buyers and distributors.
+- [Blog](${site.domain}/blog/): buyer guides for cleaning robots, warehouse AMRs, facade robots, sourcing, and certification checks.
 
 ## Facility Solutions
 - [Warehouse Cleaning Robots](${site.domain}/industries/warehouse-cleaning-robots/): recommended models and ROI guidance for warehouses.
@@ -1450,17 +2431,24 @@ async function main() {
   const pages = new Map([
     ["/", homePage()],
     ["/products/", productsPage()],
-    ["/products/p060/", productPage(products[0])],
-    ["/products/pt90/", productPage(products[1])],
     ["/oem-odm-cleaning-robots/", oemPage()],
     ["/commercial-cleaning-robot-manufacturer/", manufacturerPage()],
     ["/industries/warehouse-cleaning-robots/", warehousePage()],
+    ["/blog/", blogIndexPage()],
     ["/resources/", resourcesPage()],
     ["/faqs/", faqPage()],
     ["/about/", aboutPage()],
     ["/request-a-quote/", quotePage()],
     ["/contact/", contactPage()],
   ]);
+
+  for (const product of products) {
+    pages.set(product.url.split("#")[0], productPage(product));
+  }
+
+  for (const post of blogPosts) {
+    pages.set(`/blog/${post.slug}/`, blogArticlePage(post));
+  }
 
   for (const [label, href] of industries) {
     if (!pages.has(href)) {
