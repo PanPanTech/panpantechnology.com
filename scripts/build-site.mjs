@@ -25,253 +25,1052 @@ const nav = [
 
 const products = [
   {
-    slug: "p060",
-    title: "P060 All-in-One Commercial Cleaning Robot",
-    shortTitle: "P060 All-in-One Cleaning Robot",
-    model: "P060",
-    category: "Indoor Cleaning",
-    type: "Multifunction commercial cleaning robot",
-    excerpt:
-      "A compact 6-in-1 robot for sweeping, scrubbing, vacuuming, mopping, self-cleaning, and sanitizing commercial floors.",
-    image: "/assets/images/p060-product.jpg",
-    url: "/products/p060/",
-    efficiency: "Up to 1,368 m2/h",
-    runtime: "Up to 4.5 h standard scrubbing",
-    dimensions: "650 x 580 x 550 mm",
-    cleaningWidth: "520 mm scrubbing width",
-    tanks: "22 L clean / 15 L waste",
-    navigation: "LiDAR + vision autonomous navigation",
-    certifications: "CE / FCC / IEC documentation confirmed per order",
-    bestFor: "Offices, shops, hotels, clinics, showrooms, and small to medium indoor facilities.",
-    highlights: [
-      "Six cleaning modes in one robot: sweep, scrub, vacuum, mop, self-clean, and sanitize.",
-      "Compact body for commercial interiors, service corridors, and mixed public spaces.",
-      "Designed for distributors that need a clear model story, product photos, and RFQ path.",
+    "slug": "p060",
+    "title": "ONE S55 / P060 All-in-One Commercial Cleaning Robot",
+    "shortTitle": "ONE S55 / P060 Cleaning Robot",
+    "model": "ONE S55 / P060",
+    "category": "Indoor Cleaning",
+    "type": "6-in-1 indoor commercial cleaning robot",
+    "excerpt": "A compact all-in-one robot for sweeping, scrubbing, vacuuming, dust-pushing, self-cleaning, and sanitizing commercial floors.",
+    "image": "/assets/images/one-s55-p060-cleaning-robot.jpg",
+    "url": "/products/p060/",
+    "efficiency": "Up to 1,368 m2/h",
+    "runtime": "Up to 4.5 h standard scrubbing",
+    "dimensions": "650 x 580 x 550 mm",
+    "cleaningWidth": "520 mm scrubbing width",
+    "tanks": "22 L clean / 15 L waste / 1 L dust bin",
+    "navigation": "LiDAR + vision navigation",
+    "certifications": "CE / FCC / IEC documentation available per order",
+    "bestFor": "Offices, hotels, hospitals, small warehouses, factories, showrooms, and mixed indoor commercial floors.",
+    "highlights": [
+      "Combines sweep, scrub, vacuum, mop, self-cleaning, and sanitizing workflows.",
+      "70 kg compact body with 15 kPa suction and HEPA H13 filtration for indoor commercial use.",
+      "Low-noise operation and quick-change modules help distributors support varied facility tasks."
     ],
+    "specs": [
+      [
+        "Dimensions",
+        "650 x 580 x 550 mm"
+      ],
+      [
+        "Weight",
+        "70 kg"
+      ],
+      [
+        "Cleaning efficiency",
+        "About 1,197 m2/h scrubbing; up to 1,368 m2/h sweeping, vacuuming, or dust-pushing"
+      ],
+      [
+        "Cleaning width",
+        "520 mm scrubbing width"
+      ],
+      [
+        "Tank / dust capacity",
+        "22 L clean water, 15 L waste water, 1 L dust bin"
+      ],
+      [
+        "Suction",
+        "15 kPa peak suction"
+      ],
+      [
+        "Runtime",
+        "4.5 h standard scrubbing; 2.5 h strong mode"
+      ],
+      [
+        "Protection / filtration",
+        "IP43, HEPA H13"
+      ],
+      [
+        "Noise",
+        "55 dB / 45 dB modes"
+      ],
+      [
+        "Navigation",
+        "LiDAR + vision"
+      ],
+      [
+        "Certifications",
+        "CE / FCC / IEC documents available per final configuration"
+      ]
+    ]
   },
   {
-    slug: "pt90",
-    title: "PT90 Autonomous Floor Scrubber",
-    shortTitle: "PT90 Autonomous Floor Scrubber",
-    model: "PT90",
-    category: "Large-Area Scrubbing",
-    type: "Large-area autonomous floor scrubber",
-    excerpt:
-      "A driverless ride-on scrubber concept for warehouses, factories, malls, and high-traffic facilities.",
-    image: "/assets/images/pt90-scrubber.jpg",
-    url: "/products/pt90/",
-    efficiency: "Up to 4,000 m2/h",
-    runtime: "4-6 h per charge",
-    dimensions: "1340 x 1024 x 1350 mm",
-    cleaningWidth: "800 mm scrubbing / 1160 mm sweeping",
-    tanks: "140 L clean / 170 L recovery",
-    navigation: "LiDAR, depth sensing, ultrasonic sensors",
-    certifications: "Certification documents confirmed per order",
-    bestFor: "Warehouses, factories, malls, transport hubs, and large public facilities.",
-    highlights: [
-      "Large-area scrubbing for facilities where repeated routes consume staff time.",
-      "Navigation and obstacle sensing options for mixed indoor and semi-outdoor projects.",
-      "Prepared for OEM discussions where tank size, cleaning width, and route reporting matter.",
+    "slug": "pt90",
+    "title": "SC80 / PT90 Autonomous Floor Scrubber",
+    "shortTitle": "SC80 / PT90 Floor Scrubber",
+    "model": "SC80 / PT90",
+    "category": "Large-Area Scrubbing",
+    "type": "Driverless large-area floor scrubber",
+    "excerpt": "A large autonomous scrubber for transport hubs, warehouses, factories, malls, and broad indoor or semi-outdoor hard floors.",
+    "image": "/assets/images/sc80-pt90-floor-scrubber.jpg",
+    "url": "/products/pt90/",
+    "efficiency": "Up to 4,000 m2/h",
+    "runtime": "4-6 h per charge",
+    "dimensions": "1340 x 1024 x 1350 mm",
+    "cleaningWidth": "800 mm scrubbing / 1160 mm sweeping",
+    "tanks": "140 L clean water class",
+    "navigation": "LiDAR + depth camera + ultrasonic sensing",
+    "certifications": "Final documents confirmed per order",
+    "bestFor": "Large hard-floor areas in stations, airports, warehouses, factories, malls, and public facilities.",
+    "highlights": [
+      "Large cleaning width and 140 L clean-water class tank reduce route interruptions.",
+      "36 V / 200 Ah lithium iron phosphate battery supports long repeated routes.",
+      "Multi-sensor perception supports driverless operation around mixed obstacles."
     ],
+    "specs": [
+      [
+        "Dimensions",
+        "1340 x 1024 x 1350 mm"
+      ],
+      [
+        "Weight",
+        "400 kg"
+      ],
+      [
+        "Maximum efficiency",
+        "Up to 4,000 m2/h"
+      ],
+      [
+        "Cleaning width",
+        "1160 mm sweeping; 800 mm scrubbing; 1024 mm squeegee width"
+      ],
+      [
+        "Battery",
+        "36 V / 200 Ah lithium iron phosphate"
+      ],
+      [
+        "Runtime",
+        "4-6 h per charge"
+      ],
+      [
+        "Clean water tank",
+        "140 L"
+      ],
+      [
+        "Navigation",
+        "LiDAR, depth camera, and ultrasonic sensing"
+      ],
+      [
+        "Best-fit scenarios",
+        "Transport hubs, plazas, malls, warehouses, and large hard-floor facilities"
+      ]
+    ]
   },
   {
-    slug: "s55-compact-cleaning-robot",
-    title: "S55 Compact Commercial Cleaning Robot",
-    shortTitle: "S55 Compact Cleaning Robot",
-    model: "S55",
-    category: "Indoor Cleaning",
-    type: "Compact floor cleaning robot",
-    excerpt:
-      "A compact indoor cleaning robot for offices, retail aisles, clinics, apartments, and mixed commercial interiors.",
-    image: "/assets/images/s55-compact-cleaner.jpg",
-    url: "/products/s55-compact-cleaning-robot/",
-    efficiency: "Up to 1,368 m2/h",
-    runtime: "Up to 4.5 h standard cleaning",
-    dimensions: "650 x 580 x 550 mm",
-    cleaningWidth: "520 mm scrubbing width",
-    tanks: "22 L clean / 15 L waste",
-    navigation: "360-degree multi-sensor perception",
-    certifications: "CE / FCC / IEC documentation confirmed per order",
-    bestFor: "Small and medium indoor commercial areas, mixed floor materials, low-noise public spaces, and distributor starter lines.",
-    highlights: [
-      "Compact body with sweep, scrub, vacuum, dust-push, and combo cleaning modes.",
-      "One-tap mode switching helps one robot cover several floor conditions.",
-      "Suitable for distributor catalogs where compact size and easy maintenance matter.",
+    "slug": "t300-industrial-delivery-amr",
+    "title": "T300 Standard Industrial Delivery AMR",
+    "shortTitle": "T300 Standard AMR",
+    "model": "T300 Standard",
+    "category": "Warehouse AMR",
+    "type": "Industrial delivery and material-handling AMR",
+    "excerpt": "A 300 kg payload AMR platform for industrial logistics, line-side delivery, warehouse picking support, and commercial heavy delivery.",
+    "image": "/assets/images/t300-standard-amr.jpg",
+    "url": "/products/t300-industrial-delivery-amr/",
+    "efficiency": "300 kg payload class",
+    "runtime": "Project confirmed",
+    "dimensions": "Final datasheet confirmed per configuration",
+    "cleaningWidth": "Open platform with onboard touchscreen",
+    "tanks": "Flat-deck / accessory-ready payload platform",
+    "navigation": "Autonomous AMR navigation with integration interfaces",
+    "certifications": "Project safety documents confirmed per order",
+    "bestFor": "Industrial logistics, commercial heavy delivery, line-side replenishment, and warehouse material movement.",
+    "highlights": [
+      "300 kg payload class for repeatable material movement.",
+      "Onboard touchscreen and open platform support flexible operation.",
+      "Supports elevator, door, call, and software or hardware integration workflows."
     ],
+    "specs": [
+      [
+        "Payload",
+        "Up to 300 kg class"
+      ],
+      [
+        "Configuration",
+        "Standard delivery AMR with high-load chassis and open platform"
+      ],
+      [
+        "Control",
+        "Onboard touchscreen"
+      ],
+      [
+        "Interfaces",
+        "Elevator control, door access, calling, and software or hardware interfaces available by project"
+      ],
+      [
+        "Use cases",
+        "Industrial logistics and commercial heavy-load delivery"
+      ],
+      [
+        "Documentation",
+        "Final datasheet and safety file confirmed per deployment"
+      ]
+    ]
   },
   {
-    slug: "iq70b-autonomous-scrubber",
-    title: "IQ70B Autonomous Floor Scrubber",
-    shortTitle: "IQ70B Floor Scrubber",
-    model: "IQ70B",
-    category: "Large-Area Scrubbing",
-    type: "Autonomous floor scrubber with service station option",
-    excerpt:
-      "A mid-to-large autonomous scrubber for airports, factories, hospitals, stations, malls, office buildings, and warehouse floors.",
-    image: "/assets/images/iq70b-floor-scrubber.jpg",
-    url: "/products/iq70b-autonomous-scrubber/",
-    efficiency: "Up to 2,160 m2/h",
-    runtime: "Up to 5 h",
-    dimensions: "940 x 800 x 1170 mm",
-    cleaningWidth: "Project confirmed",
-    tanks: "65 L class water capacity",
-    navigation: "2D LiDAR, depth cameras, ultrasonic sensors",
-    certifications: "Project documentation confirmed per order",
-    bestFor: "Large indoor facilities that need autonomous scrubbing plus optional automatic charging, water refill, drainage, and standby workflows.",
-    highlights: [
-      "Service-station workflow can reduce manual charging and water handling.",
-      "Designed for large indoor routes in factories, stations, hospitals, malls, and offices.",
-      "Multi-sensor obstacle handling supports mixed human and machine environments.",
+    "slug": "t300-lifting-amr",
+    "title": "T300 Lifting AMR",
+    "shortTitle": "T300 Lifting AMR",
+    "model": "T300 Lifting",
+    "category": "Warehouse AMR",
+    "type": "Latent lifting AMR for rack movement",
+    "excerpt": "A T300-series AMR variant for latent lifting and rack movement in factories, warehouses, and work-in-progress transfer areas.",
+    "image": "/assets/images/t300-lifting-amr.jpg",
+    "url": "/products/t300-lifting-amr/",
+    "efficiency": "300 kg payload class",
+    "runtime": "Project confirmed",
+    "dimensions": "T300-series chassis; final datasheet confirmed",
+    "cleaningWidth": "Latent lifting rack module",
+    "tanks": "Rack / shelf payload workflow",
+    "navigation": "Autonomous AMR navigation",
+    "certifications": "Project safety documents confirmed per order",
+    "bestFor": "Factory rack movement, warehouse shelf transfer, and flexible material staging.",
+    "highlights": [
+      "Designed for under-rack lifting and transfer tasks.",
+      "Uses the T300 platform with 300 kg class payload planning.",
+      "Best evaluated with rack size, center of gravity, path width, and docking workflow."
     ],
+    "specs": [
+      [
+        "Payload",
+        "Up to 300 kg class"
+      ],
+      [
+        "Configuration",
+        "Latent lifting variant for rack or shelf movement"
+      ],
+      [
+        "Platform",
+        "T300-series AMR"
+      ],
+      [
+        "Use cases",
+        "Factory and warehouse rack movement"
+      ],
+      [
+        "Project checks",
+        "Rack size, floor flatness, turning radius, docking position, and center of gravity"
+      ],
+      [
+        "Documentation",
+        "Final lifting module datasheet confirmed per order"
+      ]
+    ]
   },
   {
-    slug: "xg1-outdoor-sweeping-robot",
-    title: "XG1 Outdoor Sweeping Robot",
-    shortTitle: "XG1 Outdoor Sweeper",
-    model: "XG1",
-    category: "Outdoor Sweeping",
-    type: "Outdoor sweeper",
-    excerpt:
-      "Autonomous sweeping for campuses, logistics parks, transport hubs, and industrial outdoor zones.",
-    image: "/assets/images/outdoor-sweeper.jpg",
-    url: "/products/xg1-outdoor-sweeping-robot/",
-    efficiency: "Up to 100,000 m2 scenario coverage",
-    runtime: "4-6 h average battery life",
-    dimensions: "Final dimensions confirmed with datasheet",
-    cleaningWidth: "Outdoor sweeper class",
-    tanks: "100 L trash bin class",
-    navigation: "LiDAR, ultrasonic sensing, autonomous route planning",
-    certifications: "Certification documents confirmed per order",
-    bestFor: "Campuses, logistics parks, public squares, and outdoor industrial spaces.",
-    highlights: [
-      "Outdoor sweeper option for buyers comparing beyond indoor floor scrubbers.",
-      "Supports scheduled work areas, cloud monitoring, and low-battery return-to-charge workflows.",
-      "Useful for logistics parks, campuses, and public outdoor spaces with repeatable routes.",
+    "slug": "t300-conveyor-amr",
+    "title": "T300 Conveyor AMR",
+    "shortTitle": "T300 Conveyor AMR",
+    "model": "T300 Conveyor",
+    "category": "Warehouse AMR",
+    "type": "Conveyor docking AMR",
+    "excerpt": "A T300-series AMR with roller conveyor module for automatic loading, unloading, and station-to-station transfer.",
+    "image": "/assets/images/t300-conveyor-amr-new.jpg",
+    "url": "/products/t300-conveyor-amr/",
+    "efficiency": "300 kg payload class",
+    "runtime": "Project confirmed",
+    "dimensions": "Final conveyor height and length confirmed per station",
+    "cleaningWidth": "Single or double roller conveyor module",
+    "tanks": "Conveyor transfer payload module",
+    "navigation": "Autonomous AMR docking navigation",
+    "certifications": "Project safety documents confirmed per order",
+    "bestFor": "Production-line loading, unloading, conveyor docking, and station transfer workflows.",
+    "highlights": [
+      "Roller module supports automatic material handoff at fixed stations.",
+      "Conveyor height, roller length, and docking tolerance are configured by project.",
+      "Designed for line-side automation where manual cart transfer is repetitive."
     ],
+    "specs": [
+      [
+        "Payload",
+        "Up to 300 kg class"
+      ],
+      [
+        "Configuration",
+        "Roller conveyor AMR"
+      ],
+      [
+        "Module options",
+        "Single-layer or double-layer roller concepts by project"
+      ],
+      [
+        "Use cases",
+        "Automatic loading, unloading, and conveyor station transfer"
+      ],
+      [
+        "Project checks",
+        "Docking height, station width, roller direction, path clearance, and safety zones"
+      ],
+      [
+        "Documentation",
+        "Final conveyor module datasheet confirmed per order"
+      ]
+    ]
   },
   {
-    slug: "fw1-facade-cleaning-robot",
-    title: "FW1 Facade Cleaning Robot",
-    shortTitle: "FW1 Facade Cleaning Robot",
-    model: "FW1",
-    category: "Facade Cleaning",
-    type: "High-rise facade and glass cleaning robot",
-    excerpt:
-      "A facade cleaning robot concept for glass curtain wall maintenance, high-rise exterior cleaning, and property service teams.",
-    image: "/assets/images/facade-cleaning-robot.jpg",
-    url: "/products/fw1-facade-cleaning-robot/",
-    efficiency: "Project dependent",
-    runtime: "Project dependent",
-    dimensions: "Final dimensions confirmed with datasheet",
-    cleaningWidth: "Facade cleaning module",
-    tanks: "Water / cleaning module confirmed per project",
-    navigation: "Remote operation and safety support systems",
-    certifications: "Project safety documentation confirmed per order",
-    bestFor: "Office towers, hotel facades, shopping centers, commercial properties, and exterior glass maintenance providers.",
-    highlights: [
-      "Expands the PanPanTech catalog from floor cleaning to building exterior maintenance.",
-      "Designed for property teams comparing safer and more repeatable high-rise cleaning methods.",
-      "Best quoted after reviewing facade height, surface material, anchoring conditions, and local safety rules.",
+    "slug": "t300-tray-amr",
+    "title": "T300 Tray AMR",
+    "shortTitle": "T300 Tray AMR",
+    "model": "T300 Tray",
+    "category": "Warehouse AMR",
+    "type": "Tray delivery AMR",
+    "excerpt": "A T300-series tray delivery AMR for moving boxed parts, bins, tools, and small material batches across factories and warehouses.",
+    "image": "/assets/images/t300-tray-amr.jpg",
+    "url": "/products/t300-tray-amr/",
+    "efficiency": "300 kg payload class",
+    "runtime": "Project confirmed",
+    "dimensions": "Tray size confirmed per payload",
+    "cleaningWidth": "Tray / shelf payload module",
+    "tanks": "Tray-based payload workflow",
+    "navigation": "Autonomous AMR navigation",
+    "certifications": "Project safety documents confirmed per order",
+    "bestFor": "Material tray delivery, small-batch transfer, tool delivery, and internal warehouse circulation.",
+    "highlights": [
+      "Tray or shelf module supports small parts and boxed material movement.",
+      "Useful for factory routes where payloads change but delivery points repeat.",
+      "Configure tray dimensions, edge protection, and loading height around the site workflow."
     ],
+    "specs": [
+      [
+        "Payload",
+        "Up to 300 kg class"
+      ],
+      [
+        "Configuration",
+        "Tray or shelf delivery AMR"
+      ],
+      [
+        "Platform",
+        "T300-series AMR"
+      ],
+      [
+        "Use cases",
+        "Material trays, boxed parts, tools, and bin delivery"
+      ],
+      [
+        "Project checks",
+        "Tray size, loading method, path width, station height, and manual handoff rules"
+      ],
+      [
+        "Documentation",
+        "Final tray module datasheet confirmed per order"
+      ]
+    ]
   },
   {
-    slug: "t300-industrial-delivery-amr",
-    title: "T300 Industrial Delivery AMR",
-    shortTitle: "T300 Delivery AMR",
-    model: "T300",
-    category: "Warehouse AMR",
-    type: "Industrial delivery and material-handling robot",
-    excerpt:
-      "A 300 kg payload AMR platform for line-side delivery, work-in-progress transfer, warehouse picking support, and factory material movement.",
-    image: "/assets/images/t300-amr.jpg",
-    url: "/products/t300-industrial-delivery-amr/",
-    efficiency: "Up to 300 kg payload",
-    runtime: "8 h full-load / 12 h no-load class",
-    dimensions: "835 x 500 x 1350 mm",
-    cleaningWidth: "Not applicable",
-    tanks: "Not applicable",
-    navigation: "VSLAM + LiDAR SLAM",
-    certifications: "ISO 3691-4 class safety documentation confirmed per order",
-    bestFor: "Line-side delivery, quality inspection transfer, warehouse picking support, factory logistics, and commercial heavy-load delivery.",
-    highlights: [
-      "High-load chassis with open architecture for industrial delivery workflows.",
-      "Supports standard, lifting, tray, towing, and other project configurations.",
-      "Useful for buyers combining cleaning automation with material movement.",
+    "slug": "t300-towing-amr",
+    "title": "T300 Towing AMR",
+    "shortTitle": "T300 Towing AMR",
+    "model": "T300 Towing",
+    "category": "Warehouse AMR",
+    "type": "Industrial towing AMR",
+    "excerpt": "A T300-series towing AMR concept for pulling multiple material carts and supporting repeatable factory logistics routes.",
+    "image": "/assets/images/t300-towing-amr.jpg",
+    "url": "/products/t300-towing-amr/",
+    "efficiency": "300 kg class workflow",
+    "runtime": "Project confirmed",
+    "dimensions": "Tow hook and cart dimensions confirmed per project",
+    "cleaningWidth": "Towing / cart module",
+    "tanks": "Multi-cart material workflow",
+    "navigation": "Autonomous AMR route navigation",
+    "certifications": "Project safety documents confirmed per order",
+    "bestFor": "Multi-cart towing, milk-run logistics, line-side replenishment, and factory route automation.",
+    "highlights": [
+      "Designed for repeated material-cart movement instead of single-load delivery.",
+      "Cart train length, tow point, turning radius, and aisle width must be checked together.",
+      "Supports warehouse picking support and line-side replenishment planning."
     ],
+    "specs": [
+      [
+        "Payload / workflow",
+        "300 kg class T300-series towing workflow; final cart train confirmed by project"
+      ],
+      [
+        "Configuration",
+        "Towing AMR with cart or trailer interface"
+      ],
+      [
+        "Use cases",
+        "Multi-cart towing, milk-run routes, and line-side material replenishment"
+      ],
+      [
+        "Project checks",
+        "Tow hook, cart size, train length, turning radius, slopes, and safety zones"
+      ],
+      [
+        "Documentation",
+        "Final towing module datasheet confirmed per order"
+      ]
+    ]
   },
   {
-    slug: "t300-conveyor-amr",
-    title: "T300 Conveyor AMR",
-    shortTitle: "T300 Conveyor AMR",
-    model: "T300 Conveyor",
-    category: "Warehouse AMR",
-    type: "Conveyor AMR for production-line transfer",
-    excerpt:
-      "A conveyor-top AMR for automatic docking, material transfer between stations, and warehouse or factory conveyor-line integration.",
-    image: "/assets/images/t300-conveyor-amr.jpg",
-    url: "/products/t300-conveyor-amr/",
-    efficiency: "80 kg per layer / 160 kg double-layer class",
-    runtime: "8-10 h full-load class",
-    dimensions: "835 x 650-665 x 1350 mm",
-    cleaningWidth: "Not applicable",
-    tanks: "Not applicable",
-    navigation: "VSLAM + LiDAR SLAM with docking support",
-    certifications: "Project documentation confirmed per order",
-    bestFor: "Factories, warehouses, production lines, material stations, and automated transfer points.",
-    highlights: [
-      "Self-powered roller system supports direct station-to-station material transfer.",
-      "Adjustable roller width and working height help fit different conveyor lines.",
-      "A strong fit for picking, buffering, assembly, and line-side delivery workflows.",
+    "slug": "t600-heavy-payload-amr",
+    "title": "T600 Heavy-Payload AMR",
+    "shortTitle": "T600 Heavy-Payload AMR",
+    "model": "T600",
+    "category": "Warehouse AMR",
+    "type": "Heavy-payload latent lifting AMR",
+    "excerpt": "A 600 kg payload AMR for heavy factory and warehouse material movement, rack transfer, and industrial delivery routes.",
+    "image": "/assets/images/t600-heavy-payload-amr-new.jpg",
+    "url": "/products/t600-heavy-payload-amr/",
+    "efficiency": "600 kg payload",
+    "runtime": "Project confirmed",
+    "dimensions": "960 x 500 x 1350 mm",
+    "cleaningWidth": "Latent lifting heavy-payload module",
+    "tanks": "Rack / heavy material workflow",
+    "navigation": "Autonomous AMR navigation with VDA5050 support",
+    "certifications": "Project safety documents confirmed per order",
+    "bestFor": "Heavy material movement in factories, warehouses, line-side storage, and rack transfer workflows.",
+    "highlights": [
+      "600 kg payload class supports heavier rack and material movement than T300 variants.",
+      "VDA5050 support helps buyers discuss fleet interoperability.",
+      "Built-in screen and local control features can reduce dependency on a central control station."
     ],
+    "specs": [
+      [
+        "Payload",
+        "600 kg"
+      ],
+      [
+        "Dimensions",
+        "960 x 500 x 1350 mm"
+      ],
+      [
+        "Robot weight",
+        "About 112 kg"
+      ],
+      [
+        "Configuration",
+        "Latent lifting heavy-payload AMR"
+      ],
+      [
+        "Protocol",
+        "VDA5050 support"
+      ],
+      [
+        "Operation",
+        "Built-in screen, elevator dispatch priority, assist switch, shortcut buttons, and front indicator lights"
+      ],
+      [
+        "Use cases",
+        "Factory and warehouse heavy material movement"
+      ]
+    ]
   },
   {
-    slug: "t600-heavy-payload-amr",
-    title: "T600 Heavy-Payload AMR",
-    shortTitle: "T600 Heavy-Payload AMR",
-    model: "T600",
-    category: "Warehouse AMR",
-    type: "Heavy-payload industrial delivery robot",
-    excerpt:
-      "A 600 kg payload AMR platform for heavier warehouse racks, industrial delivery routes, and flexible material-handling automation.",
-    image: "/assets/images/t600-heavy-amr.jpg",
-    url: "/products/t600-heavy-payload-amr/",
-    efficiency: "Up to 600 kg payload",
-    runtime: "12 h no-load class",
-    dimensions: "960 x 500 x 1350 mm / underride 845 x 500 x 255 mm",
-    cleaningWidth: "Not applicable",
-    tanks: "Not applicable",
-    navigation: "VSLAM + LiDAR SLAM or LiDAR SLAM",
-    certifications: "Project documentation confirmed per order",
-    bestFor: "Heavy rack movement, warehouse transport, factory material movement, and flexible picking support.",
-    highlights: [
-      "Heavy-payload platform for buyers that need more capacity than standard AMRs.",
-      "Supports lifting, following, conveyor, towing, and underride project configurations.",
-      "Designed for warehouse workflows where rack recognition, scheduling, and access control matter.",
+    "slug": "iqx70b-autonomous-scrubber",
+    "title": "IQX70B Autonomous Floor Scrubber",
+    "shortTitle": "IQX70B Floor Scrubber",
+    "model": "IQX70B",
+    "category": "Large-Area Scrubbing",
+    "type": "Fully autonomous floor scrubbing robot",
+    "excerpt": "A fully autonomous floor scrubber for smart factories, hospitals, airports, stations, malls, offices, and warehouse floors.",
+    "image": "/assets/images/iqx70b-floor-scrubber.jpg",
+    "url": "/products/iqx70b-autonomous-scrubber/",
+    "efficiency": "Up to 2,160 m2/h",
+    "runtime": "Up to 5 h",
+    "dimensions": "940 x 800 x 1170 mm",
+    "cleaningWidth": "Edge cleaning to about 10 cm",
+    "tanks": "65 L water tank class",
+    "navigation": "Autonomous navigation with service-station workflow",
+    "certifications": "Project documentation confirmed per order",
+    "bestFor": "Large indoor sites that need autonomous scrubbing plus charging, water refill, drainage, and maintenance workflow planning.",
+    "highlights": [
+      "65 L water tank class and 5 h runtime support large repeated cleaning routes.",
+      "Service-station workflow can handle charging, wastewater discharge, clean-water refill, detergent adding, and tank washing.",
+      "Suitable for hospitals, airports, stations, malls, office buildings, warehouses, and smart factories."
     ],
+    "specs": [
+      [
+        "Dimensions",
+        "940 x 800 x 1170 mm"
+      ],
+      [
+        "Weight",
+        "200 kg"
+      ],
+      [
+        "Runtime",
+        "Up to 5 h"
+      ],
+      [
+        "Maximum efficiency",
+        "Up to 2,160 m2/h"
+      ],
+      [
+        "Water tank",
+        "65 L class"
+      ],
+      [
+        "Edge cleaning",
+        "Can clean to about 10 cm from edge"
+      ],
+      [
+        "Noise",
+        "65 dB(A)"
+      ],
+      [
+        "Station workflow",
+        "Automatic charging, drainage, refill, detergent adding, and waste-tank washing"
+      ]
+    ]
   },
+  {
+    "slug": "xg-cleaning-robot",
+    "title": "XG High-End Commercial Cleaning Robot",
+    "shortTitle": "XG Cleaning Robot",
+    "model": "XG",
+    "category": "Outdoor Sweeping",
+    "type": "High-end commercial all-in-one cleaning robot",
+    "excerpt": "A high-end commercial cleaning robot for large-area routes, outdoor-capable scenes, cloud management, and autonomous cleaning programs.",
+    "image": "/assets/images/xg-cleaning-robot.jpg",
+    "url": "/products/xg-cleaning-robot/",
+    "efficiency": "Large-area route class",
+    "runtime": "Auto-return charging workflow",
+    "dimensions": "Final datasheet confirmed per order",
+    "cleaningWidth": "Brochure-confirmed cleaning module",
+    "tanks": "Large trash-bin class; final volume confirmed",
+    "navigation": "High-precision mapping and omnidirectional perception",
+    "certifications": "Project documentation confirmed per order",
+    "bestFor": "Large outdoor or mixed-area cleaning programs where cloud management and route memory are important.",
+    "highlights": [
+      "High-precision mapping and dynamic memory support repeated large-area routes.",
+      "Omnidirectional obstacle perception helps reduce blind spots.",
+      "Cloud platform management supports remote monitoring and route programs."
+    ],
+    "specs": [
+      [
+        "Model",
+        "XG"
+      ],
+      [
+        "Robot class",
+        "High-end commercial all-in-one cleaning robot"
+      ],
+      [
+        "Navigation",
+        "High-precision mapping and dynamic route memory"
+      ],
+      [
+        "Obstacle perception",
+        "Omnidirectional perception without blind-zone planning"
+      ],
+      [
+        "Charging",
+        "Low-battery auto-return charging workflow"
+      ],
+      [
+        "Management",
+        "Cloud platform remote management"
+      ],
+      [
+        "Open item",
+        "Exact dimensions, tank size, and cleaning width should be confirmed from the final datasheet"
+      ]
+    ]
+  },
+  {
+    "slug": "yz-outdoor-sweeping-robot",
+    "title": "YZ Outdoor Sweeping Robot",
+    "shortTitle": "YZ Outdoor Sweeper",
+    "model": "YZ",
+    "category": "Outdoor Sweeping",
+    "type": "Driverless outdoor sweeping robot",
+    "excerpt": "An outdoor driverless sweeping robot for municipal roads, large outdoor plazas, industrial parks, and campus cleaning routes.",
+    "image": "/assets/images/yz-outdoor-sweeper.jpg",
+    "url": "/products/yz-outdoor-sweeping-robot/",
+    "efficiency": "Up to 10,000 m2/h",
+    "runtime": "All-weather autonomous workflow",
+    "dimensions": "Final datasheet confirmed per order",
+    "cleaningWidth": "1.0-1.8 m sweeping width",
+    "tanks": "120 L standard trash-bin workflow",
+    "navigation": "4G / 5G, app, cloud platform, optional remote takeover",
+    "certifications": "Project documentation confirmed per order",
+    "bestFor": "Municipal roads, outdoor industrial parks, large plazas, campuses, and logistics-park exterior routes.",
+    "highlights": [
+      "Up to 10,000 m2/h outdoor sweeping efficiency for large-area routes.",
+      "Supports automatic loading and unloading of a 120 L standard trash bin.",
+      "4G / 5G, app, cloud platform, and optional remote takeover support operations teams."
+    ],
+    "specs": [
+      [
+        "Maximum efficiency",
+        "Up to 10,000 m2/h"
+      ],
+      [
+        "Sweeping width",
+        "1.0-1.8 m"
+      ],
+      [
+        "Cleaning rate",
+        "At least 99% stated in source table"
+      ],
+      [
+        "Trash handling",
+        "60 L/min waste handling; automatic loading and unloading of 120 L standard trash bin"
+      ],
+      [
+        "Operation",
+        "All-weather autonomous operation"
+      ],
+      [
+        "Connectivity",
+        "4G / 5G, app, cloud platform, optional remote takeover"
+      ],
+      [
+        "Use cases",
+        "Large outdoor and municipal road sweeping"
+      ]
+    ]
+  },
+  {
+    "slug": "c2-cleaning-robot",
+    "title": "C2 Four-in-One Commercial Cleaning Robot",
+    "shortTitle": "C2 Cleaning Robot",
+    "model": "C2",
+    "category": "Indoor Cleaning",
+    "type": "Four-in-one commercial cleaning robot",
+    "excerpt": "A four-in-one commercial cleaning robot for sweeping, vacuuming, scrubbing, and mopping indoor commercial spaces.",
+    "image": "/assets/images/c2-cleaning-robot.jpg",
+    "url": "/products/c2-cleaning-robot/",
+    "efficiency": "Indoor commercial class",
+    "runtime": "Final datasheet confirmed",
+    "dimensions": "Final datasheet confirmed",
+    "cleaningWidth": "Four-in-one cleaning module",
+    "tanks": "Final datasheet confirmed",
+    "navigation": "Autonomous indoor navigation",
+    "certifications": "Project documentation confirmed per order",
+    "bestFor": "Commercial indoor cleaning programs that need a compact four-in-one robot before adding a smart station.",
+    "highlights": [
+      "Four-in-one cleaning modes: sweep, vacuum, scrub, and mop.",
+      "Good starting point for indoor commercial cleaning catalogs.",
+      "Detailed numeric specifications should be confirmed from the final model datasheet before quotation."
+    ],
+    "specs": [
+      [
+        "Robot class",
+        "Four-in-one commercial cleaning robot"
+      ],
+      [
+        "Cleaning modes",
+        "Sweep, vacuum, scrub, and mop"
+      ],
+      [
+        "Best-fit environment",
+        "Commercial indoor areas"
+      ],
+      [
+        "Known source note",
+        "The selection table marks detailed specifications as brochure-based and requiring final confirmation"
+      ],
+      [
+        "Open item",
+        "Dimensions, tank volumes, runtime, and cleaning width should be confirmed from final datasheet"
+      ]
+    ]
+  },
+  {
+    "slug": "c2-pro-cleaning-robot",
+    "title": "C2 PRO Cleaning Robot with Smart Station",
+    "shortTitle": "C2 PRO Cleaning Robot",
+    "model": "C2 PRO",
+    "category": "Indoor Cleaning",
+    "type": "Four-in-one cleaning robot with smart station",
+    "excerpt": "A compact commercial cleaning robot with smart station workflow for automatic drainage, refill, charging, AI recognition, and indoor route cleaning.",
+    "image": "/assets/images/c2-pro-cleaning-robot.jpg",
+    "url": "/products/c2-pro-cleaning-robot/",
+    "efficiency": "Indoor smart-station class",
+    "runtime": "2.5 h vacuum / 4 h scrubbing",
+    "dimensions": "506 x 506 x 660 mm",
+    "cleaningWidth": "Narrow passage from 75 cm",
+    "tanks": "Smart station drainage / refill workflow",
+    "navigation": "AI recognition and autonomous mapping",
+    "certifications": "Project documentation confirmed per order",
+    "bestFor": "Large indoor commercial spaces that need cleaning plus automatic station support.",
+    "highlights": [
+      "Smart station supports automatic drainage, water refill, and charging.",
+      "Compact 506 mm body with 75 cm narrow-passage planning.",
+      "AI recognition and optional mobile transfer station support broader site workflows."
+    ],
+    "specs": [
+      [
+        "Dimensions",
+        "506 x 506 x 660 mm"
+      ],
+      [
+        "Weight",
+        "50 kg"
+      ],
+      [
+        "Protection",
+        "IP33"
+      ],
+      [
+        "Maximum speed",
+        "1 m/s"
+      ],
+      [
+        "Slope / obstacle",
+        "5 degree slope; 10 mm obstacle"
+      ],
+      [
+        "Runtime",
+        "2.5 h sweeping or vacuuming; 4 h scrubbing"
+      ],
+      [
+        "Battery",
+        "24 V / 36 Ah"
+      ],
+      [
+        "Charging",
+        "About 3 h"
+      ],
+      [
+        "Minimum passage",
+        "75 cm"
+      ],
+      [
+        "Map capacity",
+        "Up to 10,000 m2"
+      ],
+      [
+        "Peak suction",
+        "15 kPa"
+      ],
+      [
+        "Station",
+        "Automatic drainage, refill, charging, and optional mobile transfer station"
+      ]
+    ]
+  },
+  {
+    "slug": "c3-mini-cleaning-robot",
+    "title": "C3-Mini Compact Cleaning Robot",
+    "shortTitle": "C3-Mini Cleaning Robot",
+    "model": "C3-Mini",
+    "category": "Indoor Cleaning",
+    "type": "Compact sweep, vacuum, mop, and scrub robot",
+    "excerpt": "A compact commercial cleaning robot for small and narrow indoor routes, with sweep, vacuum, mop, scrub, edge-cleaning, and multi-sensor perception.",
+    "image": "/assets/images/c3-mini-cleaning-robot.jpg",
+    "url": "/products/c3-mini-cleaning-robot/",
+    "efficiency": "About 200 m2/h",
+    "runtime": "About 1.5 h",
+    "dimensions": "400 x 400 x 360 mm body",
+    "cleaningWidth": "530 mm sweeping / 350 mm scrubbing",
+    "tanks": "5 L clean / 3.5 L waste / 0.7 L dust bin",
+    "navigation": "2D laser, structured light, line laser, ultrasonic sensing",
+    "certifications": "Project documentation confirmed per order",
+    "bestFor": "Small indoor areas, narrow passages, offices, shops, and compact commercial spaces.",
+    "highlights": [
+      "400 mm compact body supports 60 cm narrow-passage planning.",
+      "Active retractable side brush supports zero-edge cleaning scenarios.",
+      "Useful as a compact indoor model below larger station-based robots."
+    ],
+    "specs": [
+      [
+        "Dimensions",
+        "400 x 400 x 360 mm, excluding side brush"
+      ],
+      [
+        "Weight",
+        "27 kg empty"
+      ],
+      [
+        "Speed",
+        "0.5 m/s"
+      ],
+      [
+        "Runtime",
+        "About 1.5 h"
+      ],
+      [
+        "Battery",
+        "24 V / 15 Ah"
+      ],
+      [
+        "Charging",
+        "About 1.5 h"
+      ],
+      [
+        "Minimum passage",
+        "60 cm"
+      ],
+      [
+        "Map capacity",
+        "Up to 5,000 m2"
+      ],
+      [
+        "Tank / dust capacity",
+        "5 L clean, 3.5 L waste, 0.7 L dust bin"
+      ],
+      [
+        "Cleaning width",
+        "530 mm sweeping; 350 mm scrubbing"
+      ],
+      [
+        "Roller brush",
+        "300 rpm"
+      ],
+      [
+        "Noise",
+        "Under 60 dB"
+      ],
+      [
+        "Efficiency",
+        "About 200 m2/h"
+      ],
+      [
+        "Sensors",
+        "2D laser, structured light, line laser, and ultrasonic sensing"
+      ]
+    ]
+  },
+  {
+    "slug": "q3-g-cleaning-robot",
+    "title": "Q3-G Commercial Cleaning Robot",
+    "shortTitle": "Q3-G Cleaning Robot",
+    "model": "Q3-G",
+    "category": "Indoor Cleaning",
+    "type": "Four-in-one indoor commercial cleaning robot",
+    "excerpt": "A four-in-one indoor cleaning robot with 2D or 3D LiDAR options, smart station workflow, multilingual app, and broad floor-material support.",
+    "image": "/assets/images/q3-g-cleaning-robot.jpg",
+    "url": "/products/q3-g-cleaning-robot/",
+    "efficiency": "Brochure-confirmed per module",
+    "runtime": "Final datasheet confirmed",
+    "dimensions": "Final datasheet confirmed",
+    "cleaningWidth": "Roller brush / roller mop module options",
+    "tanks": "Smart station refill / drainage workflow",
+    "navigation": "Q3-G 2D single-line or Q3-G 3D multi-line LiDAR",
+    "certifications": "CE / FCC stated in source table; final documents confirmed per order",
+    "bestFor": "Workshops, offices, hotels, metros, hospitals, schools, public service buildings, transport hubs, and warehouses.",
+    "highlights": [
+      "Four-in-one modes: scrubbing, vacuuming, sweeping, and dust-pushing.",
+      "2D single-line or 3D multi-line LiDAR options support different project budgets.",
+      "Smart station supports automatic drainage, water refill, and charging."
+    ],
+    "specs": [
+      [
+        "Cleaning modes",
+        "Scrubbing, vacuuming, sweeping, and dust-pushing"
+      ],
+      [
+        "Navigation options",
+        "Q3-G 2D single-line LiDAR or Q3-G 3D multi-line LiDAR"
+      ],
+      [
+        "Safety sensing",
+        "21 sensors with 360-degree protection stated in source table"
+      ],
+      [
+        "Robot weight",
+        "68.5 kg including 7 kg battery"
+      ],
+      [
+        "Station weight",
+        "25 kg"
+      ],
+      [
+        "Station workflow",
+        "Automatic drainage, refill, and charging"
+      ],
+      [
+        "Cleaning modules",
+        "Roller brush + roller mop, dual roller brush, or dual roller mop options"
+      ],
+      [
+        "Connectivity",
+        "4G, WiFi, or offline"
+      ],
+      [
+        "App",
+        "19 languages stated in source table"
+      ],
+      [
+        "Certifications",
+        "CE / FCC stated in source table"
+      ],
+      [
+        "Floor types",
+        "Marble, terrazzo, tile, epoxy, short carpet, and similar indoor floors"
+      ]
+    ]
+  },
+  {
+    "slug": "q3-w-cleaning-robot",
+    "title": "Q3-W Textile Factory Cleaning Robot",
+    "shortTitle": "Q3-W Cleaning Robot",
+    "model": "Q3-W",
+    "category": "Indoor Cleaning",
+    "type": "High-suction cleaning robot for textile factories",
+    "excerpt": "A Q3-series high-suction cleaning robot developed for textile and garment factories that need to collect cloth scraps, thread, and lightweight production waste.",
+    "image": "/assets/images/q3-w-cleaning-robot.jpg",
+    "url": "/products/q3-w-cleaning-robot/",
+    "efficiency": "Textile factory route class",
+    "runtime": "Final datasheet confirmed",
+    "dimensions": "Q3-series platform; final datasheet confirmed",
+    "cleaningWidth": "High-suction textile waste module",
+    "tanks": "Final dust and waste capacity confirmed",
+    "navigation": "Q3-series autonomous navigation",
+    "certifications": "Project documentation confirmed per order",
+    "bestFor": "Garment factories, textile workshops, and production areas with cloth scraps, threads, and lightweight debris.",
+    "highlights": [
+      "Developed for garment-factory waste such as cloth scraps and thread.",
+      "Uses the Q3-series platform while focusing on stronger suction needs.",
+      "Best quoted after checking debris type, route width, dust load, and waste-disposal workflow."
+    ],
+    "specs": [
+      [
+        "Robot class",
+        "Textile factory high-suction cleaning robot"
+      ],
+      [
+        "Platform",
+        "Q3-series platform"
+      ],
+      [
+        "Target debris",
+        "Cloth scraps, thread, and similar garment-factory waste"
+      ],
+      [
+        "Best-fit sites",
+        "Garment factories and textile workshops"
+      ],
+      [
+        "Open item",
+        "Detailed suction, tank, runtime, and module values should be confirmed from the final datasheet"
+      ]
+    ]
+  },
+  {
+    "slug": "facade-cleaning-robot",
+    "title": "High-Rise Facade Cleaning Robot",
+    "shortTitle": "Facade Cleaning Robot",
+    "model": "Facade Cleaning Robot",
+    "category": "Facade Cleaning",
+    "type": "Glass curtain wall and exterior facade cleaning robot",
+    "excerpt": "A high-rise facade and glass curtain wall cleaning robot for property teams seeking safer, repeatable exterior cleaning workflows.",
+    "image": "/assets/images/facade-cleaning-robot-new.jpg",
+    "url": "/products/facade-cleaning-robot/",
+    "efficiency": "Project dependent",
+    "runtime": "Project dependent",
+    "dimensions": "Final model confirmed after facade review",
+    "cleaningWidth": "Glass curtain wall cleaning module",
+    "tanks": "Water / cleaning method confirmed by project",
+    "navigation": "Remote operation and safety workflow",
+    "certifications": "Project safety documentation confirmed per order",
+    "bestFor": "High-rise glass curtain walls, commercial building facades, and exterior property maintenance projects.",
+    "highlights": [
+      "Supports unmanned or reduced-exposure cleaning for high-rise glass facades.",
+      "Best reviewed after confirming building height, glass type, roof access, anchor points, and local safety rules.",
+      "Useful for replacing or reducing high-risk manual rope-access or basket cleaning workflows."
+    ],
+    "specs": [
+      [
+        "Robot class",
+        "Glass curtain wall and high-rise facade cleaning robot"
+      ],
+      [
+        "Cleaning method",
+        "Water and cleaning module confirmed by project"
+      ],
+      [
+        "Use cases",
+        "High-rise glass facade, exterior curtain wall, and property maintenance"
+      ],
+      [
+        "Deployment checks",
+        "Building height, roof access, anchoring, glass type, wind limits, and safety perimeter"
+      ],
+      [
+        "Known deployments",
+        "Source material references projects in Foshan, Shenzhen, Hong Kong, Macau, and Singapore"
+      ],
+      [
+        "Open item",
+        "Exact model code and numeric specifications require final supplier confirmation"
+      ]
+    ]
+  },
+  {
+    "slug": "jsr1-service-robot",
+    "title": "JSR-1 General-Purpose Service Robot",
+    "shortTitle": "JSR-1 Service Robot",
+    "model": "JSR-1",
+    "category": "Service Robot",
+    "type": "General-purpose AI service robot",
+    "excerpt": "A general-purpose embodied AI service robot concept for retail service, light manipulation, facility assistance, and exploratory commercial automation projects.",
+    "image": "/assets/images/jsr1-service-robot.jpg",
+    "url": "/products/jsr1-service-robot/",
+    "efficiency": "Up to 3 kg arm payload",
+    "runtime": "Project confirmed",
+    "dimensions": "Final datasheet confirmed",
+    "cleaningWidth": "Mobile service robot with robotic arm",
+    "tanks": "General-purpose payload workflow",
+    "navigation": "Centimeter-level localization stated in source material",
+    "certifications": "Project documentation confirmed per order",
+    "bestFor": "Exploratory commercial service, retail assistance, light pick-and-place, and facility support projects where the final use case must be confirmed.",
+    "highlights": [
+      "General-purpose service robot model added from the supplier selection table as a to-confirm category.",
+      "Source material states a 6-DoF robotic arm with up to 3 kg payload and RGB-D camera perception.",
+      "Best treated as an exploratory project until final model, scope, and specifications are confirmed."
+    ],
+    "specs": [
+      [
+        "Model",
+        "JSR-1"
+      ],
+      [
+        "Robot class",
+        "General-purpose AI service robot"
+      ],
+      [
+        "Arm",
+        "6-DoF robotic arm"
+      ],
+      [
+        "Payload",
+        "Up to 3 kg stated in source material"
+      ],
+      [
+        "Perception",
+        "RGB-D cameras; 720-degree FOV stated in source material"
+      ],
+      [
+        "Localization",
+        "Centimeter-level precise localization stated in source material"
+      ],
+      [
+        "Open item",
+        "Final dimensions, battery, runtime, and deployment scope require confirmation"
+      ]
+    ]
+  }
 ];
 
 const productCategories = [
   {
-    label: "Indoor Cleaning",
-    text: "Compact robots for offices, retail, healthcare, hotel public areas, and mixed commercial interiors.",
+    "label": "Indoor Cleaning",
+    "text": "Compact and station-based commercial cleaning robots for offices, hotels, hospitals, shops, workshops, and narrow indoor routes."
   },
   {
-    label: "Large-Area Scrubbing",
-    text: "Autonomous scrubbers for warehouses, factories, malls, stations, airports, and high-traffic facilities.",
+    "label": "Large-Area Scrubbing",
+    "text": "Autonomous scrubbers for warehouses, factories, malls, stations, airports, and high-traffic hard floors."
   },
   {
-    label: "Outdoor Sweeping",
-    text: "Outdoor sweepers for campuses, logistics parks, public squares, loading areas, and industrial parks.",
+    "label": "Warehouse AMR",
+    "text": "Standard, lifting, conveyor, tray, towing, and heavy-payload AMR platforms for picking support and material handling."
   },
   {
-    label: "Facade Cleaning",
-    text: "Specialized robots for glass curtain walls, commercial building facades, and exterior property maintenance.",
+    "label": "Outdoor Sweeping",
+    "text": "Large-area cleaning and sweeping robots for campuses, logistics parks, outdoor plazas, and municipal-style routes."
   },
   {
-    label: "Warehouse AMR",
-    text: "Delivery, conveyor, towing, lifting, and heavy-payload AMR platforms for picking and material handling.",
+    "label": "Facade Cleaning",
+    "text": "Specialized robots for glass curtain walls, commercial building facades, and exterior property maintenance."
   },
+  {
+    "label": "Service Robot",
+    "text": "General-purpose service robot concepts for light manipulation, retail service, and exploratory commercial automation."
+  }
 ];
 
 const videos = [
@@ -416,7 +1215,7 @@ const blogPosts = [
       ["Do commercial robot vacuums work around people?", "Professional robots use sensors, route rules, and emergency stops, but the site still needs a deployment plan and trained staff."],
       ["What should I send for a quote?", "Send floor area, floor type, cleaning frequency, site photos, aisle width, destination country, quantity, and any OEM or distributor requirements."],
     ],
-    related: ["/products/p060/", "/products/s55-compact-cleaning-robot/", "/request-a-quote/"],
+    related: ["/products/p060/", "/products/c3-mini-cleaning-robot/", "/request-a-quote/"],
   },
   {
     slug: "autonomous-floor-scrubber",
@@ -484,9 +1283,9 @@ const blogPosts = [
       ["Can autonomous floor scrubbers work in warehouses?", "Yes, when routes, aisle width, floor condition, people, and forklift interactions are planned carefully."],
       ["Do scrubber robots need operators?", "They need trained operators for setup, exception handling, maintenance, water workflow, and safety checks."],
       ["How do I compare runtime claims?", "Ask what mode, speed, floor condition, tank workflow, and battery state were used for the runtime claim."],
-      ["Which PanPanTech models fit large areas?", "PT90 and IQ70B class robots are the main large-area scrubbing options in the current PanPanTech range."],
+      ["Which PanPanTech models fit large areas?", "SC80 / PT90 and IQX70B class robots are the main large-area scrubbing options in the current PanPanTech range."],
     ],
-    related: ["/products/pt90/", "/products/iq70b-autonomous-scrubber/", "/industries/warehouse-cleaning-robots/"],
+    related: ["/products/pt90/", "/products/iqx70b-autonomous-scrubber/", "/industries/warehouse-cleaning-robots/"],
   },
   {
     slug: "industrial-robot-vacuum-for-warehouse",
@@ -552,7 +1351,7 @@ const blogPosts = [
     faqs: [
       ["Is a warehouse robot vacuum the same as an autonomous scrubber?", "No. A vacuum handles dry debris. An autonomous scrubber uses liquid and recovery to clean hard floors."],
       ["Can robots clean around forklifts?", "They can work in warehouses when routes, speed, timing, and safety controls are planned around forklift traffic."],
-      ["Which model fits a dusty warehouse?", "For support areas, a compact cleaning robot may fit. For large hard floors, compare PT90 or IQ70B class scrubbers."],
+      ["Which model fits a dusty warehouse?", "For support areas, a compact cleaning robot may fit. For large hard floors, compare SC80 / PT90 or IQX70B class scrubbers."],
       ["Can one supplier provide cleaning robots and AMRs?", "A single supplier can coordinate both categories, but cleaning performance and material-handling performance should be evaluated separately."],
       ["What is the first step for a warehouse quote?", "Share a floor map, photos, floor area, soil type, aisle width, shift schedule, and target country."],
     ],
@@ -697,9 +1496,9 @@ const blogPosts = [
       ["Are consumer window robots suitable for commercial facades?", "Usually no. Consumer models are not a substitute for commercial facade cleaning systems and safety procedures."],
       ["What information is needed for a facade robot quote?", "Send facade photos, building height, surface material, access points, local safety rules, and cleaning frequency."],
       ["Can a facade robot clean all glass buildings?", "No. Geometry, anchors, weather, water access, and surface condition can limit feasibility."],
-      ["Which PanPanTech product fits facade cleaning?", "The FW1 facade cleaning robot page is the starting point for project review and quotation."],
+      ["Which PanPanTech product fits facade cleaning?", "The facade cleaning robot page is the starting point for project review and quotation."],
     ],
-    related: ["/products/fw1-facade-cleaning-robot/", "/request-a-quote/", "/contact/"],
+    related: ["/products/facade-cleaning-robot/", "/request-a-quote/", "/contact/"],
   },
   {
     slug: "certifications-for-commercial-cleaning-robots",
@@ -841,6 +1640,7 @@ function productSchema(product) {
 }
 
 function productSpecs(product) {
+  if (product.specs?.length) return product.specs;
   return [
     [product.category === "Warehouse AMR" ? "Payload / capacity" : "Cleaning efficiency", product.efficiency],
     ["Runtime", product.runtime],
@@ -991,7 +1791,7 @@ ${items
     <h3><a href="${product.url}">${html(product.shortTitle)}</a></h3>
     <p>${html(product.excerpt)}</p>
     <dl class="cleanbot-mini-specs">
-      <div><dt>Efficiency</dt><dd>${html(product.efficiency)}</dd></div>
+      <div><dt>${html(product.cardMetricLabel || (["Warehouse AMR", "Service Robot"].includes(product.category) ? "Payload" : "Efficiency"))}</dt><dd>${html(product.efficiency)}</dd></div>
       <div><dt>Runtime</dt><dd>${html(product.runtime)}</dd></div>
     </dl>
     <a class="cleanbot-link" href="${product.url}">View robot</a>
@@ -1243,7 +2043,7 @@ function homePage() {
           <a class="ppt-button ppt-button--outline-on-dark" href="/request-a-quote/">Get a Quote</a>
         </div>
         <div class="ppt-stat-row" aria-label="Key capabilities">
-          <div><strong>9</strong><span>robot products now listed</span></div>
+          <div><strong>18</strong><span>models from the selection table</span></div>
           <div><strong>600 kg</strong><span>heavy-payload AMR class</span></div>
           <div><strong>4,000</strong><span>m2/h scrubber class</span></div>
         </div>
@@ -1466,7 +2266,7 @@ function productPage(product) {
         <h1>${html(product.title)}</h1>
         <p class="ppt-lead">${html(product.excerpt)}</p>
         <div class="ppt-product-kpis">
-          <div><strong>${html(product.efficiency)}</strong><span>${product.category === "Warehouse AMR" ? "Payload / capacity" : "Cleaning efficiency"}</span></div>
+          <div><strong>${html(product.efficiency)}</strong><span>${["Warehouse AMR", "Service Robot"].includes(product.category) ? "Payload / capacity" : "Cleaning efficiency"}</span></div>
           <div><strong>${html(product.runtime)}</strong><span>Runtime</span></div>
           <div><strong>${html(product.navigation)}</strong><span>Navigation</span></div>
         </div>
@@ -1616,7 +2416,7 @@ function warehousePage() {
   <div class="ppt-container ppt-split">
     <div>
       <h2>Best-fit models for warehouse floors</h2>
-      <p>PT90 and IQ70B scrubbers fit broad indoor logistics floors. Outdoor sweeping robots support campuses and loading areas. T300 and T600 AMRs support line-side delivery, picking support, and heavy material movement.</p>
+      <p>SC80 / PT90 and IQX70B scrubbers fit broad indoor logistics floors. XG and YZ robots support campuses and outdoor routes. T300 and T600 AMRs support line-side delivery, picking support, and heavy material movement.</p>
       <ul class="ppt-check-list">
         <li>Map cleaning routes by floor area, shift time, and aisle width.</li>
         <li>Compare tank size, cleaning width, runtime, and recharge workflow.</li>
@@ -1713,7 +2513,7 @@ function quotePage() {
       <p><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></p>
       <p><label for="company">Company</label><input id="company" name="company" autocomplete="organization"></p>
       <p><label for="country">Country</label><input id="country" name="country" autocomplete="country-name"></p>
-      <p><label for="interest">Product interest</label><input id="interest" name="product_interest" aria-describedby="interest-help"><small id="interest-help">P060, PT90, IQ70B, XG1, FW1, T300, T600, or OEM / ODM.</small></p>
+      <p><label for="interest">Product interest</label><input id="interest" name="product_interest" aria-describedby="interest-help"><small id="interest-help">ONE S55 / P060, SC80 / PT90, T300 variants, T600, IQX70B, XG, YZ, C2, C2 PRO, C3-Mini, Q3-G, Q3-W, facade robot, JSR-1, or OEM / ODM.</small></p>
       <p><label for="quantity">Purchase quantity</label><input id="quantity" name="quantity" aria-describedby="quantity-help"><small id="quantity-help">Pilot order, 5 units, 20 units, or distributor launch.</small></p>
       <p class="cleanbot-form-wrap__wide"><label for="message">Project details</label><textarea id="message" name="message" rows="6" aria-describedby="message-help"></textarea><small id="message-help">Include floor area, payload, site type, cleaning schedule, destination country, certifications, and OEM needs.</small></p>
       <p class="cleanbot-form-wrap__wide"><button class="cleanbot-button cleanbot-button--primary" type="submit">Email RFQ</button></p>
@@ -2388,13 +3188,7 @@ function llmsTxt() {
 
 ## Products
 - [Commercial Cleaning Robots](${site.domain}/products/): product range overview.
-- [P060 All-in-One Cleaning Robot](${site.domain}/products/p060/): compact 6-in-1 robot for indoor commercial cleaning.
-- [PT90 Autonomous Floor Scrubber](${site.domain}/products/pt90/): large-area floor scrubbing robot for warehouses and public facilities.
-- [IQ70B Floor Scrubber](${site.domain}/products/iq70b-autonomous-scrubber/): autonomous scrubber with service-station option.
-- [XG1 Outdoor Sweeper](${site.domain}/products/xg1-outdoor-sweeping-robot/): outdoor sweeping robot for campuses and logistics parks.
-- [FW1 Facade Cleaning Robot](${site.domain}/products/fw1-facade-cleaning-robot/): facade and glass curtain wall cleaning robot.
-- [T300 Delivery AMR](${site.domain}/products/t300-industrial-delivery-amr/): 300 kg payload material-handling AMR.
-- [T600 Heavy-Payload AMR](${site.domain}/products/t600-heavy-payload-amr/): 600 kg payload warehouse AMR.
+${products.map((product) => `- [${product.shortTitle}](${site.domain}${product.url}): ${product.excerpt}`).join("\n")}
 
 ## Buying And OEM
 - [Commercial Cleaning Robot Manufacturer](${site.domain}/commercial-cleaning-robot-manufacturer/): manufacturing, QC, export, and certification information.

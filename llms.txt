@@ -4,13 +4,24 @@
 
 ## Products
 - [Commercial Cleaning Robots](https://panpantechnology.com/products/): product range overview.
-- [P060 All-in-One Cleaning Robot](https://panpantechnology.com/products/p060/): compact 6-in-1 robot for indoor commercial cleaning.
-- [PT90 Autonomous Floor Scrubber](https://panpantechnology.com/products/pt90/): large-area floor scrubbing robot for warehouses and public facilities.
-- [IQ70B Floor Scrubber](https://panpantechnology.com/products/iq70b-autonomous-scrubber/): autonomous scrubber with service-station option.
-- [XG1 Outdoor Sweeper](https://panpantechnology.com/products/xg1-outdoor-sweeping-robot/): outdoor sweeping robot for campuses and logistics parks.
-- [FW1 Facade Cleaning Robot](https://panpantechnology.com/products/fw1-facade-cleaning-robot/): facade and glass curtain wall cleaning robot.
-- [T300 Delivery AMR](https://panpantechnology.com/products/t300-industrial-delivery-amr/): 300 kg payload material-handling AMR.
-- [T600 Heavy-Payload AMR](https://panpantechnology.com/products/t600-heavy-payload-amr/): 600 kg payload warehouse AMR.
+- [ONE S55 / P060 Cleaning Robot](https://panpantechnology.com/products/p060/): A compact all-in-one robot for sweeping, scrubbing, vacuuming, dust-pushing, self-cleaning, and sanitizing commercial floors.
+- [SC80 / PT90 Floor Scrubber](https://panpantechnology.com/products/pt90/): A large autonomous scrubber for transport hubs, warehouses, factories, malls, and broad indoor or semi-outdoor hard floors.
+- [T300 Standard AMR](https://panpantechnology.com/products/t300-industrial-delivery-amr/): A 300 kg payload AMR platform for industrial logistics, line-side delivery, warehouse picking support, and commercial heavy delivery.
+- [T300 Lifting AMR](https://panpantechnology.com/products/t300-lifting-amr/): A T300-series AMR variant for latent lifting and rack movement in factories, warehouses, and work-in-progress transfer areas.
+- [T300 Conveyor AMR](https://panpantechnology.com/products/t300-conveyor-amr/): A T300-series AMR with roller conveyor module for automatic loading, unloading, and station-to-station transfer.
+- [T300 Tray AMR](https://panpantechnology.com/products/t300-tray-amr/): A T300-series tray delivery AMR for moving boxed parts, bins, tools, and small material batches across factories and warehouses.
+- [T300 Towing AMR](https://panpantechnology.com/products/t300-towing-amr/): A T300-series towing AMR concept for pulling multiple material carts and supporting repeatable factory logistics routes.
+- [T600 Heavy-Payload AMR](https://panpantechnology.com/products/t600-heavy-payload-amr/): A 600 kg payload AMR for heavy factory and warehouse material movement, rack transfer, and industrial delivery routes.
+- [IQX70B Floor Scrubber](https://panpantechnology.com/products/iqx70b-autonomous-scrubber/): A fully autonomous floor scrubber for smart factories, hospitals, airports, stations, malls, offices, and warehouse floors.
+- [XG Cleaning Robot](https://panpantechnology.com/products/xg-cleaning-robot/): A high-end commercial cleaning robot for large-area routes, outdoor-capable scenes, cloud management, and autonomous cleaning programs.
+- [YZ Outdoor Sweeper](https://panpantechnology.com/products/yz-outdoor-sweeping-robot/): An outdoor driverless sweeping robot for municipal roads, large outdoor plazas, industrial parks, and campus cleaning routes.
+- [C2 Cleaning Robot](https://panpantechnology.com/products/c2-cleaning-robot/): A four-in-one commercial cleaning robot for sweeping, vacuuming, scrubbing, and mopping indoor commercial spaces.
+- [C2 PRO Cleaning Robot](https://panpantechnology.com/products/c2-pro-cleaning-robot/): A compact commercial cleaning robot with smart station workflow for automatic drainage, refill, charging, AI recognition, and indoor route cleaning.
+- [C3-Mini Cleaning Robot](https://panpantechnology.com/products/c3-mini-cleaning-robot/): A compact commercial cleaning robot for small and narrow indoor routes, with sweep, vacuum, mop, scrub, edge-cleaning, and multi-sensor perception.
+- [Q3-G Cleaning Robot](https://panpantechnology.com/products/q3-g-cleaning-robot/): A four-in-one indoor cleaning robot with 2D or 3D LiDAR options, smart station workflow, multilingual app, and broad floor-material support.
+- [Q3-W Cleaning Robot](https://panpantechnology.com/products/q3-w-cleaning-robot/): A Q3-series high-suction cleaning robot developed for textile and garment factories that need to collect cloth scraps, thread, and lightweight production waste.
+- [Facade Cleaning Robot](https://panpantechnology.com/products/facade-cleaning-robot/): A high-rise facade and glass curtain wall cleaning robot for property teams seeking safer, repeatable exterior cleaning workflows.
+- [JSR-1 Service Robot](https://panpantechnology.com/products/jsr1-service-robot/): A general-purpose embodied AI service robot concept for retail service, light manipulation, facility assistance, and exploratory commercial automation projects.
 
 ## Buying And OEM
 - [Commercial Cleaning Robot Manufacturer](https://panpantechnology.com/commercial-cleaning-robot-manufacturer/): manufacturing, QC, export, and certification information.
