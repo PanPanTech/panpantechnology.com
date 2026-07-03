@@ -27,25 +27,25 @@ const groupBrands = [
     name: "AiEinkSmart",
     url: "https://aieinksmart.com",
     role: "Electronic shelf labels and e-paper signage",
-    note: "The ESL traffic and inquiry site remains independent and is not redirected into PanPanTech.",
+    note: "Electronic shelf label systems for retailers that need fast price updates, e-paper shelf displays, and store-level operations support.",
   },
   {
     name: "Pyroglaux",
     url: "https://pyroglaux.com",
     role: "Privacy-compliant retail footfall analytics",
-    note: "A sister retail analytics brand that supports store traffic and behavior measurement.",
+    note: "Retail analytics for store traffic, behavior measurement, and privacy-compliant occupancy insights.",
   },
   {
     name: "AiESL",
     url: "https://aiesl.com",
     role: "Retail data middleware, API, and platform entry",
-    note: "A software and developer-facing entry for ESL data, integration, and retail workflows.",
+    note: "Platform and API entry for retail data, label management, and system integration.",
   },
   {
     name: "EinkSmart",
     url: "https://einksmart.com",
     role: "E-paper art frame and digital art display",
-    note: "A separate digital art display line kept away from retail ESL positioning.",
+    note: "E-paper art frames and ambient digital display products for residential and commercial interiors.",
   },
 ];
 
@@ -53,25 +53,25 @@ const businessUnits = [
   {
     title: "Retail Tech",
     eyebrow: "ESL / Analytics / Middleware",
-    text: "Electronic shelf labels, e-paper signage, retail footfall analytics, and data platform links live in dedicated vertical brands while PanPanTech provides the group trust layer.",
+    text: "Connect shelf-edge displays, price updates, store analytics, and retail data workflows through dedicated PanPanTech group brands.",
     href: "/solutions/#retail-tech",
   },
   {
     title: "Smart Robots",
     eyebrow: "Cleaning / AMR / Facade",
-    text: "Commercial cleaning robots, facade cleaning robots, and warehouse AMRs remain on panpantechnology.com as the active robot business and sourcing catalog.",
+    text: "Commercial cleaning robots, facade cleaning robots, and warehouse AMRs for facility automation, distributor sourcing, and project evaluation.",
     href: "/solutions/smart-robots/",
   },
   {
     title: "Digital Art",
     eyebrow: "E-paper display line",
-    text: "E-paper art and digital display products stay as a lightweight vertical path with clear separation from ESL procurement content.",
+    text: "E-paper art frames and ambient display products for interiors, hospitality spaces, galleries, and curated commercial environments.",
     href: "/solutions/#digital-art",
   },
   {
     title: "Manufacturing",
     eyebrow: "ESL OEM / PCBA / Modules",
-    text: "Future ESL finished-goods assembly, PCBA service, and e-paper display module manufacturing start as a group capability page before any separate domain is considered.",
+    text: "ESL finished-goods assembly, PCBA service, and e-paper display module manufacturing for qualified B2B cooperation.",
     href: "/manufacturing/",
   },
 ];
@@ -1905,7 +1905,7 @@ function groupRelationship() {
   <div class="ppt-group-map__hub">
     <span>Hub</span>
     <strong>panpantechnology.com</strong>
-    <p>PanPanTech mother brand site for trust, navigation, smart robots, and future manufacturing.</p>
+    <p>PanPanTech group website for company information, business paths, smart robots, and manufacturing cooperation.</p>
   </div>
   <div class="ppt-group-map__spokes">
 ${groupBrands
@@ -1919,8 +1919,8 @@ ${groupBrands
   .join("\n")}
   </div>
   <div class="ppt-group-map__defense">
-    <span>Defensive domains</span>
-    <p>aieink.com and aieink.cn stop as build projects. panpantech.ai is recommended as a defensive 301 to this mother brand site.</p>
+    <span>Single contact point</span>
+    <p>Start with PanPanTech and we will guide your request to the right retail technology, robotics, digital art, or manufacturing team.</p>
   </div>
 </div>`;
 }
@@ -2182,7 +2182,7 @@ function blogArticlePage(post) {
   });
 }
 
-function finalCta(text = "Send your retail technology, robotics, or manufacturing brief. PanPanTech will route it to the right business path and next steps.") {
+function finalCta(text = "Send your retail technology, robotics, or manufacturing brief. PanPanTech will connect you with the right team and next steps.") {
   return `<section class="ppt-section">
   <div class="ppt-container ppt-final-cta">
     <h2>Talk to PanPanTech about your next program</h2>
@@ -2199,7 +2199,7 @@ function homePageV2() {
       <div class="ppt-hero__copy">
         <p class="ppt-eyebrow">PanPanTech Group</p>
         <h1>PanPanTech | Retail AIoT, Smart Robots, and Manufacturing Platform</h1>
-        <p class="ppt-lead">PanPanTech is the mother brand for retail technology, smart robotics, and future ESL OEM / PCBA manufacturing. Vertical brands keep their own traffic paths while this site provides the trust layer and navigation center.</p>
+        <p class="ppt-lead">PanPanTech connects retail technology, smart robotics, and manufacturing capability for global B2B buyers. Explore our product brands, robot systems, and OEM programs from one official group website.</p>
         <div class="ppt-actions">
           <a class="ppt-button ppt-button--primary" href="/solutions/">Explore Solutions</a>
           <a class="ppt-button ppt-button--outline-on-dark" href="/manufacturing/">Manufacturing Capability</a>
@@ -2221,8 +2221,8 @@ function homePageV2() {
     <div class="ppt-container">
       ${sectionHead(
         "Business Matrix",
-        "One mother brand, four focused business paths",
-        "PanPanTech 2.0 separates trust from traffic: the group site explains who owns the capabilities, while vertical sites keep their own product and inquiry funnels."
+        "One group, four focused business paths",
+        "Explore the group's four public business areas and move quickly to the team or product path that matches your project."
       )}
       ${businessMatrix()}
     </div>
@@ -2232,8 +2232,8 @@ function homePageV2() {
     <div class="ppt-container">
       ${sectionHead(
         "Group Relationship",
-        "A clear brand graph for buyers, search engines, and AI answer systems",
-        "Each linked brand has a role sentence. The footer and schema repeat the same structure so external platforms can verify the relationship."
+        "A clear group structure for buyers and partners",
+        "Each PanPanTech group brand has a defined role, so buyers can reach the right product, software, robotics, or manufacturing team."
       )}
       ${groupRelationship()}
     </div>
@@ -2260,7 +2260,7 @@ function homePageV2() {
       <div>
         <p class="ppt-eyebrow">Manufacturing</p>
         <h2>Future ESL OEM, PCBA, and e-paper module capability starts inside the group site</h2>
-        <p>PanPanTech should validate manufacturing inquiries under the mother brand before creating another domain. The manufacturing page separates OEM / ODM and PCBA language from AiEinkSmart's retail-buyer SEO funnel.</p>
+        <p>PanPanTech supports OEM, PCBA, and e-paper module discussions for qualified B2B partners. The manufacturing page outlines capability areas, sample review, pilot production, and QC workflow.</p>
         <a class="ppt-button ppt-button--outline-on-dark" href="/manufacturing/">Review Manufacturing Path</a>
       </div>
       <div class="ppt-process-list">
@@ -2275,8 +2275,8 @@ function homePageV2() {
     <div class="ppt-container ppt-cta-panel">
       <div>
         <p class="ppt-eyebrow">Unified Inquiry</p>
-        <h2>Route retail tech, robot, and manufacturing conversations through PanPanTech</h2>
-        <p>Use one group contact point, then route the lead to AiEinkSmart, Pyroglaux, AiESL, Smart Robots, or manufacturing after the first qualification.</p>
+        <h2>Start retail tech, robot, and manufacturing conversations with PanPanTech</h2>
+        <p>Use one group contact point and PanPanTech will connect your request with the right retail technology, robotics, digital art, or manufacturing team.</p>
       </div>
       <a class="ppt-button ppt-button--primary" href="/request-a-quote/">Contact PanPanTech</a>
     </div>
@@ -2287,7 +2287,7 @@ function homePageV2() {
     path: "/",
     title: "PanPanTech | Retail AIoT, Smart Robots, Manufacturing Platform",
     description:
-      "PanPanTech is the mother brand for retail AIoT, electronic shelf label brands, smart robots, and future ESL OEM, PCBA, and e-paper module manufacturing.",
+      "PanPanTech connects retail AIoT, electronic shelf label brands, smart robots, and ESL OEM, PCBA, and e-paper module manufacturing capability.",
     body,
     image: "/assets/images/robot-dark-hero.jpg",
     schemas: [faqSchema()],
@@ -2299,11 +2299,11 @@ function solutionsPage() {
     path: "/solutions/",
     title: "Solutions | PanPanTech Retail Tech, Robots, Digital Art",
     description:
-      "Explore PanPanTech solution paths for retail technology, smart robots, digital art displays, and manufacturing without merging vertical brand traffic funnels.",
+      "Explore PanPanTech solution paths for retail technology, smart robots, digital art displays, and manufacturing programs for global B2B buyers.",
     eyebrow: "Solutions",
     h1: "PanPanTech solution paths",
     lead:
-      "PanPanTech 2.0 uses the group site as a navigation layer: retail tech points to specialist brands, smart robots stay on this site, and manufacturing begins as a group capability.",
+      "Explore PanPanTech business areas and choose the right path for retail stores, facility automation, interior display products, or manufacturing cooperation.",
     schemas: [breadcrumbSchema([["Home", "/"], ["Solutions", "/solutions/"]])],
     content: `<section class="ppt-section">
   <div class="ppt-container">
@@ -2314,12 +2314,12 @@ function solutionsPage() {
   <div class="ppt-container ppt-split">
     <div id="retail-tech">
       <p class="ppt-eyebrow">Retail Tech</p>
-      <h2>Keep ESL traffic in AiEinkSmart while PanPanTech owns the trust layer</h2>
-      <p>Electronic shelf labels, e-paper signage, retail analytics, and data middleware should not be merged into a second umbrella domain. The group site explains ownership and sends buyers to the right vertical entry.</p>
+      <h2>Retail technology for digital shelf operations and store intelligence</h2>
+      <p>PanPanTech group brands support electronic shelf labels, e-paper signage, store traffic analytics, and retail data integration for retailers, distributors, and system integrators.</p>
       <ul class="ppt-check-list">
-        <li>AiEinkSmart remains the ESL inquiry and ranking site.</li>
-        <li>Pyroglaux stays the retail footfall analytics brand.</li>
-        <li>AiESL stays the data platform and API entry.</li>
+        <li>AiEinkSmart supports electronic shelf labels and e-paper shelf displays.</li>
+        <li>Pyroglaux supports retail footfall analytics and store behavior measurement.</li>
+        <li>AiESL supports retail data middleware, API access, and platform integration.</li>
       </ul>
     </div>
     <div class="ppt-process-list ppt-process-list--light">
@@ -2333,14 +2333,14 @@ function solutionsPage() {
   <div class="ppt-container ppt-split">
     <div id="digital-art">
       <p class="ppt-eyebrow">Digital Art</p>
-      <h2>Digital art remains a separate lightweight vertical path</h2>
-      <p>EinkSmart can keep digital art and e-paper frame positioning separate from retail ESL procurement language, reducing confusion for buyers and AI systems.</p>
+      <h2>E-paper art frames for calm interiors and commercial spaces</h2>
+      <p>EinkSmart presents e-paper art frames and ambient digital display products for homes, hospitality spaces, galleries, and curated commercial interiors.</p>
       <a class="ppt-link" href="https://einksmart.com">Visit EinkSmart</a>
     </div>
-    <figure class="ppt-image-frame"><img src="/assets/images/p060-studio.jpg" alt="PanPanTech controlled product photography style" width="1000" height="1000" loading="lazy" decoding="async"></figure>
+    <figure class="ppt-image-frame ppt-image-frame--landscape"><img src="/assets/images/digital-art-frame-living-room.png" alt="EinkSmart e-paper art frame in a warm living room" width="879" height="662" loading="lazy" decoding="async"></figure>
   </div>
 </section>
-${finalCta("Tell us whether your project belongs to retail tech, smart robots, digital art, or manufacturing. PanPanTech will route it correctly.")}`,
+${finalCta("Tell us whether your project is for retail tech, smart robots, digital art, or manufacturing. PanPanTech will connect you with the right team.")}`,
   });
 }
 
@@ -2353,7 +2353,7 @@ function smartRobotsSolutionPage() {
     eyebrow: "Smart Robots",
     h1: "Smart robots for cleaning, facade care, and warehouse movement",
     lead:
-      "This section keeps the existing robot business inside PanPanTech while the homepage becomes a broader mother brand site for trust, navigation, and manufacturing capability.",
+      "This section helps facility teams, distributors, and integrators compare cleaning robots, facade cleaning robots, and warehouse AMRs through the PanPanTech robot business.",
     schemas: [breadcrumbSchema([["Home", "/"], ["Solutions", "/solutions/"], ["Smart Robots", "/solutions/smart-robots/"]])],
     content: `<section class="ppt-section">
   <div class="ppt-container">
@@ -2395,29 +2395,29 @@ function technologyPage() {
     eyebrow: "Technology",
     h1: "Technology layer behind the PanPanTech group",
     lead:
-      "The technology page gives buyers and AI answer systems a single source for PanPanTech's AIoT platform logic, e-paper capability, robot systems, and IP posture.",
+      "The technology page gives buyers and partners a clear view of PanPanTech's AIoT platform logic, e-paper capability, robot systems, and IP posture.",
     schemas: [breadcrumbSchema([["Home", "/"], ["Technology", "/technology/"]])],
     content: `<section class="ppt-section">
   <div class="ppt-container ppt-feature-grid">
-    <article class="ppt-feature-card"><span>AIoT</span><h2>Retail data platform</h2><p>NeuroGrid-style retail decision logic, ESL data flow, API integration, and operational visibility should be described here as group technology rather than as another umbrella brand.</p></article>
+    <article class="ppt-feature-card"><span>AIoT</span><h2>Retail data platform</h2><p>Retail decision logic, ESL data flow, API integration, and operational visibility for store operations, integrations, and management workflows.</p></article>
     <article class="ppt-feature-card"><span>E-paper</span><h2>Display and ESL capability</h2><p>E-paper displays, ESL hardware, wireless gateways, low-power labels, and e-paper signage belong in the technology vocabulary without duplicating AiEinkSmart product pages.</p></article>
     <article class="ppt-feature-card"><span>Robotics</span><h2>Autonomous systems</h2><p>Cleaning routes, AMR movement, perception, docking workflow, fleet reporting, and service readiness connect the robot business to the group technology story.</p></article>
   </div>
 </section>
 <section class="ppt-section ppt-section--soft">
   <div class="ppt-container ppt-content">
-    <h2>Trust signals to standardize across external platforms</h2>
+    <h2>Trust signals for buyers and partners</h2>
     <table>
       <tbody>
         <tr><th scope="row">Company facts</th><td>Founded in 2015 in Guangzhou, with R&D, manufacturing, and sales capability presented under PanPanTech.</td></tr>
         <tr><th scope="row">Deployment proof</th><td>Use 30+ countries and 6,000+ stores as group-level trust statements where documentation supports the claim.</td></tr>
         <tr><th scope="row">Manufacturing base</th><td>Use 3,200 m2, SMT lines, ISO9001, test workflow, and QC evidence as manufacturing facts when verified.</td></tr>
-        <tr><th scope="row">Brand graph</th><td>Repeat AiEinkSmart, Pyroglaux, AiESL, and EinkSmart roles consistently in schema, footer, About, LinkedIn, and marketplace profiles.</td></tr>
+        <tr><th scope="row">Group brands</th><td>AiEinkSmart, Pyroglaux, AiESL, and EinkSmart each support a focused product, software, analytics, or display category.</td></tr>
       </tbody>
     </table>
   </div>
 </section>
-${finalCta("Share the technology capability you need to verify. PanPanTech will route the request to the right product, software, or manufacturing owner.")}`,
+${finalCta("Share the technology capability you need to verify. PanPanTech will connect you with the right product, software, or manufacturing team.")}`,
   });
 }
 
@@ -2430,26 +2430,26 @@ function manufacturingPage() {
     eyebrow: "Manufacturing",
     h1: "ESL OEM, PCBA, and e-paper module manufacturing capability",
     lead:
-      "Manufacturing starts as a PanPanTech group capability page, not a new domain. It validates OEM and PCBA demand while keeping AiEinkSmart focused on retail ESL buyers.",
+      "PanPanTech manufacturing supports qualified B2B cooperation for ESL OEM, PCBA assembly, e-paper display modules, testing, QC, and export documentation.",
     schemas: [breadcrumbSchema([["Home", "/"], ["Manufacturing", "/manufacturing/"]])],
     content: `<section class="ppt-section">
   <div class="ppt-container">
     ${sectionHead(
       "Capability Map",
-      "Separate manufacturing intent from retail ESL purchasing intent",
-      "Retail buyers should still go to AiEinkSmart. OEM, ODM, PCBA, and module buyers can qualify manufacturing capability here."
+      "Manufacturing programs for qualified B2B partners",
+      "Review the capability areas PanPanTech can discuss for ESL OEM, PCBA assembly, e-paper modules, testing, QC, and export documentation."
     )}
     ${manufacturingCapabilityGrid()}
   </div>
 </section>
 <section class="ppt-section ppt-section--soft">
   <div class="ppt-container ppt-content">
-    <h2>Keyword and inquiry boundaries</h2>
+    <h2>Manufacturing cooperation areas</h2>
     <table>
       <tbody>
-        <tr><th scope="row">AiEinkSmart owns</th><td>electronic shelf labels, ESL supplier, ESL manufacturer, ESL price tags, digital price tags, and retail-buyer inquiry content.</td></tr>
-        <tr><th scope="row">Manufacturing owns</th><td>ESL OEM, ESL ODM, PCBA assembly, e-paper display module manufacturing, contract manufacturing, and pilot production.</td></tr>
-        <tr><th scope="row">Do not build</th><td>A separate aieink.com umbrella site. It creates duplicate official sources and weakens the PanPanTech entity graph.</td></tr>
+        <tr><th scope="row">ESL OEM / ODM programs</th><td>Finished electronic shelf label programs, private-label planning, packaging, documentation, and rollout support.</td></tr>
+        <tr><th scope="row">PCBA and module work</th><td>PCBA assembly, e-paper display modules, contract manufacturing, pilot production, firmware coordination, and functional testing.</td></tr>
+        <tr><th scope="row">QC and export support</th><td>Incoming checks, SMT process notes, sample validation, burn-in expectations, packing checks, and destination-market document review.</td></tr>
       </tbody>
     </table>
   </div>
@@ -2459,7 +2459,7 @@ function manufacturingPage() {
     <div>
       <p class="ppt-eyebrow">Manufacturing Workflow</p>
       <h2>From sample request to controlled pilot</h2>
-      <p>Use the first version of this page to collect qualified OEM and PCBA demand before investing in a separate manufacturing website or new brand name.</p>
+      <p>Share product requirements, target market, enclosure needs, wireless requirements, firmware scope, order quantity, and certification expectations before sample planning.</p>
     </div>
     <div class="ppt-process-list">
       <div><span>01</span><strong>Requirement review</strong><p>Product category, target market, enclosure, wireless, firmware, order quantity, and certification needs.</p></div>
@@ -2477,11 +2477,11 @@ function aboutPageV2() {
     path: "/about/",
     title: "About PanPanTech | Retail AIoT and Smart Robotics Group",
     description:
-      "PanPanTech is the mother brand for retail AIoT, electronic shelf label brands, smart robots, and future manufacturing capability from Guangzhou.",
+      "PanPanTech is a Guangzhou-based group for retail AIoT, electronic shelf label brands, smart robots, digital art displays, and manufacturing capability.",
     eyebrow: "About PanPanTech",
-    h1: "A mother brand for retail AIoT, smart robots, and manufacturing",
+    h1: "A global group for retail AIoT, smart robots, and manufacturing",
     lead:
-      "PanPanTech 2.0 brings the group story into one official source while preserving the independent SEO and inquiry roles of each vertical brand.",
+      "PanPanTech connects retail technology, smart robotics, digital art displays, and manufacturing capability under one group identity for global buyers, distributors, and OEM partners.",
     schemas: [breadcrumbSchema([["Home", "/"], ["About", "/about/"]])],
     content: `<section class="ppt-section">
   <div class="ppt-container">
@@ -2491,21 +2491,21 @@ function aboutPageV2() {
 <section class="ppt-section ppt-section--soft">
   <div class="ppt-container">
     ${sectionHead(
-      "Brand Architecture",
-      "One group identity with focused vertical brands",
-      "PanPanTech is the public trust and navigation center. AiEinkSmart, Pyroglaux, AiESL, and EinkSmart keep their own business identities and buyer paths."
+      "Group Structure",
+      "One group identity with focused business lines",
+      "PanPanTech is the group brand behind retail technology, smart robotics, digital art displays, and manufacturing programs. Each business line gives buyers a clearer path to the right product team."
     )}
     ${groupRelationship()}
   </div>
 </section>
 <section class="ppt-section">
   <div class="ppt-container ppt-content">
-    <h2>Operating principles for brand consistency</h2>
+    <h2>How PanPanTech supports buyers</h2>
     <ul>
-      <li>Use PanPanTech as the single mother brand in external profiles, presentations, quotations, and email signatures.</li>
-      <li>Describe AiEinkSmart as the electronic shelf label brand of PanPanTech, not as a second umbrella company.</li>
-      <li>Keep aieinksmart.com independent for ESL rankings and inquiries; do not redirect it into this site.</li>
-      <li>Use manufacturing content for OEM, ODM, PCBA, and module buyers rather than retail ESL shoppers.</li>
+      <li>Use PanPanTech as the group contact for retail technology, robotics, digital art, and manufacturing cooperation.</li>
+      <li>AiEinkSmart is the electronic shelf label and e-paper shelf display brand within the PanPanTech group.</li>
+      <li>Robot sourcing, OEM robot programs, ESL manufacturing, and PCBA cooperation are guided through the relevant PanPanTech business path.</li>
+      <li>PanPanTech supports distributors, integrators, retailers, facility operators, and qualified OEM partners.</li>
     </ul>
   </div>
 </section>
@@ -3280,6 +3280,7 @@ table { border-collapse: collapse; width: 100%; }
   background: #ffffff;
   aspect-ratio: 1 / 1;
 }
+.ppt-image-frame--landscape { aspect-ratio: 879 / 662; }
 .ppt-image-frame img, .ppt-product-hero__media img, .cleanbot-product-card__media img { width: 100%; height: 100%; object-fit: cover; }
 .cleanbot-product-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .cleanbot-product-card {
@@ -3868,14 +3869,14 @@ Sitemap: ${site.domain}/sitemap.xml
 function llmsTxt() {
   return `# PanPanTech
 
-> PanPanTech is the mother brand for retail AIoT, smart robotics, and manufacturing capability. It links the group's vertical brands while keeping each traffic and inquiry path focused.
+> PanPanTech is the group brand for retail AIoT, smart robotics, digital art displays, and manufacturing capability for global B2B buyers.
 
-## Mother Brand Pages
-- [Home](${site.domain}/): PanPanTech group trust, navigation, smart robots, and manufacturing entry.
+## Key Pages
+- [Home](${site.domain}/): PanPanTech group overview, smart robots, retail technology brands, and manufacturing entry.
 - [Solutions](${site.domain}/solutions/): retail tech, smart robots, digital art, and manufacturing paths.
 - [Technology](${site.domain}/technology/): AIoT, e-paper, retail platform, robotics, and IP trust signals.
 - [Manufacturing](${site.domain}/manufacturing/): ESL OEM, PCBA assembly, e-paper display module manufacturing, testing, QC, and export documentation.
-- [About PanPanTech](${site.domain}/about/): official group brand architecture and operating principles.
+- [About PanPanTech](${site.domain}/about/): group structure, business lines, and buyer support.
 
 ## Group Brand Relationships
 ${groupBrands.map((brand) => `- [${brand.name}](${brand.url}): ${brand.role}. ${brand.note}`).join("\n")}

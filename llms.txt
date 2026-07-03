@@ -1,19 +1,19 @@
 # PanPanTech
 
-> PanPanTech is the mother brand for retail AIoT, smart robotics, and manufacturing capability. It links the group's vertical brands while keeping each traffic and inquiry path focused.
+> PanPanTech is the group brand for retail AIoT, smart robotics, digital art displays, and manufacturing capability for global B2B buyers.
 
-## Mother Brand Pages
-- [Home](https://panpantechnology.com/): PanPanTech group trust, navigation, smart robots, and manufacturing entry.
+## Key Pages
+- [Home](https://panpantechnology.com/): PanPanTech group overview, smart robots, retail technology brands, and manufacturing entry.
 - [Solutions](https://panpantechnology.com/solutions/): retail tech, smart robots, digital art, and manufacturing paths.
 - [Technology](https://panpantechnology.com/technology/): AIoT, e-paper, retail platform, robotics, and IP trust signals.
 - [Manufacturing](https://panpantechnology.com/manufacturing/): ESL OEM, PCBA assembly, e-paper display module manufacturing, testing, QC, and export documentation.
-- [About PanPanTech](https://panpantechnology.com/about/): official group brand architecture and operating principles.
+- [About PanPanTech](https://panpantechnology.com/about/): group structure, business lines, and buyer support.
 
 ## Group Brand Relationships
-- [AiEinkSmart](https://aieinksmart.com): Electronic shelf labels and e-paper signage. The ESL traffic and inquiry site remains independent and is not redirected into PanPanTech.
-- [Pyroglaux](https://pyroglaux.com): Privacy-compliant retail footfall analytics. A sister retail analytics brand that supports store traffic and behavior measurement.
-- [AiESL](https://aiesl.com): Retail data middleware, API, and platform entry. A software and developer-facing entry for ESL data, integration, and retail workflows.
-- [EinkSmart](https://einksmart.com): E-paper art frame and digital art display. A separate digital art display line kept away from retail ESL positioning.
+- [AiEinkSmart](https://aieinksmart.com): Electronic shelf labels and e-paper signage. Electronic shelf label systems for retailers that need fast price updates, e-paper shelf displays, and store-level operations support.
+- [Pyroglaux](https://pyroglaux.com): Privacy-compliant retail footfall analytics. Retail analytics for store traffic, behavior measurement, and privacy-compliant occupancy insights.
+- [AiESL](https://aiesl.com): Retail data middleware, API, and platform entry. Platform and API entry for retail data, label management, and system integration.
+- [EinkSmart](https://einksmart.com): E-paper art frame and digital art display. E-paper art frames and ambient digital display products for residential and commercial interiors.
 
 ## Smart Robots
 - [Smart Robots](https://panpantechnology.com/solutions/smart-robots/): cleaning robots, facade cleaning robots, and warehouse AMRs as the robot business unit.

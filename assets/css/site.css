@@ -214,6 +214,7 @@ table { border-collapse: collapse; width: 100%; }
   background: #ffffff;
   aspect-ratio: 1 / 1;
 }
+.ppt-image-frame--landscape { aspect-ratio: 879 / 662; }
 .ppt-image-frame img, .ppt-product-hero__media img, .cleanbot-product-card__media img { width: 100%; height: 100%; object-fit: cover; }
 .cleanbot-product-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .cleanbot-product-card {
