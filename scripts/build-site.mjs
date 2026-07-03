@@ -6,21 +6,88 @@ const site = {
   name: "PanPanTech",
   domain: "https://panpantechnology.com",
   address: "Building A1, Yuexiu iPARK Yuegang Zhigu, Nansha District, Guangzhou, Guangdong Province, China",
-  email: "info@einksmart.com",
+  email: "info@panpantechnology.com",
   phone: "+86-13925118851",
   city: "Guangzhou",
   country: "CN",
   description:
-    "PanPanTech supplies commercial cleaning robots, facade cleaning robots, autonomous floor scrubbers, sweeping robots, and warehouse AMR solutions for global B2B buyers and OEM / ODM partners.",
+    "PanPanTech is a retail AIoT, smart robotics, and manufacturing platform connecting electronic shelf labels, retail analytics, AMR robots, and OEM programs.",
 };
 
 const nav = [
-  ["Products", "/products/"],
-  ["OEM / ODM", "/oem-odm-cleaning-robots/"],
-  ["Manufacturer", "/commercial-cleaning-robot-manufacturer/"],
-  ["Warehouse", "/industries/warehouse-cleaning-robots/"],
-  ["Blog", "/blog/"],
-  ["FAQ", "/faqs/"],
+  ["Solutions", "/solutions/"],
+  ["Technology", "/technology/"],
+  ["Manufacturing", "/manufacturing/"],
+  ["About", "/about/"],
+  ["Contact", "/contact/"],
+];
+
+const groupBrands = [
+  {
+    name: "AiEinkSmart",
+    url: "https://aieinksmart.com",
+    role: "Electronic shelf labels and e-paper signage",
+    note: "The ESL traffic and inquiry site remains independent and is not redirected into PanPanTech.",
+  },
+  {
+    name: "Pyroglaux",
+    url: "https://pyroglaux.com",
+    role: "Privacy-compliant retail footfall analytics",
+    note: "A sister retail analytics brand that supports store traffic and behavior measurement.",
+  },
+  {
+    name: "AiESL",
+    url: "https://aiesl.com",
+    role: "Retail data middleware, API, and platform entry",
+    note: "A software and developer-facing entry for ESL data, integration, and retail workflows.",
+  },
+  {
+    name: "EinkSmart",
+    url: "https://einksmart.com",
+    role: "E-paper art frame and digital art display",
+    note: "A separate digital art display line kept away from retail ESL positioning.",
+  },
+];
+
+const businessUnits = [
+  {
+    title: "Retail Tech",
+    eyebrow: "ESL / Analytics / Middleware",
+    text: "Electronic shelf labels, e-paper signage, retail footfall analytics, and data platform links live in dedicated vertical brands while PanPanTech provides the group trust layer.",
+    href: "/solutions/#retail-tech",
+  },
+  {
+    title: "Smart Robots",
+    eyebrow: "Cleaning / AMR / Facade",
+    text: "Commercial cleaning robots, facade cleaning robots, and warehouse AMRs remain on panpantechnology.com as the active robot business and sourcing catalog.",
+    href: "/solutions/smart-robots/",
+  },
+  {
+    title: "Digital Art",
+    eyebrow: "E-paper display line",
+    text: "E-paper art and digital display products stay as a lightweight vertical path with clear separation from ESL procurement content.",
+    href: "/solutions/#digital-art",
+  },
+  {
+    title: "Manufacturing",
+    eyebrow: "ESL OEM / PCBA / Modules",
+    text: "Future ESL finished-goods assembly, PCBA service, and e-paper display module manufacturing start as a group capability page before any separate domain is considered.",
+    href: "/manufacturing/",
+  },
+];
+
+const trustFacts = [
+  ["2015", "Founded in Guangzhou"],
+  ["30+", "countries served"],
+  ["6,000+", "retail stores deployed"],
+  ["3,200 m2", "production base and SMT capability"],
+];
+
+const manufacturingCapabilities = [
+  ["01", "ESL OEM / ODM", "Finished electronic shelf label programs, model planning, neutral datasheets, packaging support, and distributor-ready documentation."],
+  ["02", "PCBA assembly", "Board-level assembly, firmware coordination, test fixtures, inspection workflow, and sourcing support for retail IoT hardware."],
+  ["03", "E-paper modules", "E-paper display modules, wireless gateway accessory planning, enclosure coordination, and sample-to-pilot validation."],
+  ["04", "Quality control", "Incoming material checks, SMT process notes, functional testing, burn-in expectations, packing checks, and export document control."],
 ];
 
 const products = [
@@ -1592,8 +1659,10 @@ function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.name,
+    legalName: "PanPan Technology",
+    alternateName: ["PanPanTech", "PanPan Technology"],
     url: site.domain,
-    logo: url("/assets/images/p060-product.jpg"),
+    logo: url("/assets/images/robot-dark-hero.jpg"),
     description: site.description,
     email: site.email,
     telephone: site.phone,
@@ -1603,6 +1672,28 @@ function organizationSchema() {
       addressLocality: site.city,
       addressCountry: site.country,
     },
+    knowsAbout: [
+      "retail AIoT",
+      "electronic shelf labels",
+      "retail analytics",
+      "commercial cleaning robots",
+      "warehouse AMR",
+      "PCBA assembly",
+      "e-paper display module manufacturing",
+    ],
+    brand: groupBrands.map((brand) => ({
+      "@type": "Brand",
+      name: brand.name,
+      url: brand.url,
+      description: brand.role,
+    })),
+    subOrganization: groupBrands.map((brand) => ({
+      "@type": "Organization",
+      name: brand.name,
+      url: brand.url,
+      description: brand.role,
+    })),
+    sameAs: groupBrands.map((brand) => brand.url),
   };
 }
 
@@ -1694,31 +1785,39 @@ function header(currentPath = "/") {
 }
 
 function footer() {
-  const footerProducts = products
-    .slice(0, 6)
-    .map((product) => `<a href="${product.url}">${html(product.shortTitle)}</a>`)
-    .join("");
+  const groupLinks = groupBrands
+    .map((brand) => `<a href="${brand.url}">${html(brand.name)} - ${html(brand.role)}</a>`)
+    .join("\n");
   return `<footer class="ppt-footer">
   <div class="ppt-container ppt-footer__grid">
     <div class="ppt-footer__brand">
       <a class="ppt-logo ppt-logo--footer" href="/"><span>PanPan</span>Tech</a>
-      <p>Commercial cleaning robots, facade cleaning robots, and warehouse AMR solutions for global B2B buyers, distributors, and OEM / ODM partners.</p>
-      <ul class="ppt-cert-list" aria-label="Certification categories"><li>CE</li><li>FCC</li><li>IEC</li></ul>
+      <p>Retail AIoT, smart robotics, and manufacturing platform for global B2B buyers, system integrators, distributors, and OEM partners.</p>
+      <ul class="ppt-cert-list" aria-label="Group capability tags"><li>AIoT</li><li>ESL</li><li>AMR</li><li>PCBA</li></ul>
     </div>
     <div>
-      <h2>Products</h2>
-      <a href="/products/">Commercial Cleaning Robots</a>
-      ${footerProducts}
+      <h2>PanPanTech Group</h2>
+      ${groupLinks}
     </div>
     <div>
       <h2>Solutions</h2>
-      <a href="/industries/warehouse-cleaning-robots/">Warehouse Cleaning</a>
-      <a href="/commercial-cleaning-robot-manufacturer/">Manufacturer Program</a>
-      <a href="/oem-odm-cleaning-robots/">OEM / ODM</a>
+      <a href="/solutions/">Solutions overview</a>
+      <a href="/solutions/#retail-tech">Retail Tech</a>
+      <a href="/solutions/smart-robots/">Smart Robots</a>
+      <a href="/solutions/#digital-art">Digital Art</a>
+      <a href="/manufacturing/">Manufacturing</a>
+    </div>
+    <div>
+      <h2>Robot Business</h2>
+      <a href="/products/">Robot product range</a>
+      <a href="/industries/warehouse-cleaning-robots/">Warehouse cleaning robots</a>
+      <a href="/commercial-cleaning-robot-manufacturer/">Robot sourcing support</a>
+      <a href="/oem-odm-cleaning-robots/">Robot OEM / ODM</a>
       <a href="/request-a-quote/">Request a Quote</a>
     </div>
     <div>
       <h2>Company</h2>
+      <a href="/technology/">Technology</a>
       <a href="/about/">About</a>
       <a href="/blog/">Blog</a>
       <a href="/faqs/">FAQ</a>
@@ -1738,7 +1837,7 @@ function layout({
   description,
   body,
   schemas = [],
-  image = "/assets/images/p060-hero.jpg",
+  image = "/assets/images/robot-dark-hero.jpg",
 }) {
   const canonical = url(currentPath);
   const schemaScripts = [organizationSchema(), ...schemas].map(jsonLd).join("\n");
@@ -1776,6 +1875,69 @@ function sectionHead(eyebrow, title, text) {
   <h2>${html(title)}</h2>
   <p>${html(text)}</p>
 </div>`;
+}
+
+function trustStrip() {
+  return `<div class="ppt-trust-grid" aria-label="PanPanTech group facts">
+${trustFacts
+  .map(([value, label]) => `<div><strong>${html(value)}</strong><span>${html(label)}</span></div>`)
+  .join("\n")}
+</div>`;
+}
+
+function businessMatrix() {
+  return `<div class="ppt-business-grid">
+${businessUnits
+  .map(
+    (unit) => `<article class="ppt-business-card" id="${unit.href.includes("#") ? unit.href.split("#")[1] : unit.title.toLowerCase().replaceAll(" ", "-")}">
+  <span>${html(unit.eyebrow)}</span>
+  <h3>${html(unit.title)}</h3>
+  <p>${html(unit.text)}</p>
+  <a class="ppt-link" href="${unit.href}">View path</a>
+</article>`
+  )
+  .join("\n")}
+</div>`;
+}
+
+function groupRelationship() {
+  return `<div class="ppt-group-map" aria-label="PanPanTech brand relationship map">
+  <div class="ppt-group-map__hub">
+    <span>Hub</span>
+    <strong>panpantechnology.com</strong>
+    <p>PanPanTech mother brand site for trust, navigation, smart robots, and future manufacturing.</p>
+  </div>
+  <div class="ppt-group-map__spokes">
+${groupBrands
+  .map(
+    (brand) => `<a class="ppt-group-node" href="${brand.url}">
+  <span>${html(brand.name)}</span>
+  <strong>${html(brand.role)}</strong>
+  <p>${html(brand.note)}</p>
+</a>`
+  )
+  .join("\n")}
+  </div>
+  <div class="ppt-group-map__defense">
+    <span>Defensive domains</span>
+    <p>aieink.com and aieink.cn stop as build projects. panpantech.ai is recommended as a defensive 301 to this mother brand site.</p>
+  </div>
+</div>`;
+}
+
+function manufacturingCapabilityGrid() {
+  return `<div class="ppt-system-grid">
+${manufacturingCapabilities
+  .map(
+    ([number, title, text]) => `<article><span>${html(number)}</span><h3>${html(title)}</h3><p>${html(text)}</p></article>`
+  )
+  .join("\n")}
+</div>`;
+}
+
+function representativeRobotCards() {
+  const featuredSlugs = ["p060", "pt90", "t300-industrial-delivery-amr", "t600-heavy-payload-amr", "facade-cleaning-robot", "yz-outdoor-sweeping-robot"];
+  return productCards(products.filter((product) => featuredSlugs.includes(product.slug)));
 }
 
 function productCards(items = products) {
@@ -2020,17 +2182,340 @@ function blogArticlePage(post) {
   });
 }
 
-function finalCta(text = "Send your floor area, cleaning frequency, destination country, and OEM requirements. PanPanTech will recommend the right configuration and next steps.") {
+function finalCta(text = "Send your retail technology, robotics, or manufacturing brief. PanPanTech will route it to the right business path and next steps.") {
   return `<section class="ppt-section">
   <div class="ppt-container ppt-final-cta">
-    <h2>Tell us about your facility or distributor program</h2>
+    <h2>Talk to PanPanTech about your next program</h2>
     <p>${html(text)}</p>
     <a class="ppt-button ppt-button--primary" href="/request-a-quote/">Request a Quote</a>
   </div>
 </section>`;
 }
 
+function homePageV2() {
+  const body = `<main id="main-content" class="ppt-main">
+  <section class="ppt-hero ppt-section--dark ppt-hero--brand">
+    <div class="ppt-container ppt-hero__grid">
+      <div class="ppt-hero__copy">
+        <p class="ppt-eyebrow">PanPanTech Group</p>
+        <h1>PanPanTech | Retail AIoT, Smart Robots, and Manufacturing Platform</h1>
+        <p class="ppt-lead">PanPanTech is the mother brand for retail technology, smart robotics, and future ESL OEM / PCBA manufacturing. Vertical brands keep their own traffic paths while this site provides the trust layer and navigation center.</p>
+        <div class="ppt-actions">
+          <a class="ppt-button ppt-button--primary" href="/solutions/">Explore Solutions</a>
+          <a class="ppt-button ppt-button--outline-on-dark" href="/manufacturing/">Manufacturing Capability</a>
+        </div>
+      </div>
+      <figure class="ppt-hero__media">
+        <img src="/assets/images/robot-dark-hero.jpg" width="1200" height="800" alt="PanPanTech industrial robot and AIoT technology hero" decoding="async" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="ppt-section">
+    <div class="ppt-container">
+      ${trustStrip()}
+    </div>
+  </section>
+
+  <section class="ppt-section ppt-section--soft">
+    <div class="ppt-container">
+      ${sectionHead(
+        "Business Matrix",
+        "One mother brand, four focused business paths",
+        "PanPanTech 2.0 separates trust from traffic: the group site explains who owns the capabilities, while vertical sites keep their own product and inquiry funnels."
+      )}
+      ${businessMatrix()}
+    </div>
+  </section>
+
+  <section class="ppt-section">
+    <div class="ppt-container">
+      ${sectionHead(
+        "Group Relationship",
+        "A clear brand graph for buyers, search engines, and AI answer systems",
+        "Each linked brand has a role sentence. The footer and schema repeat the same structure so external platforms can verify the relationship."
+      )}
+      ${groupRelationship()}
+    </div>
+  </section>
+
+  <section class="ppt-section ppt-section--soft">
+    <div class="ppt-container">
+      ${sectionHead(
+        "Smart Robots",
+        "Robot business stays here, but as a business unit instead of the whole brand",
+        "Cleaning robots, facade cleaning robots, and warehouse AMRs remain on panpantechnology.com. The homepage shows representative categories and sends detailed evaluation to the robot section."
+      )}
+      ${categoryOverview()}
+      ${representativeRobotCards()}
+      <div class="ppt-actions">
+        <a class="ppt-button ppt-button--outline" href="/solutions/smart-robots/">View Smart Robots</a>
+        <a class="ppt-button ppt-button--outline" href="/products/">Compare Robot Models</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ppt-section ppt-section--dark ppt-manufacturing">
+    <div class="ppt-container ppt-split">
+      <div>
+        <p class="ppt-eyebrow">Manufacturing</p>
+        <h2>Future ESL OEM, PCBA, and e-paper module capability starts inside the group site</h2>
+        <p>PanPanTech should validate manufacturing inquiries under the mother brand before creating another domain. The manufacturing page separates OEM / ODM and PCBA language from AiEinkSmart's retail-buyer SEO funnel.</p>
+        <a class="ppt-button ppt-button--outline-on-dark" href="/manufacturing/">Review Manufacturing Path</a>
+      </div>
+      <div class="ppt-process-list">
+        <div><span>01</span><strong>ESL OEM / ODM</strong><p>Finished ESL programs, model planning, packaging, and documentation.</p></div>
+        <div><span>02</span><strong>PCBA assembly</strong><p>Board assembly, firmware coordination, testing, and QC workflow.</p></div>
+        <div><span>03</span><strong>E-paper modules</strong><p>Display modules, gateway accessories, samples, and pilot validation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ppt-section">
+    <div class="ppt-container ppt-cta-panel">
+      <div>
+        <p class="ppt-eyebrow">Unified Inquiry</p>
+        <h2>Route retail tech, robot, and manufacturing conversations through PanPanTech</h2>
+        <p>Use one group contact point, then route the lead to AiEinkSmart, Pyroglaux, AiESL, Smart Robots, or manufacturing after the first qualification.</p>
+      </div>
+      <a class="ppt-button ppt-button--primary" href="/request-a-quote/">Contact PanPanTech</a>
+    </div>
+  </section>
+</main>`;
+
+  return layout({
+    path: "/",
+    title: "PanPanTech | Retail AIoT, Smart Robots, Manufacturing Platform",
+    description:
+      "PanPanTech is the mother brand for retail AIoT, electronic shelf label brands, smart robots, and future ESL OEM, PCBA, and e-paper module manufacturing.",
+    body,
+    image: "/assets/images/robot-dark-hero.jpg",
+    schemas: [faqSchema()],
+  });
+}
+
+function solutionsPage() {
+  return simplePage({
+    path: "/solutions/",
+    title: "Solutions | PanPanTech Retail Tech, Robots, Digital Art",
+    description:
+      "Explore PanPanTech solution paths for retail technology, smart robots, digital art displays, and manufacturing without merging vertical brand traffic funnels.",
+    eyebrow: "Solutions",
+    h1: "PanPanTech solution paths",
+    lead:
+      "PanPanTech 2.0 uses the group site as a navigation layer: retail tech points to specialist brands, smart robots stay on this site, and manufacturing begins as a group capability.",
+    schemas: [breadcrumbSchema([["Home", "/"], ["Solutions", "/solutions/"]])],
+    content: `<section class="ppt-section">
+  <div class="ppt-container">
+    ${businessMatrix()}
+  </div>
+</section>
+<section class="ppt-section ppt-section--soft">
+  <div class="ppt-container ppt-split">
+    <div id="retail-tech">
+      <p class="ppt-eyebrow">Retail Tech</p>
+      <h2>Keep ESL traffic in AiEinkSmart while PanPanTech owns the trust layer</h2>
+      <p>Electronic shelf labels, e-paper signage, retail analytics, and data middleware should not be merged into a second umbrella domain. The group site explains ownership and sends buyers to the right vertical entry.</p>
+      <ul class="ppt-check-list">
+        <li>AiEinkSmart remains the ESL inquiry and ranking site.</li>
+        <li>Pyroglaux stays the retail footfall analytics brand.</li>
+        <li>AiESL stays the data platform and API entry.</li>
+      </ul>
+    </div>
+    <div class="ppt-process-list ppt-process-list--light">
+      <div><span>Brand</span><strong>AiEinkSmart</strong><p>Electronic shelf labels and e-paper signage.</p></div>
+      <div><span>Brand</span><strong>Pyroglaux</strong><p>Retail footfall analytics and store behavior measurement.</p></div>
+      <div><span>Brand</span><strong>AiESL</strong><p>Retail data middleware, API, and platform integration.</p></div>
+    </div>
+  </div>
+</section>
+<section class="ppt-section">
+  <div class="ppt-container ppt-split">
+    <div id="digital-art">
+      <p class="ppt-eyebrow">Digital Art</p>
+      <h2>Digital art remains a separate lightweight vertical path</h2>
+      <p>EinkSmart can keep digital art and e-paper frame positioning separate from retail ESL procurement language, reducing confusion for buyers and AI systems.</p>
+      <a class="ppt-link" href="https://einksmart.com">Visit EinkSmart</a>
+    </div>
+    <figure class="ppt-image-frame"><img src="/assets/images/p060-studio.jpg" alt="PanPanTech controlled product photography style" width="1000" height="1000" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+${finalCta("Tell us whether your project belongs to retail tech, smart robots, digital art, or manufacturing. PanPanTech will route it correctly.")}`,
+  });
+}
+
+function smartRobotsSolutionPage() {
+  return simplePage({
+    path: "/solutions/smart-robots/",
+    title: "Smart Robots | Cleaning Robots and AMR | PanPanTech",
+    description:
+      "PanPanTech Smart Robots covers commercial cleaning robots, autonomous floor scrubbers, facade cleaning robots, warehouse AMRs, and sourcing support.",
+    eyebrow: "Smart Robots",
+    h1: "Smart robots for cleaning, facade care, and warehouse movement",
+    lead:
+      "This section keeps the existing robot business inside PanPanTech while the homepage becomes a broader mother brand site for trust, navigation, and manufacturing capability.",
+    schemas: [breadcrumbSchema([["Home", "/"], ["Solutions", "/solutions/"], ["Smart Robots", "/solutions/smart-robots/"]])],
+    content: `<section class="ppt-section">
+  <div class="ppt-container">
+    ${sectionHead(
+      "Robot Categories",
+      "Choose robots by facility task",
+      "Detailed product pages stay available for sourcing checks, but this solution page starts with use case and deployment logic."
+    )}
+    ${categoryOverview()}
+  </div>
+</section>
+<section class="ppt-section ppt-section--soft">
+  <div class="ppt-container">
+    ${sectionHead(
+      "Representative Models",
+      "A compact snapshot before model comparison",
+      "Use this set to orient buyers across indoor cleaning, large-area scrubbing, warehouse AMR, outdoor sweeping, and facade cleaning."
+    )}
+    ${representativeRobotCards()}
+  </div>
+</section>
+<section class="ppt-section">
+  <div class="ppt-container ppt-feature-grid">
+    <article class="ppt-feature-card"><span>01</span><h2>Cleaning routes</h2><p>Match floor area, aisle width, soil level, water workflow, and cleaning frequency before comparing model names.</p></article>
+    <article class="ppt-feature-card"><span>02</span><h2>AMR movement</h2><p>Match payload, station layout, docking workflow, safety zone, elevator or door integration, and cart interface.</p></article>
+    <article class="ppt-feature-card"><span>03</span><h2>Distributor launch</h2><p>Keep neutral datasheets, model naming, spare parts, warranty terms, and export documents visible before RFQ.</p></article>
+  </div>
+</section>
+${finalCta("Send your facility task, floor area, payload, path constraints, and destination country. PanPanTech will recommend a robot path.")}`,
+  });
+}
+
+function technologyPage() {
+  return simplePage({
+    path: "/technology/",
+    title: "Technology | AIoT, E-paper, Retail Systems | PanPanTech",
+    description:
+      "PanPanTech technology pages explain the group capability layer behind AIoT retail systems, e-paper display products, smart robots, and manufacturing programs.",
+    eyebrow: "Technology",
+    h1: "Technology layer behind the PanPanTech group",
+    lead:
+      "The technology page gives buyers and AI answer systems a single source for PanPanTech's AIoT platform logic, e-paper capability, robot systems, and IP posture.",
+    schemas: [breadcrumbSchema([["Home", "/"], ["Technology", "/technology/"]])],
+    content: `<section class="ppt-section">
+  <div class="ppt-container ppt-feature-grid">
+    <article class="ppt-feature-card"><span>AIoT</span><h2>Retail data platform</h2><p>NeuroGrid-style retail decision logic, ESL data flow, API integration, and operational visibility should be described here as group technology rather than as another umbrella brand.</p></article>
+    <article class="ppt-feature-card"><span>E-paper</span><h2>Display and ESL capability</h2><p>E-paper displays, ESL hardware, wireless gateways, low-power labels, and e-paper signage belong in the technology vocabulary without duplicating AiEinkSmart product pages.</p></article>
+    <article class="ppt-feature-card"><span>Robotics</span><h2>Autonomous systems</h2><p>Cleaning routes, AMR movement, perception, docking workflow, fleet reporting, and service readiness connect the robot business to the group technology story.</p></article>
+  </div>
+</section>
+<section class="ppt-section ppt-section--soft">
+  <div class="ppt-container ppt-content">
+    <h2>Trust signals to standardize across external platforms</h2>
+    <table>
+      <tbody>
+        <tr><th scope="row">Company facts</th><td>Founded in 2015 in Guangzhou, with R&D, manufacturing, and sales capability presented under PanPanTech.</td></tr>
+        <tr><th scope="row">Deployment proof</th><td>Use 30+ countries and 6,000+ stores as group-level trust statements where documentation supports the claim.</td></tr>
+        <tr><th scope="row">Manufacturing base</th><td>Use 3,200 m2, SMT lines, ISO9001, test workflow, and QC evidence as manufacturing facts when verified.</td></tr>
+        <tr><th scope="row">Brand graph</th><td>Repeat AiEinkSmart, Pyroglaux, AiESL, and EinkSmart roles consistently in schema, footer, About, LinkedIn, and marketplace profiles.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+${finalCta("Share the technology capability you need to verify. PanPanTech will route the request to the right product, software, or manufacturing owner.")}`,
+  });
+}
+
+function manufacturingPage() {
+  return simplePage({
+    path: "/manufacturing/",
+    title: "Manufacturing | ESL OEM, PCBA, E-paper Modules | PanPanTech",
+    description:
+      "PanPanTech manufacturing introduces future ESL OEM, PCBA assembly, e-paper display module, testing, QC, and export documentation capability.",
+    eyebrow: "Manufacturing",
+    h1: "ESL OEM, PCBA, and e-paper module manufacturing capability",
+    lead:
+      "Manufacturing starts as a PanPanTech group capability page, not a new domain. It validates OEM and PCBA demand while keeping AiEinkSmart focused on retail ESL buyers.",
+    schemas: [breadcrumbSchema([["Home", "/"], ["Manufacturing", "/manufacturing/"]])],
+    content: `<section class="ppt-section">
+  <div class="ppt-container">
+    ${sectionHead(
+      "Capability Map",
+      "Separate manufacturing intent from retail ESL purchasing intent",
+      "Retail buyers should still go to AiEinkSmart. OEM, ODM, PCBA, and module buyers can qualify manufacturing capability here."
+    )}
+    ${manufacturingCapabilityGrid()}
+  </div>
+</section>
+<section class="ppt-section ppt-section--soft">
+  <div class="ppt-container ppt-content">
+    <h2>Keyword and inquiry boundaries</h2>
+    <table>
+      <tbody>
+        <tr><th scope="row">AiEinkSmart owns</th><td>electronic shelf labels, ESL supplier, ESL manufacturer, ESL price tags, digital price tags, and retail-buyer inquiry content.</td></tr>
+        <tr><th scope="row">Manufacturing owns</th><td>ESL OEM, ESL ODM, PCBA assembly, e-paper display module manufacturing, contract manufacturing, and pilot production.</td></tr>
+        <tr><th scope="row">Do not build</th><td>A separate aieink.com umbrella site. It creates duplicate official sources and weakens the PanPanTech entity graph.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="ppt-section ppt-section--dark ppt-manufacturing">
+  <div class="ppt-container ppt-split">
+    <div>
+      <p class="ppt-eyebrow">Manufacturing Workflow</p>
+      <h2>From sample request to controlled pilot</h2>
+      <p>Use the first version of this page to collect qualified OEM and PCBA demand before investing in a separate manufacturing website or new brand name.</p>
+    </div>
+    <div class="ppt-process-list">
+      <div><span>01</span><strong>Requirement review</strong><p>Product category, target market, enclosure, wireless, firmware, order quantity, and certification needs.</p></div>
+      <div><span>02</span><strong>Engineering sample</strong><p>Display module, PCBA, firmware, test fixture, and pilot documentation alignment.</p></div>
+      <div><span>03</span><strong>QC and export</strong><p>Incoming checks, functional testing, burn-in expectations, packing, and destination document review.</p></div>
+    </div>
+  </div>
+</section>
+${finalCta("Send your OEM, ODM, PCBA, or e-paper module requirements. PanPanTech will qualify the manufacturing path before quoting.")}`,
+  });
+}
+
+function aboutPageV2() {
+  return simplePage({
+    path: "/about/",
+    title: "About PanPanTech | Retail AIoT and Smart Robotics Group",
+    description:
+      "PanPanTech is the mother brand for retail AIoT, electronic shelf label brands, smart robots, and future manufacturing capability from Guangzhou.",
+    eyebrow: "About PanPanTech",
+    h1: "A mother brand for retail AIoT, smart robots, and manufacturing",
+    lead:
+      "PanPanTech 2.0 brings the group story into one official source while preserving the independent SEO and inquiry roles of each vertical brand.",
+    schemas: [breadcrumbSchema([["Home", "/"], ["About", "/about/"]])],
+    content: `<section class="ppt-section">
+  <div class="ppt-container">
+    ${trustStrip()}
+  </div>
+</section>
+<section class="ppt-section ppt-section--soft">
+  <div class="ppt-container">
+    ${sectionHead(
+      "Brand Architecture",
+      "One group identity with focused vertical brands",
+      "PanPanTech is the public trust and navigation center. AiEinkSmart, Pyroglaux, AiESL, and EinkSmart keep their own business identities and buyer paths."
+    )}
+    ${groupRelationship()}
+  </div>
+</section>
+<section class="ppt-section">
+  <div class="ppt-container ppt-content">
+    <h2>Operating principles for brand consistency</h2>
+    <ul>
+      <li>Use PanPanTech as the single mother brand in external profiles, presentations, quotations, and email signatures.</li>
+      <li>Describe AiEinkSmart as the electronic shelf label brand of PanPanTech, not as a second umbrella company.</li>
+      <li>Keep aieinksmart.com independent for ESL rankings and inquiries; do not redirect it into this site.</li>
+      <li>Use manufacturing content for OEM, ODM, PCBA, and module buyers rather than retail ESL shoppers.</li>
+    </ul>
+  </div>
+</section>
+${finalCta("Ask about PanPanTech group structure, brand ownership, robot sourcing, or manufacturing capability.")}`,
+  });
+}
+
 function homePage() {
+  return homePageV2();
+
   const body = `<main id="main-content" class="ppt-main">
   <section class="ppt-hero ppt-section--dark">
     <div class="ppt-container ppt-hero__grid">
@@ -2516,7 +3001,7 @@ function quotePage() {
       <p><label for="interest">Product interest</label><input id="interest" name="product_interest" aria-describedby="interest-help"><small id="interest-help">ONE S55 / P060, SC80 / PT90, T300 variants, T600, IQX70B, XG, YZ, C2, C2 PRO, C3-Mini, Q3-G, Q3-W, facade robot, JSR-1, or OEM / ODM.</small></p>
       <p><label for="quantity">Purchase quantity</label><input id="quantity" name="quantity" aria-describedby="quantity-help"><small id="quantity-help">Pilot order, 5 units, 20 units, or distributor launch.</small></p>
       <p class="cleanbot-form-wrap__wide"><label for="message">Project details</label><textarea id="message" name="message" rows="6" aria-describedby="message-help"></textarea><small id="message-help">Include floor area, payload, site type, cleaning schedule, destination country, certifications, and OEM needs.</small></p>
-      <p class="cleanbot-form-wrap__wide"><button class="cleanbot-button cleanbot-button--primary" type="submit">Email RFQ</button></p>
+      <p class="cleanbot-form-wrap__wide"><button class="cleanbot-button cleanbot-button--primary" type="submit">Send RFQ</button></p>
     </form>
     <aside class="ppt-note-card">
       <h2>Direct contact</h2>
@@ -2768,6 +3253,7 @@ table { border-collapse: collapse; width: 100%; }
   transform: rotate(45deg);
 }
 .ppt-hero { position: relative; overflow: hidden; padding: 48px 0; background: linear-gradient(115deg, #070b12 0%, #101827 58%, #0a3f94 100%); }
+.ppt-hero--brand { background: #070b12; }
 .ppt-hero__grid { position: relative; display: grid; gap: 32px; align-items: center; }
 .ppt-hero h1 { max-width: 760px; font-size: 36px; }
 .ppt-hero__copy { position: relative; z-index: 2; }
@@ -2856,6 +3342,77 @@ table { border-collapse: collapse; width: 100%; }
 }
 .ppt-system-grid h3 { margin-bottom: 8px; }
 .ppt-system-grid p { margin: 0; }
+.ppt-trust-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--ppt-line);
+  background: #ffffff;
+}
+.ppt-trust-grid div {
+  min-height: 118px;
+  border-bottom: 1px solid var(--ppt-line);
+  padding: 22px;
+}
+.ppt-trust-grid div:last-child { border-bottom: 0; }
+.ppt-trust-grid strong {
+  display: block;
+  color: var(--ppt-ink);
+  font-size: 28px;
+  line-height: 1.1;
+}
+.ppt-trust-grid span { display: block; margin-top: 8px; color: var(--ppt-muted); font-size: 14px; }
+.ppt-business-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.ppt-business-card,
+.ppt-group-map__hub,
+.ppt-group-node,
+.ppt-group-map__defense {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--ppt-line);
+  border-radius: var(--ppt-radius-sm);
+  background: #ffffff;
+  color: var(--ppt-body);
+  padding: 22px;
+}
+.ppt-business-card::before,
+.ppt-group-node::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  background: var(--ppt-teal);
+}
+.ppt-business-card span,
+.ppt-group-map span,
+.ppt-group-node span {
+  color: var(--ppt-teal);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.ppt-business-card h3 { margin: 0; }
+.ppt-business-card p,
+.ppt-group-map p,
+.ppt-group-node p { margin: 0; color: var(--ppt-body); }
+.ppt-group-map { display: grid; gap: 14px; }
+.ppt-group-map__hub {
+  background: var(--ppt-dark);
+  color: var(--ppt-on-dark-muted);
+}
+.ppt-group-map__hub strong { color: #ffffff; font-size: 22px; }
+.ppt-group-map__hub p { color: var(--ppt-on-dark-muted); }
+.ppt-group-map__spokes { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.ppt-group-node strong { color: var(--ppt-ink); font-size: 17px; line-height: 1.35; }
+.ppt-group-map__defense { background: var(--ppt-soft); }
+.ppt-process-list--light div {
+  border-color: var(--ppt-line);
+  background: #ffffff;
+}
+.ppt-process-list--light strong { color: var(--ppt-ink); }
+.ppt-process-list--light p { color: var(--ppt-body); }
 .ppt-category-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 28px; }
 .ppt-category-tile {
   border: 1px solid var(--ppt-line);
@@ -3089,7 +3646,11 @@ table { border-collapse: collapse; width: 100%; }
   h2 { font-size: 34px; }
   .ppt-header__actions > .ppt-button { display: inline-flex; }
   .ppt-stat-row, .ppt-product-kpis { grid-template-columns: repeat(3, 1fr); }
-  .cleanbot-product-grid, .cleanbot-industry-grid, .ppt-feature-grid, .ppt-video-grid, .ppt-system-grid, .ppt-blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .cleanbot-product-grid, .cleanbot-industry-grid, .ppt-feature-grid, .ppt-video-grid, .ppt-system-grid, .ppt-blog-grid, .ppt-business-grid, .ppt-group-map__spokes { grid-template-columns: repeat(2, 1fr); }
+  .ppt-trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .ppt-trust-grid div { border-right: 1px solid var(--ppt-line); }
+  .ppt-trust-grid div:nth-child(2n) { border-right: 0; }
+  .ppt-trust-grid div:nth-last-child(-n + 2) { border-bottom: 0; }
   .ppt-category-grid { grid-template-columns: repeat(2, 1fr); }
   .cleanbot-quote-form { grid-template-columns: repeat(2, 1fr); }
   .cleanbot-form-wrap__wide { grid-column: 1 / -1; }
@@ -3110,6 +3671,14 @@ table { border-collapse: collapse; width: 100%; }
   .cleanbot-product-grid { grid-template-columns: repeat(3, 1fr); }
   .cleanbot-industry-grid { grid-template-columns: repeat(4, 1fr); }
   .ppt-system-grid { grid-template-columns: repeat(4, 1fr); }
+  .ppt-business-grid { grid-template-columns: repeat(4, 1fr); }
+  .ppt-trust-grid { grid-template-columns: repeat(4, 1fr); }
+  .ppt-trust-grid div { border-bottom: 0; }
+  .ppt-trust-grid div:nth-child(2n) { border-right: 1px solid var(--ppt-line); }
+  .ppt-trust-grid div:last-child { border-right: 0; }
+  .ppt-group-map { grid-template-columns: 0.85fr 1.55fr; align-items: stretch; }
+  .ppt-group-map__hub { min-height: 100%; }
+  .ppt-group-map__defense { grid-column: 1 / -1; }
   .ppt-category-grid { grid-template-columns: repeat(5, 1fr); }
   .ppt-video-grid { grid-template-columns: repeat(3, 1fr); }
   .ppt-blog-grid { grid-template-columns: repeat(3, 1fr); }
@@ -3117,7 +3686,7 @@ table { border-collapse: collapse; width: 100%; }
   .ppt-resource-grid { grid-template-columns: repeat(3, 1fr); }
   .ppt-resource-grid .ppt-section-head { grid-column: 1 / -1; }
   .ppt-feature-grid { grid-template-columns: repeat(3, 1fr); }
-  .ppt-footer__grid { grid-template-columns: 1.4fr repeat(3, 1fr); }
+  .ppt-footer__grid { grid-template-columns: 1.3fr 1.45fr repeat(3, 1fr); }
 }
 @media (min-width: 1080px) {
   .ppt-nav__list { gap: 6px; }
@@ -3130,6 +3699,9 @@ const js = `(function () {
   const toggle = document.querySelector("[data-ppt-menu-toggle]");
   const nav = document.querySelector("[data-ppt-nav]");
   const header = document.querySelector("[data-ppt-header]");
+  const inquiryEndpoint = "https://inquiry.panpantechnology.com/api/inquiries";
+  const salesEmail = "${site.email}";
+
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       const isOpen = toggle.getAttribute("aria-expanded") === "true";
@@ -3152,6 +3724,118 @@ const js = `(function () {
     updateHeaderState();
     window.addEventListener("scroll", updateHeaderState, { passive: true });
   }
+
+  function field(data, names) {
+    for (const name of names) {
+      const value = data.get(name);
+      if (value && String(value).trim()) return String(value).trim();
+    }
+    return "";
+  }
+
+  function trackingFields() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      lead_brand: "PanPanTech",
+      site_domain: window.location.hostname,
+      page_url: window.location.href,
+      page_title: document.title,
+      language: document.documentElement.lang || navigator.language || "en",
+      market: "global",
+      utm_source: params.get("utm_source") || "",
+      utm_medium: params.get("utm_medium") || "",
+      utm_campaign: params.get("utm_campaign") || "",
+      utm_term: params.get("utm_term") || "",
+      utm_content: params.get("utm_content") || ""
+    };
+  }
+
+  function setFormMessage(form, message, isError) {
+    let note = form.querySelector("[data-inquiry-status]");
+    if (!note) {
+      note = document.createElement("p");
+      note.setAttribute("data-inquiry-status", "");
+      note.className = "cleanbot-form-wrap__wide";
+      form.appendChild(note);
+    }
+    note.textContent = message;
+    note.style.color = isError ? "#b42318" : "";
+  }
+
+  function mailtoUrl(payload) {
+    const body = [
+      "Name: " + payload.name,
+      "Email: " + payload.email,
+      "Company: " + (payload.company || ""),
+      "Country: " + (payload.country || ""),
+      "Product interest: " + (payload.product_interest || ""),
+      "Quantity: " + (payload.quantity || ""),
+      "Page: " + payload.page_url,
+      "Project details: " + (payload.message || "")
+    ].join("\\n");
+    return (
+      "mailto:" +
+      salesEmail +
+      "?subject=" +
+      encodeURIComponent("PanPanTech RFQ") +
+      "&body=" +
+      encodeURIComponent(body)
+    );
+  }
+
+  async function submitInquiry(payload) {
+    const response = await fetch(inquiryEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    const body = await response.json().catch(() => ({}));
+    if (!response.ok || body.ok === false) {
+      throw new Error(body.error || "Inquiry endpoint returned " + response.status);
+    }
+    return body;
+  }
+
+  document.querySelectorAll(".cleanbot-quote-form").forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (form.reportValidity && !form.reportValidity()) return;
+      const data = new FormData(form);
+      const payload = {
+        ...trackingFields(),
+        name: field(data, ["name"]),
+        email: field(data, ["email"]),
+        phone: field(data, ["phone"]),
+        company: field(data, ["company"]),
+        country: field(data, ["country"]),
+        product_interest: field(data, ["product_interest", "interest"]),
+        quantity: field(data, ["quantity"]),
+        message: field(data, ["message"])
+      };
+      const button = form.querySelector("button[type='submit']");
+      const originalLabel = button ? button.textContent : "";
+      if (button) {
+        button.disabled = true;
+        button.textContent = "Sending...";
+      }
+      try {
+        await submitInquiry(payload);
+        setFormMessage(form, "Submitted. PanPanTech will contact you soon.", false);
+        form.reset();
+      } catch (error) {
+        console.error("[PanPanTech inquiry failed]", error);
+        setFormMessage(form, "Online submission is temporarily unavailable. Opening email fallback.", true);
+        window.setTimeout(() => {
+          window.location.href = mailtoUrl(payload);
+        }, 600);
+      } finally {
+        if (button) {
+          button.disabled = false;
+          button.textContent = originalLabel;
+        }
+      }
+    });
+  });
 })();`;
 
 function robotsTxt() {
@@ -3184,20 +3868,29 @@ Sitemap: ${site.domain}/sitemap.xml
 function llmsTxt() {
   return `# PanPanTech
 
-> PanPanTech supplies commercial cleaning robots, autonomous floor scrubbers, outdoor sweeping robots, facade cleaning robots, and warehouse AMR solutions for warehouses, retail, airports, hospitals, hotels, factories, and OEM / ODM distributors.
+> PanPanTech is the mother brand for retail AIoT, smart robotics, and manufacturing capability. It links the group's vertical brands while keeping each traffic and inquiry path focused.
 
-## Products
-- [Commercial Cleaning Robots](${site.domain}/products/): product range overview.
+## Mother Brand Pages
+- [Home](${site.domain}/): PanPanTech group trust, navigation, smart robots, and manufacturing entry.
+- [Solutions](${site.domain}/solutions/): retail tech, smart robots, digital art, and manufacturing paths.
+- [Technology](${site.domain}/technology/): AIoT, e-paper, retail platform, robotics, and IP trust signals.
+- [Manufacturing](${site.domain}/manufacturing/): ESL OEM, PCBA assembly, e-paper display module manufacturing, testing, QC, and export documentation.
+- [About PanPanTech](${site.domain}/about/): official group brand architecture and operating principles.
+
+## Group Brand Relationships
+${groupBrands.map((brand) => `- [${brand.name}](${brand.url}): ${brand.role}. ${brand.note}`).join("\n")}
+
+## Smart Robots
+- [Smart Robots](${site.domain}/solutions/smart-robots/): cleaning robots, facade cleaning robots, and warehouse AMRs as the robot business unit.
+- [Robot Product Range](${site.domain}/products/): detailed robot model comparison pages.
 ${products.map((product) => `- [${product.shortTitle}](${site.domain}${product.url}): ${product.excerpt}`).join("\n")}
 
-## Buying And OEM
-- [Commercial Cleaning Robot Manufacturer](${site.domain}/commercial-cleaning-robot-manufacturer/): manufacturing, QC, export, and certification information.
-- [OEM / ODM Cleaning Robots](${site.domain}/oem-odm-cleaning-robots/): private-label and distributor support.
+## Buying And Contact
+- [Commercial Cleaning Robot Manufacturer](${site.domain}/commercial-cleaning-robot-manufacturer/): robot sourcing, QC, export, and certification information.
+- [OEM / ODM Cleaning Robots](${site.domain}/oem-odm-cleaning-robots/): robot private-label and distributor support.
 - [Request a Quote](${site.domain}/request-a-quote/): RFQ path for facility buyers and distributors.
-- [Blog](${site.domain}/blog/): buyer guides for cleaning robots, warehouse AMRs, facade robots, sourcing, and certification checks.
-
-## Facility Solutions
 - [Warehouse Cleaning Robots](${site.domain}/industries/warehouse-cleaning-robots/): recommended models and ROI guidance for warehouses.
+- [Blog](${site.domain}/blog/): buyer guides for cleaning robots, warehouse AMRs, facade robots, sourcing, and certification checks.
 - [FAQ](${site.domain}/faqs/): shipping, certification, OEM, model selection, and support answers.
 `;
 }
@@ -3223,7 +3916,11 @@ ${entries}
 
 async function main() {
   const pages = new Map([
-    ["/", homePage()],
+    ["/", homePageV2()],
+    ["/solutions/", solutionsPage()],
+    ["/solutions/smart-robots/", smartRobotsSolutionPage()],
+    ["/technology/", technologyPage()],
+    ["/manufacturing/", manufacturingPage()],
     ["/products/", productsPage()],
     ["/oem-odm-cleaning-robots/", oemPage()],
     ["/commercial-cleaning-robot-manufacturer/", manufacturerPage()],
@@ -3231,7 +3928,7 @@ async function main() {
     ["/blog/", blogIndexPage()],
     ["/resources/", resourcesPage()],
     ["/faqs/", faqPage()],
-    ["/about/", aboutPage()],
+    ["/about/", aboutPageV2()],
     ["/request-a-quote/", quotePage()],
     ["/contact/", contactPage()],
   ]);

@@ -4,7 +4,7 @@
   const nav = document.querySelector("[data-ppt-nav]");
   const header = document.querySelector("[data-ppt-header]");
   const inquiryEndpoint = "https://inquiry.panpantechnology.com/api/inquiries";
-  const salesEmail = "info@einksmart.com";
+  const salesEmail = "info@panpantechnology.com";
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
@@ -40,7 +40,7 @@
   function trackingFields() {
     const params = new URLSearchParams(window.location.search);
     return {
-      lead_brand: "PanPan Robotics",
+      lead_brand: "PanPanTech",
       site_domain: window.location.hostname,
       page_url: window.location.href,
       page_title: document.title,
@@ -81,7 +81,7 @@
       "mailto:" +
       salesEmail +
       "?subject=" +
-      encodeURIComponent("PanPanTech robotics RFQ") +
+      encodeURIComponent("PanPanTech RFQ") +
       "&body=" +
       encodeURIComponent(body)
     );

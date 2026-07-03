@@ -1,9 +1,23 @@
 # PanPanTech
 
-> PanPanTech supplies commercial cleaning robots, autonomous floor scrubbers, outdoor sweeping robots, facade cleaning robots, and warehouse AMR solutions for warehouses, retail, airports, hospitals, hotels, factories, and OEM / ODM distributors.
+> PanPanTech is the mother brand for retail AIoT, smart robotics, and manufacturing capability. It links the group's vertical brands while keeping each traffic and inquiry path focused.
 
-## Products
-- [Commercial Cleaning Robots](https://panpantechnology.com/products/): product range overview.
+## Mother Brand Pages
+- [Home](https://panpantechnology.com/): PanPanTech group trust, navigation, smart robots, and manufacturing entry.
+- [Solutions](https://panpantechnology.com/solutions/): retail tech, smart robots, digital art, and manufacturing paths.
+- [Technology](https://panpantechnology.com/technology/): AIoT, e-paper, retail platform, robotics, and IP trust signals.
+- [Manufacturing](https://panpantechnology.com/manufacturing/): ESL OEM, PCBA assembly, e-paper display module manufacturing, testing, QC, and export documentation.
+- [About PanPanTech](https://panpantechnology.com/about/): official group brand architecture and operating principles.
+
+## Group Brand Relationships
+- [AiEinkSmart](https://aieinksmart.com): Electronic shelf labels and e-paper signage. The ESL traffic and inquiry site remains independent and is not redirected into PanPanTech.
+- [Pyroglaux](https://pyroglaux.com): Privacy-compliant retail footfall analytics. A sister retail analytics brand that supports store traffic and behavior measurement.
+- [AiESL](https://aiesl.com): Retail data middleware, API, and platform entry. A software and developer-facing entry for ESL data, integration, and retail workflows.
+- [EinkSmart](https://einksmart.com): E-paper art frame and digital art display. A separate digital art display line kept away from retail ESL positioning.
+
+## Smart Robots
+- [Smart Robots](https://panpantechnology.com/solutions/smart-robots/): cleaning robots, facade cleaning robots, and warehouse AMRs as the robot business unit.
+- [Robot Product Range](https://panpantechnology.com/products/): detailed robot model comparison pages.
 - [ONE S55 / P060 Cleaning Robot](https://panpantechnology.com/products/p060/): A compact all-in-one robot for sweeping, scrubbing, vacuuming, dust-pushing, self-cleaning, and sanitizing commercial floors.
 - [SC80 / PT90 Floor Scrubber](https://panpantechnology.com/products/pt90/): A large autonomous scrubber for transport hubs, warehouses, factories, malls, and broad indoor or semi-outdoor hard floors.
 - [T300 Standard AMR](https://panpantechnology.com/products/t300-industrial-delivery-amr/): A 300 kg payload AMR platform for industrial logistics, line-side delivery, warehouse picking support, and commercial heavy delivery.
@@ -23,12 +37,10 @@
 - [Facade Cleaning Robot](https://panpantechnology.com/products/facade-cleaning-robot/): A high-rise facade and glass curtain wall cleaning robot for property teams seeking safer, repeatable exterior cleaning workflows.
 - [JSR-1 Service Robot](https://panpantechnology.com/products/jsr1-service-robot/): A general-purpose embodied AI service robot concept for retail service, light manipulation, facility assistance, and exploratory commercial automation projects.
 
-## Buying And OEM
-- [Commercial Cleaning Robot Manufacturer](https://panpantechnology.com/commercial-cleaning-robot-manufacturer/): manufacturing, QC, export, and certification information.
-- [OEM / ODM Cleaning Robots](https://panpantechnology.com/oem-odm-cleaning-robots/): private-label and distributor support.
+## Buying And Contact
+- [Commercial Cleaning Robot Manufacturer](https://panpantechnology.com/commercial-cleaning-robot-manufacturer/): robot sourcing, QC, export, and certification information.
+- [OEM / ODM Cleaning Robots](https://panpantechnology.com/oem-odm-cleaning-robots/): robot private-label and distributor support.
 - [Request a Quote](https://panpantechnology.com/request-a-quote/): RFQ path for facility buyers and distributors.
-- [Blog](https://panpantechnology.com/blog/): buyer guides for cleaning robots, warehouse AMRs, facade robots, sourcing, and certification checks.
-
-## Facility Solutions
 - [Warehouse Cleaning Robots](https://panpantechnology.com/industries/warehouse-cleaning-robots/): recommended models and ROI guidance for warehouses.
+- [Blog](https://panpantechnology.com/blog/): buyer guides for cleaning robots, warehouse AMRs, facade robots, sourcing, and certification checks.
 - [FAQ](https://panpantechnology.com/faqs/): shipping, certification, OEM, model selection, and support answers.

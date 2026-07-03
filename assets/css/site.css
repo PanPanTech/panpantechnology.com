@@ -187,6 +187,7 @@ table { border-collapse: collapse; width: 100%; }
   transform: rotate(45deg);
 }
 .ppt-hero { position: relative; overflow: hidden; padding: 48px 0; background: linear-gradient(115deg, #070b12 0%, #101827 58%, #0a3f94 100%); }
+.ppt-hero--brand { background: #070b12; }
 .ppt-hero__grid { position: relative; display: grid; gap: 32px; align-items: center; }
 .ppt-hero h1 { max-width: 760px; font-size: 36px; }
 .ppt-hero__copy { position: relative; z-index: 2; }
@@ -275,6 +276,77 @@ table { border-collapse: collapse; width: 100%; }
 }
 .ppt-system-grid h3 { margin-bottom: 8px; }
 .ppt-system-grid p { margin: 0; }
+.ppt-trust-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid var(--ppt-line);
+  background: #ffffff;
+}
+.ppt-trust-grid div {
+  min-height: 118px;
+  border-bottom: 1px solid var(--ppt-line);
+  padding: 22px;
+}
+.ppt-trust-grid div:last-child { border-bottom: 0; }
+.ppt-trust-grid strong {
+  display: block;
+  color: var(--ppt-ink);
+  font-size: 28px;
+  line-height: 1.1;
+}
+.ppt-trust-grid span { display: block; margin-top: 8px; color: var(--ppt-muted); font-size: 14px; }
+.ppt-business-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.ppt-business-card,
+.ppt-group-map__hub,
+.ppt-group-node,
+.ppt-group-map__defense {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--ppt-line);
+  border-radius: var(--ppt-radius-sm);
+  background: #ffffff;
+  color: var(--ppt-body);
+  padding: 22px;
+}
+.ppt-business-card::before,
+.ppt-group-node::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  background: var(--ppt-teal);
+}
+.ppt-business-card span,
+.ppt-group-map span,
+.ppt-group-node span {
+  color: var(--ppt-teal);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.ppt-business-card h3 { margin: 0; }
+.ppt-business-card p,
+.ppt-group-map p,
+.ppt-group-node p { margin: 0; color: var(--ppt-body); }
+.ppt-group-map { display: grid; gap: 14px; }
+.ppt-group-map__hub {
+  background: var(--ppt-dark);
+  color: var(--ppt-on-dark-muted);
+}
+.ppt-group-map__hub strong { color: #ffffff; font-size: 22px; }
+.ppt-group-map__hub p { color: var(--ppt-on-dark-muted); }
+.ppt-group-map__spokes { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.ppt-group-node strong { color: var(--ppt-ink); font-size: 17px; line-height: 1.35; }
+.ppt-group-map__defense { background: var(--ppt-soft); }
+.ppt-process-list--light div {
+  border-color: var(--ppt-line);
+  background: #ffffff;
+}
+.ppt-process-list--light strong { color: var(--ppt-ink); }
+.ppt-process-list--light p { color: var(--ppt-body); }
 .ppt-category-grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 28px; }
 .ppt-category-tile {
   border: 1px solid var(--ppt-line);
@@ -508,7 +580,11 @@ table { border-collapse: collapse; width: 100%; }
   h2 { font-size: 34px; }
   .ppt-header__actions > .ppt-button { display: inline-flex; }
   .ppt-stat-row, .ppt-product-kpis { grid-template-columns: repeat(3, 1fr); }
-  .cleanbot-product-grid, .cleanbot-industry-grid, .ppt-feature-grid, .ppt-video-grid, .ppt-system-grid, .ppt-blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .cleanbot-product-grid, .cleanbot-industry-grid, .ppt-feature-grid, .ppt-video-grid, .ppt-system-grid, .ppt-blog-grid, .ppt-business-grid, .ppt-group-map__spokes { grid-template-columns: repeat(2, 1fr); }
+  .ppt-trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .ppt-trust-grid div { border-right: 1px solid var(--ppt-line); }
+  .ppt-trust-grid div:nth-child(2n) { border-right: 0; }
+  .ppt-trust-grid div:nth-last-child(-n + 2) { border-bottom: 0; }
   .ppt-category-grid { grid-template-columns: repeat(2, 1fr); }
   .cleanbot-quote-form { grid-template-columns: repeat(2, 1fr); }
   .cleanbot-form-wrap__wide { grid-column: 1 / -1; }
@@ -529,6 +605,14 @@ table { border-collapse: collapse; width: 100%; }
   .cleanbot-product-grid { grid-template-columns: repeat(3, 1fr); }
   .cleanbot-industry-grid { grid-template-columns: repeat(4, 1fr); }
   .ppt-system-grid { grid-template-columns: repeat(4, 1fr); }
+  .ppt-business-grid { grid-template-columns: repeat(4, 1fr); }
+  .ppt-trust-grid { grid-template-columns: repeat(4, 1fr); }
+  .ppt-trust-grid div { border-bottom: 0; }
+  .ppt-trust-grid div:nth-child(2n) { border-right: 1px solid var(--ppt-line); }
+  .ppt-trust-grid div:last-child { border-right: 0; }
+  .ppt-group-map { grid-template-columns: 0.85fr 1.55fr; align-items: stretch; }
+  .ppt-group-map__hub { min-height: 100%; }
+  .ppt-group-map__defense { grid-column: 1 / -1; }
   .ppt-category-grid { grid-template-columns: repeat(5, 1fr); }
   .ppt-video-grid { grid-template-columns: repeat(3, 1fr); }
   .ppt-blog-grid { grid-template-columns: repeat(3, 1fr); }
@@ -536,7 +620,7 @@ table { border-collapse: collapse; width: 100%; }
   .ppt-resource-grid { grid-template-columns: repeat(3, 1fr); }
   .ppt-resource-grid .ppt-section-head { grid-column: 1 / -1; }
   .ppt-feature-grid { grid-template-columns: repeat(3, 1fr); }
-  .ppt-footer__grid { grid-template-columns: 1.4fr repeat(3, 1fr); }
+  .ppt-footer__grid { grid-template-columns: 1.3fr 1.45fr repeat(3, 1fr); }
 }
 @media (min-width: 1080px) {
   .ppt-nav__list { gap: 6px; }
