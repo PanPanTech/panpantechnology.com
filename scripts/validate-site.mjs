@@ -5,6 +5,7 @@ const root = process.cwd();
 const domain = "https://panpantechnology.com";
 const errors = [];
 const warnings = [];
+const verificationHtmlPattern = /^google[a-z0-9]+\.html$/i;
 
 async function exists(filePath) {
   try {
@@ -73,12 +74,18 @@ function isExternal(href) {
 }
 
 const htmlFiles = await walk(root, (filePath) => filePath.endsWith(".html"));
-const generatedHtml = htmlFiles.filter((filePath) => rel(filePath) !== "404.html");
+const generatedHtml = htmlFiles.filter((filePath) => {
+  const relative = rel(filePath);
+  return relative !== "404.html" && !verificationHtmlPattern.test(path.basename(relative));
+});
 
 for (const filePath of htmlFiles) {
   const content = await readFile(filePath, "utf8");
   const relative = rel(filePath);
   const is404 = relative === "404.html";
+  const isVerificationHtml = verificationHtmlPattern.test(path.basename(relative));
+
+  if (isVerificationHtml) continue;
 
   for (const bad of [
     "<x-dc",
