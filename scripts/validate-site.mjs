@@ -207,6 +207,20 @@ if (!rfq.includes('class="cleanbot-quote-form"') || !rfq.includes('action="https
   errors.push("request-a-quote/index.html: RFQ form is not wired to the inquiry service");
 }
 
+const home = await readFile(path.join(root, "index.html"), "utf8");
+if (!home.includes("data-hero-carousel")) {
+  errors.push("index.html: home hero carousel marker is missing");
+}
+if ((home.match(/data-hero-card=/g) ?? []).length !== 4) {
+  errors.push("index.html: expected 4 hero carousel cards");
+}
+if ((home.match(/data-hero-media=/g) ?? []).length !== 4) {
+  errors.push("index.html: expected 4 hero carousel media layers");
+}
+if (!siteJs.includes("initializeHeroCarousel")) {
+  errors.push("assets/js/site.js: home hero carousel script is missing");
+}
+
 const retailVideoPath = path.join(root, "assets/videos/esl-hero.mp4");
 if (await exists(retailVideoPath)) {
   const retailVideo = await readFile(retailVideoPath);
