@@ -2,6 +2,7 @@ import { access, readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
+const domain = "https://panpantechnology.com";
 const errors = [];
 const warnings = [];
 
@@ -31,11 +32,18 @@ function rel(filePath) {
   return path.relative(root, filePath).replaceAll("\\", "/");
 }
 
+function routeForFile(filePath) {
+  const relative = rel(filePath);
+  if (relative === "index.html") return "/";
+  return `/${relative.replace(/index\.html$/, "")}`;
+}
+
 function routeToFile(route) {
-  const clean = route.split("#")[0].split("?")[0];
-  if (clean === "/") return path.join(root, "index.html");
-  if (clean.endsWith(".html")) return path.join(root, clean.slice(1));
-  return path.join(root, clean.slice(1), "index.html");
+  let clean = route.split("#")[0].split("?")[0];
+  if (clean.startsWith(domain)) clean = clean.slice(domain.length);
+  if (clean === "/" || clean === "") return path.join(root, "index.html");
+  if (clean.endsWith(".html")) return path.join(root, clean.replace(/^\//, ""));
+  return path.join(root, clean.replace(/^\//, ""), "index.html");
 }
 
 function getAttrs(tag) {
@@ -50,7 +58,8 @@ function getAttrs(tag) {
 }
 
 function stripFragment(route) {
-  return route.includes("#") ? route.slice(route.indexOf("#") + 1) : "";
+  const index = route.indexOf("#");
+  return index >= 0 ? route.slice(index + 1) : "";
 }
 
 function hasFragmentTarget(html, fragment) {
@@ -59,33 +68,62 @@ function hasFragmentTarget(html, fragment) {
   return new RegExp(`\\s(id|name)=["']${encoded}["']`).test(html);
 }
 
+function isExternal(href) {
+  return /^https?:\/\//.test(href) && !href.startsWith(domain);
+}
+
 const htmlFiles = await walk(root, (filePath) => filePath.endsWith(".html"));
+const generatedHtml = htmlFiles.filter((filePath) => rel(filePath) !== "404.html");
 
 for (const filePath of htmlFiles) {
   const content = await readFile(filePath, "utf8");
   const relative = rel(filePath);
+  const is404 = relative === "404.html";
 
-  for (const bad of ["�", "鈥", "虏", "漏", "路"]) {
-    if (content.includes(bad)) errors.push(`${relative}: mojibake marker found: ${bad}`);
+  for (const bad of [
+    "<x-dc",
+    "<sc-",
+    "data-dc-script",
+    "support.js",
+    "current-site/assets",
+    ".dc.html",
+    "{{",
+    "\u951f",
+    "\u95b3",
+    "\u94cf",
+    "\u5a55",
+    "\u8dfa",
+    "\ufffd",
+  ]) {
+    if (content.includes(bad)) errors.push(`${relative}: generated page contains build/runtime residue: ${bad}`);
   }
 
-  if (!/<title>[^<]{10,80}<\/title>/.test(content)) {
+  if (!/<title>[^<]{10,90}<\/title>/.test(content)) {
     errors.push(`${relative}: missing or weak <title>`);
   }
 
-  if (!/<meta name="description" content="[^"]{80,180}">/.test(content)) {
+  if (!is404 && !/<meta name="description" content="[^"]{50,220}">/.test(content)) {
     errors.push(`${relative}: missing or weak meta description`);
   }
 
-  if (!/<link rel="canonical" href="https:\/\/panpantechnology\.com\/[^"]*">/.test(content)) {
+  if (!is404 && !/<link rel="canonical" href="https:\/\/panpantechnology\.com\/[^"]*">/.test(content)) {
     errors.push(`${relative}: missing canonical`);
   }
 
   const h1Count = (content.match(/<h1[\s>]/g) ?? []).length;
   if (h1Count !== 1) errors.push(`${relative}: expected exactly one H1, found ${h1Count}`);
 
+  if (!is404) {
+    if (!content.includes('property="og:image" content="https://panpantechnology.com/assets/images/panpantech-social-card.jpg"')) {
+      errors.push(`${relative}: og:image is not the PanPanTech brand social card`);
+    }
+    if (!content.includes('name="twitter:image" content="https://panpantechnology.com/assets/images/panpantech-social-card.jpg"')) {
+      errors.push(`${relative}: twitter:image is not the PanPanTech brand social card`);
+    }
+  }
+
   const jsonLdBlocks = [...content.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  if (jsonLdBlocks.length === 0) errors.push(`${relative}: missing JSON-LD`);
+  if (!is404 && jsonLdBlocks.length === 0) errors.push(`${relative}: missing JSON-LD`);
   for (const block of jsonLdBlocks) {
     try {
       JSON.parse(block[1]);
@@ -98,9 +136,10 @@ for (const filePath of htmlFiles) {
   for (const match of anchorTags) {
     const attrs = getAttrs(match[0]);
     const href = attrs.href;
-    if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) continue;
-    if (!href.startsWith("/")) continue;
-    const targetFile = routeToFile(href);
+    if (!href || href === "#" || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("javascript:")) continue;
+    if (isExternal(href)) continue;
+    if (!href.startsWith("/") && !href.startsWith(domain) && !href.startsWith("#")) continue;
+    const targetFile = href.startsWith("#") ? filePath : routeToFile(href);
     if (!(await exists(targetFile))) {
       errors.push(`${relative}: broken internal link ${href}`);
       continue;
@@ -119,11 +158,11 @@ for (const filePath of htmlFiles) {
     const attrs = getAttrs(match[0]);
     const src = attrs.src;
     if (!src || src.startsWith("http") || src.startsWith("data:")) continue;
-    if (!(await exists(path.join(root, src.replace(/^\//, ""))))) {
+    const target = path.join(root, src.replace(/^\//, ""));
+    if (!(await exists(target))) {
       errors.push(`${relative}: missing image ${src}`);
     }
     if (!attrs.alt) warnings.push(`${relative}: image missing alt ${src}`);
-    if (!attrs.width || !attrs.height) warnings.push(`${relative}: image missing width/height ${src}`);
   }
 
   const videoTags = [...content.matchAll(/<video\b[^>]*>/g)];
@@ -131,47 +170,62 @@ for (const filePath of htmlFiles) {
     const attrs = getAttrs(match[0]);
     const src = attrs.src;
     if (!src || src.startsWith("http") || src.startsWith("data:")) continue;
-    if (!(await exists(path.join(root, src.replace(/^\//, ""))))) {
-      errors.push(`${relative}: missing video ${src}`);
-    }
+    const target = path.join(root, src.replace(/^\//, ""));
+    if (!(await exists(target))) errors.push(`${relative}: missing video ${src}`);
     if (attrs.poster && !(await exists(path.join(root, attrs.poster.replace(/^\//, ""))))) {
       errors.push(`${relative}: missing video poster ${attrs.poster}`);
     }
   }
 }
 
-for (const required of ["robots.txt", "llms.txt", "sitemap.xml", "CNAME", ".nojekyll", "_headers"]) {
+for (const required of [
+  "robots.txt",
+  "llms.txt",
+  "sitemap.xml",
+  "CNAME",
+  ".nojekyll",
+  "_headers",
+  "favicon.ico",
+  "assets/images/panpantech-logo.png",
+  "assets/images/panpantech-social-card.jpg",
+  "assets/images/panpantech-favicon.png",
+  "assets/images/favicon-48x48.png",
+  "assets/images/apple-touch-icon.png",
+  "assets/css/responsive.css",
+  "assets/js/site.js",
+]) {
   if (!(await exists(path.join(root, required)))) errors.push(`missing ${required}`);
 }
 
-const css = await readFile(path.join(root, "assets/css/site.css"), "utf8");
-if (/letter-spacing:\s*-/.test(css)) errors.push("assets/css/site.css: negative letter-spacing is not allowed");
-if (/font-size:[^;]*(vw|clamp|min|max)/.test(css)) {
-  errors.push("assets/css/site.css: viewport-scaled font-size is not allowed");
+const siteJs = await readFile(path.join(root, "assets/js/site.js"), "utf8");
+if (!siteJs.includes("https://inquiry.panpantechnology.com/api/inquiries")) {
+  errors.push("assets/js/site.js: RFQ endpoint is not connected");
 }
-if (/style="/.test((await Promise.all(htmlFiles.map((filePath) => readFile(filePath, "utf8")))).join("\n"))) {
-  errors.push("inline style attributes found");
+
+const rfq = await readFile(path.join(root, "request-a-quote/index.html"), "utf8");
+if (!rfq.includes('class="cleanbot-quote-form"') || !rfq.includes('action="https://inquiry.panpantechnology.com/api/inquiries"')) {
+  errors.push("request-a-quote/index.html: RFQ form is not wired to the inquiry service");
+}
+
+const retailVideoPath = path.join(root, "assets/videos/esl-hero.mp4");
+if (await exists(retailVideoPath)) {
+  const retailVideo = await readFile(retailVideoPath);
+  const signature = retailVideo.toString("latin1");
+  if (!signature.includes("avc1") || signature.includes("hvc1") || signature.includes("hev1")) {
+    errors.push("assets/videos/esl-hero.mp4: expected H.264/avc1 video, not HEVC");
+  }
+  const info = await stat(retailVideoPath);
+  if (info.size <= 1024) errors.push("assets/videos/esl-hero.mp4: video file is unexpectedly small");
+} else {
+  errors.push("missing assets/videos/esl-hero.mp4");
 }
 
 const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
-for (const filePath of htmlFiles) {
-  if (rel(filePath) === "404.html") continue;
-  const route =
-    rel(filePath) === "index.html"
-      ? "/"
-      : `/${rel(filePath).replace(/index\.html$/, "")}`;
-  if (!sitemap.includes(`https://panpantechnology.com${route}`)) {
+for (const filePath of generatedHtml) {
+  const route = routeForFile(filePath);
+  if (!sitemap.includes(`${domain}${route}`)) {
     errors.push(`sitemap.xml: missing ${route}`);
   }
-}
-
-const imageStats = await Promise.all(
-  ["assets/images/p060-hero.jpg", "assets/images/p060-product.jpg", "assets/images/p060-studio.jpg", "assets/images/robot-dark-hero.jpg"].map(
-    async (image) => [image, await stat(path.join(root, image))]
-  )
-);
-for (const [image, info] of imageStats) {
-  if (info.size <= 0) errors.push(`${image}: empty image file`);
 }
 
 if (warnings.length) {

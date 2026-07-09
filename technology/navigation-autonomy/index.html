@@ -1,0 +1,146 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style></style><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><title>Navigation &amp; Autonomy Technology | PanPanTech</title><meta name="description" content="LiDAR, depth camera, and ultrasonic sensor fusion for mapping, localization, and obstacle avoidance across PanPanTech cleaning and AMR robots."><link rel="canonical" href="https://panpantechnology.com/technology/navigation-autonomy/"><meta property="og:type" content="website"><meta property="og:title" content="Navigation &amp; Autonomy Technology | PanPanTech"><meta property="og:description" content="Multi-sensor navigation and autonomy stack shared across PanPanTech robots."><meta property="og:url" content="https://panpantechnology.com/technology/navigation-autonomy/"><meta property="og:image" content="https://panpantechnology.com/assets/images/panpantech-social-card.jpg"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PanPanTech","url":"https://panpantechnology.com","logo":"https://panpantechnology.com/assets/images/panpantech-logo.png","email":"info@panpantechnology.com","telephone":"+86-13925118851","image":"https://panpantechnology.com/assets/images/panpantech-social-card.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://panpantechnology.com/"},{"@type":"ListItem","position":2,"name":"Technology","item":"https://panpantechnology.com/technology/"},{"@type":"ListItem","position":3,"name":"Navigation & Autonomy","item":"https://panpantechnology.com/technology/navigation-autonomy/"}]}</script><style>
+html, body { margin: 0; padding: 0; background: #F5F6F8; }
+* { box-sizing: border-box; }
+::selection { background: #0E5FD9; color: #fff; }
+</style><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/images/favicon-48x48.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/responsive.css"><meta name="theme-color" content="#0E5FD9"><meta name="twitter:image" content="https://panpantechnology.com/assets/images/panpantech-social-card.jpg"></head>
+<body><div style='font-family: "Instrument Sans", system-ui, sans-serif; color: rgb(61, 68, 83); background: rgb(245, 246, 248); min-width: 1180px;'>
+
+  <header style="position: sticky; top: 0px; z-index: 90; background: rgba(245, 246, 248, 0.88); backdrop-filter: blur(14px); border-bottom: 1px solid rgb(226, 230, 237);">
+    <div style="max-width: 1360px; margin: 0px auto; padding: 0px 40px; display: flex; align-items: center; justify-content: space-between; height: 72px;">
+      <a href="/" style='font-family: "Space Grotesk", sans-serif; font-size: 21px; font-weight: 700; letter-spacing: -0.02em; color: rgb(11, 15, 26); text-decoration: none;'>PanPan<span style="color: rgb(14, 95, 217);">Tech</span></a>
+      <nav style="display: flex; align-items: center; gap: 34px;">
+        <a href="/solutions/" class="scp0" style="font-size: 14px; font-weight: 500; color: rgb(61, 68, 83); text-decoration: none;">Solutions</a>
+        <a href="/products/" class="scp0" style="font-size: 14px; font-weight: 500; color: rgb(61, 68, 83); text-decoration: none;">Smart Robots</a>
+        <a href="/technology/" style="font-size: 14px; font-weight: 600; color: rgb(11, 15, 26); text-decoration: none; border-bottom: 2px solid rgb(14, 95, 217); padding-bottom: 2px;">Technology</a>
+        <a href="/manufacturing/" class="scp0" style="font-size: 14px; font-weight: 500; color: rgb(61, 68, 83); text-decoration: none;">Manufacturing</a>
+        <a href="/blog/" class="scp0" style="font-size: 14px; font-weight: 500; color: rgb(61, 68, 83); text-decoration: none;">Blog</a>
+        <a href="/about/" class="scp0" style="font-size: 14px; font-weight: 500; color: rgb(61, 68, 83); text-decoration: none;">About</a>
+      </nav>
+      <a href="/request-a-quote/" class="scp1" style="display: inline-flex; align-items: center; gap: 10px; background: rgb(11, 15, 26); color: rgb(255, 255, 255); font-size: 13.5px; font-weight: 600; padding: 12px 22px; border-radius: 999px; text-decoration: none; transition: background 180ms;">Request a Quote<span style='font-family: "IBM Plex Mono", monospace;'>→</span></a>
+    </div>
+  </header>
+
+  <section style="background: rgb(7, 10, 18);">
+    <div style="max-width: 1360px; margin: 0px auto; padding: 72px 40px 80px;">
+      <div style='display: flex; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgb(92, 107, 133); margin-bottom: 28px;'>
+        <a href="/technology/" class="scp2" style="color: rgb(92, 107, 133); text-decoration: none;">Technologies</a><span>/</span><span style="color: rgb(143, 163, 200);">Navigation &amp; Autonomy</span>
+      </div>
+      <p style='margin: 0px 0px 16px; font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(14, 95, 217);'>Technology 01</p>
+      <h1 style='margin: 0px; max-width: 900px; font-family: "Space Grotesk", sans-serif; font-size: 54px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 600; color: rgb(255, 255, 255); text-wrap: balance;'>Navigation &amp; Autonomy: safe routes in live environments</h1>
+      <p style="margin: 24px 0px 0px; max-width: 600px; font-size: 17px; line-height: 1.6; color: rgb(185, 196, 216);">Multi-sensor fusion — LiDAR, depth camera, ultrasonic — for mapping, localization, and obstacle avoidance around people, racking, and narrow routes. Shared across the cleaning, AMR, and outdoor robot lines.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255, 255, 255, 0.14); margin-top: 56px; max-width: 800px;">
+        
+          <div style="padding: 26px 32px 8px 0px; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+            <div style='font-family: "Space Grotesk", sans-serif; font-size: 34px; font-weight: 600; color: rgb(255, 255, 255); line-height: 1;'><span class="sc-interp">3</span></div>
+            <div style='margin-top: 8px; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(143, 163, 200);'><span class="sc-interp">Sensor types fused</span></div>
+          </div>
+        
+          <div style="padding: 26px 32px 8px 0px; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+            <div style='font-family: "Space Grotesk", sans-serif; font-size: 34px; font-weight: 600; color: rgb(255, 255, 255); line-height: 1;'><span class="sc-interp">360°</span></div>
+            <div style='margin-top: 8px; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(143, 163, 200);'><span class="sc-interp">Obstacle awareness</span></div>
+          </div>
+        
+          <div style="padding: 26px 32px 8px 0px; border-right: 1px solid rgba(255, 255, 255, 0.1);">
+            <div style='font-family: "Space Grotesk", sans-serif; font-size: 34px; font-weight: 600; color: rgb(255, 255, 255); line-height: 1;'><span class="sc-interp">0</span></div>
+            <div style='margin-top: 8px; font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(143, 163, 200);'><span class="sc-interp">Fixed guidance required</span></div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div style="max-width: 1360px; margin: 0px auto; padding: 88px 40px 96px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px;">
+      <div>
+        <p style='margin: 0px 0px 14px; font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(14, 95, 217);'>Capabilities</p>
+        <h2 style='margin: 0px; font-family: "Space Grotesk", sans-serif; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 600; color: rgb(11, 15, 26); text-wrap: balance;'>What the autonomy stack covers</h2>
+        <div style="margin-top: 32px; background: rgb(237, 239, 243); border: 1px dashed rgb(196, 203, 216); border-radius: 12px; padding: 24px 28px;">
+          <span style='font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(154, 163, 181);'>需补充素材</span>
+          <p style="margin: 10px 0px 0px; font-size: 14px; line-height: 1.6; color: rgb(106, 115, 134);">传感器布局示意图 / 建图界面截图 / 避障演示视频；传感器具体型号与精度参数。</p>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; border-top: 1px solid rgb(216, 221, 230);">
+        
+          <div style="display: grid; grid-template-columns: 56px 240px 1fr; gap: 24px; padding: 24px 0px; border-bottom: 1px solid rgb(226, 230, 237); align-items: baseline;">
+            <span style='font-family: "IBM Plex Mono", monospace; font-size: 13px; color: rgb(14, 95, 217);'><span class="sc-interp">/01</span></span>
+            <span style='font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 600; color: rgb(11, 15, 26);'><span class="sc-interp">Mapping &amp; localization</span></span>
+            <span style="font-size: 14.5px; line-height: 1.6; color: rgb(106, 115, 134);"><span class="sc-interp">Robots build and reuse site maps; routes are edited in software, not with physical markers or wires.</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 56px 240px 1fr; gap: 24px; padding: 24px 0px; border-bottom: 1px solid rgb(226, 230, 237); align-items: baseline;">
+            <span style='font-family: "IBM Plex Mono", monospace; font-size: 13px; color: rgb(14, 95, 217);'><span class="sc-interp">/02</span></span>
+            <span style='font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 600; color: rgb(11, 15, 26);'><span class="sc-interp">Obstacle avoidance</span></span>
+            <span style="font-size: 14.5px; line-height: 1.6; color: rgb(106, 115, 134);"><span class="sc-interp">LiDAR, depth, and ultrasonic layers detect people, pallets, and low obstacles at different heights and distances.</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 56px 240px 1fr; gap: 24px; padding: 24px 0px; border-bottom: 1px solid rgb(226, 230, 237); align-items: baseline;">
+            <span style='font-family: "IBM Plex Mono", monospace; font-size: 13px; color: rgb(14, 95, 217);'><span class="sc-interp">/03</span></span>
+            <span style='font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 600; color: rgb(11, 15, 26);'><span class="sc-interp">Narrow-route planning</span></span>
+            <span style="font-size: 14.5px; line-height: 1.6; color: rgb(106, 115, 134);"><span class="sc-interp">Path planning tuned for aisles, corridors, and edge-cleaning passes close to walls and shelving.</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 56px 240px 1fr; gap: 24px; padding: 24px 0px; border-bottom: 1px solid rgb(226, 230, 237); align-items: baseline;">
+            <span style='font-family: "IBM Plex Mono", monospace; font-size: 13px; color: rgb(14, 95, 217);'><span class="sc-interp">/04</span></span>
+            <span style='font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 600; color: rgb(11, 15, 26);'><span class="sc-interp">Docking precision</span></span>
+            <span style="font-size: 14.5px; line-height: 1.6; color: rgb(106, 115, 134);"><span class="sc-interp">Repeatable docking to charging stations, water stations, and conveyor transfer points.</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 56px 240px 1fr; gap: 24px; padding: 24px 0px; border-bottom: 1px solid rgb(226, 230, 237); align-items: baseline;">
+            <span style='font-family: "IBM Plex Mono", monospace; font-size: 13px; color: rgb(14, 95, 217);'><span class="sc-interp">/05</span></span>
+            <span style='font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 600; color: rgb(11, 15, 26);'><span class="sc-interp">Mixed-traffic behavior</span></span>
+            <span style="font-size: 14.5px; line-height: 1.6; color: rgb(106, 115, 134);"><span class="sc-interp">Speed and yielding behavior designed for spaces shared with staff, customers, and forklifts.</span></span>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section style="background: rgb(237, 239, 243); border-top: 1px solid rgb(226, 230, 237);">
+    <div style="max-width: 1360px; margin: 0px auto; padding: 80px 40px 96px;">
+      <h2 style='margin: 0px 0px 36px; font-family: "Space Grotesk", sans-serif; font-size: 34px; letter-spacing: -0.02em; font-weight: 600; color: rgb(11, 15, 26);'>Applied in these products</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+        
+          <a href="/products/pt90/" class="scp3" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 237); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 220ms;">
+            <div style="position: relative; aspect-ratio: 16 / 9; background: rgb(240, 242, 245);"><div style='position: absolute; inset: 0px; background-image: url("/assets/images/sc80-pt90-floor-scrubber.jpg"); background-size: cover; background-position: center center;'></div></div>
+            <div style="padding: 22px 26px 24px;">
+              <span style='font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 600; color: rgb(11, 15, 26);'><span class="sc-interp">SC80 / PT90 Scrubber</span></span>
+              <span style='display: block; margin-top: 6px; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(14, 95, 217);'><span class="sc-interp">Large-area cleaning</span></span>
+            </div>
+          </a>
+        
+          <a href="/products/#amr" class="scp3" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 237); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 220ms;">
+            <div style="position: relative; aspect-ratio: 16 / 9; background: rgb(240, 242, 245);"><div style='position: absolute; inset: 0px; background-image: url("/assets/images/t300-standard-amr.jpg"); background-size: cover; background-position: center center;'></div></div>
+            <div style="padding: 22px 26px 24px;">
+              <span style='font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 600; color: rgb(11, 15, 26);'><span class="sc-interp">T300 / T600 AMR</span></span>
+              <span style='display: block; margin-top: 6px; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(14, 95, 217);'><span class="sc-interp">Warehouse delivery</span></span>
+            </div>
+          </a>
+        
+          <a href="/products/#outdoor" class="scp3" style="display: flex; flex-direction: column; background: rgb(255, 255, 255); border: 1px solid rgb(226, 230, 237); border-radius: 14px; overflow: hidden; text-decoration: none; color: inherit; transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 220ms;">
+            <div style="position: relative; aspect-ratio: 16 / 9; background: rgb(240, 242, 245);"><div style='position: absolute; inset: 0px; background-image: url("/assets/images/yz-outdoor-sweeper.jpg"); background-size: cover; background-position: center center;'></div></div>
+            <div style="padding: 22px 26px 24px;">
+              <span style='font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 600; color: rgb(11, 15, 26);'><span class="sc-interp">YZ Outdoor Sweeper</span></span>
+              <span style='display: block; margin-top: 6px; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(14, 95, 217);'><span class="sc-interp">Outdoor routes</span></span>
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <section style="background: rgb(7, 10, 18);">
+    <div style="max-width: 1360px; margin: 0px auto; padding: 88px 40px; display: flex; align-items: center; justify-content: space-between; gap: 60px;">
+      <h2 style='margin: 0px; font-family: "Space Grotesk", sans-serif; font-size: 40px; line-height: 1.08; letter-spacing: -0.03em; font-weight: 600; color: rgb(255, 255, 255); max-width: 640px; text-wrap: balance;'>Ask how the autonomy stack handles your site layout</h2>
+      <a href="/request-a-quote/" class="scp4" style="flex: 0 0 auto; display: inline-flex; align-items: center; gap: 12px; background: rgb(14, 95, 217); color: rgb(255, 255, 255); font-size: 16px; font-weight: 600; padding: 18px 36px; border-radius: 999px; text-decoration: none; transition: transform 180ms;">Request a Quote <span style='font-family: "IBM Plex Mono", monospace;'>→</span></a>
+    </div>
+  </section>
+
+  <footer style="background: rgb(7, 10, 18); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <div style="max-width: 1360px; margin: 0px auto; padding: 36px 40px; display: flex; justify-content: space-between; gap: 24px;">
+      <span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgb(92, 107, 133);'>© 2026 PanPanTech. All rights reserved.</span>
+      <span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgb(92, 107, 133);'>Guangzhou, China · info@panpantechnology.com · +86-13925118851</span>
+    </div>
+  </footer></div><script src="/assets/js/site.js" defer></script></body></html>

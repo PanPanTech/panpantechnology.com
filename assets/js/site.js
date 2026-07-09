@@ -1,33 +1,7 @@
 (function () {
   "use strict";
-  const toggle = document.querySelector("[data-ppt-menu-toggle]");
-  const nav = document.querySelector("[data-ppt-nav]");
-  const header = document.querySelector("[data-ppt-header]");
   const inquiryEndpoint = "https://inquiry.panpantechnology.com/api/inquiries";
   const salesEmail = "info@panpantechnology.com";
-
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const isOpen = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!isOpen));
-      nav.classList.toggle("is-open", !isOpen);
-      document.body.classList.toggle("ppt-menu-open", !isOpen);
-    });
-    nav.addEventListener("click", (event) => {
-      if (event.target instanceof HTMLAnchorElement) {
-        toggle.setAttribute("aria-expanded", "false");
-        nav.classList.remove("is-open");
-        document.body.classList.remove("ppt-menu-open");
-      }
-    });
-  }
-  if (header) {
-    const updateHeaderState = () => {
-      header.classList.toggle("is-scrolled", window.scrollY > 8);
-    };
-    updateHeaderState();
-    window.addEventListener("scroll", updateHeaderState, { passive: true });
-  }
 
   function field(data, names) {
     for (const name of names) {
@@ -55,15 +29,10 @@
   }
 
   function setFormMessage(form, message, isError) {
-    let note = form.querySelector("[data-inquiry-status]");
-    if (!note) {
-      note = document.createElement("p");
-      note.setAttribute("data-inquiry-status", "");
-      note.className = "cleanbot-form-wrap__wide";
-      form.appendChild(note);
-    }
+    const note = form.querySelector("[data-inquiry-status]");
+    if (!note) return;
     note.textContent = message;
-    note.style.color = isError ? "#b42318" : "";
+    note.style.color = isError ? "#b42318" : "#1f7a3f";
   }
 
   function mailtoUrl(payload) {
@@ -77,14 +46,7 @@
       "Page: " + payload.page_url,
       "Project details: " + (payload.message || "")
     ].join("\n");
-    return (
-      "mailto:" +
-      salesEmail +
-      "?subject=" +
-      encodeURIComponent("PanPanTech RFQ") +
-      "&body=" +
-      encodeURIComponent(body)
-    );
+    return "mailto:" + salesEmail + "?subject=" + encodeURIComponent("PanPanTech RFQ") + "&body=" + encodeURIComponent(body);
   }
 
   async function submitInquiry(payload) {
