@@ -1,6 +1,10 @@
 html, body {
   max-width: 100%;
+  /* overflow-x: hidden creates a scroll container and breaks position: sticky
+     (article TOC). overflow-x: clip prevents horizontal scroll without breaking
+     sticky; older browsers fall back to hidden. */
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img, video {
@@ -16,6 +20,7 @@ img, video {
     width: 100% !important;
     max-width: 100vw !important;
     overflow-x: hidden !important;
+    overflow-x: clip !important;
   }
 
   body * {
@@ -125,6 +130,50 @@ img, video {
     max-width: 100%;
     overflow-x: auto;
   }
+}
+
+/* Collapsible FAQ cards (all widths) — same visual language as the static cards */
+details.faq-fold {
+  background: #fff;
+  border: 1px solid #e2e6ed;
+  border-radius: 12px;
+}
+
+details.faq-fold summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 22px 28px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #0b0f1a;
+}
+
+details.faq-fold summary::-webkit-details-marker {
+  display: none;
+}
+
+details.faq-fold summary::after {
+  content: "+";
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  color: #0e5fd9;
+  flex: 0 0 auto;
+}
+
+details.faq-fold[open] summary::after {
+  content: "\2013";
+}
+
+details.faq-fold .faq-a {
+  padding: 0 28px 22px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #6a7386;
 }
 
 @media (max-width: 480px) {

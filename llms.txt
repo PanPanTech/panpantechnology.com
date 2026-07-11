@@ -14,6 +14,7 @@
 - [Blog Autonomous Floor Scrubber](https://panpantechnology.com/blog/autonomous-floor-scrubber/)
 - [Blog Robotic Window Cleaner](https://panpantechnology.com/blog/best-robotic-window-cleaner/)
 - [Blog Certifications](https://panpantechnology.com/blog/certifications-for-commercial-cleaning-robots/)
+- [Blog Commercial Cleaning Robot Guide](https://panpantechnology.com/blog/commercial-cleaning-robot/)
 - [Blog Commercial Robot Vacuum](https://panpantechnology.com/blog/commercial-robot-vacuum/)
 - [Blog Industrial Robot Vacuum Warehouse](https://panpantechnology.com/blog/industrial-robot-vacuum-for-warehouse/)
 - [Solutions](https://panpantechnology.com/solutions/)
