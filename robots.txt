@@ -13,7 +13,25 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://panpantechnology.com/sitemap.xml
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://www.panpantechnology.com/sitemap.xml

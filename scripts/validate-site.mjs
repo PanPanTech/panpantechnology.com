@@ -2,7 +2,7 @@ import { access, readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
-const domain = "https://panpantechnology.com";
+const domain = "https://www.panpantechnology.com";
 const errors = [];
 const warnings = [];
 const verificationHtmlPattern = /^google[a-z0-9]+\.html$/i;
@@ -113,7 +113,7 @@ for (const filePath of htmlFiles) {
     errors.push(`${relative}: missing or weak meta description`);
   }
 
-  if (!is404 && !/<link rel="canonical" href="https:\/\/panpantechnology\.com\/[^"]*">/.test(content)) {
+  if (!is404 && !/<link rel="canonical" href="https:\/\/www\.panpantechnology\.com\/[^"]*">/.test(content)) {
     errors.push(`${relative}: missing canonical`);
   }
 
@@ -121,10 +121,10 @@ for (const filePath of htmlFiles) {
   if (h1Count !== 1) errors.push(`${relative}: expected exactly one H1, found ${h1Count}`);
 
   if (!is404) {
-    if (!content.includes('property="og:image" content="https://panpantechnology.com/assets/images/panpantech-social-card.jpg"')) {
+    if (!content.includes('property="og:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"')) {
       errors.push(`${relative}: og:image is not the PanPanTech brand social card`);
     }
-    if (!content.includes('name="twitter:image" content="https://panpantechnology.com/assets/images/panpantech-social-card.jpg"')) {
+    if (!content.includes('name="twitter:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"')) {
       errors.push(`${relative}: twitter:image is not the PanPanTech brand social card`);
     }
   }

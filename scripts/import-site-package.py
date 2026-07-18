@@ -18,7 +18,7 @@ from lxml import etree, html
 from PIL import Image
 
 
-DOMAIN = "https://panpantechnology.com"
+DOMAIN = "https://www.panpantechnology.com"
 LOGO_URL = f"{DOMAIN}/assets/images/panpantech-logo.png"
 SOCIAL_URL = f"{DOMAIN}/assets/images/panpantech-social-card.jpg"
 INQUIRY_ENDPOINT = "https://inquiry.panpantechnology.com/api/inquiries"
@@ -1084,7 +1084,25 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /
 
 Sitemap: {DOMAIN}/sitemap.xml
@@ -1116,7 +1134,7 @@ Sitemap: {DOMAIN}/sitemap.xml
         ]
     )
     (REPO_ROOT / "llms.txt").write_text("\n".join(llms_lines) + "\n", encoding="utf-8", newline="\n")
-    (REPO_ROOT / "CNAME").write_text("panpantechnology.com\n", encoding="utf-8", newline="\n")
+    (REPO_ROOT / "CNAME").write_text("www.panpantechnology.com\n", encoding="utf-8", newline="\n")
     (REPO_ROOT / ".nojekyll").write_text("", encoding="utf-8")
     (REPO_ROOT / "_headers").write_text(
         """/*
