@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"></noscript>
+<title>ESL BOM Breakdown: Every Part of an Electronic Shelf Label | PanPanTech</title>
+<meta name="description" content="A manufacturer takes an electronic shelf label apart: enclosure UV yellowing, glass vs film substrate, panel grading, ghosting and the 24-hour full refresh, PCBA and antenna testing, and battery pulse behaviour.">
+<link rel="canonical" href="https://www.panpantechnology.com/blog/electronic-shelf-label-bom-teardown/">
+<meta property="og:type" content="article"><meta property="og:title" content="ESL BOM Breakdown: Every Part of an Electronic Shelf Label | PanPanTech"><meta property="og:description" content="A manufacturer takes an electronic shelf label apart: enclosure UV yellowing, glass vs film substrate, panel grading, ghosting and the 24-hour full refresh, PCBA and antenna testing, and battery pulse behaviour."><meta property="og:url" content="https://www.panpantechnology.com/blog/electronic-shelf-label-bom-teardown/"><meta property="og:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PanPanTech","url":"https://www.panpantechnology.com","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","email":"info@panpantechnology.com","telephone":"+86-13925118851","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.panpantechnology.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.panpantechnology.com/blog/"},{"@type":"ListItem","position":3,"name":"ESL BOM Breakdown","item":"https://www.panpantechnology.com/blog/electronic-shelf-label-bom-teardown/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"ESL BOM Breakdown: Every Part of an Electronic Shelf Label, Explained by a Manufacturer","description":"A manufacturer takes an electronic shelf label apart: enclosure UV yellowing, glass vs film substrate, panel grading, ghosting and the 24-hour full refresh, PCBA and antenna testing, and battery pulse behaviour.","image":"https://www.panpantechnology.com/assets/images/esl-teardown-layers.svg","datePublished":"2026-07-20","dateModified":"2026-07-20","author":{"@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"},"publisher":{"@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"},"articleSection":"Manufacturing","mainEntityOfPage":"https://www.panpantechnology.com/blog/electronic-shelf-label-bom-teardown/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do electronic shelf labels turn yellow over time?","acceptedAnswer":{"@type":"Answer","text":"Photo-oxidation. UV photons break polymer chains in ABS and polycarbonate, and the fragments form chromophores that absorb blue light, so the plastic reads as yellow. The fix is a stabiliser package (UV absorber plus hindered amine light stabiliser), a more UV-stable resin such as ASA, or both — verified by accelerated weathering to ASTM G154 or ISO 4892 with yellowness index measured per ASTM E313."}},{"@type":"Question","name":"Does an e-paper display have a glass substrate, and is that better?","acceptedAnswer":{"@type":"Answer","text":"Most rigid ESL panels use a glass TFT substrate; flexible panels use a plastic film backplane. Glass gives better flatness, optical clarity, dimensional stability and lamination yield, and it resists solvents during cleaning. Its downside is brittleness and weight — drop and point-load failures. Film survives handling far better but is softer, easier to scratch and can haze under aggressive cleaners."}},{"@type":"Question","name":"What are Grade A, Grade B and reject e-paper panels?","acceptedAnswer":{"@type":"Answer","text":"Panel makers sort output by defect severity and location: particle defects, edge residue, non-uniformity (Mura) and colour deviation. Grade A meets the full cosmetic specification. Grade B carries defects that are minor or fall in tolerated zones and is sold at a discount. Reject or salvage panels fail specification outright and should never reach a commercial ESL, though they do appear in very low-priced products."}},{"@type":"Question","name":"Why does an e-paper label keep a faint image of the old price?","acceptedAnswer":{"@type":"Answer","text":"That is ghosting, or image retention. Pigment particles in the microcapsules do not fully return to their end positions, and residual and trapped charge accumulates when the same image is held for a long time. Partial updates alone do not clear it; a full refresh that drives the whole panel through black and white restores contrast."}},{"@type":"Question","name":"Why do serious ESL vendors build a 24-hour automatic full refresh into the firmware?","acceptedAnswer":{"@type":"Answer","text":"Because a price label may hold the same image for weeks. A scheduled full refresh — commonly every 24 hours — resets particle positions before residue becomes visible, at a known, budgeted energy cost. Firmware without it looks identical on day one and degrades visibly over months."}},{"@type":"Question","name":"How should an ESL antenna be tested before shipment?","acceptedAnswer":{"@type":"Answer","text":"With a vector network analyser measuring return loss and VSWR, on the assembled product, and ideally with radiated efficiency or TRP on a sample basis in a chamber. An oscilloscope cannot tell you whether an antenna is matched — it belongs on power rails, ripple and timing."}},{"@type":"Question","name":"Does the plastic enclosure affect the antenna?","acceptedAnswer":{"@type":"Answer","text":"Yes. Plastic has a higher dielectric constant than air, so closing the enclosure pulls the resonant frequency down. The antenna must be tuned in the assembled state, and validated on a real metal shelf rail, because the rail couples to the antenna and reduces radiated efficiency."}},{"@type":"Question","name":"How do you tell whether a coin cell capacity is overstated?","acceptedAnswer":{"@type":"Answer","text":"Do not trust a slow constant-current capacity test alone. Test under a pulse profile that mimics a screen refresh plus RF burst, at end-of-life state of charge and at the lowest specified temperature, and watch the voltage sag against the MCU brown-out threshold. A cell can pass a capacity test and still fail in the field."}}]}</script>
+<link rel="stylesheet" href="/assets/css/blog.css"></head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="logo">PanPan<span>Tech</span></a>
+      <nav class="site-nav">
+        <a href="/solutions/">Solutions</a>
+        <a href="/products/">Smart Robots</a>
+        <a href="/technology/">Technology</a>
+        <a href="/manufacturing/">Manufacturing</a>
+        <a href="/partners/">Partners</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+      <a href="/request-a-quote/" class="btn-quote">Request a Quote<span class="mono">→</span></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="crumbs">
+          <a href="/">Home</a><span>/</span>
+          <a href="/blog/">Blog</a><span>/</span>
+          <span class="here">ESL BOM Breakdown</span>
+        </div>
+        <p class="kicker">Teardown — Manufacturing</p>
+        <h1>ESL BOM Breakdown: Every Part of an Electronic Shelf Label, Explained by a Manufacturer</h1>
+        <p class="hero-answer"><strong>An electronic shelf label is five layers: enclosure, display substrate, e-paper film, PCBA with an integrated antenna, and battery. Cost and field failures concentrate in the display and the battery — and almost every quality difference between a cheap label and a good one is invisible on the datasheet.</strong> This is what we look at when we build them.</p>
+        <p class="hero-meta">Updated 2026-07-20 · 31 min read</p>
+      </div>
+      <div class="hero-img"><img src="/assets/images/esl-teardown-layers.svg" alt="Exploded view of an electronic shelf label showing enclosure, substrate, e-paper film, PCBA and battery layers" loading="eager"></div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="wrap">
+
+      <aside class="toc">
+        <span class="toc-label">Contents</span>
+        <a href="#map"><span class="n">01</span><span>The teardown map</span></a>
+        <a href="#enclosure"><span class="n">02</span><span>Enclosure &amp; UV yellowing</span></a>
+        <a href="#substrate"><span class="n">03</span><span>Glass vs film substrate</span></a>
+        <a href="#grading"><span class="n">04</span><span>Grade A, B and reject panels</span></a>
+        <a href="#ghosting"><span class="n">05</span><span>Ghosting &amp; the 24-hour refresh</span></a>
+        <a href="#pcba"><span class="n">06</span><span>PCBA &amp; antenna</span></a>
+        <a href="#battery"><span class="n">07</span><span>Battery reality</span></a>
+        <a href="#checklist"><span class="n">08</span><span>Inspection checklist</span></a>
+        <a href="#faq"><span class="n">09</span><span>FAQ</span></a>
+      </aside>
+
+      <article>
+
+        <section id="map">
+          <h2>What is actually inside an electronic shelf label?</h2>
+          <div class="answer-box">Five layers, front to back: the enclosure, the display substrate (glass or plastic film with the TFT backplane), the e-paper film itself, the PCBA carrying the MCU/RF SoC and an etched trace antenna, and the battery. Two of those five — the display module and the battery — dominate both the bill of materials and the field failure rate.</div>
+          <p>Electronic shelf labels look like commodity hardware. They are flat, they are small, and every supplier's specification sheet says roughly the same thing: this many inches, this many colours, this many years of battery life, this radio protocol. Buyers compare those numbers, find them nearly identical, and then choose on price.</p>
+          <p>The problem is that none of the numbers on that sheet describe the things that decide whether a deployment still looks acceptable in year three. Whether the enclosure yellows under store lighting. Whether the panel came from the top of the sorting line or the discount bin. Whether the firmware knows to clear the screen before residue becomes visible. Whether the antenna was tuned inside the closed case or on a bare board. Whether the cell can still deliver a refresh pulse at the end of its life in a chilled aisle.</p>
+          <p>This article opens each layer in turn and describes what a manufacturer checks, what goes wrong, and what you can ask for as a buyer. We build these products, so the perspective is honest but not neutral — where we describe a test method, it is one you can ask any supplier to run, including us.</p>
+          <div class="tbl-scroll"><div class="tbl">
+            <div class="tbl-head cols-3"><span>Layer</span><span>What it decides</span><span>Where it goes wrong</span></div>
+            <div class="tbl-row cols-3"><span class="c1">1 · Enclosure</span><span>Appearance over life, mounting, sealing, antenna environment</span><span class="dim">UV yellowing, brittle clips, warping</span></div>
+            <div class="tbl-row cols-3"><span class="c1">2 · Substrate</span><span>Optical quality, flatness, mechanical robustness</span><span class="dim">Cracking (glass), scratching and haze (film)</span></div>
+            <div class="tbl-row cols-3"><span class="c1">3 · E-paper film</span><span>Contrast, uniformity, cosmetic quality</span><span class="dim">Downgraded panels, Mura, edge defects</span></div>
+            <div class="tbl-row cols-3"><span class="c1">4 · PCBA + antenna</span><span>Refresh speed, radio range, update reliability</span><span class="dim">Solder defects, detuned antenna, thin firmware</span></div>
+            <div class="tbl-row cols-3"><span class="c1">5 · Battery</span><span>Service life, cold performance, refresh success</span><span class="dim">Overstated capacity, pulse sag, cold failure</span></div>
+          </div></div>
+          <p class="src">Source: PanPanTech ESL production and failure analysis experience, 2026.</p>
+        </section>
+
+        <section id="enclosure">
+          <h2>Layer 1 — the enclosure, and why labels turn yellow</h2>
+          <div class="answer-box">Yellowing is photo-oxidation, not dirt. UV photons break polymer chains; the fragments form conjugated structures — chromophores — that absorb blue light, so the plastic looks yellow. Unstabilised ABS is the worst offender, and store lighting plus daylight through a shopfront is enough to do it.</div>
+
+          <h3><span class="n">01</span>The mechanism, briefly</h3>
+          <p>ABS is popular for enclosures because it moulds well, takes texture, and is cheap. Its weakness is the butadiene phase: the carbon-carbon double bonds in that rubber component are exactly what UV energy attacks. Chain scission produces carbonyl groups and conjugated sequences that absorb in the blue end of the visible spectrum. Remove blue from reflected white light and the eye reads the remainder as yellow.</p>
+          <p>Polycarbonate degrades by a different route — photo-Fries rearrangement and chain scission — but arrives at the same visible outcome, along with surface embrittlement and micro-cracking. Both processes accelerate with heat, which matters more than people expect for a label sitting under a lighting strip or in a west-facing shopfront.</p>
+
+          <h3><span class="n">02</span>The three real fixes</h3>
+          <div class="cards">
+            <div class="spec"><span class="k">Stabiliser package</span><span class="v">A UV absorber (typically benzotriazole class) converts UV energy to heat before it reaches the polymer backbone, while a hindered amine light stabiliser (HALS) interrupts the radical chain reaction that follows. Absorbers protect the bulk; HALS protects the surface. Serious enclosures use both. This is the single most common corner cut in low-cost labels because it is invisible at incoming inspection.</span></div>
+            <div class="spec"><span class="k">Resin change</span><span class="v">ASA replaces the butadiene phase of ABS with an acrylate rubber that has no vulnerable double bonds — it is why ASA is used for exterior automotive trim. UV-stable polycarbonate grades and PC/ASA blends are the other route. The cost delta over commodity ABS is real but small next to the cost of replacing labels across a chain.</span></div>
+            <div class="spec"><span class="k">Surface protection</span><span class="v">A hard coat or UV-blocking layer on the front face protects both the enclosure and, importantly, the display underneath. Pigment choice matters too: some white pigments and optical brighteners themselves discolour, so a white enclosure can yellow even when the base resin is fine.</span></div>
+          </div>
+
+          <h3><span class="n">03</span>How to verify it instead of trusting the claim</h3>
+          <p>Any supplier can say "UV resistant". The question that separates real answers from marketing is: <em>under which test, for how many hours, and what was the measured colour shift?</em></p>
+          <div class="tbl-scroll"><div class="tbl">
+            <div class="tbl-head cols-3"><span>Standard</span><span>What it does</span><span>What to ask for</span></div>
+            <div class="tbl-row cols-3"><span class="c1">ASTM G154 (≈ ISO 4892-3)</span><span>Fluorescent UV lamp exposure with condensation cycles — the classic QUV test. UVA-340 lamps approximate the short-wave UV of noon summer sunlight</span><span class="dim">Lamp type, cycle definition and total exposure hours</span></div>
+            <div class="tbl-row cols-3"><span class="c1">ISO 4892-2</span><span>Xenon-arc exposure — reproduces the full solar spectrum including visible and infrared, closer to real daylight</span><span class="dim">Irradiance level and filter setup</span></div>
+            <div class="tbl-row cols-3"><span class="c1">ASTM E313</span><span>Yellowness index (YI) — turns "looks yellowish" into a number you can put in a specification</span><span class="dim">Initial YI, final YI, and the agreed ΔYI limit</span></div>
+          </div></div>
+          <p class="src">Sources: <a href="https://www.q-lab.com/weathering/weathering-test-standards/ASTM-G154" target="_blank" rel="noopener">Q-Lab, ASTM G154 overview</a> · <a href="https://www.intertek.com/polymers-plastics/testlopedia/accelerated-weathering-by-quv/" target="_blank" rel="noopener">Intertek, accelerated weathering by QUV</a> · <a href="https://infinitalab.com/astm/yellowness-index-yi-astm-e313/" target="_blank" rel="noopener">ASTM E313 yellowness index</a>.</p>
+          <p>A useful practical demand: ask for a retained sample from an earlier production batch, at least a year old, stored in daylight rather than a drawer. Accelerated tests are correlations, not certainties; a real aged part tells you something a chamber cannot. And specify colour by measured value with a tolerance, not by an approved sample that fades in the file.</p>
+        </section>
+
+        <section id="substrate">
+          <h2>Layer 2 — glass or film? What the substrate really changes</h2>
+          <div class="answer-box">Rigid ESL panels are built on a glass TFT substrate; flexible panels use a plastic film backplane. Glass wins on optics, flatness and chemical resistance. Film wins on survival during handling and installation. For most shelf-edge deployments glass is the right answer — but only if the enclosure supports it properly.</div>
+
+          <h3><span class="n">01</span>What glass gives you</h3>
+          <p>Flatness first. The e-paper film is laminated to the backplane, and any waviness in the substrate becomes visible non-uniformity in the finished display. Glass is dimensionally stable across temperature and humidity in a way that plastic film is not, which shows up as better lamination yield and more consistent appearance across a production run — the difference between a wall of labels that looks uniform and one that does not.</p>
+          <p>Then optics. The front glass in a well-made module is optically matched to the laminate, so less light is lost at the interfaces and more of it returns from the white pigment. Since e-paper is entirely reflective, every percent of light lost on the way in and out costs contrast directly — there is no backlight to compensate. This is why two labels with the same nominal panel can look visibly different side by side.</p>
+          <p>And chemical resistance, which buyers rarely consider until they own thousands of units. Retail labels get wiped — with whatever the cleaning contractor has on the trolley, including alcohol and ammonia-based cleaners. Glass shrugs those off. Plastic front surfaces can craze, haze, or lose their coating after repeated contact, and a hazed label is unreadable in exactly the same way a broken one is.</p>
+
+          <h3><span class="n">02</span>What glass costs you</h3>
+          <p>Brittleness, and it is not theoretical. Labels are dropped during installation, knocked by trolleys and pallet jacks, and clipped and unclipped from rails by staff in a hurry. Glass fails from point loads and edge impacts, and it fails suddenly. The mitigation is mechanical design, not material choice: the enclosure must support the panel across its area rather than at the edges, the front bezel must not transmit clip force into the glass, and there must be compliant material between the rigid layers.</p>
+          <p>This is where cheap labels quietly diverge from good ones. Two products can use the identical panel and show completely different breakage rates in the field purely because of how the enclosure carries the load. It is invisible in a photograph and obvious in a warranty report.</p>
+          <div class="tbl-scroll"><div class="tbl">
+            <div class="tbl-head cols-3"><span>Property</span><span>Glass substrate</span><span>Flexible film substrate</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Flatness / uniformity</span><span>Excellent, stable across temperature</span><span class="dim">Good, more variation across a run</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Optical clarity</span><span>Higher transmission, better contrast</span><span class="dim">Slightly lower, coating dependent</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Impact / drop</span><span>Brittle — depends on enclosure support</span><span class="dim">Tolerant, survives handling abuse</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Scratch &amp; cleaning</span><span>Hard, resists solvents and repeated wiping</span><span class="dim">Softer, can haze or craze with aggressive cleaners</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Weight &amp; thickness</span><span>Heavier, affects clip design</span><span class="dim">Lighter and thinner</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Best fit</span><span>Standard shelf edge, chilled aisles, long life</span><span class="dim">Curved surfaces, high-handling or high-breakage sites</span></div>
+          </div></div>
+          <p class="src">Source: PanPanTech module engineering, 2026. Specific figures vary by panel supplier and lamination process.</p>
+        </section>
+
+        <section id="grading">
+          <h2>Layer 3 — Grade A, Grade B, and panels that should never have shipped</h2>
+          <div class="answer-box">Panel makers sort output by defect type, severity and position. Grade A meets the full cosmetic specification. Grade B has defects that are minor or sit in tolerated zones and sells at a discount. Reject panels fail outright — and they are one of the main reasons a suspiciously cheap label is cheap.</div>
+
+          <h3><span class="n">01</span>What the grading actually measures</h3>
+          <p>E-paper panel production is a yield business, like any display process. Not every panel comes off the line perfect, and rather than scrap everything imperfect, manufacturers sort. The sorting criteria are consistent across the industry even when the labels for each bin differ:</p>
+          <div class="list">
+            <div><span class="ar">→</span><span><strong>Particle defects</strong> — contamination trapped in or under the film, appearing as a permanent dark or light dot. Judged by size, contrast against background, count per panel, and how close two defects sit together.</span></div>
+            <div><span class="ar">→</span><span><strong>Mura</strong> — non-uniformity across an area, from lamination or coating variation. Harder to specify than dots and more noticeable to shoppers, because the eye is very good at detecting a gradient across what should be a flat white field.</span></div>
+            <div><span class="ar">→</span><span><strong>Edge and border defects</strong> — residue, incomplete seal or discoloration near the perimeter. Often tolerated in grading because a bezel is assumed to cover them, which is precisely why bezel design and panel grade have to be specified together.</span></div>
+            <div><span class="ar">→</span><span><strong>Colour and white-state deviation</strong> — the white is not neutral, or does not match panel to panel. Invisible in isolation, glaring across a shelf of labels.</span></div>
+            <div><span class="ar">→</span><span><strong>Response and contrast variation</strong> — the panel updates correctly but reaches slightly different optical end points, which shows as a lack of crispness or as noticeable variation in a wall of labels.</span></div>
+          </div>
+
+          <h3><span class="n">02</span>Where downgraded panels end up</h3>
+          <p>Grade B panels are legitimate product. They are sold openly, at a discount, and there are honest applications for them — internal signage, prototypes, price-insensitive uses where a small dot near an edge does not matter. The problem is not their existence. The problem is a finished label that is quoted and sold as though it were built on Grade A material.</p>
+          <p>Reject or salvage panels are a different matter. They failed specification, and in a well-run supply chain they are destroyed. They do nevertheless appear in extremely low-cost products, and they are the reason a label can be quoted below what the honest bill of materials costs. If a quotation is dramatically under the market and nobody can explain which line item is cheaper, the panel grade is the first place to look.</p>
+
+          <h3><span class="n">03</span>How a buyer can actually check</h3>
+          <p>You cannot audit a panel supplier's sorting line. You can inspect what arrives:</p>
+          <div class="list">
+            <div><span class="ar">→</span><span>Ask for the incoming panel specification your supplier buys to — the acceptance criteria document, not a marketing grade name. If they cannot produce one, they are not controlling this.</span></div>
+            <div><span class="ar">→</span><span>Inspect on full-field images, not on price text. Drive a batch to full white, then full black, then any additional colour, and look across the whole area. Defects that hide behind digits are obvious on a flat field.</span></div>
+            <div><span class="ar">→</span><span>Inspect a wall, not a unit. Mount thirty units together as they would sit on a shelf and step back three metres. Uniformity problems that pass unit-level inspection become obvious, and this is the view your customer actually gets.</span></div>
+            <div><span class="ar">→</span><span>Check the border zone with the bezel removed on a sample, so you know whether edge defects are being hidden rather than absent.</span></div>
+            <div><span class="ar">→</span><span>Define AQL sampling and cosmetic criteria in the purchase agreement before the first shipment. Cosmetic disputes without a written standard are unwinnable for both sides.</span></div>
+          </div>
+        </section>
+
+        <section id="ghosting">
+          <h2>Layer 3, continued — ghosting, and why good firmware refreshes every 24 hours</h2>
+          <div class="answer-box">Ghosting is residual image left behind when pigment particles do not fully return to their end positions. Holding one image for weeks — exactly what a price label does — accumulates trapped charge and lets particles settle, so residue builds up. Only a full refresh, driving the whole panel through black and white, clears it. That is why serious firmware schedules one automatically, typically every 24 hours.</div>
+
+          <h3><span class="n">01</span>The physics, in plain terms</h3>
+          <p>A microcapsule electrophoretic display holds charged white and black pigment particles suspended in a clear fluid inside microcapsules. Apply a field across the capsule and the particles migrate — like charges repel, opposite charges attract — bringing white or black to the viewing surface, where they stay without power. That bistability is the whole appeal of e-paper: a label draws energy only when the price changes.</p>
+          <p>It is also the source of the problem. Three effects accumulate when an image is held for a long time:</p>
+          <div class="cards">
+            <div class="spec"><span class="k">Residual charge</span><span class="v">Each update leaves a small amount of charge on the particles and at the internal interfaces. The next update starts from a slightly different electrical condition than the waveform assumed, so particles do not travel exactly as far as intended.</span></div>
+            <div class="spec"><span class="k">Trapped charge</span><span class="v">Charge accumulates at layer boundaries under a long-held DC-biased state, partially opposing the applied field. The panel becomes progressively harder to drive to its true end points.</span></div>
+            <div class="spec"><span class="k">Particle settling</span><span class="v">Held in one position for weeks, particles pack and cluster. Breaking that packing takes more drive energy than moving particles that have been cycling regularly.</span></div>
+          </div>
+          <p>The result is a faint but readable outline of the previous price, sitting under the new one. On a shelf edge that is not merely cosmetic — it is a legibility and, in some jurisdictions, a price-accuracy problem.</p>
+
+          <figure>
+            <img src="/assets/images/esl-ghosting-microcapsule.svg" alt="Diagram showing microcapsule particles in a clean state, charge accumulation causing ghosting, and a full refresh clearing the residue" loading="lazy">
+            <figcaption>Schematic: how residue accumulates when one image is held, and what a full refresh does about it. PanPanTech, 2026.</figcaption>
+          </figure>
+
+          <h3><span class="n">02</span>Partial update versus full refresh — the trade every vendor makes</h3>
+          <p>A partial update rewrites only the pixels that changed. It is fast and it does not flash, so the label updates discreetly. A full refresh drives the entire panel through inverted black and white states — visibly flashing — before drawing the new image, forcing every particle through its maximum excursion and resetting the charge state.</p>
+          <p>Partial updates cost less energy and look better in a demo. Full refreshes cost more energy and look momentarily ugly. A vendor optimising for a specification sheet — "10-year battery life", "silent updates" — is tempted to minimise full refreshes. A vendor optimising for how the deployment looks in year three schedules them anyway.</p>
+          <div class="tbl-scroll"><div class="tbl">
+            <div class="tbl-head cols-3"><span>Strategy</span><span>Immediate effect</span><span>Effect over years</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Partial updates only</span><span>Fast, silent, lowest energy per update</span><span class="dim">Residue accumulates; contrast degrades visibly</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Full refresh on every change</span><span>Cleanest image, visible flash each time</span><span class="dim">Clean, but wastes energy on frequently-updated labels</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Partial + scheduled full refresh</span><span>Silent day-to-day, one flash per cycle</span><span class="dim">Contrast maintained at predictable energy cost</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Temperature-compensated waveform</span><span>Correct drive at the actual panel temperature</span><span class="dim">Prevents cold-failure and hot-ghosting artefacts</span></div>
+          </div></div>
+          <p class="src">Sources: waveform behaviour per published e-paper driving literature, e.g. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11433740/" target="_blank" rel="noopener">Low-Power Driving Waveform Design for Electrophoretic Electronic Paper (Micromachines, 2024)</a>; <a href="https://www.good-display.com/news/205.html" target="_blank" rel="noopener">waveform and OTP files in e-paper displays</a>.</p>
+
+          <h3><span class="n">03</span>Temperature makes all of this worse at both ends</h3>
+          <p>E-paper is strongly temperature dependent, because the suspending fluid's viscosity is. Cold fluid means slower particles; a waveform tuned for 25 °C under-drives a panel at 0 °C, so the image comes out grey and smeared or the update fails outright. Hot conditions bring the opposite failure — faster particles, more overshoot, and accelerated charge accumulation, so ghosting builds up faster.</p>
+          <p>This is why a chilled-aisle or freezer deployment is a genuinely different engineering problem, not merely a colder version of the same one. It needs a panel rated for the range, a temperature sensor, a waveform set selected by measured temperature, and a refresh policy that accounts for both the display and the battery — which, as the next section but one explains, is also struggling at that temperature. Anyone quoting a freezer deployment without asking about temperature compensation has not done it before.</p>
+
+          <h3><span class="n">04</span>What this means when you are buying</h3>
+          <p>Firmware quality is the hardest thing to evaluate before purchase, because it looks identical to bad firmware on day one. Four questions that work:</p>
+          <div class="list">
+            <div><span class="ar">→</span><span>Is there a scheduled automatic full refresh, and what is its default interval? "Every 24 hours" is a healthy answer. "Only when the price changes" is not.</span></div>
+            <div><span class="ar">→</span><span>Is the refresh policy temperature-aware, and where does the temperature reading come from — the panel, the board, or an assumption?</span></div>
+            <div><span class="ar">→</span><span>Does the published battery-life figure include the scheduled full refreshes? Many quoted lifetimes assume a handful of price changes per year and no maintenance refresh, which is not how a store runs.</span></div>
+            <div><span class="ar">→</span><span>Can the interval be configured centrally, and does the label report refresh failures back to the system rather than silently freezing? Details of the platform side are covered in our <a class="in" href="/technology/retail-data-platform/">retail data platform</a> overview.</span></div>
+          </div>
+          <p>The simple acceptance test: take a sample batch, display one high-contrast image continuously for two to four weeks, then update to a different image using the normal path and inspect for residue. It costs nothing but calendar time, and it separates firmware that manages the panel from firmware that merely writes to it.</p>
+        </section>
+
+        <section id="pcba">
+          <h2>Layer 4 — PCBA, silicon, and the antenna nobody tests properly</h2>
+          <div class="answer-box">The PCBA decides refresh speed, radio range and update reliability. Two things separate a controlled PCBA from a cheap one: an assembly standard the supplier can name and evidence (IPC-A-610 class), and an antenna that was tuned and measured in the assembled product with a vector network analyser — not on a bare board, and not with an oscilloscope.</div>
+
+          <h3><span class="n">01</span>What the silicon choice actually changes</h3>
+          <p>An ESL board is usually a low-power MCU with an integrated radio, plus display drive and power management. The specification sheet lists a core and a clock; what matters operationally is different:</p>
+          <div class="cards">
+            <div class="spec"><span class="k">RF sensitivity &amp; output</span><span class="v">Determines how many access points a store needs and how reliably labels in metal-dense zones update. A few dB of sensitivity translates directly into infrastructure cost — this is the specification with the largest financial leverage in the whole BOM.</span></div>
+            <div class="spec"><span class="k">Sleep current</span><span class="v">A label spends over 99% of its life asleep. Sleep current, not active current, sets the battery life — a difference of a microamp or two changes the answer by years.</span></div>
+            <div class="spec"><span class="k">Flash headroom</span><span class="v">Reliable over-the-air update needs room for a second firmware image plus rollback. Boards specified with just enough flash for today's firmware cannot be safely updated later, which turns a fixable bug into a truck roll across every store.</span></div>
+            <div class="spec"><span class="k">Display drive path</span><span class="v">Whether waveform handling is integrated or external affects refresh time, energy per refresh, and how many waveform sets can be stored for temperature compensation.</span></div>
+          </div>
+
+          <h3><span class="n">02</span>Judging PCBA quality</h3>
+          <p>There is an industry standard for this, and asking about it separates suppliers quickly. <a href="https://www.ipc.org/" target="_blank" rel="noopener">IPC-A-610</a> defines acceptability of electronic assemblies in three classes: Class 1 general electronics, Class 2 dedicated service electronics — the normal commercial and industrial choice, covering roughly 70% of assemblies made globally — and Class 3 high-performance, where failure is not acceptable. Class 2 is the right target for an ESL. The useful question is not "do you follow IPC?" but "which class, and can I see the inspection records?"</p>
+          <div class="tbl-scroll"><div class="tbl">
+            <div class="tbl-head cols-3"><span>Control point</span><span>What good looks like</span><span>What to ask for</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Solder paste &amp; reflow</span><span>Profiled per paste and board mass, verified periodically, not set once</span><span class="dim">Reflow profile record for your board</span></div>
+            <div class="tbl-row cols-3"><span class="c1">AOI</span><span>100% post-reflow optical inspection with recorded defect rate</span><span class="dim">Defect-per-million trend, not a pass/fail claim</span></div>
+            <div class="tbl-row cols-3"><span class="c1">X-ray</span><span>Sampling on any bottom-terminated packages where joints are hidden</span><span class="dim">Whether it is used at all, and at what rate</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Cleaning &amp; residue</span><span>Flux residue controlled; ionic contamination testing if no-clean is not used correctly</span><span class="dim">Cleanliness test evidence — residue drives long-term corrosion</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Conformal coating</span><span>Specified deliberately for chilled or humid deployments, with keep-out around contacts</span><span class="dim">Whether it is offered for your environment</span></div>
+            <div class="tbl-row cols-3"><span class="c1">ICT / FCT</span><span>Functional test of every unit — display, radio, sensor, battery contact</span><span class="dim">Test coverage list and where records are kept</span></div>
+          </div></div>
+          <p class="src">Sources: <a href="https://blog.ansi.org/ansi/acceptability-electronic-assemblies-ipc-a-610j-2024/" target="_blank" rel="noopener">ANSI, IPC-A-610J acceptability of electronic assemblies</a> · <a href="https://www.escatec.com/blog/which-ipc-a-610-class-is-best-for-your-printed-circuit-board-assembly" target="_blank" rel="noopener">IPC-A-610 class comparison</a>. Our own SMT process is described on the <a class="in" href="/technology/manufacturing-smt/">manufacturing technology</a> page.</p>
+
+          <h3><span class="n">03</span>The antenna — and a correction worth making</h3>
+          <p>ESLs almost always use an antenna etched directly into the PCB copper, because it costs nothing in materials. It is also the component most often left unmeasured, and a widespread piece of shop-floor folklore is that you check it with an oscilloscope. You cannot. An oscilloscope shows a voltage waveform against time: it is the right instrument for power rails, ripple, brown-out margin and timing, and it will tell you nothing about whether an antenna is matched. Antenna matching is a frequency-domain measurement, and the instrument is a <strong>vector network analyser</strong>, reading return loss and VSWR.</p>
+          <p>Both instruments belong on the line — they simply answer different questions. Confusing them is how a product ships with an antenna that is 40 MHz off tune and a test report that says everything passed.</p>
+          <div class="tbl-scroll"><div class="tbl">
+            <div class="tbl-head cols-3"><span>Instrument</span><span>What it actually measures</span><span>Correct use on an ESL line</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Vector network analyser</span><span>Return loss / VSWR versus frequency — how much power is accepted rather than reflected</span><span class="dim">Antenna tuning and per-batch verification. The right tool.</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Oscilloscope</span><span>Voltage against time</span><span class="dim">Supply ripple, refresh current profile, brown-out margin, timing. Not antennas.</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Spectrum analyser</span><span>Power against frequency</span><span class="dim">Transmit power, harmonics, spurious emissions, pre-compliance</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Anechoic chamber</span><span>Radiated efficiency / TRP / TIS</span><span class="dim">Design validation and periodic sampling — the number that predicts real range</span></div>
+          </div></div>
+          <p class="src">Source: PanPanTech RF validation practice, 2026. Specific pass thresholds are set per product and per market.</p>
+
+          <h3><span class="n">04</span>Why the enclosure detunes the antenna — and the shelf rail detunes it again</h3>
+          <p>An antenna resonates according to its electrical length, which depends on the dielectric environment around it. Plastic has a higher dielectric constant than air, so closing the enclosure around a bare-board-tuned antenna pulls the resonant frequency down. Tune on a naked PCB and you have tuned a product that does not exist.</p>
+          <p>Then the label goes onto a steel shelf rail, millimetres behind the antenna. Metal that close couples strongly, shifting resonance again and absorbing radiated energy. A label that measures perfectly on a bench can lose a substantial share of its range once clipped to a real rail — and the failure appears as intermittent update failures in specific store zones, which is exactly the kind of fault that takes weeks to diagnose remotely.</p>
+          <figure>
+            <img src="/assets/images/esl-antenna-keepout.svg" alt="Diagram of a PCB trace antenna keep-out area and how the enclosure and metal shelf rail shift its resonant frequency" loading="lazy">
+            <figcaption>Schematic: keep-out discipline on the board, and the two things that detune the antenna afterwards. PanPanTech, 2026.</figcaption>
+          </figure>
+          <p>The engineering answers are unglamorous and non-negotiable: keep the ground plane and all copper out of the antenna keep-out zone; keep the battery, its metal clip and the display's metal layers away from the radiating element; tune in the assembled state; and validate on the actual rail type the customer uses, including any metal shelving or freezer-door frames. If a supplier cannot say which rail they validated against, they validated against none.</p>
+        </section>
+
+        <section id="battery">
+          <h2>Layer 5 — the battery, where specification sheets lie most often</h2>
+          <div class="answer-box">Capacity in mAh is close to meaningless on its own. What decides whether a label works is whether the cell can deliver a current pulse — screen refresh plus radio burst — without the voltage sagging below the MCU's brown-out threshold, at end of life, at the coldest temperature the deployment sees.</div>
+
+          <h3><span class="n">01</span>Why pulse behaviour beats capacity</h3>
+          <p>An ESL is asleep almost permanently and then, briefly, is not. A refresh draws current to drive the panel; a radio burst draws current to transmit. Both are short and both are far above the sleep current. The cell's internal resistance turns that current into a voltage drop, and if the resulting terminal voltage falls below the brown-out threshold the MCU resets mid-update. The label freezes showing a half-drawn price, or the update simply fails and the shelf shows yesterday's number.</p>
+          <p>Real coin cells are specified for exactly this. A Panasonic CR2450, for instance, is rated 620 mAh nominal to a 2.0 V cutoff, with pulse capability characterised in the datasheet — around 9 mA under a defined pulse profile — and an operating range of roughly −30 °C to +85 °C with self-discharge near 1% per year. Those pulse and temperature figures, not the headline capacity, are what the design has to be built around.</p>
+          <p class="src">Sources: <a href="https://energy.panasonic.com/dam/master/pdf/en/datasheet/lithium/CR2450_Datasheet_EN_240701.pdf" target="_blank" rel="noopener">Panasonic CR2450 datasheet</a> · <a href="https://data.energizer.com/pdfs/cr2450.pdf" target="_blank" rel="noopener">Energizer CR2450 datasheet</a>. Values differ by manufacturer and grade — always work from the datasheet of the cell actually being fitted.</p>
+
+          <h3><span class="n">02</span>How overstated capacity actually shows up</h3>
+          <p>Cells with optimistic capacity ratings rarely fail an incoming test, because the usual incoming test is a slow constant-current discharge — the gentlest possible way to measure a cell. Under that test a thin or poor-quality cell can post an acceptable number. Under a real pulse load, especially once it has aged and its internal resistance has risen, it sags far more than a good cell at the same state of charge.</p>
+          <p>This is why capacity-only acceptance testing produces the classic field pattern: labels that work fine for eighteen months and then start failing updates in clusters, long before the quoted life. The cell has not run out of energy — it has run out of the ability to deliver that energy quickly.</p>
+          <figure>
+            <img src="/assets/images/esl-battery-pulse-sag.svg" alt="Chart comparing voltage sag under pulse load for a healthy cell, an aged cell and a cold cell against the MCU brown-out threshold" loading="lazy">
+            <figcaption>Schematic: three cells that can all pass a slow capacity test, behaving very differently under a real refresh pulse. PanPanTech, 2026.</figcaption>
+          </figure>
+
+          <h3><span class="n">03</span>A discharge test that actually predicts field behaviour</h3>
+          <div class="list">
+            <div><span class="ar">→</span><span>Test under a pulse profile that mimics the real duty cycle — refresh current plus RF burst, at the real pulse width and repetition rate — not a constant current.</span></div>
+            <div><span class="ar">→</span><span>Test at end-of-life state of charge, not fresh. Pre-discharge cells to a defined depth, then apply the pulse profile. Fresh-cell results tell you nothing about year four.</span></div>
+            <div><span class="ar">→</span><span>Test at the lowest specified temperature, soaked to equilibrium, not merely cooled for ten minutes.</span></div>
+            <div><span class="ar">→</span><span>Measure terminal voltage during the pulse against the actual brown-out threshold, and keep a documented margin rather than a pass/fail.</span></div>
+            <div><span class="ar">→</span><span>Sample every incoming lot. Cell quality varies lot to lot even from one supplier, and this is a component where substitution is common and hard to see.</span></div>
+          </div>
+
+          <h3><span class="n">04</span>Cold and freezer deployments</h3>
+          <p>Low temperature raises internal resistance, so voltage sag under pulse gets worse exactly where the display also needs more drive energy. The two effects compound: the panel wants a longer, stronger waveform, and the cell is less able to supply it. This is the mechanism behind labels that work perfectly in the ambient aisle and fail in the chilled section of the same store, and it is why freezer deployments need to be engineered rather than assumed.</p>
+          <div class="cards">
+            <div class="spec"><span class="k">Cell chemistry</span><span class="v">Choose a chemistry and grade rated for the actual minimum temperature, verified from the datasheet's low-temperature discharge curves rather than the headline operating range.</span></div>
+            <div class="spec"><span class="k">Energy buffer</span><span class="v">A correctly sized reservoir capacitor supplies the peak while the cell supplies the average, which is often the difference between a design that works cold and one that does not.</span></div>
+            <div class="spec"><span class="k">Refresh policy</span><span class="v">Firmware should read temperature and adapt: select the right waveform, defer non-critical refreshes when the cell is cold and weak, and report rather than fail silently.</span></div>
+            <div class="spec"><span class="k">Condensation</span><span class="v">Cold labels moved to warm air condense. Sealing, venting and conformal coating are part of the freezer specification, not optional extras.</span></div>
+          </div>
+          <p>If you are specifying for chilled or frozen retail, ask for test data at your actual temperature, on aged cells, on the assembled product. We cover the underlying display technology on the <a class="in" href="/technology/epaper-esl/">e-paper and ESL technology</a> page, and the manufacturing controls on the <a class="in" href="/manufacturing/">manufacturing capability</a> page.</p>
+        </section>
+
+        <section id="checklist">
+          <h2>The inspection checklist, in one table</h2>
+          <p>Everything above, condensed into what to specify and verify at each stage. This is the practical output of the teardown — a buyer working through this list is asking better questions than most tenders contain.</p>
+          <div class="tbl-scroll"><div class="tbl">
+            <div class="tbl-head cols-3"><span>Stage</span><span>What to check</span><span>Evidence to request</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Incoming — enclosure</span><span>Resin grade and UV stabiliser package; colour by measured value</span><span class="dim">Material certificate; weathering report (ASTM G154 / ISO 4892) with ΔYI per ASTM E313</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Incoming — panel</span><span>Grade and cosmetic acceptance criteria; substrate type</span><span class="dim">Written incoming specification; AQL plan; full-field inspection results</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Incoming — cells</span><span>Pulse capability, not just mAh; lot traceability</span><span class="dim">Cell datasheet; pulse test at low temperature on aged cells; lot sampling records</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Process — SMT</span><span>Reflow profiling, AOI, X-ray sampling, cleanliness</span><span class="dim">IPC-A-610 class statement; profile records; AOI defect trend</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Process — RF</span><span>Antenna tuned in assembled state; keep-out respected</span><span class="dim">VNA return loss / VSWR data per batch; chamber efficiency on samples</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Process — assembly</span><span>Panel support and clip load path; no point loads on glass</span><span class="dim">Drop and clip-cycle test reports on the finished product</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Outgoing — function</span><span>Full display, radio, sensor and battery-contact test on every unit</span><span class="dim">FCT coverage list; failure rate by station</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Outgoing — firmware</span><span>Scheduled full refresh present and configurable; temperature compensation active</span><span class="dim">Firmware release note; refresh interval default; OTA rollback capability</span></div>
+            <div class="tbl-row cols-3"><span class="c1">Validation — system</span><span>Range on the real rail type; wall-level uniformity</span><span class="dim">On-rail range test; 30-unit wall inspection; 2–4 week static-image ghosting test</span></div>
+          </div></div>
+          <p class="src">Source: PanPanTech ESL production and OEM programme practice, 2026. Thresholds are set per product, market and deployment environment.</p>
+          <p>None of this is exotic. It is ordinary manufacturing discipline applied to a product that most of the market treats as a commodity — which is exactly why the differences between two visually identical labels only surface after they are installed by the thousand.</p>
+        </section>
+
+        <section id="faq">
+          <h2>FAQ</h2>
+          <div class="faq">
+            <details><summary>Why do electronic shelf labels turn yellow over time?</summary><div class="a">Photo-oxidation. UV photons break polymer chains in ABS and polycarbonate, and the fragments form chromophores that absorb blue light, so the plastic reads as yellow. The fix is a stabiliser package (UV absorber plus hindered amine light stabiliser), a more UV-stable resin such as ASA, or both — verified by accelerated weathering to ASTM G154 or ISO 4892 with yellowness index measured per ASTM E313.</div></details>
+            <details><summary>Does an e-paper display have a glass substrate, and is that better?</summary><div class="a">Most rigid ESL panels use a glass TFT substrate; flexible panels use a plastic film backplane. Glass gives better flatness, optical clarity, dimensional stability and lamination yield, and it resists solvents during cleaning. Its downside is brittleness and weight — drop and point-load failures. Film survives handling far better but is softer, easier to scratch and can haze under aggressive cleaners.</div></details>
+            <details><summary>What are Grade A, Grade B and reject e-paper panels?</summary><div class="a">Panel makers sort output by defect severity and location: particle defects, edge residue, non-uniformity (Mura) and colour deviation. Grade A meets the full cosmetic specification. Grade B carries defects that are minor or fall in tolerated zones and is sold at a discount. Reject or salvage panels fail specification outright and should never reach a commercial ESL, though they do appear in very low-priced products.</div></details>
+            <details><summary>Why does an e-paper label keep a faint image of the old price?</summary><div class="a">That is ghosting, or image retention. Pigment particles in the microcapsules do not fully return to their end positions, and residual and trapped charge accumulates when the same image is held for a long time. Partial updates alone do not clear it; a full refresh that drives the whole panel through black and white restores contrast.</div></details>
+            <details><summary>Why do serious ESL vendors build a 24-hour automatic full refresh into the firmware?</summary><div class="a">Because a price label may hold the same image for weeks. A scheduled full refresh — commonly every 24 hours — resets particle positions before residue becomes visible, at a known, budgeted energy cost. Firmware without it looks identical on day one and degrades visibly over months.</div></details>
+            <details><summary>How should an ESL antenna be tested before shipment?</summary><div class="a">With a vector network analyser measuring return loss and VSWR, on the assembled product, and ideally with radiated efficiency or TRP on a sample basis in a chamber. An oscilloscope cannot tell you whether an antenna is matched — it belongs on power rails, ripple and timing.</div></details>
+            <details><summary>Does the plastic enclosure affect the antenna?</summary><div class="a">Yes. Plastic has a higher dielectric constant than air, so closing the enclosure pulls the resonant frequency down. The antenna must be tuned in the assembled state, and validated on a real metal shelf rail, because the rail couples to the antenna and reduces radiated efficiency.</div></details>
+            <details><summary>How do you tell whether a coin cell capacity is overstated?</summary><div class="a">Do not trust a slow constant-current capacity test alone. Test under a pulse profile that mimics a screen refresh plus RF burst, at end-of-life state of charge and at the lowest specified temperature, and watch the voltage sag against the MCU brown-out threshold. A cell can pass a capacity test and still fail in the field.</div></details>
+          </div>
+        </section>
+
+        <div class="related">
+          <p class="lbl">Related PanPanTech pages</p>
+          <div class="related-grid">
+            <a href="/manufacturing/" class="rcard"><span class="tag">Capability</span><span class="t">ESL OEM, PCBA &amp; E-paper Modules</span></a>
+            <a href="/technology/epaper-esl/" class="rcard"><span class="tag">Technology</span><span class="t">E-paper &amp; ESL Technology</span></a>
+            <a href="/request-a-quote/" class="rcard"><span class="tag">RFQ</span><span class="t">Request a Quote</span></a>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div>
+        <h2>Building an ESL programme under your own brand?</h2>
+        <p>Send us your specification — or the checklist above — and our engineering team will respond with the panel grade, enclosure material, RF validation and battery test data behind the quote.</p>
+      </div>
+      <a href="/request-a-quote/" class="btn-cta">Talk to our OEM team <span class="mono">→</span></a>
+    </div>
+  </section>
+
+  <footer class="footer-full">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <div class="footer-brandmark">PanPan<span>Tech</span></div>
+          <p class="footer-blurb">Retail AIoT, smart robotics, and manufacturing platform for global B2B buyers, integrators, distributors, and OEM partners.</p>
+        </div>
+        <div class="footer-col">
+          <span class="h">Solutions</span>
+          <a href="/solutions/retail/">Retail Tech</a>
+          <a href="/products/">Smart Robots</a>
+          <a href="https://einksmart.com">Digital Art</a>
+          <a href="/manufacturing/">Manufacturing</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Robot Business</span>
+          <a href="/products/">Robot product range</a>
+          <a href="/manufacturing/">Robot OEM / ODM</a>
+          <a href="/solutions/">Industries</a>
+          <a href="/request-a-quote/">Request a Quote</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Company</span>
+          <a href="/technology/">Technology</a>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/request-a-quote/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Contact</span>
+          <p>Building A1, Yuexiu iPARK Yuegang Zhigu, Nansha District, Guangzhou, Guangdong Province, China</p>
+          <span class="lbl">Email</span>
+          <a href="mailto:info@panpantechnology.com">info@panpantechnology.com</a>
+          <span class="lbl">Phone</span>
+          <a href="tel:+8613925118851">+86-13925118851</a>
+        </div>
+      </div>
+      <div class="footer-brand-row" aria-label="PanPanTech Group brands">
+        <span><a href="https://www.aieinksmart.com" target="_blank" rel="noopener">AiEInkSmart&trade;</a> &mdash; Electronic Shelf Labels</span><span class="sep">|</span><span><a href="https://www.pyroglaux.com" target="_blank" rel="noopener">Pyroglaux&reg;</a> &mdash; Footfall Analytics</span><span class="sep">|</span><span><a href="https://www.aiesl.com" target="_blank" rel="noopener">AiESL&trade;</a> &mdash; Retail Data Platform</span><span class="sep">|</span><span><a href="https://www.einksmart.com" target="_blank" rel="noopener">EinkSmart&trade;</a> &mdash; E-Ink Art Displays</span>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; 2026 PanPanTech&reg; | Retail AIoT &middot; Smart Robotics &middot; Manufacturing | Guangzhou PanPanTech Co., Ltd. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="/assets/js/site.js" defer></script></body></html>

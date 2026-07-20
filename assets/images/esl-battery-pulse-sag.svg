@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-label="Coin cell voltage sag under pulse load, comparing a healthy cell, an aged cell and a cold cell">
+  <rect width="760" height="400" fill="#f5f6f8"/>
+  <text x="30" y="30" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5" letter-spacing="2">WHY CAPACITY ALONE TELLS YOU NOTHING — PULSE SAG</text>
+
+  <!-- axes -->
+  <line x1="90" y1="300" x2="640" y2="300" stroke="#0b0f1a" stroke-width="1.2"/>
+  <line x1="90" y1="70" x2="90" y2="300" stroke="#0b0f1a" stroke-width="1.2"/>
+  <text x="60" y="95" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6a7386">3.0V</text>
+  <text x="60" y="300" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6a7386">2.0V</text>
+  <text x="330" y="330" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">time during one screen refresh + RF burst</text>
+  <text x="42" y="190" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386" transform="rotate(-90 42 190)">terminal voltage</text>
+
+  <!-- cutoff line -->
+  <line x1="90" y1="245" x2="640" y2="245" stroke="#c25b2e" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text x="648" y="249" font-family="IBM Plex Mono, monospace" font-size="10" fill="#c25b2e">MCU brown-out</text>
+
+  <!-- pulse window shading -->
+  <rect x="240" y="70" width="150" height="230" fill="#0e5fd9" opacity="0.06"/>
+  <text x="252" y="86" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#0e5fd9">PULSE LOAD</text>
+
+  <!-- healthy cell -->
+  <path d="M90 100 L240 100 L250 128 L380 132 L392 106 L640 104" fill="none" stroke="#2f6b3f" stroke-width="2.4"/>
+  <text x="648" y="108" font-family="Instrument Sans, sans-serif" font-size="11" fill="#2f6b3f">healthy</text>
+
+  <!-- aged / overstated capacity cell -->
+  <path d="M90 118 L240 118 L252 196 L380 205 L394 130 L640 128" fill="none" stroke="#0e5fd9" stroke-width="2.4"/>
+  <text x="648" y="132" font-family="Instrument Sans, sans-serif" font-size="11" fill="#0e5fd9">aged / thin</text>
+
+  <!-- cold cell -->
+  <path d="M90 140 L240 140 L254 262 L380 272 L396 158 L640 156" fill="none" stroke="#c25b2e" stroke-width="2.4"/>
+  <text x="648" y="160" font-family="Instrument Sans, sans-serif" font-size="11" fill="#c25b2e">cold (−20 °C)</text>
+
+  <!-- annotation -->
+  <g stroke="#c25b2e" stroke-width="1" fill="none">
+    <path d="M300 262 L300 285"/>
+  </g>
+  <text x="300" y="298" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="10.5" fill="#c25b2e">sags past cutoff → refresh fails, label freezes</text>
+
+  <line x1="90" y1="352" x2="700" y2="352" stroke="#d8dde6" stroke-width="1"/>
+  <text x="90" y="374" font-family="Instrument Sans, sans-serif" font-size="12" fill="#3d4453">Three cells can all pass a slow constant-current capacity test and still behave like this under a real pulse.</text>
+  <text x="90" y="392" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#9aa3b5">Schematic — shapes illustrative, not measured data. PanPanTech, 2026.</text>
+</svg>

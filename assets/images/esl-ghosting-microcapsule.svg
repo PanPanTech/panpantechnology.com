@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-label="How ghosting forms in a microcapsule electrophoretic display and how a full refresh clears it">
+  <rect width="760" height="400" fill="#f5f6f8"/>
+  <text x="30" y="30" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5" letter-spacing="2">WHY GHOSTING FORMS — AND WHAT A FULL REFRESH DOES</text>
+
+  <!-- panel A -->
+  <g>
+    <text x="40" y="70" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0b0f1a">A · Clean state</text>
+    <text x="40" y="88" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">Particles fully driven to</text>
+    <text x="40" y="103" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">their end positions.</text>
+    <rect x="40" y="120" width="180" height="150" rx="6" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.4"/>
+    <g>
+      <circle cx="85" cy="165" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="85" cy="152" r="6" fill="#0b0f1a"/>
+      <circle cx="130" cy="165" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="130" cy="152" r="6" fill="#0b0f1a"/>
+      <circle cx="175" cy="165" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="175" cy="152" r="6" fill="#0b0f1a"/>
+      <circle cx="85" cy="222" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="85" cy="235" r="6" fill="#e2e6ed" stroke="#0b0f1a" stroke-width="0.8"/>
+      <circle cx="130" cy="222" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="130" cy="235" r="6" fill="#e2e6ed" stroke="#0b0f1a" stroke-width="0.8"/>
+      <circle cx="175" cy="222" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="175" cy="235" r="6" fill="#e2e6ed" stroke="#0b0f1a" stroke-width="0.8"/>
+    </g>
+  </g>
+
+  <!-- arrow -->
+  <g stroke="#0e5fd9" stroke-width="1.5" fill="none">
+    <path d="M235 195 L275 195"/>
+    <path d="M268 189 L275 195 L268 201"/>
+  </g>
+  <text x="238" y="182" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#6a7386">weeks on</text>
+  <text x="238" y="216" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#6a7386">one image</text>
+
+  <!-- panel B -->
+  <g>
+    <text x="290" y="70" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0b0f1a">B · Charge builds up</text>
+    <text x="290" y="88" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">Trapped charge and settled</text>
+    <text x="290" y="103" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">particles resist the next update.</text>
+    <rect x="290" y="120" width="180" height="150" rx="6" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.4"/>
+    <g>
+      <circle cx="335" cy="165" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="335" cy="150" r="7" fill="#0b0f1a"/>
+      <circle cx="380" cy="165" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="380" cy="150" r="7" fill="#0b0f1a"/>
+      <circle cx="425" cy="165" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="425" cy="150" r="7" fill="#0b0f1a"/>
+      <circle cx="335" cy="222" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="335" cy="232" r="5" fill="#0b0f1a" opacity="0.35"/>
+      <circle cx="380" cy="222" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="380" cy="232" r="5" fill="#0b0f1a" opacity="0.35"/>
+      <circle cx="425" cy="222" r="20" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.2"/>
+      <circle cx="425" cy="232" r="5" fill="#0b0f1a" opacity="0.35"/>
+    </g>
+    <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#c25b2e">
+      <text x="352" y="145">+</text><text x="397" y="145">+</text><text x="442" y="145">+</text>
+    </g>
+    <text x="290" y="288" font-family="Instrument Sans, sans-serif" font-size="11" fill="#c25b2e">Result: faint residue of the old price</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <g stroke="#0e5fd9" stroke-width="1.5" fill="none">
+    <path d="M485 195 L525 195"/>
+    <path d="M518 189 L525 195 L518 201"/>
+  </g>
+  <text x="486" y="182" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#6a7386">scheduled</text>
+  <text x="486" y="216" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#6a7386">full refresh</text>
+
+  <!-- panel C -->
+  <g>
+    <text x="540" y="70" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0b0f1a">C · Full refresh</text>
+    <text x="540" y="88" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">Screen inverts black/white,</text>
+    <text x="540" y="103" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">driving particles to full swing.</text>
+    <rect x="540" y="120" width="180" height="150" rx="6" fill="#0b0f1a" stroke="#0b0f1a" stroke-width="1.4"/>
+    <rect x="552" y="132" width="156" height="30" fill="#ffffff"/>
+    <rect x="552" y="170" width="156" height="30" fill="#0b0f1a" stroke="#ffffff" stroke-width="0.6"/>
+    <rect x="552" y="208" width="156" height="30" fill="#ffffff"/>
+    <text x="630" y="256" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#ffffff">INVERT · SETTLE · REDRAW</text>
+    <text x="540" y="288" font-family="Instrument Sans, sans-serif" font-size="11" fill="#2f6b3f">Result: contrast restored, residue cleared</text>
+  </g>
+
+  <line x1="40" y1="320" x2="720" y2="320" stroke="#d8dde6" stroke-width="1"/>
+  <text x="40" y="345" font-family="Instrument Sans, sans-serif" font-size="12" fill="#3d4453">This is why serious firmware schedules a periodic full refresh — commonly every 24 hours —</text>
+  <text x="40" y="364" font-family="Instrument Sans, sans-serif" font-size="12" fill="#3d4453">even when the displayed price has not changed. Partial updates alone accumulate residue.</text>
+  <text x="40" y="386" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#9aa3b5">Schematic — not to scale. PanPanTech, 2026.</text>
+</svg>

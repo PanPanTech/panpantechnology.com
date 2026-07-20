@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-label="Exploded view of an electronic shelf label showing five hardware layers">
+  <rect width="760" height="430" fill="#f5f6f8"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5">
+    <text x="30" y="30" letter-spacing="2">ESL TEARDOWN — FIVE LAYERS</text>
+  </g>
+
+  <!-- layer 1: front bezel -->
+  <g>
+    <path d="M120 70 L470 70 L520 100 L170 100 Z" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.4"/>
+    <rect x="120" y="70" width="350" height="10" fill="#e2e6ed" stroke="#0b0f1a" stroke-width="1.4"/>
+    <text x="545" y="88" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0b0f1a">1 · Enclosure</text>
+    <text x="545" y="105" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">ABS / PC / ASA + UV package</text>
+  </g>
+
+  <!-- layer 2: glass substrate / front laminate -->
+  <g>
+    <path d="M120 140 L470 140 L520 170 L170 170 Z" fill="#dbe6f7" stroke="#0e5fd9" stroke-width="1.4"/>
+    <rect x="120" y="140" width="350" height="6" fill="#b9cdf0" stroke="#0e5fd9" stroke-width="1.2"/>
+    <text x="545" y="158" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0b0f1a">2 · Substrate</text>
+    <text x="545" y="175" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">Glass or flexible film + TFT</text>
+  </g>
+
+  <!-- layer 3: e-paper film -->
+  <g>
+    <path d="M120 210 L470 210 L520 240 L170 240 Z" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.4"/>
+    <g>
+      <circle cx="180" cy="225" r="6" fill="#ffffff" stroke="#0b0f1a" stroke-width="1"/>
+      <circle cx="178" cy="223" r="2" fill="#0b0f1a"/>
+      <circle cx="205" cy="225" r="6" fill="#ffffff" stroke="#0b0f1a" stroke-width="1"/>
+      <circle cx="207" cy="227" r="2" fill="#0b0f1a"/>
+      <circle cx="230" cy="225" r="6" fill="#ffffff" stroke="#0b0f1a" stroke-width="1"/>
+      <circle cx="228" cy="224" r="2" fill="#0b0f1a"/>
+    </g>
+    <text x="545" y="228" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0b0f1a">3 · E-paper film</text>
+    <text x="545" y="245" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">Microcapsules — grade A / B</text>
+  </g>
+
+  <!-- layer 4: PCBA -->
+  <g>
+    <path d="M120 280 L470 280 L520 310 L170 310 Z" fill="#e6f0e6" stroke="#2f6b3f" stroke-width="1.4"/>
+    <rect x="200" y="286" width="46" height="26" fill="#0b0f1a" opacity="0.85"/>
+    <path d="M300 286 L360 286 L360 292 L306 292 L306 306 L300 306 Z" fill="none" stroke="#0e5fd9" stroke-width="2"/>
+    <text x="545" y="298" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0b0f1a">4 · PCBA + antenna</text>
+    <text x="545" y="315" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">MCU / RF SoC + PCB trace antenna</text>
+  </g>
+
+  <!-- layer 5: battery + back shell -->
+  <g>
+    <path d="M120 350 L470 350 L520 380 L170 380 Z" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.4"/>
+    <circle cx="230" cy="365" r="14" fill="#e2e6ed" stroke="#0b0f1a" stroke-width="1.4"/>
+    <text x="230" y="369" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#0b0f1a">3V</text>
+    <text x="545" y="368" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600" fill="#0b0f1a">5 · Battery + back shell</text>
+    <text x="545" y="385" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#6a7386">Coin / pouch cell + rail clip</text>
+  </g>
+
+  <!-- assembly arrows -->
+  <g stroke="#9aa3b5" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="100" y1="80" x2="100" y2="360"/>
+  </g>
+  <g fill="#9aa3b5" font-family="IBM Plex Mono, monospace" font-size="10">
+    <text x="30" y="230" transform="rotate(-90 30 230)">STACK ORDER — FRONT TO BACK</text>
+  </g>
+</svg>
