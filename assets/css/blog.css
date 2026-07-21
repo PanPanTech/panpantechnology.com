@@ -152,6 +152,8 @@ figcaption{padding:12px 18px;font-size:12.5px;color:var(--mono-grey);border-top:
 .bcard:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(11,15,26,.08)}
 .card-thumb{display:block;margin:-32px -32px 22px;border-radius:13px 13px 0 0;overflow:hidden;aspect-ratio:16/9;background:#eef1f5}
 .card-img{display:block;width:100%;height:100%;object-fit:cover}
+.card-img-contain{object-fit:contain;background:#fff;padding:12px;box-sizing:border-box}
+.card-img-contain-tight{object-fit:contain;background:#fff;padding:6px 10px;box-sizing:border-box}
 .btag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
 .btitle{margin-top:14px;font-family:"Space Grotesk",sans-serif;font-size:22px;font-weight:600;letter-spacing:-.01em;line-height:1.25;color:var(--ink)}
 .bdek{margin-top:12px;font-size:14.5px;line-height:1.6;color:var(--muted)}
