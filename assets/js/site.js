@@ -222,5 +222,180 @@
     });
   });
 
+  function metaContent(selector) {
+    const node = document.querySelector(selector);
+    return node ? node.getAttribute("content") || "" : "";
+  }
+
+  function canonicalUrl() {
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical && canonical.href) return canonical.href;
+    return window.location.href.split("#")[0];
+  }
+
+  function sharePayload() {
+    const url = canonicalUrl();
+    const title = metaContent('meta[property="og:title"]') || document.title || "PanPanTech";
+    const description = metaContent('meta[property="og:description"]') || metaContent('meta[name="description"]');
+    return { url, title, description };
+  }
+
+  function shareUrl(channel, payload) {
+    const encodedUrl = encodeURIComponent(payload.url);
+    const encodedTitle = encodeURIComponent(payload.title);
+    const encodedDescription = encodeURIComponent(payload.description);
+    const text = encodeURIComponent([payload.title, payload.description].filter(Boolean).join(" - "));
+    const routes = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+      pinterest: `https://www.pinterest.com/pin/create/button/?url=${encodedUrl}&description=${text}`,
+      whatsapp: `https://api.whatsapp.com/send?text=${text}%20${encodedUrl}`,
+      telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
+      vk: `https://vk.com/share.php?url=${encodedUrl}&title=${encodedTitle}&description=${encodedDescription}`,
+      email: `mailto:?subject=${encodedTitle}&body=${text}%0A%0A${encodedUrl}`
+    };
+    return routes[channel] || payload.url;
+  }
+
+  function articleShareTemplate() {
+    return `
+      <section class="article-share" data-article-share aria-labelledby="article-share-title">
+        <div class="share-heading">
+          <p class="share-label" id="article-share-title">Share this article</p>
+          <span class="share-hint">Send the guide to your team or save the canonical URL.</span>
+        </div>
+        <div class="share-buttons" aria-label="Share this article">
+          <a class="share-button facebook" href="#" data-share-channel="facebook" target="_blank" rel="noopener" aria-label="Share on Facebook"><span class="share-icon" aria-hidden="true">f</span><span class="share-text">Facebook</span></a>
+          <a class="share-button linkedin" href="#" data-share-channel="linkedin" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><span class="share-icon" aria-hidden="true">in</span><span class="share-text">LinkedIn</span></a>
+          <a class="share-button x" href="#" data-share-channel="x" target="_blank" rel="noopener" aria-label="Share on X"><span class="share-icon" aria-hidden="true">X</span><span class="share-text">X</span></a>
+          <a class="share-button pinterest" href="#" data-share-channel="pinterest" target="_blank" rel="noopener" aria-label="Share on Pinterest"><span class="share-icon" aria-hidden="true">P</span><span class="share-text">Pinterest</span></a>
+          <a class="share-button whatsapp" href="#" data-share-channel="whatsapp" target="_blank" rel="noopener" aria-label="Share on WhatsApp"><span class="share-icon" aria-hidden="true">WA</span><span class="share-text">WhatsApp</span></a>
+          <a class="share-button telegram" href="#" data-share-channel="telegram" target="_blank" rel="noopener" aria-label="Share on Telegram"><span class="share-icon" aria-hidden="true">TG</span><span class="share-text">Telegram</span></a>
+          <a class="share-button vk" href="#" data-share-channel="vk" target="_blank" rel="noopener" aria-label="Share on VK"><span class="share-icon" aria-hidden="true">VK</span><span class="share-text">VK</span></a>
+          <a class="share-button email" href="#" data-share-channel="email" aria-label="Share by email"><span class="share-icon" aria-hidden="true">@</span><span class="share-text">Email</span></a>
+          <button type="button" class="share-button copy" data-share-action="copy" aria-label="Copy article link"><span class="share-icon" aria-hidden="true">URL</span><span class="share-text">Copy link</span></button>
+          <button type="button" class="share-button native" data-share-action="native" aria-label="Share this article"><span class="share-icon" aria-hidden="true">+</span><span class="share-text">Share</span></button>
+        </div>
+      </section>
+    `;
+  }
+
+  function ensureArticleShareStyles() {
+    if (document.getElementById("panpantech-article-share-styles")) return;
+    const style = document.createElement("style");
+    style.id = "panpantech-article-share-styles";
+    style.textContent = `
+      .article-share{margin-top:64px;padding:28px;background:#fff;border:1px solid var(--border);border-radius:14px;display:grid;gap:20px}
+      .share-heading{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline}
+      .share-label{margin:0;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mono-grey)}
+      .share-hint{font-size:13px;line-height:1.5;color:var(--muted)}
+      .share-buttons{display:flex;flex-wrap:wrap;gap:10px}
+      .share-button{appearance:none;border:1px solid var(--border);background:#fff;color:var(--ink);min-height:42px;padding:9px 14px;border-radius:999px;display:inline-flex;align-items:center;gap:9px;font:600 13.5px/1 "Instrument Sans",system-ui,sans-serif;cursor:pointer;transition:transform 180ms,border-color 180ms,background 180ms,color 180ms}
+      .share-button:hover{transform:translateY(-1px);border-color:currentColor}
+      .share-button:focus-visible{outline:3px solid rgba(14,95,217,.2);outline-offset:2px}
+      .share-icon{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;font-size:10px;font-family:"IBM Plex Mono",monospace;font-weight:600;line-height:1}
+      .share-button.facebook .share-icon{background:#1877f2}
+      .share-button.linkedin .share-icon{background:#0a66c2}
+      .share-button.x .share-icon{background:#000}
+      .share-button.pinterest .share-icon{background:#bd081c}
+      .share-button.whatsapp .share-icon{background:#25d366}
+      .share-button.telegram .share-icon{background:#229ed9}
+      .share-button.vk .share-icon{background:#4c75a3}
+      .share-button.email .share-icon{background:#5c6b85}
+      .share-button.copy .share-icon{background:var(--blue)}
+      .share-button.native .share-icon{background:#111827}
+      .share-button.is-copied{border-color:#1f7a3f;color:#1f7a3f;background:#f1fbf5}
+      .share-button.is-copied .share-icon{background:#1f7a3f}
+      @media (max-width:480px){
+        .article-share{margin-top:48px;padding:20px}
+        .share-button{width:42px;height:42px;min-height:42px;justify-content:center;padding:0}
+        .share-button .share-text{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      }
+    `;
+    document.head.append(style);
+  }
+
+  function ensureArticleShareSection() {
+    const isArticle = metaContent('meta[property="og:type"]') === "article";
+    if (!isArticle || document.querySelector("[data-article-share]")) return;
+    ensureArticleShareStyles();
+    const article = document.querySelector("article");
+    if (!article) return;
+    const holder = document.createElement("div");
+    holder.innerHTML = articleShareTemplate().trim();
+    const share = holder.firstElementChild;
+    const related = article.querySelector(".related");
+    if (related) {
+      related.before(share);
+    } else {
+      article.append(share);
+    }
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    textarea.remove();
+  }
+
+  function initArticleShare() {
+    ensureArticleShareSection();
+    document.querySelectorAll("[data-article-share]").forEach((share) => {
+      const payload = sharePayload();
+      share.querySelectorAll("[data-share-channel]").forEach((link) => {
+        const channel = link.getAttribute("data-share-channel");
+        link.setAttribute("href", shareUrl(channel, payload));
+      });
+
+      const copyButton = share.querySelector('[data-share-action="copy"]');
+      if (copyButton) {
+        const label = copyButton.querySelector(".share-text");
+        const original = label ? label.textContent : "";
+        copyButton.addEventListener("click", async () => {
+          try {
+            await copyText(payload.url);
+            copyButton.classList.add("is-copied");
+            if (label) label.textContent = "Copied";
+            window.setTimeout(() => {
+              copyButton.classList.remove("is-copied");
+              if (label) label.textContent = original;
+            }, 1800);
+          } catch (error) {
+            console.error("[PanPanTech copy share link failed]", error);
+          }
+        });
+      }
+
+      const nativeButton = share.querySelector('[data-share-action="native"]');
+      if (nativeButton) {
+        if (!navigator.share) {
+          nativeButton.hidden = true;
+          return;
+        }
+        nativeButton.addEventListener("click", async () => {
+          try {
+            await navigator.share(payload);
+          } catch (error) {
+            if (error && error.name !== "AbortError") {
+              console.error("[PanPanTech native share failed]", error);
+            }
+          }
+        });
+      }
+    });
+  }
+
+  initArticleShare();
   initializeHeroCarousel();
 })();
