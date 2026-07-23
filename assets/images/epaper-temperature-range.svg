@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="Operating temperature range of e-paper technologies showing standard and wide-temperature E-Ink capped near 60C while ChLCD and ultra-stable LCD reach 85C">
+  <rect width="760" height="420" fill="#f5f6f8"/>
+  <text x="30" y="30" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5" letter-spacing="2">THE HEAT CEILING — WHY 80°C BREAKS MOST E-PAPER</text>
+
+  <!-- temperature axis -->
+  <!-- map temp -40..90 to x 150..710 -->
+  <!-- x = 150 + (t+40)*(560/130) -->
+  <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#6a7386">
+    <line x1="150" y1="70" x2="150" y2="330" stroke="#e2e6ed"/>
+    <text x="150" y="348" text-anchor="middle">-40</text>
+    <line x1="236" y1="70" x2="236" y2="330" stroke="#e2e6ed"/><text x="236" y="348" text-anchor="middle">-20</text>
+    <line x1="322" y1="70" x2="322" y2="330" stroke="#e2e6ed"/><text x="322" y="348" text-anchor="middle">0</text>
+    <line x1="408" y1="70" x2="408" y2="330" stroke="#e2e6ed"/><text x="408" y="348" text-anchor="middle">20</text>
+    <line x1="495" y1="70" x2="495" y2="330" stroke="#e2e6ed"/><text x="495" y="348" text-anchor="middle">40</text>
+    <line x1="581" y1="70" x2="581" y2="330" stroke="#e2e6ed"/><text x="581" y="348" text-anchor="middle">60</text>
+    <line x1="667" y1="70" x2="667" y2="330" stroke="#e2e6ed"/><text x="667" y="348" text-anchor="middle">80</text>
+    <text x="430" y="366" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">operating temperature (°C)</text>
+  </g>
+
+  <!-- 80C danger line -->
+  <line x1="667" y1="60" x2="667" y2="335" stroke="#c25b2e" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="672" y="72" font-family="IBM Plex Mono, monospace" font-size="10" fill="#c25b2e">Japanese</text>
+  <text x="672" y="85" font-family="IBM Plex Mono, monospace" font-size="10" fill="#c25b2e">summer /</text>
+  <text x="672" y="98" font-family="IBM Plex Mono, monospace" font-size="10" fill="#c25b2e">outdoor ~80°C</text>
+
+  <!-- bars: y for each -->
+  <!-- Standard E-Ink 0..50 -->
+  <text x="30" y="106" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0b0f1a">Standard E-Ink ESL</text>
+  <rect x="322" y="92" width="215" height="22" rx="4" fill="#dbe6f7" stroke="#0e5fd9" stroke-width="1.2"/>
+  <text x="430" y="107" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#0e5fd9">0 to 50°C</text>
+
+  <!-- Wide-temp E-Ink -20..60 -->
+  <text x="30" y="150" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0b0f1a">Wide-temp E-Ink</text>
+  <rect x="236" y="136" width="345" height="22" rx="4" fill="#c9dcf5" stroke="#0e5fd9" stroke-width="1.2"/>
+  <text x="408" y="151" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#0e5fd9">-20 to 60°C — still short of 80</text>
+
+  <!-- Freezer E-Ink Aurora -25..? keep to 50 -->
+  <text x="30" y="194" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0b0f1a">Freezer E-Ink (Aurora)</text>
+  <rect x="215" y="180" width="280" height="22" rx="4" fill="#c9dcf5" stroke="#0e5fd9" stroke-width="1.2"/>
+  <text x="355" y="195" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#0e5fd9">-25 to 50°C — solves cold, not heat</text>
+
+  <!-- Ultra-stable LCD -20..70 -->
+  <text x="30" y="238" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0b0f1a">Ultra-stable LCD (GDT)</text>
+  <rect x="236" y="224" width="431" height="22" rx="4" fill="#e6f0e6" stroke="#2f6b3f" stroke-width="1.2"/>
+  <text x="451" y="239" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2f6b3f">-20 to 70°C</text>
+
+  <!-- ChLCD -30..85 -->
+  <text x="30" y="282" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0b0f1a">ChLCD (IRIS)</text>
+  <rect x="193" y="268" width="495" height="22" rx="4" fill="#cfe8cf" stroke="#2f6b3f" stroke-width="1.6"/>
+  <text x="440" y="283" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2f6b3f">-30 to 85°C — clears the 80°C line</text>
+
+  <line x1="30" y1="384" x2="730" y2="384" stroke="#d8dde6" stroke-width="1"/>
+  <text x="30" y="404" font-family="Instrument Sans, sans-serif" font-size="12" fill="#3d4453">Even wide-temperature E-Ink tops out near 60°C. Only liquid-crystal e-paper reaches 85°C. Source: E Ink / Pervasive Displays / IRIS Optronics published ranges, 2026.</text>
+</svg>

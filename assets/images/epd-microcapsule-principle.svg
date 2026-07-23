@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-label="How an electrophoretic E-Ink microcapsule works: charged black and white pigment particles move under an electric field">
+  <rect width="760" height="380" fill="#f5f6f8"/>
+  <text x="30" y="30" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5" letter-spacing="2">ELECTROPHORETIC (E-INK) — HOW A MICROCAPSULE WORKS</text>
+
+  <!-- capsule showing white -->
+  <text x="150" y="70" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#0b0f1a">Top electrode negative</text>
+  <text x="150" y="88" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#6a7386">→ white particles rise → pixel WHITE</text>
+  <rect x="60" y="100" width="180" height="14" fill="#0b0f1a"/><text x="250" y="111" font-family="IBM Plex Mono,monospace" font-size="10" fill="#c25b2e">−</text>
+  <circle cx="150" cy="165" r="48" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.5"/>
+  <g fill="#e2e6ed" stroke="#0b0f1a" stroke-width="0.6">
+    <circle cx="130" cy="140" r="7"/><circle cx="150" cy="135" r="7"/><circle cx="170" cy="140" r="7"/><circle cx="140" cy="152" r="7"/><circle cx="162" cy="152" r="7"/>
+  </g>
+  <g fill="#0b0f1a">
+    <circle cx="132" cy="188" r="6"/><circle cx="150" cy="192" r="6"/><circle cx="168" cy="188" r="6"/>
+  </g>
+  <rect x="60" y="216" width="180" height="14" fill="#8a8f99"/><text x="250" y="227" font-family="IBM Plex Mono,monospace" font-size="10" fill="#0e5fd9">+</text>
+
+  <!-- capsule showing black -->
+  <text x="470" y="70" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#0b0f1a">Top electrode positive</text>
+  <text x="470" y="88" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#6a7386">→ black particles rise → pixel BLACK</text>
+  <rect x="380" y="100" width="180" height="14" fill="#0b0f1a"/><text x="570" y="111" font-family="IBM Plex Mono,monospace" font-size="10" fill="#0e5fd9">+</text>
+  <circle cx="470" cy="165" r="48" fill="#ffffff" stroke="#0b0f1a" stroke-width="1.5"/>
+  <g fill="#0b0f1a">
+    <circle cx="450" cy="140" r="6"/><circle cx="470" cy="135" r="6"/><circle cx="490" cy="140" r="6"/>
+  </g>
+  <g fill="#e2e6ed" stroke="#0b0f1a" stroke-width="0.6">
+    <circle cx="452" cy="188" r="7"/><circle cx="470" cy="192" r="7"/><circle cx="488" cy="188" r="7"/><circle cx="462" cy="176" r="7"/>
+  </g>
+  <rect x="380" y="216" width="180" height="14" fill="#8a8f99"/><text x="570" y="227" font-family="IBM Plex Mono,monospace" font-size="10" fill="#c25b2e">−</text>
+
+  <!-- legend -->
+  <g font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#3d4453">
+    <circle cx="620" cy="150" r="7" fill="#e2e6ed" stroke="#0b0f1a" stroke-width="0.8"/><text x="634" y="154">TiO₂ white (+ charge)</text>
+    <circle cx="620" cy="176" r="7" fill="#0b0f1a"/><text x="634" y="180">Carbon black (− charge)</text>
+    <text x="613" y="206" font-family="IBM Plex Mono, monospace" font-size="10" fill="#9aa3b5">suspending fluid</text>
+    <text x="613" y="220" font-family="IBM Plex Mono, monospace" font-size="10" fill="#9aa3b5">inside capsule</text>
+  </g>
+
+  <line x1="30" y1="262" x2="730" y2="262" stroke="#d8dde6" stroke-width="1"/>
+  <text x="30" y="284" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">Charged pigment particles are suspended in a clear fluid. A field pulls one colour to the surface; it stays there with</text>
+  <text x="30" y="302" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">power off (bistable). The fluid is the weak point: its viscosity changes with temperature, which caps the operating range.</text>
+  <text x="30" y="324" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">Colour E-Ink adds coloured particles or a colour filter — richer palette, but slower and still temperature-limited.</text>
+  <text x="30" y="346" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#9aa3b5">Schematic — not to scale. PanPanTech, 2026.</text>
+</svg>

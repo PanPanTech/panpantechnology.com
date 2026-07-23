@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-label="Ultra-stable liquid crystal e-paper: interface anchoring replaces the polyimide alignment layer, enabling inkjet printing, pressure resistance and multi-stable grey levels">
+  <rect width="760" height="380" fill="#f5f6f8"/>
+  <text x="30" y="30" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5" letter-spacing="2">ULTRA-STABLE LCD — STABILITY WITHOUT A PI ALIGNMENT LAYER</text>
+
+  <!-- conventional -->
+  <text x="200" y="66" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#0b0f1a">Conventional LCD</text>
+  <rect x="90" y="80" width="220" height="14" fill="#0b0f1a"/><text x="320" y="91" font-family="IBM Plex Mono,monospace" font-size="9" fill="#6a7386">glass + ITO</text>
+  <rect x="90" y="94" width="220" height="10" fill="#c25b2e"/><text x="320" y="103" font-family="IBM Plex Mono,monospace" font-size="9" fill="#c25b2e">PI + rubbing</text>
+  <g stroke="#2f6b3f" stroke-width="2"><line x1="110" y1="112" x2="130" y2="150"/><line x1="150" y1="112" x2="170" y2="150"/><line x1="190" y1="112" x2="210" y2="150"/><line x1="230" y1="112" x2="250" y2="150"/><line x1="270" y1="112" x2="290" y2="150"/></g>
+  <rect x="90" y="158" width="220" height="10" fill="#c25b2e"/>
+  <rect x="90" y="168" width="220" height="14" fill="#0b0f1a"/>
+  <text x="200" y="204" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#c25b2e">PI anchoring + rubbing = cost, fragility</text>
+
+  <!-- ultra-stable -->
+  <text x="560" y="66" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#0b0f1a">Ultra-stable LCD (GDT)</text>
+  <rect x="450" y="80" width="220" height="14" fill="#0b0f1a"/><text x="680" y="91" font-family="IBM Plex Mono,monospace" font-size="9" fill="#6a7386">glass + ITO</text>
+  <!-- no PI: composite interface -->
+  <rect x="450" y="94" width="220" height="8" fill="#2f6b3f" opacity="0.35"/>
+  <g stroke="#2f6b3f" stroke-width="2">
+    <line x1="470" y1="108" x2="470" y2="150"/><line x1="500" y1="108" x2="500" y2="150"/><line x1="530" y1="108" x2="530" y2="150"/><line x1="560" y1="108" x2="560" y2="150"/><line x1="590" y1="108" x2="590" y2="150"/><line x1="620" y1="108" x2="620" y2="150"/><line x1="650" y1="108" x2="650" y2="150"/>
+  </g>
+  <rect x="450" y="156" width="220" height="8" fill="#2f6b3f" opacity="0.35"/>
+  <rect x="450" y="164" width="220" height="14" fill="#0b0f1a"/>
+  <text x="560" y="204" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#2f6b3f">composite-interface anchoring — no PI, no rubbing</text>
+
+  <!-- benefits row -->
+  <g font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#0b0f1a">
+    <rect x="60" y="232" width="150" height="46" rx="6" fill="#fff" stroke="#e2e6ed"/><text x="72" y="252" font-weight="600">Inkjet-printable</text><text x="72" y="269" font-size="10" fill="#6a7386">no colour filter/polariser</text>
+    <rect x="222" y="232" width="150" height="46" rx="6" fill="#fff" stroke="#e2e6ed"/><text x="234" y="252" font-weight="600">Pressure-proof</text><text x="234" y="269" font-size="10" fill="#6a7386">&gt;50 N/cm²</text>
+    <rect x="384" y="232" width="150" height="46" rx="6" fill="#fff" stroke="#e2e6ed"/><text x="396" y="252" font-weight="600">Multi-stable grey</text><text x="396" y="269" font-size="10" fill="#6a7386">not just black/white</text>
+    <rect x="546" y="232" width="164" height="46" rx="6" fill="#fff" stroke="#e2e6ed"/><text x="558" y="252" font-weight="600">Weak colour shift</text><text x="558" y="269" font-size="10" fill="#6a7386">wide temp −20 to 70°C</text>
+  </g>
+
+  <line x1="30" y1="304" x2="730" y2="304" stroke="#d8dde6" stroke-width="1"/>
+  <text x="30" y="326" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">Replacing the polyimide (PI) alignment layer with an engineered interface removes the rubbing step, lets the device</text>
+  <text x="30" y="344" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">be inkjet-printed, and makes it resist pressure — a known weakness of classic cholesteric LCD.</text>
+  <text x="30" y="366" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#9aa3b5">Schematic — not to scale. Data: GDT (Gede) published materials. PanPanTech, 2026.</text>
+</svg>

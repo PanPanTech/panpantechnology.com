@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"></noscript><title>E-Paper Is Not Just E-Ink: Technology Routes Compared | PanPanTech</title><meta name="description" content="E-paper is a family, not one screen. A manufacturer compares E-Ink, cholesteric LCD and ultra-stable LCD on colour, temperature range, cost and high-heat fit."><link rel="canonical" href="https://www.panpantechnology.com/blog/e-paper-technology-comparison/"><meta property="og:type" content="article"><meta property="og:title" content="E-Paper Is Not Just E-Ink: Technology Routes Compared | PanPanTech"><meta property="og:description" content="E-Ink electrophoretic vs cholesteric LCD vs ultra-stable LCD — colour, operating temperature range, cost and how to evaluate high-heat outdoor use."><meta property="og:url" content="https://www.panpantechnology.com/blog/e-paper-technology-comparison/"><meta property="og:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PanPanTech","url":"https://www.panpantechnology.com","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","email":"info@panpantechnology.com","telephone":"+86-13925118851","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.panpantechnology.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.panpantechnology.com/blog/"},{"@type":"ListItem","position":3,"name":"E-Paper Technology Comparison","item":"https://www.panpantechnology.com/blog/e-paper-technology-comparison/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"E-Paper Is Not Just E-Ink: E-Paper Technology Routes Compared","description":"A manufacturer compares E-Ink electrophoretic, cholesteric LCD and ultra-stable LCD e-paper on colour, operating temperature range, cost and high-heat deployment fit.","image":"https://www.panpantechnology.com/assets/images/epaper-family-tree.svg","datePublished":"2026-07-23","dateModified":"2026-07-23","author":{"@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"},"publisher":{"@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"},"articleSection":"Technology","mainEntityOfPage":"https://www.panpantechnology.com/blog/e-paper-technology-comparison/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is e-paper the same as an E-Ink screen?","acceptedAnswer":{"@type":"Answer","text":"No. E-paper is an umbrella term for reflective, bistable, paper-like displays. E-Ink electrophoretic screens are the most common and mature branch — over 95% of the market — but not the only one. Cholesteric LCD, ultra-stable LCD, SiPix microcup, electronic liquid powder, MEMS and electrowetting are all e-paper technologies with very different colour and temperature behaviour."}},{"@type":"Question","name":"Which e-paper technologies are specified for high-heat outdoor use?","acceptedAnswer":{"@type":"Answer","text":"Published high-heat ranges are strongest in the liquid-crystal routes. Many standard E-Ink electronic shelf labels are specified around 0-50°C and some wide-temperature E-Ink around 60°C, so an 80°C outdoor requirement needs datasheet-level verification. Cholesteric LCD is specified up to about 85°C and ultra-stable LCD to about 70°C in the sources compared here because their image is formed by liquid-crystal geometry rather than pigment suspended in a temperature-sensitive fluid."}},{"@type":"Question","name":"Why do E-Ink displays have a temperature ceiling?","acceptedAnswer":{"@type":"Answer","text":"An electrophoretic pixel moves charged pigment particles through a clear fluid. The fluid's viscosity changes with temperature: too cold and particles barely move, too hot and the system degrades. That fluid, not the electronics, sets the operating window, which is why even wide-temperature E-Ink rarely exceeds 60°C."}},{"@type":"Question","name":"Which e-paper technology supports the richest colour?","acceptedAnswer":{"@type":"Answer","text":"Cholesteric LCD is one of the strongest colour routes in this comparison. By stacking red, green and blue reflective layers it can mix up to 16.78 million colours with a 1-2 second full-screen refresh. Colour E-Ink such as Spectra 6 reaches roughly 4,096 colours and refreshes much more slowly, while monochrome E-Ink remains very strong for crisp black-and-white text."}},{"@type":"Question","name":"What is ultra-stable LCD e-paper?","acceptedAnswer":{"@type":"Answer","text":"A reflective liquid-crystal e-paper that replaces the polyimide alignment layer of a conventional LCD with an engineered composite interface. This removes the rubbing step, allows the device to be inkjet-printed, and makes it pressure-resistant (rated above 50 N/cm²) with multi-stable grey levels and weak colour shift — addressing classic cholesteric LCD's fragility."}},{"@type":"Question","name":"Who are the main players in each e-paper technology?","acceptedAnswer":{"@type":"Answer","text":"For electrophoretic E-Ink, E Ink Corporation is widely reported as the leading supplier with over 95% market share, with OED as a secondary supplier. For cholesteric LCD, players include IRIS Optronics, BOE, AUO, HannStar and Kent. Ultra-stable LCD is pioneered by Gede (GDT). PanPanTech works across these routes to source a suitable technology path per application."}},{"@type":"Question","name":"Does e-paper keep its image with the power off?","acceptedAnswer":{"@type":"Answer","text":"Yes — bistability is the defining trait of e-paper. All these technologies hold the last image with zero power and only draw energy when the image changes, which is why they suit battery-powered electronic shelf labels and signage."}},{"@type":"Question","name":"Which e-paper should I choose for an electronic shelf label?","acceptedAnswer":{"@type":"Answer","text":"Match it to the environment. For ambient indoor shelves, monochrome or colour E-Ink is often the most mature and cost-effective route. For freezers, use a cold-rated wide-temperature E-Ink. For outdoor, high-heat or full-colour promotional displays, cholesteric or ultra-stable LCD should be evaluated because their published specifications can better match heat and colour requirements."}}]}</script><style>
+html, body { margin: 0; padding: 0; background: #F5F6F8; }
+* { box-sizing: border-box; }
+::selection { background: #0E5FD9; color: #fff; }
+</style><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/images/favicon-48x48.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/blog.css"><meta name="theme-color" content="#0E5FD9"><meta name="twitter:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"></head>
+<body><div class="site">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">PanPan<span class="accent">Tech</span></a>
+      <nav class="site-nav">
+        <a href="/solutions/" class="scp0">Solutions</a>
+        <a href="/products/" class="scp0">Smart Robots</a>
+        <a href="/technology/" class="scp0">Technology</a>
+        <a href="/manufacturing/" class="scp0">Manufacturing</a>
+        <a href="/partners/" class="scp0">Partners</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/about/" class="scp0">About</a>
+      </nav>
+      <a href="/request-a-quote/" class="btn-quote scp1">Request a Quote<span class="mono">→</span></a>
+    </div>
+  </header>
+
+  <section class="dark">
+    <div class="hero-grid">
+      <div>
+        <div class="crumbs">
+          <a href="/" class="scp2">Home</a><span>/</span>
+          <a href="/blog/" class="scp2">Blog</a><span>/</span>
+          <span class="here">E-Paper Technology Comparison</span>
+        </div>
+        <p class="kicker">Technology — E-Paper Displays</p>
+        <h1 class="sz48">E-Paper Is Not Just E-Ink: E-Paper Technology Routes Compared</h1>
+        <p class="hero-answer"><strong>"E-paper" is a family of display technologies, not a single screen. E-Ink electrophoretic — the "e-ink screen" many buyers picture first — is the most mature and familiar branch. Its hot-side operating range is usually narrower than liquid-crystal e-paper routes: many standard labels are specified around 0-50°C and some wide-temperature versions near 60°C, so an 80°C surface-temperature requirement needs separate validation instead of assuming any e-paper label will fit.</strong> For very high heat, richer colour or pressure-sensitive public use, compare electrophoretic panels with cholesteric and ultra-stable LCD routes before choosing a module.</p>
+        <p class="hero-meta">Updated 2026-07-23 · 23 min read</p>
+      </div>
+      <div class="hero-media">
+        <div class="bg-cover" style='background-image: url("/assets/images/esl-warehouse-shelves.jpg");'></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="page-grid">
+      <aside class="toc">
+        <span class="toc-label">Contents</span>
+        <a href="#heat" class="scp3"><span class="n">01</span><span>A real 80°C problem</span></a>
+        <a href="#family" class="scp3"><span class="n">02</span><span>What counts as e-paper</span></a>
+        <a href="#epd" class="scp3"><span class="n">03</span><span>Electrophoretic (E-Ink)</span></a>
+        <a href="#chlcd" class="scp3"><span class="n">04</span><span>Cholesteric LCD</span></a>
+        <a href="#ultrastable" class="scp3"><span class="n">05</span><span>Ultra-stable LCD</span></a>
+        <a href="#others" class="scp3"><span class="n">06</span><span>The other routes</span></a>
+        <a href="#temperature" class="scp3"><span class="n">07</span><span>The heat ceiling, explained</span></a>
+        <a href="#table" class="scp3"><span class="n">08</span><span>Full comparison table</span></a>
+        <a href="#choose" class="scp3"><span class="n">09</span><span>How to choose</span></a>
+        <a href="#trends" class="scp3"><span class="n">10</span><span>Where it is heading</span></a>
+        <a href="#faq" class="scp3"><span class="n">11</span><span>FAQ</span></a>
+      </aside>
+
+      <article>
+
+        <div id="heat" class="mb56">
+          <h2>It starts with a real problem: heat beyond label specifications</h2>
+          <div class="answer-box">A customer put it plainly: the Japanese summer is brutal, and outdoor surfaces can exceed the stated operating range of many heat-resistant two-colour e-paper electronic shelf labels. They were looking for a display route that could be evaluated around an 80°C requirement, and had noticed cholesteric LCD displays starting to appear on the market. That single question exposes a truth many buyers miss — not all e-paper is the same, and the differences are physical, not cosmetic.</div>
+          <p>A buyer specifies "an e-paper label", assumes that means one thing, deploys it outdoors or in a sun-facing storefront, and may see slow updates, fading, unstable images or early failures in the second summer. The label may not be faulty; the display branch may simply be mismatched to the environment.</p>
+          <p>Here is the uncomfortable part, and we will say it as people who once used the shortcut too: for years many practitioners — including engineers inside this industry — treated "e-paper" and "E-Ink screen" as synonyms, as if there were one technology in one form. That shortcut hides useful details. E-paper is an umbrella covering several fundamentally different physics. Electrophoretic E-Ink is the most familiar and mature shelf-label route, while liquid-crystal e-paper routes are often considered when colour depth, pressure behaviour or high-temperature specifications become the deciding factor.</p>
+          <p>This article sets out a practical comparison. We walk through what actually qualifies as e-paper, take apart the four routes that matter — electrophoretic E-Ink, cholesteric LCD, and ultra-stable LCD, plus the legacy routes — name the main players in each, and then spend a full section on the customer's real question: how to evaluate an e-paper display when the surface-temperature requirement approaches 80°C. The short answer sits in the temperature chart in section 7; the reasoning is worth the read.</p>
+        </div>
+
+        <div id="family" class="mb56">
+          <h2>What actually counts as "e-paper"?</h2>
+          <div class="answer-box">A display is e-paper if it is reflective (it uses ambient light, with no backlight), bistable (it holds its image with the power off and only draws energy to change), and paper-like to read. Those three traits — not any single material — define the category. Everything else, including colour and temperature range, can vary significantly between routes.</div>
+          <p>Start from the shared DNA, because it is what makes all these technologies feel similar in a demo and then behave completely differently in the field.</p>
+          <div class="cards">
+            <div class="spec"><span class="k">Reflective</span><span class="v">Like ink on paper, e-paper reflects ambient light instead of emitting it. That is why it stays readable in direct sunlight where an LCD or OLED washes out, and why it consumes so little power — there is no backlight to run.</span></div>
+            <div class="spec"><span class="k">Bistable</span><span class="v">The pixel keeps its state after power is removed. Energy is spent only when the image changes. This is what makes e-paper viable for a battery-powered shelf label that updates a few times a day and then sleeps.</span></div>
+            <div class="spec"><span class="k">Paper-like</span><span class="v">Wide viewing angle, matte surface, no flicker, comfortable for long reading. The look people associate with an e-reader — but achievable through several different underlying mechanisms.</span></div>
+          </div>
+          <p style="margin-top:20px">Group the technologies by <em>how</em> they achieve those traits and the family tree becomes clear. There are three branches: the electrophoretic route (moving pigment particles), the liquid-crystal route (reorienting liquid-crystal molecules), and a set of other reflective mechanisms that are now mostly historical.</p>
+          <figure>
+            <img src="/assets/images/epaper-family-tree.svg" alt="Family tree of e-paper technologies: electrophoretic (E-Ink microcapsule, SiPix, Bridgestone), liquid crystal (cholesteric, ultra-stable) and other reflective (MEMS, electrowetting)" loading="lazy">
+            <figcaption>The e-paper family. "E-Ink screen" is one leaf on the electrophoretic branch, not the whole tree. PanPanTech, 2026.</figcaption>
+          </figure>
+          <p>The rest of this guide walks the branches in order of commercial relevance: electrophoretic first (because it owns the market), then the two liquid-crystal routes (because they answer the heat-and-colour questions), then the legacy mechanisms for completeness.</p>
+        </div>
+
+        <div id="epd" class="mb56">
+          <h2>Route 1 — Electrophoretic (E-Ink): the market default</h2>
+          <div class="answer-box">Electrophoretic displays (EPD) move charged black and white pigment particles through a clear fluid inside microcapsules. It is the most mature e-paper technology, is widely reported to hold over 95% of the market, and is especially strong for crisp monochrome text — while colour depth and hot-side operating range need to be checked carefully against the application.</div>
+          <p>This is the "e-ink screen" almost everyone means when they say e-paper. It was commercialised out of research by MIT professor Joseph Jacobson and colleagues, and refined over decades. Each pixel contains microcapsules holding positively charged white titanium-dioxide particles and negatively charged black carbon particles suspended in a clear fluid. Apply a field and the chosen colour rises to the surface, where it stays without power.</p>
+          <figure>
+            <img src="/assets/images/epd-microcapsule-principle.svg" alt="Diagram of an E-Ink microcapsule showing charged white and black pigment particles moving under an electric field to display white or black" loading="lazy">
+            <figcaption>Electrophoretic pixel: charged pigment moves through a fluid. That fluid is also the temperature weak point. PanPanTech, 2026.</figcaption>
+          </figure>
+          <h3><span class="n">A</span>What it is brilliant at</h3>
+          <p>Monochrome E-Ink produces the sharpest, highest-contrast black-and-white text of any reflective technology, with an extremely wide viewing angle and no angular colour shift. For an e-reader or a price-and-barcode shelf label, nothing beats it on legibility per milliwatt. It is also the most manufacturable and lowest-risk choice, with a deep supply chain behind it.</p>
+          <h3><span class="n">B</span>Where it struggles: colour and heat</h3>
+          <p>Colour is the first limit. Colour E-Ink — the Spectra family and similar — adds coloured particles or a colour filter, but reaches only in the low thousands of colours (Spectra 6 is around 4,096) and refreshes a full colour image slowly, on the order of 15 seconds. That is fine for a price change, but less suited to vivid promotional imagery or frequent full-colour updates.</p>
+          <p>Temperature is the harder limit, and the one the customer hit. Standard E-Ink electronic shelf labels are specified for roughly 0–50°C. Wide-temperature variants extend that to about −20 to 60°C, and freezer-grade parts such as E Ink's Aurora reach −25°C on the cold side. But almost none exceed 60°C on the hot side — so 80°C outdoor or summer-storefront heat is outside the envelope of even the "heat-resistant" parts. Section 7 explains exactly why the fluid imposes that ceiling.</p>
+          <p class="src">Sources: <a href="https://www.pervasivedisplays.com/wide-temperature-eink-display/" target="_blank" rel="noopener">Pervasive Displays, wide-temperature E-Ink (−20 to +60°C)</a> · <a href="https://www.eink.com/application/detail/ESL" target="_blank" rel="noopener">E Ink ESL application</a> · <a href="https://iris-opt.com/en/blog/epd-vs-chlcd/" target="_blank" rel="noopener">IRIS Optronics, EPD vs ChLCD</a>.</p>
+          <h3><span class="n">C</span>Main players</h3>
+          <p>E Ink Corporation of Taiwan is widely reported as the leading supplier in this route, with well over 95% share, and OED is a secondary electrophoretic supplier. Their technical characteristics are similar because the underlying physics is the same. Within the electrophoretic branch there are also two lesser-used mechanisms — SiPix microcup and Bridgestone's electronic liquid powder — covered briefly in section 6.</p>
+        </div>
+
+        <div id="chlcd" class="mb56">
+          <h2>Route 2 — Cholesteric LCD (ChLCD): colour and heat tolerance</h2>
+          <div class="answer-box">Cholesteric LCD forms colour from the helical geometry of liquid-crystal molecules rather than from pigment in a fluid. Stacking red, green and blue reflective layers yields up to 16.78 million colours with a 1-2 second full-screen refresh, and an operating range up to about 85°C. It is the route the customer had spotted, and one option to evaluate when a project requires operation near an 80°C surface-temperature line.</div>
+          <p>Cholesteric liquid crystal is a special phase whose molecules arrange in a helix. The pitch of that helix determines which wavelength of light it reflects — tune the pitch and you tune the colour. In its planar state the layer reflects a specific colour; in its focal-conic state it scatters or passes light and reads dark. Both states are stable without power, so the display is bistable like all e-paper.</p>
+          <figure>
+            <img src="/assets/images/chlcd-helical-structure.svg" alt="Diagram showing cholesteric liquid crystal helical structure selectively reflecting a wavelength, and stacked red-green-blue layers producing full colour" loading="lazy">
+            <figcaption>Colour comes from molecular geometry, not moving pigment — which is why ChLCD is both colourful and heat-tolerant. PanPanTech, 2026.</figcaption>
+          </figure>
+          <h3><span class="n">A</span>Why the colour is in a different league</h3>
+          <p>Because colour is produced by physically stacking red, green and blue reflective cholesteric layers and mixing them, ChLCD can render up to 16.78 million colours — genuine full colour, with vivid greens and blues that colour E-Ink generally does not match. A full-colour update takes 1-2 seconds versus roughly 15 seconds for a six-colour E-Ink panel. For promotional retail displays, digital-quality imagery and frequent visual updates, that gap can be decisive.</p>
+          <p class="src">Sources: <a href="https://www.mygica.com/e-ink-spectra-6-vs-chlcd-color-epaper-comparison/" target="_blank" rel="noopener">E Ink Spectra 6 vs ChLCD comparison</a> · <a href="https://iris-opt.com/en/blog/epaper-color-gamut/" target="_blank" rel="noopener">IRIS Optronics, e-paper colour gamut</a>.</p>
+          <h3><span class="n">B</span>Why it survives heat</h3>
+          <p>There is no suspending fluid whose viscosity collapses at temperature extremes. The image is held by liquid-crystal geometry, which tolerates a much wider window — IRIS Optronics specifies its full-colour ChLCD module from about ?30°C to +85°C. That upper figure is the key reason buyers evaluate ChLCD for outdoor and high-heat deployments: it is closer to the 80°C condition the customer was worried about, where many common E-Ink ESL specifications are exceeded.</p>
+          <p class="src">Source: <a href="https://iris-opt.com/en/products/full-color-chlcd/" target="_blank" rel="noopener">IRIS Optronics, Full-Colour ChLCD e-Paper Module</a> (−30 to +85°C, three-layer reflective, bistable, sub-second per-colour refresh).</p>
+          <h3><span class="n">C</span>The honest trade-offs</h3>
+          <p>Classic ChLCD is not free of weaknesses, and a good manufacturer names them. It is generally not pressure-proof — press the surface and the displayed image can disappear until refreshed — and it shows more angular colour shift than E-Ink, so the colour changes somewhat as you move off-axis. Reflectance and contrast are also different in character from E-Ink's crisp monochrome. These are the exact gaps the ultra-stable variant in the next section sets out to close.</p>
+          <h3><span class="n">D</span>Main players</h3>
+          <p>The cholesteric route has several serious names: IRIS Optronics (the full-colour module the customer noticed), BOE, AUO, HannStar and Kent Displays, among others. They differ in colour depth, module construction and maturity, but share the underlying liquid-crystal physics — full colour, wide temperature, with the pressure and angular-shift caveats above.</p>
+        </div>
+
+        <div id="ultrastable" class="mb56">
+          <h2>Route 3 — Ultra-stable LCD: fixing cholesteric's weak points</h2>
+          <div class="answer-box">Ultra-stable LCD is a reflective liquid-crystal e-paper that replaces the polyimide alignment layer of a conventional LCD with an engineered composite interface. That removes the rubbing step, lets the device be inkjet-printed without a colour filter or polariser, and makes it pressure-resistant (rated above 50 N/cm²) with multi-stable grey levels and weak colour shift — directly addressing classic ChLCD's fragility.</div>
+          <p>This is the newest of the four routes, pioneered by Gede (GDT). It keeps the heat tolerance and reflective, bistable nature of the liquid-crystal family, but re-engineers the cell to remove cholesteric LCD's two headline weaknesses: pressure sensitivity and structural complexity.</p>
+          <figure>
+            <img src="/assets/images/ultrastable-lcd-nopi.svg" alt="Diagram comparing a conventional LCD with a polyimide alignment layer against an ultra-stable LCD using composite-interface anchoring, enabling inkjet printing and pressure resistance" loading="lazy">
+            <figcaption>Replacing the PI alignment layer with an engineered interface is what enables inkjet printing and pressure resistance. Data: GDT (Gede). PanPanTech, 2026.</figcaption>
+          </figure>
+          <h3><span class="n">A</span>The core idea: no polyimide</h3>
+          <p>A conventional LCD relies on a rubbed polyimide (PI) layer to anchor and align the liquid crystal. Ultra-stable LCD replaces that anchoring with interactions engineered at a composite interface, tuned through interfacial force and side-chain structure. Removing the PI and the rubbing step simplifies the stack, and — because the process is compatible with inkjet printing — the display can be printed and packaged without the polariser and colour filter a normal LCD needs, which lowers cost and raises yield.</p>
+          <h3><span class="n">B</span>What that buys you</h3>
+          <div class="cards">
+            <div class="spec"><span class="k">Pressure-proof</span><span class="v">Rated above 50 N/cm², where classic cholesteric LCD loses its image under a press. This matters for shelf edges and public-facing surfaces that get touched.</span></div>
+            <div class="spec"><span class="k">Multi-stable grey</span><span class="v">Not just black and white but stable intermediate grey levels, giving finer static images than a simple bistable panel.</span></div>
+            <div class="spec"><span class="k">Weak colour shift</span><span class="v">Less angular colour change than classic ChLCD, so the display looks more consistent off-axis.</span></div>
+            <div class="spec"><span class="k">Wide temperature</span><span class="v">Specified around −20 to 70°C — below ChLCD's 85°C ceiling but far beyond any E-Ink label, and still comfortably above ordinary outdoor heat.</span></div>
+          </div>
+          <p style="margin-top:20px">Gede's own reflective LCD modules (the GDMLCD line) are described as sunlight-readable reflective LCDs with non-volatile memory — zero power to retain the image, power only to change it, no backlight — with high contrast, ultra-wide viewing angle and ultra-low deep-sleep current. In other words, the e-paper virtues, delivered through liquid crystal rather than pigment.</p>
+          <p class="src">Source: GDT (Shenzhen Gede) published materials and GDMLCD module specifications, 2025 (pressure resistance &gt;50 N/cm², multi-stable, bistable reflective, no-PI inkjet-printed process).</p>
+          <h3><span class="n">C</span>Where it sits</h3>
+          <p>Ultra-stable LCD is the youngest and least broadly deployed of the four, so its supply chain is thinner than E-Ink's. But for applications that need heat tolerance <em>and</em> pressure resistance — outdoor signage, industrial and transport displays, touched public surfaces — it targets a gap the other three routes leave open.</p>
+        </div>
+
+        <div id="others" class="mb56">
+          <h2>Route 4 — The other reflective mechanisms (mostly legacy)</h2>
+          <p>For completeness, several other e-paper mechanisms exist. They shaped the field but are now niche or discontinued, and you are unlikely to specify them for a new product. Knowing they exist prevents another round of "wait, that's e-paper too?"</p>
+          <div class="tbl-wrap mt8">
+            <div class="tbl-head cols-3b"><span>Technology</span><span>How it works</span><span>Status</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">SiPix microcup</span><span>Coloured fluid and white particles in sealed microcups; switching electrode polarity moves the particles. Higher reflectance and contrast than early microcapsule, cheaper, can show colour</span><span class="dim">Electrophoretic branch; largely absorbed / niche</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Bridgestone QR-LPD</span><span>Electronic liquid powder — charged black and white powder moved through air in microcups. Fast response but needs high drive voltage, so it draws more power</span><span class="dim">Discontinued</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">MEMS (Mirasol)</span><span>Interferometric modulation reflects selected wavelengths per pixel; higher colour saturation and faster than electrophoretic, and low power</span><span class="dim">Discontinued as a display line</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Electrowetting</span><span>Voltage changes a liquid's surface tension to reveal or hide a coloured layer; very fast pixel switching, simple structure, flexible-capable</span><span class="dim">Research / niche</span></div>
+          </div>
+          <p class="src">Source: technology summaries per public references; commercial status per PanPanTech market tracking, 2026.</p>
+          <p>The practical takeaway: for a product decision today, the real choice is among electrophoretic E-Ink, cholesteric LCD and ultra-stable LCD. The others are context, not options.</p>
+        </div>
+
+        <div id="temperature" class="mb56">
+          <h2>The heat ceiling, explained — the section the customer really needed</h2>
+          <div class="answer-box">E-Ink has a temperature ceiling because its pixel depends on a fluid, and fluid viscosity changes with temperature. Liquid-crystal e-paper does not rely on the same pigment-in-fluid mechanism, so published ranges can sit higher. That is why cholesteric LCD (up to ~85°C) and ultra-stable LCD (~70°C) can be closer to high-heat requirements than many wide-temperature E-Ink ESL ranges (~60°C).</div>
+          <p>This deserves its own section because it is the single most consequential difference between the routes, and the one buyers discover the hard way.</p>
+          <h3><span class="n">A</span>Why the fluid sets the limit</h3>
+          <p>Recall the electrophoretic pixel: charged pigment particles migrating through a clear suspending fluid. That fluid is the main constraint. When it gets cold its viscosity rises, particles move sluggishly, and the image comes out grey, smeared, or fails to update. When it gets hot the system can degrade in other ways and reliability can drop. The electronics may tolerate a wider span, but the fluid mechanism often dictates the operating window. That is why many "wide-temperature" E-Ink ESL specifications still cluster around 60°C on the hot side: the display chemistry has to balance cold-side movement, hot-side reliability and cost.</p>
+          <h3><span class="n">B</span>Why liquid crystal escapes it</h3>
+          <p>In cholesteric and ultra-stable LCD there is no pigment-in-fluid suspension doing the work. The image is held by the geometry and orientation of liquid-crystal molecules — a mechanism that tolerates a much broader temperature span. That distinction is visible in published ranges: IRIS specifies its ChLCD to about 85°C and Gede its ultra-stable LCD to about 70°C, while many E-Ink ESL specifications cluster at or below 60°C on the hot side.</p>
+          <figure>
+            <img src="/assets/images/epaper-temperature-range.svg" alt="Bar chart of e-paper operating temperature ranges: standard E-Ink 0-50C, wide-temp E-Ink -20-60C, freezer E-Ink -25-50C, ultra-stable LCD -20-70C, ChLCD -30-85C, against an 80C outdoor line" loading="lazy">
+            <figcaption>In this comparison, liquid-crystal routes list higher hot-side ranges than common E-Ink ESL specifications. Sources: E Ink / Pervasive Displays / IRIS / GDT published ranges, 2026.</figcaption>
+          </figure>
+          <h3><span class="n">C</span>What this means for a real deployment</h3>
+          <p>If your labels sit indoors at room temperature, E-Ink is often the most cost-effective and mature choice. But a west-facing storefront, an outdoor kiosk, a sun-exposed shelf, or simply a hot-climate summer can push the surface of a display toward 80°C. At that point the question is no longer only "which brand of e-ink" but "which e-paper physics is specified for this environment" — and liquid-crystal routes usually belong on the shortlist. The customer who asked us about IRIS ChLCD had identified a relevant technology path to evaluate. We cover the pairing of technology to environment in the selection section below, and the electronics-side reliability story in our <a class="in" href="/blog/electronic-shelf-label-bom-teardown/">ESL BOM teardown</a>.</p>
+        </div>
+
+        <div id="table" class="mb56">
+          <h2>The full comparison, in one table</h2>
+          <div class="answer-box">Across the four routes, the pattern is consistent: E-Ink tends to lead on maturity, monochrome sharpness and cost; liquid-crystal routes tend to lead on colour, higher-temperature specifications and pressure-related design options. There is no universally "best" e-paper ? only the route that fits the environment and the image requirement.</div>
+          <p>The numbers below are drawn from a supplier comparison table and public manufacturer specifications. Treat vendor-reported figures as directional and confirm the final datasheet for the exact model — but the shape of the differences is not in dispute.</p>
+          <div class="tbl-wrap mt8">
+            <div class="tbl-head cols-4"><span>Attribute</span><span>E-Ink (electrophoretic)</span><span>Cholesteric LCD</span><span>Ultra-stable LCD</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Display medium</span><span>Charged pigment in fluid (microcapsule)</span><span>Cholesteric liquid crystal</span><span class="dim">Ultra-stable liquid crystal</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Colour</span><span>Mono, or ~4,096 (Spectra 6)</span><span>Up to 16.78 million</span><span class="dim">Multi-stable grey; colour via the LC route</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Full-colour refresh</span><span>~15 s (6-colour)</span><span>1–2 s</span><span class="dim">Fast (per Gede driving method)</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Operating temperature</span><span>0–50°C std; −20 to 60°C wide</span><span>−30 to 85°C</span><span class="dim">−20 to 70°C</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Reflectance</span><span>~30–35%</span><span>~19–23% (supplier table)</span><span class="dim">Wide viewing, high contrast</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Contrast</span><span>~16:1 to 25:1</span><span>~9:1 to 12:1 (supplier table)</span><span class="dim">High (GDMLCD)</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Pressure tolerance</span><span>≤100 N/cm² (film) to failure</span><span>Not pressure-proof</span><span class="dim">&gt;50 N/cm²</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Angular colour shift</span><span>None (mono)</span><span>Noticeable</span><span class="dim">Weak</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Bistable / power-off hold</span><span>Yes</span><span>Yes</span><span class="dim">Yes</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Maturity &amp; market</span><span>&gt;95% share, deepest supply chain</span><span>Emerging in colour signage</span><span class="dim">Newest, thinnest supply chain</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Main players</span><span>E Ink (widely adopted), OED</span><span>IRIS, BOE, AUO, HannStar, Kent</span><span class="dim">Gede (GDT)</span></div>
+          </div>
+          <p class="src">Source: manufacturer comparison table (reflectance, contrast, temperature, pressure, share figures) plus public specifications from E Ink, IRIS Optronics and GDT, 2026. Vendor-reported values — confirm per model datasheet.</p>
+          <p>Read the table as a set of trade-offs rather than a scoreboard. A monochrome shelf label and a full-colour outdoor sign are not competing for the same technology; they are simply different jobs that land on different branches of the family tree.</p>
+        </div>
+
+        <div id="choose" class="mb56">
+          <h2>How to choose: match the technology to the environment</h2>
+          <p>The decision is driven far more by where the display lives and what it shows than by any single spec. Four common scenarios cover most retail and industrial cases.</p>
+          <div class="chk mt8">
+            <div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Ambient indoor shelves</strong> — room temperature, price and text. Monochrome or colour E-Ink is often the cost-effective, mature, lower-risk path. Do not over-engineer it without an environmental reason.</span></div>
+            <div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Chillers and freezers</strong> — cold, not hot. Use a cold-rated wide-temperature E-Ink (down to −25°C), and design for condensation. The cold side is where E-Ink still competes well.</span></div>
+            <div class="chk-row p16"><span class="ar">?</span><span class="t"><strong>Outdoor, sun-facing or hot-climate</strong> — where surfaces approach 80°C. This is where liquid-crystal routes deserve evaluation: cholesteric LCD (to ~85°C) or ultra-stable LCD (to ~70°C). E-Ink, including wide-temperature parts, often requires separate validation and may not meet the hot-side requirement.</span></div>
+            <div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Full-colour promotional or touched surfaces</strong> — vivid imagery, frequent visual change, or public touch. Cholesteric LCD for 16.78-million-colour imagery; ultra-stable LCD where pressure resistance also matters.</span></div>
+          </div>
+          <p style="margin-top:20px">A useful discipline: write down the worst-case surface temperature, the colour requirement and the touch exposure <em>before</em> comparing brands. Those three answers usually select the branch on their own, and only then does brand-level comparison within a branch make sense. The component-level reliability questions — panel grade, driver firmware, battery behaviour in the cold — are covered in our <a class="in" href="/blog/electronic-shelf-label-bom-teardown/">electronic shelf label teardown</a>, and the underlying display capability on our <a class="in" href="/technology/epaper-esl/">e-paper &amp; ESL technology</a> page.</p>
+          <p>And to answer the customer's actual question directly: yes — for an 80°C outdoor requirement, cholesteric or ultra-stable LCD should be on the evaluation shortlist, and sourcing the right module for that environment is exactly the kind of problem our <a class="in" href="/manufacturing/">manufacturing and OEM</a> team exists to solve.</p>
+        </div>
+
+        <div id="trends" class="mb56">
+          <h2>Where e-paper is heading</h2>
+          <p>Three directions define the current wave of development, and all three widen the gap between "e-paper = e-ink" and the reality of a diversifying family.</p>
+          <div class="vstack">
+            <div class="spec"><span class="k">Colour</span><span class="v">Full-colour e-paper reached volume production in 2022. The colour contest — colour E-Ink versus cholesteric LCD — is now the most active front, and it is where the liquid-crystal routes are strongest.</span></div>
+            <div class="spec"><span class="k">Flexibility</span><span class="v">Flexible e-paper has reached about 1 mm thickness with 180° bending, opening curved and wearable applications that rigid glass cannot serve.</span></div>
+            <div class="spec"><span class="k">Resolution</span><span class="v">Resolution has pushed past 300 PPI toward print quality, and research "retina" e-paper exceeding 25,000 PPI — using electrochemical tungsten-oxide nanodisks at 560 nm pixel pitch, with static image power around 0.5 mW/cm² — points at where the ceiling really is.</span></div>
+          </div>
+          <p style="margin-top:20px">The market context is large and growing. Industry bodies project China's e-paper tablet shipments at roughly 3.1 million units in 2025 and global e-paper smart-retail shelf-label shipments at about 360 million pieces, and China's video-industry association began drafting an e-paper reader quality-grading standard in 2025. As colour and temperature-tolerant variants mature, the practical definition of "e-paper" keeps widening — which is exactly why treating it as one technology can lead to a mis-specified purchase.</p>
+          <p class="src">Sources: industry figures per China Electronics Video Industry Association and public reporting, 2025; retina e-paper per published research, 2025.</p>
+        </div>
+
+        <div id="faq" class="mb56">
+          <h2>FAQ</h2>
+          <div class="faq">
+            <details><summary>Is e-paper the same as an E-Ink screen?</summary><div class="a">No. E-paper is an umbrella term for reflective, bistable, paper-like displays. E-Ink electrophoretic screens are the most common and mature branch — over 95% of the market — but not the only one. Cholesteric LCD, ultra-stable LCD, SiPix microcup, electronic liquid powder, MEMS and electrowetting are all e-paper technologies with very different colour and temperature behaviour.</div></details>
+            <details><summary>Which e-paper technologies are specified for high-heat outdoor use?</summary><div class="a">Published high-heat ranges are strongest in the liquid-crystal routes. Many standard E-Ink electronic shelf labels are specified around 0-50°C and some wide-temperature E-Ink around 60°C, so an 80°C outdoor requirement needs datasheet-level verification. Cholesteric LCD is specified up to about 85°C and ultra-stable LCD to about 70°C in the sources compared here because their image is formed by liquid-crystal geometry rather than pigment suspended in a temperature-sensitive fluid.</div></details>
+            <details><summary>Why do E-Ink displays have a temperature ceiling?</summary><div class="a">An electrophoretic pixel moves charged pigment particles through a clear fluid. The fluid's viscosity changes with temperature: too cold and particles barely move, too hot and the system degrades. That fluid, not the electronics, sets the operating window, which is why even wide-temperature E-Ink rarely exceeds 60°C.</div></details>
+            <details><summary>Which e-paper technology supports the richest colour?</summary><div class="a">Cholesteric LCD is one of the strongest colour routes in this comparison. By stacking red, green and blue reflective layers it can mix up to 16.78 million colours with a 1-2 second full-screen refresh. Colour E-Ink such as Spectra 6 reaches roughly 4,096 colours and refreshes much more slowly, while monochrome E-Ink remains very strong for crisp black-and-white text.</div></details>
+            <details><summary>What is ultra-stable LCD e-paper?</summary><div class="a">A reflective liquid-crystal e-paper that replaces the polyimide alignment layer of a conventional LCD with an engineered composite interface. This removes the rubbing step, allows the device to be inkjet-printed, and makes it pressure-resistant (rated above 50 N/cm²) with multi-stable grey levels and weak colour shift — addressing classic cholesteric LCD's fragility.</div></details>
+            <details><summary>Who are the main players in each e-paper technology?</summary><div class="a">For electrophoretic E-Ink, E Ink Corporation is widely reported as the leading supplier with over 95% market share, with OED as a secondary supplier. For cholesteric LCD, players include IRIS Optronics, BOE, AUO, HannStar and Kent. Ultra-stable LCD is pioneered by Gede (GDT). PanPanTech works across these routes to source a suitable technology path per application.</div></details>
+            <details><summary>Does e-paper keep its image with the power off?</summary><div class="a">Yes — bistability is the defining trait of e-paper. All these technologies hold the last image with zero power and only draw energy when the image changes, which is why they suit battery-powered electronic shelf labels and signage.</div></details>
+            <details><summary>Which e-paper should I choose for an electronic shelf label?</summary><div class="a">Match it to the environment. For ambient indoor shelves, monochrome or colour E-Ink is often the most mature and cost-effective route. For freezers, use a cold-rated wide-temperature E-Ink. For outdoor, high-heat or full-colour promotional displays, cholesteric or ultra-stable LCD should be evaluated because their published specifications can better match heat and colour requirements.</div></details>
+          </div>
+        </div>
+
+        <div class="related">
+          <p class="related-label">Related PanPanTech pages</p>
+          <div class="grid3-16">
+            <a href="/technology/epaper-esl/" class="rcard scp4"><span class="tag">Technology</span><span class="t">E-Paper &amp; ESL Technology</span></a>
+            <a href="/blog/electronic-shelf-label-bom-teardown/" class="rcard scp4"><span class="tag">Teardown</span><span class="t">Inside an Electronic Shelf Label</span></a>
+            <a href="/manufacturing/" class="rcard scp4"><span class="tag">Manufacturing</span><span class="t">ESL OEM &amp; E-paper Modules</span></a>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="cta-wrap">
+      <div>
+        <h2>Need e-paper that fits your environment?</h2>
+        <p>Tell us the worst-case temperature, the colour requirement and the mounting — PanPanTech will help compare the suitable e-paper routes (E-Ink, cholesteric or ultra-stable LCD) and source the module for the project.</p>
+      </div>
+      <a href="/request-a-quote/" class="btn-cta scp5">Talk to our OEM team <span class="mono">→</span></a>
+    </div>
+  </section>
+
+  <footer class="footer-full">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <div class="footer-brandmark">PanPan<span>Tech</span></div>
+          <p class="footer-blurb">Retail AIoT, smart robotics, and manufacturing platform for global B2B buyers, integrators, distributors, and OEM partners.</p>
+        </div>
+        <div class="footer-col">
+          <span class="h">Solutions</span>
+          <a href="/solutions/retail/">Retail Tech</a>
+          <a href="/products/">Smart Robots</a>
+          <a href="https://einksmart.com">Digital Art</a>
+          <a href="/manufacturing/">Manufacturing</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Robot Business</span>
+          <a href="/products/">Robot product range</a>
+          <a href="/manufacturing/">Robot OEM / ODM</a>
+          <a href="/solutions/">Industries</a>
+          <a href="/request-a-quote/">Request a Quote</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Company</span>
+          <a href="/technology/">Technology</a>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/request-a-quote/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Contact</span>
+          <p>Building A1, Yuexiu iPARK Yuegang Zhigu, Nansha District, Guangzhou, Guangdong Province, China</p>
+          <span class="lbl">Email</span>
+          <a href="mailto:info@panpantechnology.com">info@panpantechnology.com</a>
+          <span class="lbl">Phone</span>
+          <a href="tel:+8613925118851">+86-13925118851</a>
+        </div>
+      </div>
+      <div class="footer-brand-row" aria-label="PanPanTech Group brands">
+        <span><a href="https://www.aieinksmart.com" target="_blank" rel="noopener">AiEInkSmart&trade;</a> &mdash; Electronic Shelf Labels</span><span class="sep">|</span><span><a href="https://www.pyroglaux.com" target="_blank" rel="noopener">Pyroglaux&reg;</a> &mdash; Footfall Analytics</span><span class="sep">|</span><span><a href="https://www.aiesl.com" target="_blank" rel="noopener">AiESL&trade;</a> &mdash; Retail Data Platform</span><span class="sep">|</span><span><a href="https://www.einksmart.com" target="_blank" rel="noopener">EinkSmart&trade;</a> &mdash; E-Ink Art Displays</span>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; 2026 PanPanTech&reg; | Retail AIoT &middot; Smart Robotics &middot; Manufacturing | Guangzhou PanPanTech Co., Ltd. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+</div><script src="/assets/js/site.js" defer></script></body></html>

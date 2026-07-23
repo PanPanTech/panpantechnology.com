@@ -16,6 +16,7 @@
 - [Blog Certifications](https://www.panpantechnology.com/blog/certifications-for-commercial-cleaning-robots/)
 - [Blog Commercial Cleaning Robot Guide](https://www.panpantechnology.com/blog/commercial-cleaning-robot/)
 - [Blog Commercial Robot Vacuum](https://www.panpantechnology.com/blog/commercial-robot-vacuum/)
+- [Blog E-Paper Technology Comparison](https://www.panpantechnology.com/blog/e-paper-technology-comparison/)
 - [Blog ESL BOM Teardown](https://www.panpantechnology.com/blog/electronic-shelf-label-bom-teardown/)
 - [Blog Robotic Floor Scrubber vs Walk-Behind](https://www.panpantechnology.com/blog/robotic-floor-scrubber/)
 - [Blog Industrial Robot Vacuum Warehouse](https://www.panpantechnology.com/blog/industrial-robot-vacuum-for-warehouse/)

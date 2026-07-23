@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-label="How a cholesteric liquid crystal display reflects colour: helical molecular pitch selectively reflects a wavelength, and stacked RGB layers build full colour">
+  <rect width="760" height="400" fill="#f5f6f8"/>
+  <text x="30" y="30" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5" letter-spacing="2">CHOLESTERIC LCD (ChLCD) — COLOUR FROM A HELIX</text>
+
+  <!-- single helix reflect -->
+  <text x="180" y="66" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#0b0f1a">Planar state — reflects</text>
+  <text x="180" y="84" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11" fill="#6a7386">helix pitch selects a wavelength</text>
+  <!-- helix coils -->
+  <g stroke="#2f6b3f" stroke-width="2" fill="none">
+    <ellipse cx="180" cy="120" rx="46" ry="9"/>
+    <ellipse cx="180" cy="140" rx="46" ry="9"/>
+    <ellipse cx="180" cy="160" rx="46" ry="9"/>
+    <ellipse cx="180" cy="180" rx="46" ry="9"/>
+    <ellipse cx="180" cy="200" rx="46" ry="9"/>
+  </g>
+  <!-- incoming + reflected light -->
+  <g stroke="#c25b2e" stroke-width="1.6" fill="none">
+    <path d="M120 90 L160 116"/><path d="M154 108 L160 116 L152 118"/>
+  </g>
+  <g stroke="#0e5fd9" stroke-width="1.6" fill="none">
+    <path d="M200 116 L242 90"/><path d="M236 92 L242 90 L240 98"/>
+  </g>
+  <text x="118" y="86" font-family="IBM Plex Mono,monospace" font-size="9" fill="#c25b2e">white in</text>
+  <text x="228" y="86" font-family="IBM Plex Mono,monospace" font-size="9" fill="#0e5fd9">colour out</text>
+  <text x="180" y="228" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#6a7386">pitch = colour · softer pitch = redder</text>
+
+  <!-- focal conic -->
+  <text x="180" y="266" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#3d4453">Focal-conic state scatters / passes light (dark). Both states hold with power off — bistable.</text>
+
+  <!-- stacked RGB -->
+  <text x="540" y="66" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#0b0f1a">Stack R + G + B → full colour</text>
+  <g>
+    <rect x="440" y="86" width="200" height="30" fill="#e24b4b" opacity="0.75" stroke="#0b0f1a" stroke-width="0.6"/><text x="650" y="106" font-family="IBM Plex Mono,monospace" font-size="10" fill="#0b0f1a">R</text>
+    <rect x="440" y="120" width="200" height="30" fill="#2f9e44" opacity="0.75" stroke="#0b0f1a" stroke-width="0.6"/><text x="650" y="140" font-family="IBM Plex Mono,monospace" font-size="10" fill="#0b0f1a">G</text>
+    <rect x="440" y="154" width="200" height="30" fill="#3b6fe0" opacity="0.8" stroke="#0b0f1a" stroke-width="0.6"/><text x="650" y="174" font-family="IBM Plex Mono,monospace" font-size="10" fill="#0b0f1a">B</text>
+  </g>
+  <text x="440" y="206" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#3d4453">Three reflective layers mix RGB → up to</text>
+  <text x="440" y="223" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#3d4453">16.78 million colours, 1–2 s full-screen refresh.</text>
+  <text x="440" y="250" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2f6b3f">No fluid to freeze/boil → −30 to 85°C range.</text>
+
+  <line x1="30" y1="300" x2="730" y2="300" stroke="#d8dde6" stroke-width="1"/>
+  <text x="30" y="322" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">Because colour comes from molecular geometry, not moving pigment in a liquid, ChLCD is far richer in colour and</text>
+  <text x="30" y="340" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">tolerant of heat — but classic ChLCD is not pressure-proof and shows more angular colour shift than E-Ink.</text>
+  <text x="30" y="362" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="#9aa3b5">Schematic — not to scale. Data: IRIS Optronics published specs. PanPanTech, 2026.</text>
+</svg>
