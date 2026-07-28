@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" role="img" aria-label="How to tell a real electronic shelf label manufacturer from a trading company reselling other factories' products">
+  <rect width="760" height="400" fill="#f5f6f8"/>
+  <text x="30" y="30" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5" letter-spacing="2">TRADING COMPANY vs REAL MANUFACTURER</text>
+
+  <!-- trader column -->
+  <rect x="40" y="56" width="330" height="300" rx="8" fill="#fff" stroke="#c25b2e" stroke-width="1.4"/>
+  <text x="205" y="84" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="600" fill="#c25b2e">Trading company (re-badges)</text>
+  <g font-family="Instrument Sans, sans-serif" font-size="12" fill="#3d4453">
+    <text x="60" y="118">✗ No SMT line, no test lab of its own</text>
+    <text x="60" y="146">✗ Certificate holder is another entity</text>
+    <text x="60" y="174">✗ Can't show incoming panel spec</text>
+    <text x="60" y="202">✗ Firmware belongs to a third party</text>
+    <text x="60" y="230">✗ "Factory photos" are generic / borrowed</text>
+    <text x="60" y="258">✗ Cannot change control cell / module</text>
+    <text x="60" y="286">✗ Price quoted, questions deflected</text>
+  </g>
+  <text x="60" y="324" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#c25b2e">You inherit risks you cannot see or fix.</text>
+
+  <!-- factory column -->
+  <rect x="390" y="56" width="330" height="300" rx="8" fill="#fff" stroke="#2f6b3f" stroke-width="1.6"/>
+  <text x="555" y="84" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="600" fill="#2f6b3f">Real manufacturer (controls it)</text>
+  <g font-family="Instrument Sans, sans-serif" font-size="12" fill="#3d4453">
+    <text x="410" y="118">✓ Owns SMT, AOI/X-ray, aging &amp; RF test</text>
+    <text x="410" y="146">✓ Holds the CE/FCC/UN 38.3 documents</text>
+    <text x="410" y="174">✓ Shows incoming panel acceptance spec</text>
+    <text x="410" y="202">✓ Owns or co-develops the firmware</text>
+    <text x="410" y="230">✓ Named auditable factory &amp; labs</text>
+    <text x="410" y="258">✓ Written change control on BOM</text>
+    <text x="410" y="286">✓ Answers the checklist precisely</text>
+  </g>
+  <text x="410" y="324" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#2f6b3f">You can verify, specify and hold them to it.</text>
+
+  <line x1="30" y1="374" x2="730" y2="374" stroke="#d8dde6" stroke-width="1"/>
+  <text x="30" y="393" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#3d4453">The single fastest test: ask who holds the certificate and to see the incoming panel spec. A trader cannot produce either. PanPanTech, 2026.</text>
+</svg>
