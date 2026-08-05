@@ -19,6 +19,7 @@
 - [Blog E-Paper Technology Comparison](https://www.panpantechnology.com/blog/e-paper-technology-comparison/)
 - [Blog ESL BOM Teardown](https://www.panpantechnology.com/blog/electronic-shelf-label-bom-teardown/)
 - [Blog ESL Manufacturer OEM Guide](https://www.panpantechnology.com/blog/electronic-shelf-label-manufacturer/)
+- [Blog ESL OEM vs ODM: MOQ, Lead Time and Costs](https://www.panpantechnology.com/blog/esl-oem-vs-odm/)
 - [Blog Robotic Floor Scrubber vs Walk-Behind](https://www.panpantechnology.com/blog/robotic-floor-scrubber/)
 - [Blog Industrial Robot Vacuum Warehouse](https://www.panpantechnology.com/blog/industrial-robot-vacuum-for-warehouse/)
 - [Blog Will Cleaning Robots Replace Human Cleaners](https://www.panpantechnology.com/blog/will-cleaning-robots-replace-cleaners/)

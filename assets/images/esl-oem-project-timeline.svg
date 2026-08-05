@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-label="Timeline of a first private-label electronic shelf label order showing which stages run in parallel and which must run in sequence">
+  <rect width="1000" height="540" fill="#f5f6f8"/>
+  <text x="48" y="38" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#9aa3b5" letter-spacing="2.6">A FIRST PRIVATE-LABEL ORDER — WHAT RUNS IN PARALLEL, WHAT CANNOT</text>
+
+  <!-- week scale -->
+  <line x1="300" y1="70" x2="952" y2="70" stroke="#c9cfda" stroke-width="1"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#9aa3b5">
+    <text x="300" y="62">week 0</text><text x="410" y="62">2</text><text x="520" y="62">4</text>
+    <text x="630" y="62">6</text><text x="740" y="62">8</text><text x="850" y="62">10</text><text x="930" y="62">12</text>
+  </g>
+  <g stroke="#e3e7ee" stroke-width="1">
+    <line x1="410" y1="70" x2="410" y2="440"/><line x1="520" y1="70" x2="520" y2="440"/>
+    <line x1="630" y1="70" x2="630" y2="440"/><line x1="740" y1="70" x2="740" y2="440"/>
+    <line x1="850" y1="70" x2="850" y2="440"/>
+  </g>
+
+  <g font-family="Instrument Sans, sans-serif" font-size="13.5" fill="#3d4453">
+    <text x="48" y="100">Specification &amp; series choice</text>
+    <text x="48" y="140">Sample / prototype</text>
+    <text x="48" y="180">Your sample approval</text>
+    <text x="48" y="220">Artwork, housing colour, packaging</text>
+    <text x="48" y="260">Software UI &amp; system integration</text>
+    <text x="48" y="300">Certification check (usually none)</text>
+    <text x="48" y="340">Production run</text>
+    <text x="48" y="380">Inspection &amp; despatch</text>
+    <text x="48" y="420">Air freight to destination</text>
+  </g>
+
+  <!-- bars -->
+  <rect x="300" y="86" width="60" height="20" rx="4" fill="#0e5fd9" opacity="0.85"/>
+  <rect x="360" y="126" width="115" height="20" rx="4" fill="#0e5fd9" opacity="0.85"/>
+  <rect x="475" y="166" width="85" height="20" rx="4" fill="#c8781f" opacity="0.9"/>
+  <rect x="360" y="206" width="200" height="20" rx="4" fill="#7a8398" opacity="0.55"/>
+  <rect x="360" y="246" width="255" height="20" rx="4" fill="#7a8398" opacity="0.55"/>
+  <rect x="360" y="286" width="90" height="20" rx="4" fill="#2f6b3f" opacity="0.5"/>
+  <rect x="560" y="326" width="200" height="20" rx="4" fill="#0e5fd9" opacity="0.85"/>
+  <rect x="760" y="366" width="55" height="20" rx="4" fill="#0e5fd9" opacity="0.85"/>
+  <rect x="815" y="406" width="90" height="20" rx="4" fill="#7a8398" opacity="0.55"/>
+
+  <!-- annotations -->
+  <text x="368" y="180" font-family="Instrument Sans, sans-serif" font-size="12" fill="#c8781f">← the step that slips most</text>
+  <text x="568" y="320" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#0e5fd9">25–35 days</text>
+
+  <line x1="560" y1="76" x2="560" y2="446" stroke="#c8781f" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="568" y="462" font-family="Instrument Sans, sans-serif" font-size="13" fill="#c8781f" font-weight="600">The clock only starts here</text>
+  <text x="568" y="481" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#6a7386">— deposit received AND configuration + artwork confirmed in writing</text>
+
+  <!-- legend -->
+  <g font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">
+    <rect x="48" y="500" width="14" height="12" rx="3" fill="#0e5fd9" opacity="0.85"/><text x="70" y="511">factory, sequential</text>
+    <rect x="210" y="500" width="14" height="12" rx="3" fill="#7a8398" opacity="0.55"/><text x="232" y="511">runs in parallel</text>
+    <rect x="352" y="500" width="14" height="12" rx="3" fill="#c8781f" opacity="0.9"/><text x="374" y="511">waiting on you</text>
+    <rect x="494" y="500" width="14" height="12" rx="3" fill="#2f6b3f" opacity="0.5"/><text x="516" y="511">only if the model falls outside the existing certificate</text>
+  </g>
+</svg>
