@@ -136,6 +136,27 @@ SUPPLEMENTAL_IMAGES = {
 }
 
 
+EXCLUDED_GALLERY_IMAGES = {
+    "acr0350_extra1.jpg",
+    "acr0350_extra2.jpg",
+    "acr0440c_extra1.jpg",
+    "acr0440c_extra3.jpg",
+    "acr0440c_extra4.jpg",
+    "acr0440p_extra1.jpg",
+    "acr0440p_extra2.jpg",
+    "acr0440p_extra3.jpg",
+    "acr0600_extra1.jpg",
+    "acr0600_extra3.jpg",
+    "acr0670_v3.jpg",
+    "acr0670_extra1.jpg",
+    "acr0670_extra2.jpg",
+    "acr0670_extra3.jpg",
+    "acr1200_extra3.jpg",
+    "acr1200_extra4.jpg",
+    "acr1800_extra2.jpg",
+}
+
+
 def esc(value: object) -> str:
     return html.escape(str(value), quote=True)
 
@@ -228,9 +249,13 @@ def extract_products() -> list[dict]:
         stem = image_stem(slug)
         images = sorted(SPEC_IMAGES.glob(f"{stem}_v*.jpg"))
         for image in images:
+            if image.name in EXCLUDED_GALLERY_IMAGES:
+                continue
             shutil.copy2(image, ASSET_IMAGES / image.name)
-        image_urls = [f"/assets/images/{image.name}" for image in images]
+        image_urls = [f"/assets/images/{image.name}" for image in images if image.name not in EXCLUDED_GALLERY_IMAGES]
         for source, output_name in SUPPLEMENTAL_IMAGES.get(slug, []):
+            if output_name in EXCLUDED_GALLERY_IMAGES:
+                continue
             if not source.exists():
                 raise FileNotFoundError(f"Supplemental image missing for {slug}: {source}")
             shutil.copy2(source, ASSET_IMAGES / output_name)
