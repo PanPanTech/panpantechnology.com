@@ -49,6 +49,20 @@ CATEGORIES = [
         "copy": "Autonomous mobile robots for production feeding, warehouse transfer, heavy-payload delivery and multi-floor logistics.",
         "products": ["amr-0300", "amr-0600"],
     },
+    {
+        "id": "picking",
+        "label": "Picking Robot",
+        "heading": "Robotic picking and shelf-side handling",
+        "copy": "Mobile manipulation robots for shelf picking, item transfer, tray loading and assisted fulfilment workflows.",
+        "products": ["asr-0012"],
+    },
+    {
+        "id": "facade",
+        "label": "Facade Cleaning",
+        "heading": "Glass facade cleaning robots",
+        "copy": "Commercial facade robots for curtain-wall glass, high-rise exterior cleaning and safer building-maintenance workflows.",
+        "products": ["facade-cleaning-robot"],
+    },
 ]
 
 
@@ -155,6 +169,143 @@ EXCLUDED_GALLERY_IMAGES = {
     "acr1200_extra4.jpg",
     "acr1800_extra2.jpg",
 }
+
+
+MANUAL_PRODUCTS = [
+    {
+        "slug": "asr-0012",
+        "model": "ASR-0012",
+        "name": "Shelf Picking and Mobile Manipulation Robot",
+        "subtitle": "Picking Robot",
+        "description": "The ASR-0012 is a mobile manipulation robot for shelf-side picking, tote handling and light item transfer in retail, warehouse and hospitality workflows. It combines an autonomous mobile base with a vertical lift column, perception sensors and a multi-axis robotic arm, allowing operators to trial item retrieval, shelf replenishment and delivery handoff without rebuilding the site around fixed automation.",
+        "metrics": [
+            {"value": "Mobile", "label": "autonomous base"},
+            {"value": "Arm", "label": "robotic picking"},
+            {"value": "Shelf", "label": "retail and warehouse"},
+            {"value": "Pilot", "label": "workflow validation"},
+        ],
+        "advantages": [
+            {
+                "title": "Mobile picking at the shelf edge",
+                "copy": "The robot brings a manipulator to the shelf, bin or table rather than requiring every item to move through a fixed picking cell.",
+            },
+            {
+                "title": "Suitable for pilots and workflow proofing",
+                "copy": "Use it to test tote presentation, shelf approach, item handoff, operator supervision and exception handling before committing to a larger automation program.",
+            },
+            {
+                "title": "Autonomous base with vertical reach",
+                "copy": "The mobile base and lift column support access to different shelf heights, while the arm handles light item retrieval and placement tasks.",
+            },
+            {
+                "title": "Shelf, tray and service scenarios",
+                "copy": "Typical trials include convenience retail shelves, storage and picking zones, restaurant table service, tray loading and material handoff points.",
+            },
+            {
+                "title": "Computer vision assisted operation",
+                "copy": "Camera and perception modules help the robot locate the work area and align with products, totes or fixtures during supervised deployment.",
+            },
+            {
+                "title": "Works alongside AMR transport",
+                "copy": "For larger sites, combine picking or item handling with AMR transport pages to build a complete fulfilment path from shelf to workstation.",
+            },
+        ],
+        "specs": [
+            {"key": "Robot type", "value": "Mobile manipulation / shelf picking robot"},
+            {"key": "Model", "value": "ASR-0012"},
+            {"key": "Main modules", "value": "Autonomous mobile base, lift column, robotic arm, vision and perception sensors"},
+            {"key": "Primary tasks", "value": "Shelf picking, tote handoff, tray loading, item transfer and assisted service workflows"},
+            {"key": "Deployment mode", "value": "Pilot or project configuration after site and SKU review"},
+            {"key": "Best-fit objects", "value": "Light retail goods, packaged items, trays and repeatable handoff tasks"},
+            {"key": "Workflow inputs", "value": "Shelf dimensions, item size and weight, bin/tote style, route width and handoff height"},
+            {"key": "Navigation", "value": "Autonomous mobile navigation with supervised workflow setup"},
+            {"key": "Perception", "value": "Vision-assisted work-area recognition and object approach"},
+            {"key": "Integration", "value": "Can be evaluated with AMR delivery, shelf replenishment, goods-to-person and line-side workflows"},
+            {"key": "Final configuration", "value": "Confirm through PanPanTech contact form with site photos and task video"},
+        ],
+        "applications": [
+            "Retail shelf picking",
+            "Warehouse picking zones",
+            "Tote and tray handling",
+            "Restaurant service support",
+            "Shelf replenishment trials",
+            "R&D pilot projects",
+        ],
+        "images": [
+            "/assets/images/asr0012_v1.jpg",
+            "/assets/images/asr0012_v2.jpg",
+            "/assets/images/asr0012_v3.jpg",
+        ],
+        "category": "Picking Robot",
+        "source": "PanPanTech ASR-0012 image pack",
+    },
+    {
+        "slug": "facade-cleaning-robot",
+        "model": "Facade Cleaning Robot",
+        "name": "for Glass Curtain Walls",
+        "subtitle": "Glass Facade Cleaning",
+        "description": "The PanPanTech facade cleaning robot page covers commercial glass curtain-wall cleaning for office towers, malls, hotels, campuses and property-service teams. The system is positioned as a project solution rather than a stand-alone consumer window device: building height, glass geometry, mullion layout, access points, wind exposure, water workflow and local work-at-height rules must be reviewed before model confirmation.",
+        "metrics": [
+            {"value": "Glass", "label": "curtain walls"},
+            {"value": "High-rise", "label": "exterior cleaning"},
+            {"value": "Hybrid", "label": "robot plus operator"},
+            {"value": "Pilot", "label": "site assessment"},
+        ],
+        "advantages": [
+            {
+                "title": "Designed around facade workflow",
+                "copy": "Commercial facade cleaning depends on access, anchoring, surface geometry, water management and recovery procedures, so the page guides customers to share building information first.",
+            },
+            {
+                "title": "Reduces repetitive work-at-height exposure",
+                "copy": "On suitable repeated glass zones, the robot can move routine cleaning away from rope-only manual work and into a more controlled machine-assisted workflow.",
+            },
+            {
+                "title": "Works with hybrid cleaning plans",
+                "copy": "Robots handle regular glass areas while trained technicians remain responsible for setup, inspection, corners, signage, recesses and other difficult facade details.",
+            },
+            {
+                "title": "Supports multiple facade materials",
+                "copy": "Project assessment can cover pure flat glass, framed curtain walls, stone curtain walls, metal curtain walls and composite facade zones.",
+            },
+            {
+                "title": "Pilot before rollout",
+                "copy": "A representative pilot zone verifies cleaning quality, setup time, water supply, operating limits, recovery path and manual follow-up requirements.",
+            },
+            {
+                "title": "Procurement-ready information request",
+                "copy": "The page asks customers to submit facade drawings, photos, cleaning frequency, working hours and safety requirements through the website form.",
+            },
+        ],
+        "specs": [
+            {"key": "Robot type", "value": "Commercial glass facade / curtain-wall cleaning robot"},
+            {"key": "Use case", "value": "Exterior building glass and repeated facade cleaning workflows"},
+            {"key": "Typical projects", "value": "Office towers, commercial complexes, hotels, campuses, hospitals and industrial parks"},
+            {"key": "Suitable surfaces", "value": "Flat glass, framed glass curtain walls, stone curtain walls, metal curtain walls and composite facades after assessment"},
+            {"key": "Deployment basis", "value": "Building-specific assessment, pilot cleaning and safety review"},
+            {"key": "Required inputs", "value": "Facade photos, drawings, building height, access points, mullion spacing, water/power plan and local safety rules"},
+            {"key": "Operating plan", "value": "Robot-assisted cleaning with trained operator supervision and manual support for special details"},
+            {"key": "Safety planning", "value": "Work-at-height procedure, exclusion zone, weather limit, inspection checklist and emergency recovery plan"},
+            {"key": "Final configuration", "value": "Confirm through PanPanTech contact form before final deployment planning"},
+        ],
+        "applications": [
+            "Glass curtain walls",
+            "Office towers",
+            "Hotels and malls",
+            "Commercial complexes",
+            "Campus buildings",
+            "Property service teams",
+        ],
+        "images": [
+            "/assets/images/facade-window-cleaning-robot-card.jpg",
+            "/assets/images/facade-cleaning-robot-new.jpg",
+            "/assets/images/facade-robot-building-assessment.jpg",
+            "/assets/images/facade-robot-commercial-glass-wall.jpg",
+        ],
+        "category": "Facade Cleaning",
+        "source": "Facade cleaning supplier materials",
+    },
+]
 
 
 def esc(value: object) -> str:
@@ -278,6 +429,13 @@ def extract_products() -> list[dict]:
                 "source": path.name,
             }
         )
+    for product in MANUAL_PRODUCTS:
+        for src in product["images"]:
+            source = SPEC_IMAGES / Path(src).name
+            target = ROOT / src.lstrip("/")
+            if source.exists() and not target.exists():
+                shutil.copy2(source, target)
+        products.append(product)
     return products
 
 
@@ -460,7 +618,7 @@ def header() -> str:
 def footer() -> str:
     return """<footer><div class="container footer-inner">
 <div><div class="brand" style="color:#fff">PanPan<span>Tech</span></div><p>Retail AIoT, smart robotics, and manufacturing platform for global B2B buyers, integrators, distributors, and OEM partners.</p></div>
-<div><h3>Robots</h3><p><a href="/products/#indoor">Indoor cleaning</a><br><a href="/products/#large-scrubbers">Large-area scrubbing</a><br><a href="/products/#outdoor">Outdoor sweeping</a><br><a href="/products/#amr">Warehouse AMR</a></p></div>
+<div><h3>Robots</h3><p><a href="/products/#indoor">Indoor cleaning</a><br><a href="/products/#large-scrubbers">Large-area scrubbing</a><br><a href="/products/#outdoor">Outdoor sweeping</a><br><a href="/products/#amr">Warehouse AMR</a><br><a href="/products/#picking">Picking robot</a><br><a href="/products/#facade">Facade cleaning</a></p></div>
 <div><h3>Company</h3><p><a href="/technology/">Technology</a><br><a href="/manufacturing/">Manufacturing</a><br><a href="/about/">About</a><br><a href="/request-a-quote/">Contact form</a></p></div>
 <div><h3>Contact</h3><p>Building A1, Yuexiu iPARK Yuegang Zhigu, Nansha District, Guangzhou, Guangdong Province, China</p><p><a href="mailto:info@panpantechnology.com">info@panpantechnology.com</a><br><a href="tel:+8613925118851">+86-13925118851</a></p></div>
 </div><div class="container copyright">&copy; 2026 PanPanTech&reg; | Retail AIoT &middot; Smart Robotics &middot; Manufacturing | Guangzhou PanPanTech Co., Ltd. All Rights Reserved.</div></footer><script src="/assets/js/site.js" defer></script></body></html>"""
@@ -574,8 +732,12 @@ def update_sitemap(products: list[dict]) -> None:
         for product in products
     )
     content = re.sub(r"  <url><loc>https://www\.panpantechnology\.com/products/pt90/</loc>.*?</url>\n?", "", content, flags=re.S)
-    if "/products/acr-0350/" not in content:
-        content = content.replace("</urlset>", product_urls + "\n</urlset>")
+    content = re.sub(
+        r"  <url><loc>https://www\.panpantechnology\.com/products/(?:acr-[^/]+|amr-[^/]+|asr-[^/]+|facade-cleaning-robot)/</loc><lastmod>2026-08-17</lastmod></url>\n?",
+        "",
+        content,
+    )
+    content = content.replace("</urlset>", product_urls + "\n</urlset>")
     sitemap.write_text(content, encoding="utf-8", newline="\n")
 
 
