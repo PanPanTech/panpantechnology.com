@@ -23,6 +23,7 @@
 - [Blog Robotic Floor Scrubber vs Walk-Behind](https://www.panpantechnology.com/blog/robotic-floor-scrubber/)
 - [Blog Industrial Robot Vacuum Warehouse](https://www.panpantechnology.com/blog/industrial-robot-vacuum-for-warehouse/)
 - [Blog Will Cleaning Robots Replace Human Cleaners](https://www.panpantechnology.com/blog/will-cleaning-robots-replace-cleaners/)
+- [Blog Tennant T300 Review, Specs and Autonomous Alternatives](https://www.panpantechnology.com/blog/tennant-t300-review-alternatives/)
 - [Solutions](https://www.panpantechnology.com/solutions/)
 - [Solution Retail](https://www.panpantechnology.com/solutions/retail/)
 - [Solution Warehouse Logistics](https://www.panpantechnology.com/solutions/warehouse-logistics/)

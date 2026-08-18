@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-label="Bar chart comparing theoretical maximum coverage rate with realistic conventional and ec-H2O coverage rates for Tennant T300 configurations">
+  <rect width="1000" height="500" fill="#f5f6f8"/>
+  <text x="48" y="38" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#9aa3b5" letter-spacing="2.4">WHAT "UP TO 24,000 FT²/HR" ACTUALLY MEANS — T300 PUBLISHED COVERAGE RATES</text>
+
+  <!-- axis -->
+  <line x1="248" y1="76" x2="248" y2="404" stroke="#c9cfda" stroke-width="1.5"/>
+  <g stroke="#e3e7ee" stroke-width="1">
+    <line x1="398" y1="76" x2="398" y2="404"/><line x1="548" y1="76" x2="548" y2="404"/>
+    <line x1="698" y1="76" x2="698" y2="404"/><line x1="848" y1="76" x2="848" y2="404"/>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5">
+    <text x="240" y="424">0</text><text x="378" y="424">6,000</text><text x="528" y="424">12,000</text>
+    <text x="678" y="424">18,000</text><text x="828" y="424">24,000</text>
+    <text x="620" y="444" font-size="11.5">square feet per hour</text>
+  </g>
+
+  <!-- rows: 17" self-propel, 20" self-propel, 24" dual disk -->
+  <g font-family="Instrument Sans, sans-serif" font-size="13.5" fill="#3d4453">
+    <text x="48" y="112">17 in / 430 mm</text><text x="48" y="129" font-size="12" fill="#9aa3b5">single disk, self-propel</text>
+    <text x="48" y="216">20 in / 500 mm</text><text x="48" y="233" font-size="12" fill="#9aa3b5">single disk, self-propel</text>
+    <text x="48" y="320">24 in / 600 mm</text><text x="48" y="337" font-size="12" fill="#9aa3b5">dual disk, self-propel</text>
+  </g>
+
+  <!-- 17in: theoretical 17000, conventional 12453, ecH2O 12891 ; scale 25px per 1000 -->
+  <rect x="248" y="88" width="425" height="17" rx="3" fill="#c9cfda"/>
+  <rect x="248" y="109" width="311" height="17" rx="3" fill="#0e5fd9" opacity="0.85"/>
+  <rect x="248" y="130" width="322" height="17" rx="3" fill="#2f6b3f" opacity="0.75"/>
+  <text x="683" y="101" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#6a7386">17,000 theoretical</text>
+  <text x="569" y="122" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#0e5fd9">12,453 conventional</text>
+  <text x="580" y="143" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#2f6b3f">12,891 ec-H2O</text>
+
+  <!-- 20in: 20000 / 14943 / 15469 -->
+  <rect x="248" y="192" width="500" height="17" rx="3" fill="#c9cfda"/>
+  <rect x="248" y="213" width="374" height="17" rx="3" fill="#0e5fd9" opacity="0.85"/>
+  <rect x="248" y="234" width="387" height="17" rx="3" fill="#2f6b3f" opacity="0.75"/>
+  <text x="758" y="205" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#6a7386">20,000 theoretical</text>
+  <text x="632" y="226" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#0e5fd9">14,943 conventional</text>
+  <text x="645" y="247" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#2f6b3f">15,469 ec-H2O</text>
+
+  <!-- 24in: 24000 / 18264 / 18906 -->
+  <rect x="248" y="296" width="600" height="17" rx="3" fill="#c9cfda"/>
+  <rect x="248" y="317" width="457" height="17" rx="3" fill="#0e5fd9" opacity="0.85"/>
+  <rect x="248" y="338" width="473" height="17" rx="3" fill="#2f6b3f" opacity="0.75"/>
+  <text x="858" y="309" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#6a7386">24,000 theoretical</text>
+  <text x="715" y="330" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#0e5fd9">18,264 conventional</text>
+  <text x="731" y="351" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#2f6b3f">18,906 ec-H2O</text>
+
+  <text x="48" y="472" font-family="Instrument Sans, sans-serif" font-size="14" fill="#3d4453">The headline figure is the theoretical maximum. The number to budget against is the row below it — and neither includes filling, dumping or battery swaps.</text>
+  <text x="48" y="492" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#9aa3b5">Figures as published by Tennant Company in the T300 product specification sheet. PanPanTech is not affiliated with Tennant Company.</text>
+</svg>
