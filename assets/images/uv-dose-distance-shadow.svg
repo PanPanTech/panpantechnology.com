@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-label="Diagram showing how ultraviolet disinfection dose falls with distance and how furniture creates shadowed surfaces that receive far less dose">
+  <rect width="1000" height="520" fill="#f5f6f8"/>
+  <text x="48" y="38" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#9aa3b5" letter-spacing="2.4">WHY "THE ROOM WAS DISINFECTED" IS NEVER ONE NUMBER</text>
+
+  <!-- LEFT: dose vs distance -->
+  <text x="48" y="76" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">1 · Dose falls fast with distance</text>
+  <rect x="48" y="92" width="420" height="200" rx="8" fill="#fff" stroke="#e3e7ee" stroke-width="1.5"/>
+
+  <!-- lamp -->
+  <rect x="74" y="130" width="13" height="120" rx="6" fill="#7b5ea8"/>
+  <text x="60" y="268" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6a7386">lamp</text>
+  <g opacity="0.5">
+    <path d="M87 190 L200 130 L200 250 Z" fill="#b9a3dc"/>
+    <path d="M200 130 L330 112 L330 268 L200 250 Z" fill="#d6cbe9" opacity="0.7"/>
+  </g>
+
+  <line x1="200" y1="118" x2="200" y2="262" stroke="#7b5ea8" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="330" y1="106" x2="330" y2="276" stroke="#7b5ea8" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <text x="150" y="112" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#6a7386">50 cm</text>
+  <text x="176" y="212" font-family="Space Grotesk, sans-serif" font-size="19" font-weight="700" fill="#4a3a6b">95</text>
+  <text x="176" y="230" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6a7386">mJ/cm²</text>
+
+  <text x="296" y="100" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#6a7386">100 cm</text>
+  <text x="310" y="212" font-family="Space Grotesk, sans-serif" font-size="19" font-weight="700" fill="#4a3a6b">35</text>
+  <text x="306" y="230" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6a7386">mJ/cm²</text>
+
+  <text x="356" y="200" font-family="Instrument Sans, sans-serif" font-size="13" fill="#c8781f" font-weight="600">−60%</text>
+  <text x="356" y="219" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">for double</text>
+  <text x="356" y="235" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">the distance</text>
+
+  <!-- RIGHT: shadow -->
+  <text x="524" y="76" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">2 · Geometry decides what gets treated</text>
+  <rect x="524" y="92" width="428" height="200" rx="8" fill="#fff" stroke="#e3e7ee" stroke-width="1.5"/>
+
+  <rect x="552" y="130" width="12" height="118" rx="6" fill="#7b5ea8"/>
+  <g opacity="0.45"><path d="M564 189 L790 116 L790 262 Z" fill="#b9a3dc"/></g>
+
+  <!-- table -->
+  <rect x="694" y="176" width="104" height="8" rx="2" fill="#3d4453"/>
+  <rect x="700" y="184" width="7" height="56" fill="#3d4453"/>
+  <rect x="785" y="184" width="7" height="56" fill="#3d4453"/>
+  <path d="M798 180 L900 168 L900 250 L798 240 Z" fill="#0b0f1a" opacity="0.13"/>
+  <text x="812" y="216" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#6a7386">shadow</text>
+
+  <line x1="746" y1="150" x2="746" y2="172" stroke="#c8781f" stroke-width="1.6" marker-end="url(#ar)"/>
+  <text x="640" y="146" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#c8781f">tabletop is near-parallel to the beam</text>
+  <text x="640" y="162" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">— a top transfer surface, poorly lit</text>
+  <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#c8781f"/></marker></defs>
+
+  <!-- bottom: the tail that matters -->
+  <rect x="48" y="322" width="904" height="112" rx="8" fill="#fff" stroke="#e3e7ee" stroke-width="1.5"/>
+  <text x="72" y="352" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">3 · In a real hospital run, the average was fine — the tail was not</text>
+  <rect x="72" y="368" width="760" height="26" rx="4" fill="#2f6b3f" opacity="0.72"/>
+  <rect x="832" y="368" width="40" height="26" rx="4" fill="#c8781f"/>
+  <text x="86" y="386" font-family="Instrument Sans, sans-serif" font-size="13" fill="#fff">95% of sampled points reached about 200 mJ/cm²</text>
+  <text x="878" y="386" font-family="Instrument Sans, sans-serif" font-size="13" fill="#c8781f" font-weight="600">5% at 50</text>
+  <text x="72" y="418" font-family="Instrument Sans, sans-serif" font-size="13" fill="#3d4453">Whether that 5% matters depends entirely on the organism: some need under 4 mJ/cm², one adenovirus needed 194.</text>
+
+  <text x="48" y="466" font-family="Instrument Sans, sans-serif" font-size="14" fill="#3d4453">So "the robot ran for 15 minutes" is not a result. The question is always: which organism, at what dose, on which surface.</text>
+  <text x="48" y="492" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#9aa3b5">Figures from peer-reviewed hospital UV-C studies; see article sources. Illustrative geometry, not to scale.</text>
+</svg>
