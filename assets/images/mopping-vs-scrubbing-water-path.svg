@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" role="img" aria-label="Comparison of dust mopping, wet mopping and scrubbing showing where water and soil go in each mode and the state the floor is left in">
+  <rect width="1000" height="540" fill="#f5f6f8"/>
+  <text x="48" y="38" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#9aa3b5" letter-spacing="2.4">THREE THINGS CALLED "MOPPING" — AND WHERE THE WATER ACTUALLY GOES</text>
+
+  <!-- column headers -->
+  <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#9aa3b5">
+    <text x="300" y="78">1 · PUT DOWN</text>
+    <text x="470" y="78">2 · AGITATE</text>
+    <text x="640" y="78">3 · TAKE BACK UP</text>
+    <text x="810" y="78">FLOOR AFTERWARDS</text>
+  </g>
+  <line x1="48" y1="88" x2="952" y2="88" stroke="#c9cfda" stroke-width="1.2"/>
+
+  <!-- ROW 1 dust mop -->
+  <text x="48" y="124" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">Dust-mopping</text>
+  <text x="48" y="143" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#6a7386">dry pad, no water</text>
+  <text x="48" y="161" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5">ACR-0370 / ACR-0520 mode</text>
+  <rect x="288" y="108" width="132" height="58" rx="7" fill="#fff" stroke="#c9cfda" stroke-width="1.5"/>
+  <text x="354" y="142" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="13" fill="#6a7386">nothing</text>
+  <rect x="458" y="108" width="132" height="58" rx="7" fill="#fff" stroke="#c9cfda" stroke-width="1.5"/>
+  <text x="524" y="134" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">pad drags,</text>
+  <text x="524" y="152" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">traps fine dust</text>
+  <rect x="628" y="108" width="132" height="58" rx="7" fill="#eef6f0" stroke="#2f6b3f" stroke-width="1.5"/>
+  <text x="694" y="142" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#2f6b3f">soil is in the pad</text>
+  <rect x="798" y="108" width="154" height="58" rx="7" fill="#eef6f0" stroke="#2f6b3f" stroke-width="1.5"/>
+  <text x="875" y="134" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#2f6b3f">dry immediately</text>
+  <text x="875" y="152" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">no slip window</text>
+
+  <!-- ROW 2 wet mop -->
+  <text x="48" y="244" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">Wet mopping</text>
+  <text x="48" y="263" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#6a7386">damp pad, water on</text>
+  <text x="48" y="281" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5">ACR-0350 / ACR-0440C mode</text>
+  <rect x="288" y="222" width="132" height="76" rx="7" fill="#e8f0fb" stroke="#0e5fd9" stroke-width="1.5"/>
+  <text x="354" y="256" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0e5fd9">water +</text>
+  <text x="354" y="274" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0e5fd9">solution</text>
+  <rect x="458" y="222" width="132" height="76" rx="7" fill="#fff" stroke="#c9cfda" stroke-width="1.5"/>
+  <text x="524" y="256" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">pad wipes —</text>
+  <text x="524" y="274" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">little down-force</text>
+  <rect x="628" y="222" width="132" height="76" rx="7" fill="#fdf1e4" stroke="#c8781f" stroke-width="2"/>
+  <text x="694" y="249" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700" fill="#c8781f">nothing</text>
+  <text x="694" y="269" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">soil is moved,</text>
+  <text x="694" y="285" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">not removed</text>
+  <rect x="798" y="222" width="154" height="76" rx="7" fill="#fdf1e4" stroke="#c8781f" stroke-width="2"/>
+  <text x="875" y="249" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#c8781f" font-weight="600">wet until it air-dries</text>
+  <text x="875" y="268" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">a slip window you</text>
+  <text x="875" y="284" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">have to manage</text>
+
+  <!-- ROW 3 scrub -->
+  <text x="48" y="364" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">Scrubbing</text>
+  <text x="48" y="383" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#6a7386">brush pressure + squeegee</text>
+  <text x="48" y="401" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5">ACR-0600: 20 kg brush, 830 mm squeegee</text>
+  <rect x="288" y="342" width="132" height="76" rx="7" fill="#e8f0fb" stroke="#0e5fd9" stroke-width="1.5"/>
+  <text x="354" y="376" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0e5fd9">water +</text>
+  <text x="354" y="394" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0e5fd9">solution</text>
+  <rect x="458" y="342" width="132" height="76" rx="7" fill="#e8f0fb" stroke="#0e5fd9" stroke-width="1.5"/>
+  <text x="524" y="369" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0e5fd9">brush loads the</text>
+  <text x="524" y="387" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0e5fd9">floor with real</text>
+  <text x="524" y="405" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#0e5fd9">down-pressure</text>
+  <rect x="628" y="342" width="132" height="76" rx="7" fill="#eef6f0" stroke="#2f6b3f" stroke-width="2"/>
+  <text x="694" y="369" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700" fill="#2f6b3f">vacuumed up</text>
+  <text x="694" y="389" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">into a recovery</text>
+  <text x="694" y="405" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">tank, then drained</text>
+  <rect x="798" y="342" width="154" height="76" rx="7" fill="#eef6f0" stroke="#2f6b3f" stroke-width="2"/>
+  <text x="875" y="369" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#2f6b3f" font-weight="600">dry behind the machine</text>
+  <text x="875" y="388" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">soil leaves the</text>
+  <text x="875" y="404" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12" fill="#6a7386">building</text>
+
+  <!-- arrows -->
+  <g stroke="#c9cfda" stroke-width="1.6" fill="none">
+    <path d="M424 137 L452 137" marker-end="url(#m1)"/><path d="M594 137 L622 137" marker-end="url(#m1)"/><path d="M764 137 L792 137" marker-end="url(#m1)"/>
+    <path d="M424 260 L452 260" marker-end="url(#m1)"/><path d="M594 260 L622 260" marker-end="url(#m1)"/><path d="M764 260 L792 260" marker-end="url(#m1)"/>
+    <path d="M424 380 L452 380" marker-end="url(#m1)"/><path d="M594 380 L622 380" marker-end="url(#m1)"/><path d="M764 380 L792 380" marker-end="url(#m1)"/>
+  </g>
+  <defs><marker id="m1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#c9cfda"/></marker></defs>
+
+  <text x="48" y="462" font-family="Instrument Sans, sans-serif" font-size="14.5" fill="#3d4453">The fork is column 3. A machine that puts water down without taking it back up has not removed soil from the building — it has moved it.</text>
+  <text x="48" y="492" font-family="Instrument Sans, sans-serif" font-size="13" fill="#6a7386">Tank ratio is the quickest tell: a real scrubber carries recovery capacity close to its clean-water capacity. A pad-mop machine does not need to.</text>
+  <text x="48" y="516" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#9aa3b5">Mode names and figures from PanPanTech ACR series published specifications.</text>
+</svg>
