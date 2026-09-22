@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-label="Diagram of how cold charging causes lithium plating on a graphite anode instead of normal intercalation, and why the damage is permanent">
+  <rect width="1000" height="520" fill="#f5f6f8"/>
+  <text x="48" y="38" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#9aa3b5" letter-spacing="2.4">WHY CHARGING A COLD BATTERY IS A DIFFERENT PROBLEM FROM RUNNING ONE</text>
+
+  <!-- LEFT: normal -->
+  <rect x="48" y="72" width="420" height="250" rx="10" fill="#fff" stroke="#2f6b3f" stroke-width="2"/>
+  <text x="258" y="104" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#2f6b3f">Warm charging — intercalation</text>
+  <text x="258" y="126" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="13" fill="#6a7386">ions have time to slot into the graphite layers</text>
+
+  <g>
+    <rect x="96" y="152" width="34" height="130" rx="3" fill="#c9cfda"/>
+    <text x="113" y="300" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6a7386">cathode</text>
+    <g fill="#3d4453">
+      <rect x="300" y="152" width="90" height="10" rx="2"/><rect x="300" y="170" width="90" height="10" rx="2"/>
+      <rect x="300" y="188" width="90" height="10" rx="2"/><rect x="300" y="206" width="90" height="10" rx="2"/>
+      <rect x="300" y="224" width="90" height="10" rx="2"/><rect x="300" y="242" width="90" height="10" rx="2"/>
+      <rect x="300" y="260" width="90" height="10" rx="2"/>
+    </g>
+    <text x="345" y="300" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6a7386">graphite anode</text>
+    <g fill="#2f6b3f">
+      <circle cx="322" cy="167" r="5"/><circle cx="352" cy="185" r="5"/><circle cx="335" cy="221" r="5"/><circle cx="366" cy="257" r="5"/>
+    </g>
+    <g stroke="#2f6b3f" stroke-width="2" fill="none" marker-end="url(#g1)">
+      <path d="M190 190 L286 172"/><path d="M190 218 L286 220"/><path d="M190 246 L286 256"/>
+    </g>
+    <text x="200" y="172" font-family="Instrument Sans, sans-serif" font-size="12" fill="#2f6b3f">Li⁺</text>
+  </g>
+  <text x="258" y="316" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#2f6b3f">Ions enter the layers · fully reversible</text>
+
+  <!-- RIGHT: cold -->
+  <rect x="532" y="72" width="420" height="250" rx="10" fill="#fff" stroke="#c8781f" stroke-width="2.5"/>
+  <text x="742" y="104" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700" fill="#c8781f">Cold charging — plating</text>
+  <text x="742" y="126" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="13" fill="#6a7386">intercalation slows; ions settle on the surface instead</text>
+
+  <g>
+    <rect x="580" y="152" width="34" height="130" rx="3" fill="#c9cfda"/>
+    <text x="597" y="300" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6a7386">cathode</text>
+    <g fill="#3d4453">
+      <rect x="784" y="152" width="90" height="10" rx="2"/><rect x="784" y="170" width="90" height="10" rx="2"/>
+      <rect x="784" y="188" width="90" height="10" rx="2"/><rect x="784" y="206" width="90" height="10" rx="2"/>
+      <rect x="784" y="224" width="90" height="10" rx="2"/><rect x="784" y="242" width="90" height="10" rx="2"/>
+      <rect x="784" y="260" width="90" height="10" rx="2"/>
+    </g>
+    <text x="829" y="300" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6a7386">graphite anode</text>
+    <!-- plated metal on surface -->
+    <path d="M778 150 l0 122" stroke="#c8781f" stroke-width="7"/>
+    <g fill="#c8781f">
+      <path d="M778 176 l-16 -9 l0 18 z"/><path d="M778 212 l-22 -11 l0 22 z"/><path d="M778 248 l-14 -8 l0 16 z"/>
+    </g>
+    <text x="700" y="140" font-family="Instrument Sans, sans-serif" font-size="12" fill="#c8781f">dendrites</text>
+    <g stroke="#c8781f" stroke-width="2" fill="none" marker-end="url(#g2)">
+      <path d="M674 190 L766 178"/><path d="M674 218 L766 214"/><path d="M674 246 L766 250"/>
+    </g>
+  </g>
+  <text x="742" y="316" text-anchor="middle" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#c8781f">Metal deposits on the surface · largely irreversible</text>
+
+  <defs>
+    <marker id="g1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#2f6b3f"/></marker>
+    <marker id="g2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#c8781f"/></marker>
+  </defs>
+
+  <!-- consequence chain -->
+  <rect x="48" y="346" width="904" height="94" rx="10" fill="#fff" stroke="#e3e7ee" stroke-width="1.5"/>
+  <g font-family="Instrument Sans, sans-serif" font-size="13" fill="#3d4453">
+    <text x="78" y="380">Intercalation</text><text x="78" y="398" font-size="12" fill="#9aa3b5">slows in the cold</text>
+    <text x="252" y="380">Anode potential</text><text x="252" y="398" font-size="12" fill="#9aa3b5">falls toward 0 V vs Li</text>
+    <text x="440" y="380">Metallic lithium</text><text x="440" y="398" font-size="12" fill="#9aa3b5">plates on the surface</text>
+    <text x="622" y="380">Capacity lost</text><text x="622" y="398" font-size="12" fill="#9aa3b5">permanently</text>
+    <text x="782" y="380" fill="#c8781f" font-weight="600">Dendrites may</text><text x="782" y="398" font-size="12" fill="#c8781f">pierce the separator</text>
+  </g>
+  <g stroke="#c9cfda" stroke-width="1.6" fill="none" marker-end="url(#g3)">
+    <path d="M196 384 L240 384"/><path d="M382 384 L428 384"/><path d="M566 384 L610 384"/><path d="M718 384 L770 384"/>
+  </g>
+  <defs><marker id="g3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#c9cfda"/></marker></defs>
+
+  <text x="48" y="472" font-family="Instrument Sans, sans-serif" font-size="14.5" fill="#3d4453">This is why a sub-zero charge limit is a physical constraint, not a cautious manufacturer — and why the damage does not reverse when spring arrives.</text>
+  <text x="48" y="498" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#9aa3b5">Illustrative schematic, not to scale. Onset depends on temperature, charge rate, state of charge and cell design — there is no single threshold temperature.</text>
+</svg>

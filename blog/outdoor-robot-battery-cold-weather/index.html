@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"></noscript><title>Why Outdoor Cleaning Robots Struggle in Winter: The Battery Problem</title><meta name="description" content="A datasheet that says −20 °C usually means discharge, not charging. Why the winter bottleneck for outdoor cleaning robots is charging rather than running, what lithium plating does, and the 8 questions to ask."><link rel="canonical" href="https://www.panpantechnology.com/blog/outdoor-robot-battery-cold-weather/"><meta property="og:type" content="article"><meta property="og:title" content="Why Outdoor Cleaning Robots Struggle in Winter: The Battery Problem"><meta property="og:description" content="The winter bottleneck is not whether the robot can run — it is whether it can charge. What the datasheet leaves out, and the 8 questions to put to any supplier."><meta property="og:url" content="https://www.panpantechnology.com/blog/outdoor-robot-battery-cold-weather/"><meta property="og:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PanPanTech","url":"https://www.panpantechnology.com","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","email":"info@panpantechnology.com","telephone":"+86-13925118851","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.panpantechnology.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.panpantechnology.com/blog/"},{"@type":"ListItem","position":3,"name":"Outdoor Robot Batteries in Cold Weather","item":"https://www.panpantechnology.com/blog/outdoor-robot-battery-cold-weather/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why Outdoor Cleaning Robots Struggle in Winter — The Battery Problem Nobody Puts in the Datasheet","description":"The winter bottleneck for outdoor cleaning robots is not whether they can run, but whether they can charge. What lithium plating does, why a quoted operating temperature usually means discharge only, and the eight questions to put to any supplier.","image":"https://www.panpantechnology.com/assets/images/discharge-vs-charge-temperature-window.svg","datePublished":"2026-09-22","dateModified":"2026-09-22","author":{"@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"},"publisher":{"@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"},"articleSection":"Technology","mainEntityOfPage":"https://www.panpantechnology.com/blog/outdoor-robot-battery-cold-weather/"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does an operating temperature of −20 °C mean the robot can charge at −20 °C?","acceptedAnswer":{"@type":"Answer","text":"Usually not. On most datasheets the quoted operating temperature is the discharge range — the conditions under which the machine will run. Charging has its own, much narrower window, and for both LFP and NMC cells a minimum charge temperature around 0 °C is commonly quoted under standard conditions. The charging figure is frequently omitted entirely, so it has to be requested separately."}},{"@type":"Question","name":"Why is charging below freezing harmful to a lithium battery?","acceptedAnswer":{"@type":"Answer","text":"At low temperature the rate at which lithium ions can insert into the graphite anode slows down. If charging current continues, the anode potential falls toward and below 0 V versus lithium, and lithium deposits on the anode surface as metal instead of entering the graphite layers. Most of that metal never returns to normal cycling, so capacity is permanently lost, and the resulting dendrites can in principle pierce the separator and cause an internal short. It is a physical constraint, not manufacturer caution."}},{"@type":"Question","name":"Is there a single temperature below which lithium plating starts?","acceptedAnswer":{"@type":"Answer","text":"No. Published work studies plating across a wide range of temperatures and charge rates, and the onset depends on temperature, charge current, state of charge and cell design together. That is why a responsible answer gives conditions rather than one number, and why a supplier who quotes a single universal threshold is over-simplifying."}},{"@type":"Question","name":"Which battery chemistry is best for outdoor robots in cold climates?","acceptedAnswer":{"@type":"Answer","text":"There is no clean winner, and published comparisons of LFP against NMC at −20 °C do not even agree on the ordering — results vary widely with cell design, discharge rate and cut-off voltage. Sodium-ion is the chemistry that currently looks most promising for cold service, with some cell designs rated for charging at far lower temperatures than lithium-ion, but it is early in industrialisation. The practical answer is to ask for measured data on the specific cell in the specific machine."}},{"@type":"Question","name":"What does cold weather do to the robot's remaining-runtime estimate?","acceptedAnswer":{"@type":"Answer","text":"It degrades it, and LFP is particularly exposed. The LFP discharge curve is very flat through the middle of its range, so voltage is a weak indicator of remaining charge, and low-temperature changes in internal resistance disturb the estimate further. For an outdoor robot the practical consequence is a return-to-dock trigger that fires at the wrong moment — which in the field means a machine stranded partway along its route."}},{"@type":"Question","name":"Can outdoor cleaning robots borrow the cold-weather solutions used by electric vehicles?","acceptedAnswer":{"@type":"Answer","text":"Several of them, yes, and the cheapest ones transfer best. Preconditioning — warming the pack on the way back to the dock so it is ready to accept charge on arrival — needs no new hardware, only battery-management and scheduling logic, and a cleaning robot always knows when it is about to recharge. Temperature-staged charge-current limiting instead of a blanket cut-off is also pure software. Pack insulation is cheap passive hardware. Liquid cooling and bespoke electrolytes are far less transferable at this machine size."}},{"@type":"Question","name":"Is a swappable battery pack a realistic answer for winter?","acceptedAnswer":{"@type":"Answer","text":"It is the most complete way to sidestep the problem, because a pack charged indoors never has to accept charge at outdoor temperature. It shifts the question from thermal engineering to logistics: how many spare packs, who swaps them, what they cost and how quickly they can be replaced. Ask whether packs are field-replaceable, and for spare pricing and lead time, before assuming it is an option."}}]}</script><style>
+html, body { margin: 0; padding: 0; background: #F5F6F8; }
+* { box-sizing: border-box; }
+::selection { background: #0E5FD9; color: #fff; }
+</style><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/images/favicon-48x48.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/blog.css"><meta name="theme-color" content="#0E5FD9"><meta name="twitter:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"></head>
+<body><div class="site">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">PanPan<span class="accent">Tech</span></a>
+      <nav class="site-nav">
+        <a href="/solutions/" class="scp0">Solutions</a>
+        <a href="/products/" class="scp0">Smart Robots</a>
+        <a href="/technology/" class="scp0">Technology</a>
+        <a href="/manufacturing/" class="scp0">Manufacturing</a>
+        <a href="/partners/" class="scp0">Partners</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/about/" class="scp0">About</a>
+      </nav>
+      <a href="/request-a-quote/" class="btn-quote scp1">Request a Quote<span class="mono">→</span></a>
+    </div>
+  </header>
+
+  <section class="dark">
+    <div class="hero-grid">
+      <div>
+        <div class="crumbs">
+          <a href="/" class="scp2">Home</a><span>/</span>
+          <a href="/blog/" class="scp2">Blog</a><span>/</span>
+          <span class="here">Batteries in Winter</span>
+        </div>
+        <p class="kicker">Technology — Cold-Weather Performance</p>
+        <h1 class="sz48">Why Outdoor Cleaning Robots Struggle in Winter — The Battery Problem Nobody Puts in the Datasheet</h1>
+        <p class="hero-answer"><strong>The winter bottleneck for an outdoor cleaning robot is not whether it can run. It is whether it can charge.</strong> Reduced discharge performance in the cold is a discount on a number. A low-temperature charging restriction is a functional failure — because automatic return-to-charge is the capability the entire unattended operating model rests on.</p>
+        <p class="hero-meta">Updated 2026-09-22 · 19 min read</p>
+      </div>
+      <div class="hero-media">
+        <div class="bg-cover" style='background-image: url("/assets/images/acr1900_v1.jpg"); background-size: contain; background-repeat: no-repeat; background-color: #fff;'></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="page-grid">
+      <aside class="toc">
+        <span class="toc-label">Contents</span>
+        <a href="#scene" class="scp3"><span class="n">01</span><span>A machine that never charged</span></a>
+        <a href="#chemistry" class="scp3"><span class="n">02</span><span>Five chemistries, no winner</span></a>
+        <a href="#plating" class="scp3"><span class="n">03</span><span>What cold actually does</span></a>
+        <a href="#soc" class="scp3"><span class="n">04</span><span>The estimate problem</span></a>
+        <a href="#industry" class="scp3"><span class="n">05</span><span>Why nobody has fixed it</span></a>
+        <a href="#ev" class="scp3"><span class="n">06</span><span>What EVs already solved</span></a>
+        <a href="#questions" class="scp3"><span class="n">07</span><span>Eight questions to ask</span></a>
+        <a href="#faq" class="scp3"><span class="n">08</span><span>FAQ</span></a>
+      </aside>
+
+      <article>
+
+        <div id="scene" class="mb56">
+          <h2>A robot that ran all winter and never charged once</h2>
+          <div class="answer-box">A machine rated for −20 °C operation sits on its dock in November showing 8% charge. By morning it has taken nothing. The datasheet was not lying — it really does operate at −20 °C. Nobody mentioned that operating and charging are two different specifications with two different numbers.</div>
+          <p>We are writing this because five separate enquiries landed on the same question inside a few weeks — from Italy, where −5 °C to −15 °C is described as unremarkable; from Moscow, where the buyer listed "operation during winter conditions" as a line item; from Canada, where the concern was lithium safety in warehouses and arenas; and from India, where there is no cold-weather requirement at all but battery life drives the residual value of a robot-as-a-service contract.</p>
+          <p>It is also worth saying plainly where we stand: across our own outdoor range, only one model currently carries a documented low-temperature figure, and on the four newest specification sheets that row is blank. This article is as much the question list we are sending to our own suppliers as it is a guide for buyers. We would rather publish the gap than paper over it.</p>
+        </div>
+
+        <div id="chemistry" class="mb56">
+          <h2>Which battery chemistry survives the cold?</h2>
+          <div class="answer-box">There is no clean winner, and the comparison that matters most — LFP against NMC at −20 °C — is reported inconsistently in the literature, with different sources disagreeing on which performs better. That disagreement is the finding. Cell design, discharge rate and cut-off voltage move the result more than the chemistry label does.</div>
+          <p>Outdoor cleaning robots have converged on lithium iron phosphate, and the reasons are sound: long cycle life and good thermal stability matter enormously in an unattended machine that lives outdoors. But it is worth being honest that the industry did not choose LFP for its cold-weather behaviour, and the published low-temperature numbers are not flattering to anyone.</p>
+          <div class="tbl-wrap mt8">
+            <div class="tbl-head cols-4"><span>Chemistry</span><span>Cold discharge</span><span>Cold charging</span><span>Where it stands today</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Lead-acid / gel</span><span>Marked fall-off</span><span>Comparatively tolerant</span><span>Still found on older walk-behind machines</span></div>
+            <div class="tbl-row cols-4"><span class="c1">NMC / NCA</span><span>Reported around 50–70 % of rated capacity at −20 °C at moderate rates</span><span>Minimum charge temperature commonly quoted around 0 °C</span><span>Common indoors; thermal stability weighs against it outdoors</span></div>
+            <div class="tbl-row cols-4"><span class="c1">LFP</span><span>Reported around 65–80 % in one source and below NMC in another — the range is wide</span><span>Same ~0 °C floor commonly quoted</span><span>The outdoor mainstream, chosen for life and safety</span></div>
+            <div class="tbl-row cols-4"><span class="c1">LTO</span><span>Retains partial function to around −30 °C in testing</span><span>Tolerates low-temperature charge better than graphite-anode cells</span><span>Rarely used — low energy density and high cost</span></div>
+            <div class="tbl-row cols-4"><span class="c1">Sodium-ion</span><span>Claims of over 90 % of nominal at −20 °C; some designs rated to −40 °C</span><span>Some cells rated to charge far below 0 °C</span><span>The most promising direction, but early in industrialisation</span></div>
+          </div>
+          <p class="src">Sources: <a href="https://www.sciencedirect.com/science/article/pii/S0378775322015270" target="_blank" rel="noopener">Lithium-ion batteries for low-temperature applications: limiting factors and solutions</a>, Journal of Power Sources; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11478248/" target="_blank" rel="noopener">Sodium-Ion Battery at Low Temperature: Challenges and Strategies</a>. Figures are as published under each source's own test conditions and are not directly comparable with one another.</p>
+          <p>Read that table for its shape rather than its numbers. The honest summary is that a percentage quoted without a discharge rate, a cut-off voltage and a specific cell is not information. Anyone who tells you "LFP keeps X% at −20 °C" as a general fact is quoting one test as though it were a property of the chemistry.</p>
+          <p>The more useful conclusion is that chemistry is only the starting point. What actually determines whether a machine is usable in February is thermal management and the battery-management strategy wrapped around the cells — which is where the rest of this article goes.</p>
+        </div>
+
+        <div id="plating" class="mb56">
+          <h2>What does cold actually do to a battery?</h2>
+          <div class="answer-box">Two different things, and they are not equally serious. Discharge gets worse — electrolyte thickens, internal resistance rises, and voltage sags to the cut-off sooner, so charge that is present cannot be delivered. Charging is the dangerous one: push current into a cold cell and lithium deposits on the anode as metal instead of entering it, which is largely irreversible and is a safety issue, not just a performance one.</div>
+          <h3>Why is charging below freezing harmful?</h3>
+          <p>At normal temperature, charging inserts lithium ions between the layers of the graphite anode. In the cold that insertion slows down. If charging current keeps arriving faster than the ions can be accommodated, the anode potential is driven toward — and can fall below — 0 V versus lithium metal. At that point the thermodynamically favoured outcome changes: lithium deposits on the anode surface as metal rather than intercalating into it.</p>
+          <figure>
+            <img src="/assets/images/lithium-plating-mechanism.svg" alt="Schematic comparing normal lithium intercalation into graphite during warm charging with metallic lithium plating on the anode surface during cold charging" loading="lazy">
+            <figcaption>Illustrative schematic. Onset depends on temperature, rate, state of charge and cell design together. PanPanTech, 2026.</figcaption>
+          </figure>
+          <p>Three consequences follow, and all three matter commercially:</p>
+          <div class="list">
+            <div><span class="ar">→</span><span><strong>It is largely irreversible.</strong> Most of the plated metal does not return to normal cycling, so the capacity is simply gone. A robot charged through one cold winter does not recover in spring.</span></div>
+            <div><span class="ar">→</span><span><strong>It is a safety question, not only a performance one.</strong> Plated lithium can grow as dendrites, and dendrites can in principle penetrate the separator and create an internal short.</span></div>
+            <div><span class="ar">→</span><span><strong>There is no single threshold temperature.</strong> Research examines plating across a broad span of temperatures and charge rates precisely because onset depends on temperature, current, state of charge and cell design together. A blanket "no charging below 0 °C" rule is a conservative engineering simplification of a more complicated boundary — which is also why a supplier quoting one universal number should be asked what conditions it applies to.</span></div>
+          </div>
+          <p class="src">Sources: <a href="https://www.pnas.org/doi/10.1073/pnas.2009221117" target="_blank" rel="noopener">Underpotential lithium plating on graphite anodes caused by temperature heterogeneity</a>, PNAS; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12051203/" target="_blank" rel="noopener">Mechanistic understanding of lithium-ion adsorption, intercalation and plating during charging of graphite electrodes</a>.</p>
+          <h3>So why does this break the product rather than just slow it down?</h3>
+          <p>Because of what an outdoor cleaning robot is. Its value proposition is that it works unattended: it leaves the dock, runs a route, notices it is low, returns, recharges, and goes again without anyone present. Remove the ability to charge and every other capability is still intact — and the product is finished for the season. That is the difference between a specification that degrades and a specification that collapses.</p>
+          <figure>
+            <img src="/assets/images/discharge-vs-charge-temperature-window.svg" alt="Schematic showing the wide discharge temperature range usually quoted on datasheets against the much narrower charging window that is usually omitted" loading="lazy">
+            <figcaption>The band between the two bars is where a robot runs normally and then silently fails to recharge. Illustrative, not measured. PanPanTech, 2026.</figcaption>
+          </figure>
+        </div>
+
+        <div id="soc" class="mb56">
+          <h2>Why does the robot stop knowing how much charge it has left?</h2>
+          <div class="answer-box">LFP has a very flat discharge curve through the middle of its range, so voltage is a poor indicator of remaining capacity. Cold weather shifts internal resistance and disturbs the estimate further. The operational result is a return-to-dock trigger that fires at the wrong point.</div>
+          <p>This is the least-discussed item on the list and often the one that actually strands a machine. State-of-charge estimation on LFP is hard even in a warm workshop, because the cell holds a nearly constant voltage across a wide span of remaining capacity — the very flatness that makes it well-behaved in service makes it opaque to a simple voltage-based fuel gauge.</p>
+          <p>Add cold. Internal resistance rises, the voltage under load sags further below the resting value, and whatever correction the battery-management system applies was probably characterised at room temperature. The robot's belief about its remaining runtime drifts away from reality in the direction that matters: it thinks it has more than it does.</p>
+          <p>For an indoor scrubber that means an awkward stop in a corridor. For an outdoor sweeper on a park route in January it means someone puts on a coat, walks out, and pushes several hundred kilograms of machine back to the dock. The technical defect and the operational consequence are worth keeping joined together, because only the second one appears in a service contract.</p>
+        </div>
+
+        <div id="industry" class="mb56">
+          <h2>Why has nobody in the industry fixed this?</h2>
+          <div class="answer-box">Because there is no widely used winter test standard for this robot category, little third-party cold testing, and no routine obligation to publish a low-temperature charging figure. A buyer asking "does it work in winter?" may get a confident answer that is based on discharge operation only, not on measured charging behaviour.</div>
+          <p>The contrast with electric vehicles is instructive. That industry has standardised range tests, an annual cycle of independent cold-weather testing covered in public, and in places a disclosure obligation. A car buyer can compare winter range across brands. A robot buyer has the supplier's word.</p>
+          <div class="tbl-wrap mt8">
+            <div class="tbl-head cols-3b"><span>What the datasheet says</span><span>What a buyer assumes</span><span>What it usually means</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Operating temperature −20 to +50 °C</span><span>The machine is usable at −20 °C</span><span class="dim">The discharge range only — the conditions under which it will run</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">(charging temperature not stated)</span><span>If it runs, it charges</span><span class="dim">A separate and much narrower window; around 0 °C is a commonly quoted floor</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">(pack heating not mentioned)</span><span>There is presumably some heating</span><span class="dim">Many commercial cleaning robots have no battery heating at all</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Runtime 6–8 h</span><span>6–8 h in any season</span><span class="dim">Characterised at room temperature; any pack heating draws from the same battery</span></div>
+          </div>
+          <p>That fourth row deserves its own sentence, because it is the arithmetic buyers miss. Heating a pack costs energy, and that energy comes from the pack. If warming a cold battery to an acceptable charging temperature consumes a meaningful share of capacity before charging even begins, then winter effective runtime is a different number from the one on the sheet — and it should be quoted as such.</p>
+          <p>There is a structural reason the gap persists, and it is nobody's individual failure. Machines are developed for the climates where they are first sold. Exporters pass on the specification they were given, which has no row for charging temperature. Overseas distributors select on the published parameters. The end customer discovers the issue in the second winter, when capacity loss from a season of cold charging finally shows — often after the warranty has expired. Every party behaved reasonably and the information still never arrived. We are on that chain too, which is why this article exists.</p>
+          <p>One more blind spot worth naming: in regions with real snow, a sweeper often has no work to do for weeks at a time, so the machine is parked. Storage is its own risk — a pack left at low state of charge in the cold for months ages faster, and the capacity loss shows up at the first spring start-up rather than during the winter itself.</p>
+        </div>
+
+        <div id="ev" class="mb56">
+          <h2>What can be borrowed from electric vehicles?</h2>
+          <div class="answer-box">Several lessons transfer, and the cheapest measures often transfer best. Preconditioning and temperature-staged current limiting can be software-led when the needed sensors and controls already exist. Pack insulation is cheap passive hardware. Liquid thermal management and bespoke electrolytes are harder to justify at this machine size.</div>
+          <p>The electric-vehicle industry spent a decade and a great deal of money on exactly this problem. A cleaning robot can copy the results rather than repeat the research.</p>
+          <h3>Which measure should a manufacturer do first?</h3>
+          <p>Preconditioning is usually the first measure to examine. An EV heading for a fast charger warms its pack on the way so that it can accept full current on arrival. A cleaning robot can be well suited to this logic: it normally knows when it is about to charge, because the return is triggered by its own state-of-charge threshold or by a scheduled task. Warming the pack during the return leg — or on the dock before current is applied — may require no new hardware if the battery-management system, temperature sensing and task scheduler can coordinate it. It is often one of the lowest-cost, highest-leverage items on the list.</p>
+          <p>Close behind it is charge-current limiting rather than a blanket cut-off. Vehicle battery-management systems map permitted charge current against temperature, trickling gently when cold and increasing as the pack warms, instead of simply refusing. It is a software policy, and the difference in user experience between "charges slowly tonight" and "did not charge" is the whole argument.</p>
+          <p>Self-heating is the most interesting research direction. Work at Penn State on all-climate cells embeds a thin nickel foil inside the cell as an internal resistive heater, brought out as a third terminal; the published claim is rapid charging across a wide temperature span including deeply sub-zero conditions, by warming the cell from the inside rather than through its casing. A related sandwich self-heating structure was applied to vehicles serving the Beijing Winter Olympics. This is a cell- and pack-level design decision rather than something a robot integrator can retrofit, but it is the right thing to ask a cell supplier about.</p>
+          <p class="src">Sources: <a href="https://www.psu.edu/news/research/story/self-heating-fast-charging-battery-makes-electric-vehicles-climate-immune" target="_blank" rel="noopener">Penn State — self-heating, fast-charging battery</a>; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0196890423003230" target="_blank" rel="noopener">Sandwich self-heating structure-based lithium-ion battery system and its application in the fuel cell bus for Beijing Winter Olympic Games</a>.</p>
+          <div class="tbl-wrap mt8">
+            <div class="tbl-head cols-3b"><span>Measure</span><span>Cost and nature</span><span>How well it transfers to a cleaning robot</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Preconditioning before charge</span><span>Very low — software and scheduling</span><span class="dim">Excellent. The robot already knows when it will dock</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Temperature-staged charge limiting</span><span>Very low — battery-management software</span><span class="dim">Excellent. Turns a hard failure into slower charging</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Pack insulation</span><span>Low — passive hardware</span><span class="dim">Excellent, and the cheapest physical change available</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Swappable pack</span><span>Moderate — logistics rather than thermal design</span><span class="dim">Very good. Charge indoors, run outdoors, sidestep the problem entirely</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Resistive pack heating</span><span>Moderate — added hardware and energy draw</span><span class="dim">Good, provided the energy cost is stated in the winter runtime figure</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Temperature-compensated SOC estimation</span><span>Low — algorithm work</span><span class="dim">Good, and directly addresses the stranding risk above</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Internal self-heating cells</span><span>Higher — cell-level design</span><span class="dim">Promising but not retrofittable; a question for the cell supplier</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">Liquid thermal management</span><span>High — integration-heavy</span><span class="dim">Poor fit at this machine size</span></div>
+          </div>
+          <p style="margin-top:20px">The swappable-pack row is worth dwelling on, because it is one of the clearest ways to avoid cold outdoor charging rather than merely manage it. A pack charged indoors does not have to accept current at outdoor temperature while it is in the machine. The cost moves from thermal engineering to logistics — spare packs, a swap routine, and someone to do it — and that is a question a facilities team can answer with a spreadsheet rather than a laboratory.</p>
+        </div>
+
+        <div id="questions" class="mb56">
+          <h2>Eight questions to put to any supplier</h2>
+          <div class="answer-box">Take this list to whoever is quoting you, including us. None of these questions is unreasonable, and a supplier who can answer all eight has genuinely thought about winter.</div>
+          <div class="tbl-wrap mt8">
+            <div class="tbl-head cols-3b"><span>#</span><span>Ask this</span><span>Why it matters</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">1</span><span>What is the <strong>discharge</strong> temperature range?</span><span class="dim">This is normally the only figure on the sheet — establish that it is what you are being shown</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">2</span><span>What is the <strong>charging</strong> temperature range?</span><span class="dim">Usually unstated, and it is the actual constraint</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">3</span><span>Does the pack have heating, and of what kind?</span><span class="dim">Decides whether automatic return-to-charge survives the winter</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">4</span><span>From −10 °C or −20 °C, how long does warming take and how much charge does it consume?</span><span class="dim">Converts a feature into a winter runtime number</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">5</span><span>What is <em>measured</em> runtime at −10 °C as a share of the room-temperature figure?</span><span class="dim">Insist on measured, not calculated</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">6</span><span>At low temperature, does the BMS limit current or block charging outright?</span><span class="dim">Slower charging and no charging are completely different outcomes</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">7</span><span>Is the pack field-replaceable? Spare price and lead time?</span><span class="dim">Swapping is the most complete way to avoid cold charging</span></div>
+            <div class="tbl-row cols-3b"><span class="c1">8</span><span>What state of charge and storage temperature are recommended for over-wintering?</span><span class="dim">Determines the capacity you still have next spring</span></div>
+          </div>
+          <p style="margin-top:20px">If you are specifying machines for a cold market, these eight lines belong in the tender document rather than in an email after delivery. For the machines themselves, our outdoor range is set out on the <a class="in" href="/products/">robot product page</a> — the <a class="in" href="/products/acr-1300/">ACR-1300</a>, <a class="in" href="/products/acr-1330/">ACR-1330</a>, <a class="in" href="/products/acr-1380/">ACR-1380</a> and <a class="in" href="/products/acr-1900/">ACR-1900</a> each publish their stated operating temperature, and where a charging figure is not yet published we will tell you that rather than infer one. Related reading: <a class="in" href="/blog/certifications-for-commercial-cleaning-robots/">what to verify in a certification pack</a> and <a class="in" href="/blog/commercial-cleaning-robot/">the six commercial cleaning robot types</a>.</p>
+        </div>
+
+        <div id="faq" class="mb56">
+          <h2>FAQ</h2>
+          <div class="faq">
+            <details><summary>Does an operating temperature of −20 °C mean the robot can charge at −20 °C?</summary><div class="a">Usually not. On most datasheets the quoted operating temperature is the discharge range — the conditions under which the machine will run. Charging has its own, much narrower window, and for both LFP and NMC cells a minimum charge temperature around 0 °C is commonly quoted under standard conditions. The charging figure is frequently omitted entirely, so it has to be requested separately.</div></details>
+            <details><summary>Why is charging below freezing harmful to a lithium battery?</summary><div class="a">At low temperature the rate at which lithium ions can insert into the graphite anode slows down. If charging current continues, the anode potential falls toward and below 0 V versus lithium, and lithium deposits on the anode surface as metal instead of entering the graphite layers. Most of that metal never returns to normal cycling, so capacity is permanently lost, and the resulting dendrites can in principle pierce the separator and cause an internal short. It is a physical constraint, not manufacturer caution.</div></details>
+            <details><summary>Is there a single temperature below which lithium plating starts?</summary><div class="a">No. Published work studies plating across a wide range of temperatures and charge rates, and the onset depends on temperature, charge current, state of charge and cell design together. That is why a responsible answer gives conditions rather than one number, and why a supplier who quotes a single universal threshold is over-simplifying.</div></details>
+            <details><summary>Which battery chemistry is best for outdoor robots in cold climates?</summary><div class="a">There is no clean winner, and published comparisons of LFP against NMC at −20 °C do not even agree on the ordering — results vary widely with cell design, discharge rate and cut-off voltage. Sodium-ion is the chemistry that currently looks most promising for cold service, with some cell designs rated for charging at far lower temperatures than lithium-ion, but it is early in industrialisation. The practical answer is to ask for measured data on the specific cell in the specific machine.</div></details>
+            <details><summary>What does cold weather do to the robot's remaining-runtime estimate?</summary><div class="a">It degrades it, and LFP is particularly exposed. The LFP discharge curve is very flat through the middle of its range, so voltage is a weak indicator of remaining charge, and low-temperature changes in internal resistance disturb the estimate further. For an outdoor robot the practical consequence is a return-to-dock trigger that fires at the wrong moment — which in the field means a machine stranded partway along its route.</div></details>
+            <details><summary>Can outdoor cleaning robots borrow the cold-weather solutions used by electric vehicles?</summary><div class="a">Several of them, yes, and the cheapest ones transfer best. Preconditioning — warming the pack on the way back to the dock so it is ready to accept charge on arrival — needs no new hardware, only battery-management and scheduling logic, and a cleaning robot always knows when it is about to recharge. Temperature-staged charge-current limiting instead of a blanket cut-off is also pure software. Pack insulation is cheap passive hardware. Liquid cooling and bespoke electrolytes are far less transferable at this machine size.</div></details>
+            <details><summary>Is a swappable battery pack a realistic answer for winter?</summary><div class="a">It is the most complete way to sidestep the problem, because a pack charged indoors never has to accept charge at outdoor temperature. It shifts the question from thermal engineering to logistics: how many spare packs, who swaps them, what they cost and how quickly they can be replaced. Ask whether packs are field-replaceable, and for spare pricing and lead time, before assuming it is an option.</div></details>
+          </div>
+        </div>
+
+        <div class="related">
+          <p class="related-label">Related PanPanTech pages</p>
+          <div class="grid3-16">
+            <a href="/products/" class="rcard scp4"><span class="tag">Products</span><span class="t">Outdoor sweeping robot range</span></a>
+            <a href="/blog/certifications-for-commercial-cleaning-robots/" class="rcard scp4"><span class="tag">Compliance</span><span class="t">Certifications Buyers Must Verify</span></a>
+            <a href="/request-a-quote/" class="rcard scp4"><span class="tag">RFQ</span><span class="t">Request a Quote</span></a>
+          </div>
+        </div>
+
+        <p class="src" style="margin-top:8px">This article is general engineering background for procurement and facilities teams, not battery-safety or regulatory advice. Battery handling, charging and storage should follow the instructions supplied with the specific machine. Figures quoted from published research are reproduced under each source's own test conditions and are not directly comparable with one another.</p>
+
+      </article>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="cta-wrap">
+      <div>
+        <h2>Specifying outdoor robots for a cold market?</h2>
+        <p>Send the site, the winter temperature range you actually see, and the cleaning window. We will come back with the discharge and charging figures we hold for each model — and say plainly where a figure is not yet documented.</p>
+      </div>
+      <a href="/request-a-quote/" class="btn-cta scp5">Request a Quote <span class="mono">→</span></a>
+    </div>
+  </section>
+
+  <footer class="footer-full">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <div class="footer-brandmark">PanPan<span>Tech</span></div>
+          <p class="footer-blurb">Retail AIoT, smart robotics, and manufacturing platform for global B2B buyers, integrators, distributors, and OEM partners.</p>
+        </div>
+        <div class="footer-col">
+          <span class="h">Solutions</span>
+          <a href="/solutions/retail/">Retail Tech</a>
+          <a href="/products/">Smart Robots</a>
+          <a href="https://einksmart.com">Digital Art</a>
+          <a href="/manufacturing/">Manufacturing</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Robot Business</span>
+          <a href="/products/">Robot product range</a>
+          <a href="/manufacturing/">Robot OEM / ODM</a>
+          <a href="/solutions/">Industries</a>
+          <a href="/request-a-quote/">Request a Quote</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Company</span>
+          <a href="/technology/">Technology</a>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/request-a-quote/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Contact</span>
+          <p>Building A1, Yuexiu iPARK Yuegang Zhigu, Nansha District, Guangzhou, Guangdong Province, China</p>
+          <span class="lbl">Email</span>
+          <a href="mailto:info@panpantechnology.com">info@panpantechnology.com</a>
+          <span class="lbl">Phone</span>
+          <a href="tel:+8613925118851">+86-13925118851</a>
+        </div>
+      </div>
+      <div class="footer-brand-row" aria-label="PanPanTech Group brands">
+        <span><a href="https://www.aieinksmart.com" target="_blank" rel="noopener">AiEInkSmart&trade;</a> &mdash; Electronic Shelf Labels</span><span class="sep">|</span><span><a href="https://www.pyroglaux.com" target="_blank" rel="noopener">Pyroglaux&reg;</a> &mdash; Footfall Analytics</span><span class="sep">|</span><span><a href="https://www.aiesl.com" target="_blank" rel="noopener">AiESL&trade;</a> &mdash; Retail Data Platform</span><span class="sep">|</span><span><a href="https://www.einksmart.com" target="_blank" rel="noopener">EinkSmart&trade;</a> &mdash; E-Ink Art Displays</span>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; 2026 PanPanTech&reg; | Retail AIoT &middot; Smart Robotics &middot; Manufacturing | Guangzhou PanPanTech Co., Ltd. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+</div><script src="/assets/js/site.js" defer></script></body></html>
