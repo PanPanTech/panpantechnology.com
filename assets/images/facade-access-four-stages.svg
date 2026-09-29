@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-label="Timeline showing four stages of high-rise facade cleaning that still coexist today: hand tools, suspended access, research robots and commercial robot deployment">
+  <rect width="1000" height="500" fill="#f5f6f8"/>
+  <text x="48" y="38" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#9aa3b5" letter-spacing="2.4">FOUR STAGES — AND ALL FOUR ARE STILL IN SERVICE TODAY</text>
+
+  <line x1="60" y1="300" x2="952" y2="300" stroke="#c9cfda" stroke-width="2"/>
+  <g font-family="IBM Plex Mono, monospace" font-size="11.5" fill="#9aa3b5">
+    <text x="118" y="326">1930s</text><text x="340" y="326">1987: IRATA</text><text x="560" y="326">1986–2008</text><text x="800" y="326">2024 example</text>
+  </g>
+
+  <!-- stage 1 -->
+  <circle cx="140" cy="300" r="7" fill="#7a8398"/>
+  <rect x="60" y="126" width="206" height="150" rx="9" fill="#fff" stroke="#c9cfda" stroke-width="1.6"/>
+  <text x="80" y="154" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5">01</text>
+  <text x="80" y="178" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">Hand tools</text>
+  <text x="80" y="202" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">The modern squeegee is dated</text>
+  <text x="80" y="219" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">to 1936. Quality depended on</text>
+  <text x="80" y="236" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">the operator's skill.</text>
+  <text x="80" y="262" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#2f6b3f">STILL IN USE</text>
+
+  <!-- stage 2 -->
+  <circle cx="362" cy="300" r="7" fill="#7a8398"/>
+  <rect x="282" y="126" width="206" height="150" rx="9" fill="#fff" stroke="#c9cfda" stroke-width="1.6"/>
+  <text x="302" y="154" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aa3b5">02</text>
+  <text x="302" y="178" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">Getting people there</text>
+  <text x="302" y="202" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">Cradles, BMUs and rope</text>
+  <text x="302" y="219" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">access. Solves access,</text>
+  <text x="302" y="236" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">not automation.</text>
+  <text x="302" y="262" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#2f6b3f">STILL IN USE</text>
+
+  <!-- stage 3 -->
+  <circle cx="584" cy="300" r="7" fill="#0e5fd9"/>
+  <rect x="504" y="126" width="206" height="150" rx="9" fill="#fff" stroke="#0e5fd9" stroke-width="1.8"/>
+  <text x="524" y="154" font-family="IBM Plex Mono, monospace" font-size="11" fill="#0e5fd9">03</text>
+  <text x="524" y="178" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">Research era</text>
+  <text x="524" y="202" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">Wall-climbing robots were</text>
+  <text x="524" y="219" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">published from 1986 onward.</text>
+  <text x="524" y="236" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">Feasibility, not business.</text>
+  <text x="524" y="262" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6a7386">~40 YEARS OF WORK</text>
+
+  <!-- stage 4 -->
+  <circle cx="806" cy="300" r="7" fill="#0e5fd9"/>
+  <rect x="726" y="126" width="226" height="150" rx="9" fill="#fff" stroke="#0e5fd9" stroke-width="1.8"/>
+  <text x="746" y="154" font-family="IBM Plex Mono, monospace" font-size="11" fill="#0e5fd9">04</text>
+  <text x="746" y="178" font-family="Space Grotesk, sans-serif" font-size="16" font-weight="700" fill="#0b0f1a">Named deployments</text>
+  <text x="746" y="202" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">Engineered systems on real</text>
+  <text x="746" y="219" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">buildings, with a rooftop</text>
+  <text x="746" y="236" font-family="Instrument Sans, sans-serif" font-size="12.5" fill="#3d4453">operator still present.</text>
+  <text x="746" y="262" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#c8781f">PROJECT-BY-PROJECT</text>
+
+  <rect x="60" y="356" width="892" height="62" rx="9" fill="#fff" stroke="#e3e7ee" stroke-width="1.5"/>
+  <text x="86" y="384" font-family="Instrument Sans, sans-serif" font-size="14.5" fill="#3d4453">The question moved from "can a machine move on a wall?" — answered decades ago — to "can it deliver</text>
+  <text x="86" y="406" font-family="Instrument Sans, sans-serif" font-size="14.5" fill="#3d4453">on a real building, safely and economically, project after project?" That question is still open.</text>
+
+  <text x="60" y="452" font-family="Instrument Sans, sans-serif" font-size="11.5" fill="#9aa3b5">Dates: linked article sources. Stages overlap; positions are illustrative.</text>
+</svg>
