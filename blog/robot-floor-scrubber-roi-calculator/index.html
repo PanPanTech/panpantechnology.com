@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"></noscript><title>Robot Floor Scrubber ROI Calculator</title><meta name="description" content="Free robot floor scrubber ROI calculator: estimate hours taken over, yearly saving and payback from your floor area, cleaning frequency, wage and robot price."><link rel="canonical" href="https://www.panpantechnology.com/blog/robot-floor-scrubber-roi-calculator/"><meta property="og:type" content="article"><meta property="og:title" content="Robot Floor Scrubber ROI Calculator"><meta property="og:description" content="Free robot floor scrubber ROI calculator: estimate hours taken over, yearly saving and payback from your floor area, cleaning frequency, wage and robot price."><meta property="og:url" content="https://www.panpantechnology.com/blog/robot-floor-scrubber-roi-calculator/"><meta property="og:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "PanPanTech", "url": "https://www.panpantechnology.com", "logo": "https://www.panpantechnology.com/assets/images/panpantech-logo.png", "email": "info@panpantechnology.com", "telephone": "+86-13925118851", "image": "https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.panpantechnology.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.panpantechnology.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "ROI Calculator", "item": "https://www.panpantechnology.com/blog/robot-floor-scrubber-roi-calculator/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Robot Floor Scrubber ROI Calculator: Payback for Your Floor", "description": "Free robot floor scrubber ROI calculator: estimate hours taken over, yearly saving and payback from your floor area, cleaning frequency, wage and robot price.", "image": "https://www.panpantechnology.com/assets/images/acr0600_v1.jpg", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "author": {"@type": "Organization", "name": "PanPanTech", "logo": "https://www.panpantechnology.com/assets/images/panpantech-logo.png", "image": "https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"}, "publisher": {"@type": "Organization", "name": "PanPanTech", "logo": "https://www.panpantechnology.com/assets/images/panpantech-logo.png", "image": "https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"}, "articleSection": "Tool", "mainEntityOfPage": "https://www.panpantechnology.com/blog/robot-floor-scrubber-roi-calculator/"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate the ROI of a robot floor scrubber?", "acceptedAnswer": {"@type": "Answer", "text": "Value the manual cleaning hours the robot takes over at your loaded wage, subtract supervision time and the robot's yearly cost (price over its write-off period plus consumables and service), and divide the robot price by the monthly saving to get the payback period."}}, {"@type": "Question", "name": "What is a typical payback period for a cleaning robot?", "acceptedAnswer": {"@type": "Answer", "text": "One to three years on large floors cleaned daily. Small floors cleaned a few times a week may not pay back on labour alone."}}, {"@type": "Question", "name": "Which input matters most?", "acceptedAnswer": {"@type": "Answer", "text": "The share of floor the robot can clean and how often the floor is cleaned. Together they decide how many manual hours the robot takes over."}}, {"@type": "Question", "name": "Should I use the robot's maximum m²/h figure?", "acceptedAnswer": {"@type": "Answer", "text": "No. Use the practical rate on a real route with turns and obstacles. Maximum figures assume straight runs and can be twice the practical rate."}}, {"@type": "Question", "name": "Does a cleaning robot remove the need for cleaning staff?", "acceptedAnswer": {"@type": "Answer", "text": "No. Someone still starts routes, empties bins, checks edges and handles exceptions. Budget 15–30 minutes of supervision per run."}}, {"@type": "Question", "name": "Is my data stored when I use the calculator?", "acceptedAnswer": {"@type": "Answer", "text": "No. The calculation runs in your browser and nothing is sent to PanPanTech."}}]}</script><style>
+html, body { margin: 0; padding: 0; background: #F5F6F8; }
+* { box-sizing: border-box; }
+::selection { background: #0E5FD9; color: #fff; }
+</style><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/images/favicon-48x48.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/blog.css"><meta name="theme-color" content="#0E5FD9"><meta name="twitter:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"></head>
+<body><div class="site">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">PanPan<span class="accent">Tech</span></a>
+      <nav class="site-nav">
+        <a href="/solutions/" class="scp0">Solutions</a>
+        <a href="/products/" class="scp0">Smart Robots</a>
+        <a href="/technology/" class="scp0">Technology</a>
+        <a href="/manufacturing/" class="scp0">Manufacturing</a>
+        <a href="/partners/" class="scp0">Partners</a>
+        <a href="/blog/" class="active">Blog</a>
+        <a href="/about/" class="scp0">About</a>
+      </nav>
+      <a href="/request-a-quote/" class="btn-quote scp1">Request a Quote<span class="mono">→</span></a>
+    </div>
+  </header>
+
+  <section class="dark">
+    <div class="hero-grid">
+      <div>
+        <div class="crumbs">
+          <a href="/" class="scp2">Home</a><span>/</span>
+          <a href="/blog/" class="scp2">Blog</a><span>/</span>
+          <span class="here">ROI Calculator</span>
+        </div>
+        <p class="kicker">Tool — ROI and Payback</p>
+        <h1 class="sz48">Robot Floor Scrubber ROI Calculator: Payback for Your Floor</h1>
+        <p class="hero-answer"><strong>Enter your floor area, cleaning frequency, wage and robot price to estimate how many manual hours a robot floor scrubber takes over, what it saves a year and how long it takes to pay back.</strong> The method, realistic input ranges and three worked examples follow the calculator.</p>
+        <p class="hero-meta">Updated 2026-10-05 · 8 min read</p>
+      </div>
+      <div class="hero-media">
+        <div class="bg-cover" style='background-image: url("/assets/images/acr0600_v1.jpg"); background-size: contain; background-repeat: no-repeat; background-color: #fff; background-position: center center;'></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="page-grid">
+      <aside class="toc">
+        <span class="toc-label">Contents</span>
+        <a href="#calculator" class="scp3"><span class="n">01</span><span>ROI calculator</span></a>
+        <a href="#method" class="scp3"><span class="n">02</span><span>How it works</span></a>
+        <a href="#inputs" class="scp3"><span class="n">03</span><span>Realistic inputs</span></a>
+        <a href="#examples" class="scp3"><span class="n">04</span><span>Worked examples</span></a>
+        <a href="#ignores" class="scp3"><span class="n">05</span><span>What it leaves out</span></a>
+        <a href="#faq" class="scp3"><span class="n">06</span><span>FAQ</span></a>
+      </aside>
+
+      <article>
+        <div id="calculator" class="mb56">
+          <h2>Robot floor scrubber ROI calculator</h2>
+          <div class="answer-box">Enter your floor area, cleaning frequency, wage and robot price. The calculator estimates the manual hours a robot takes over, its yearly cost, net saving and payback period. Defaults use a US janitor median wage of $17.27 per hour (BLS, May 2024).</div>
+          <div id="roi-calc" style="background:#fff;border:1px solid #E2E6ED;border-radius:14px;padding:26px 28px;margin:8px 0 20px"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px"><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Floor area cleaned (m²)<input type="number" id="roi-area" value="8000" min="100" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Share the robot can clean (%)<input type="number" id="roi-share" value="80" min="1" max="100" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Cleanings per week<input type="number" id="roi-freq" value="7" min="1" max="21" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Manual cleaning rate (m²/h)<input type="number" id="roi-manual" value="1000" min="50" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Hourly wage (your currency)<input type="number" id="roi-wage" value="17.27" min="0" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Payroll taxes and benefits (%)<input type="number" id="roi-burden" value="20" min="0" max="200" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Robot practical rate (m²/h)<input type="number" id="roi-robotRate" value="1000" min="50" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Hours available per cleaning<input type="number" id="roi-window" value="6" min="1" max="24" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Robot price incl. station<input type="number" id="roi-price" value="35000" min="0" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Yearly consumables and service<input type="number" id="roi-running" value="3000" min="0" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Years to write off the robot<input type="number" id="roi-years" value="5" min="1" max="15" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label><label style="display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:#3D4453">Supervision per cleaning (minutes)<input type="number" id="roi-sup" value="20" min="0" max="240" step="any" style="font:inherit;font-size:15px;padding:10px 12px;border:1px solid #D8DDE6;border-radius:8px;background:#fff;color:#0B0F1A"></label></div><div style="margin-top:24px;background:#F5F6F8;border-radius:12px;padding:8px 20px"><div style="display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #E2E6ED"><span style="color:#6A7386">Robots needed</span><strong id="roi-out-robots" style="color:#0B0F1A">–</strong></div><div style="display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #E2E6ED"><span style="color:#6A7386">Manual hours taken over per year</span><strong id="roi-out-hours" style="color:#0B0F1A">–</strong></div><div style="display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #E2E6ED"><span style="color:#6A7386">Labour value per year</span><strong id="roi-out-labour" style="color:#0B0F1A">–</strong></div><div style="display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #E2E6ED"><span style="color:#6A7386">Supervision cost per year</span><strong id="roi-out-supcost" style="color:#0B0F1A">–</strong></div><div style="display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #E2E6ED"><span style="color:#6A7386">Robot cost per year</span><strong id="roi-out-robotcost" style="color:#0B0F1A">–</strong></div><div style="display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #E2E6ED"><span style="color:#6A7386">Net saving per year</span><strong id="roi-out-net" style="color:#0B0F1A">–</strong></div><div style="display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #E2E6ED"><span style="color:#6A7386">Payback period</span><strong id="roi-out-payback" style="color:#0B0F1A">–</strong></div><div style="display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #E2E6ED"><span style="color:#6A7386">Net result over the write-off period</span><strong id="roi-out-five" style="color:#0B0F1A">–</strong></div></div><p class="src" style="margin-top:12px">Calculated in your browser; nothing is sent anywhere. Figures are estimates for planning, not a quotation.</p></div>
+          <p>Change one number at a time to see what matters. For most sites the two inputs that swing the answer are <strong>share the robot can clean</strong> and <strong>cleanings per week</strong>; robot price matters less than buyers expect.</p>
+        </div>
+        <div id="method" class="mb56">
+          <h2>How the calculation works</h2>
+          <div class="answer-box">The calculator values the manual hours the robot takes over, subtracts the time people still spend supervising it, and compares the result with the robot's yearly cost.</div>
+          <div class="chk mt8"><div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Manual hours taken over</strong> = floor area × robot share ÷ manual cleaning rate × cleanings per year.</span></div><div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Labour value</strong> = those hours × hourly wage × (1 + payroll taxes and benefits).</span></div><div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Robots needed</strong> = robot area ÷ (robot practical rate × hours available per cleaning), rounded up.</span></div><div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Supervision cost</strong> = minutes per cleaning × cleanings per year × loaded wage, per robot.</span></div><div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Robot cost per year</strong> = price ÷ write-off years + consumables and service.</span></div><div class="chk-row p16"><span class="ar">→</span><span class="t"><strong>Payback</strong> = robot price ÷ (labour value − supervision − running cost) per month.</span></div></div>
+          <p>The default wage is the <a href="https://www.bls.gov/ooh/building-and-grounds-cleaning/janitors-and-building-cleaners.htm" target="_blank" rel="noopener">BLS median for janitors and building cleaners</a>, $17.27 an hour in May 2024. Replace it with your own fully loaded rate or your cleaning contractor's hourly charge, which is usually higher.</p>
+        </div>
+        <div id="inputs" class="mb56">
+          <h2>Choosing realistic inputs</h2>
+          <div class="answer-box">Use practical cleaning rates, not brochure maxima, and measure the share of your floor a robot can actually reach. Over-optimistic inputs are the main reason robot business cases disappoint.</div>
+          <div class="tbl-wrap mt8"><div class="tbl-head cols-3b"><span>Input</span><span>Typical range</span><span>How to get your number</span></div><div class="tbl-row cols-3b"><span class="c1">Manual cleaning rate</span><span>Mop and bucket: a few hundred m²/h; walk-behind scrubber: about 800–1,700 m²/h</span><span>Time your current team on a representative area</span></div><div class="tbl-row cols-3b"><span class="c1">Robot practical rate</span><span>Compact robots 200–800 m²/h; large scrubbers 1,500–4,000 m²/h</span><span>Ask suppliers for practical, not theoretical, rates</span></div><div class="tbl-row cols-3b"><span class="c1">Robot share</span><span>60–90% of open floor</span><span>Exclude stairs, tight corners, cluttered rooms and edges</span></div><div class="tbl-row cols-3b"><span class="c1">Supervision</span><span>15–30 minutes per run</span><span>Starting routes, emptying bins, refilling if no station, spot checks</span></div><div class="tbl-row cols-3b"><span class="c1">Consumables and service</span><span>A few thousand per robot per year</span><span>Ask for a price list for brushes, pads, blades and filters</span></div></div><p class="src">Ranges are planning guidance. Walk-behind range based on published Tennant T300 conventional coverage rates; see our <a class="in" href="/blog/tennant-t300-review-alternatives/">T300 review</a>.</p>
+          <p>If you clean with a walk-behind scrubber today, your manual rate is high and the robot's value is mainly the operator hours it frees. If you clean with mops, the manual rate is low and the hours taken over per square metre are much larger.</p>
+        </div>
+        <div id="examples" class="mb56">
+          <h2>Three worked examples</h2>
+          <div class="answer-box">A large warehouse cleaned daily pays back fastest; a small shop cleaned three times a week may not pay back at all. Frequency and area dominate.</div>
+          <div class="tbl-wrap mt8"><div class="tbl-head cols-4"><span>Site</span><span>Inputs</span><span>Result</span><span>Takeaway</span></div><div class="tbl-row cols-4"><span class="c1">Distribution centre</span><span>20,000 m², 80% robot share, 7×/week, manual 1,200 m²/h; large scrubber at a practical 3,000 m²/h, price 60,000, running 5,000/yr</span><span>About 4,850 manual hours a year taken over; payback about 8 months</span><span>Large, open, daily floors are the best case</span></div><div class="tbl-row cols-4"><span class="c1">Supermarket</span><span>3,000 m², 75% share, 7×/week, manual 600 m²/h; compact 4-in-1 at 500 m²/h, price 35,000, running 3,000/yr</span><span>About 1,370 hours a year; payback about 18 months</span><span>Night cleaning in a closed store works well</span></div><div class="tbl-row cols-4"><span class="c1">Small shop</span><span>400 m², 70% share, 3×/week, manual 500 m²/h; compact robot at 350 m²/h, price 25,000, running 2,000/yr</span><span>About 90 hours a year; does not pay back on labour</span><span>Buy for consistency, not savings, or do not buy</span></div></div><p class="src">Results from the calculator above with the stated inputs; wage 17.27, 20% on-costs, 6-hour window, 20 minutes supervision. Your figures will differ.</p>
+          <figure><img src="/assets/images/acr0800_v1.jpg" alt="ACR-0800 autonomous ride-on floor scrubber for large warehouse floors" loading="lazy"><figcaption>Large, open floors cleaned every day are where autonomous scrubbers such as the ACR-0800 pay back fastest.</figcaption></figure>
+        </div>
+        <div id="ignores" class="mb56">
+          <h2>What the calculator leaves out</h2>
+          <div class="answer-box">Quality, consistency and reporting have value the calculator does not count, and downtime, training and site changes have costs it does not count either.</div>
+          <div class="list"><div><span class="ar">→</span><span><strong>Consistency.</strong> A robot cleans the same route every night and logs it; a short-staffed shift may not.</span></div><div><span class="ar">→</span><span><strong>Reassigned labour.</strong> Hours taken over are only saved if the people are redeployed or the contract changes.</span></div><div><span class="ar">→</span><span><strong>Downtime.</strong> A robot waiting for a part does not clean. Ask about local spares and response times.</span></div><div><span class="ar">→</span><span><strong>Edges and touch-ups.</strong> Corners and edges still need people; the robot share input should allow for this.</span></div><div><span class="ar">→</span><span><strong>Financing.</strong> Leasing and RaaS change the cash profile; see our <a class="in" href="/blog/commercial-cleaning-robot-price/">price guide</a> for the options.</span></div></div>
+          <p>For a firm number, send your inputs through <a class="in" href="/request-a-quote/">Request a Quote</a>. We will recommend a robot class from the <a class="in" href="/products/">ACR range</a> and run the same calculation with its real specifications.</p>
+        </div>
+        <div id="faq" class="mb56">
+          <h2>FAQ</h2>
+          <div class="faq">
+            <details><summary>How do you calculate the ROI of a robot floor scrubber?</summary><div class="a">Value the manual cleaning hours the robot takes over at your loaded wage, subtract supervision time and the robot's yearly cost (price over its write-off period plus consumables and service), and divide the robot price by the monthly saving to get the payback period.</div></details>
+            <details><summary>What is a typical payback period for a cleaning robot?</summary><div class="a">One to three years on large floors cleaned daily. Small floors cleaned a few times a week may not pay back on labour alone.</div></details>
+            <details><summary>Which input matters most?</summary><div class="a">The share of floor the robot can clean and how often the floor is cleaned. Together they decide how many manual hours the robot takes over.</div></details>
+            <details><summary>Should I use the robot's maximum m²/h figure?</summary><div class="a">No. Use the practical rate on a real route with turns and obstacles. Maximum figures assume straight runs and can be twice the practical rate.</div></details>
+            <details><summary>Does a cleaning robot remove the need for cleaning staff?</summary><div class="a">No. Someone still starts routes, empties bins, checks edges and handles exceptions. Budget 15–30 minutes of supervision per run.</div></details>
+            <details><summary>Is my data stored when I use the calculator?</summary><div class="a">No. The calculation runs in your browser and nothing is sent to PanPanTech.</div></details>
+          </div>
+        </div>
+        <div class="related">
+          <p class="related-label">Related PanPanTech pages</p>
+          <div class="grid3-16">
+            <a href="/blog/commercial-cleaning-robot-price/" class="rcard scp4"><span class="tag">Price Guide</span><span class="t">Cleaning Robot Price 2026</span></a>
+            <a href="/blog/robotic-floor-scrubber/" class="rcard scp4"><span class="tag">Comparison</span><span class="t">Robotic vs Walk-Behind Scrubber</span></a>
+            <a href="/blog/autonomous-floor-scrubber/" class="rcard scp4"><span class="tag">Buying Guide</span><span class="t">Autonomous Floor Scrubbers</span></a>
+          </div>
+        </div>
+        <p class="src" style="margin-top:8px">The calculator gives planning estimates only. Wage default from the US Bureau of Labor Statistics; replace it with your local loaded labour rate.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="cta-wrap">
+      <div>
+        <h2>Want the calculation run on a real robot?</h2>
+        <p>Send your floor area, floor types and cleaning schedule. PanPanTech will match a robot class and rerun the payback with its actual specifications and price.</p>
+      </div>
+      <a href="/request-a-quote/" class="btn-cta scp5">Request a Quote <span class="mono">→</span></a>
+    </div>
+  </section>
+
+  <footer class="footer-full">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <div class="footer-brandmark">PanPan<span>Tech</span></div>
+          <p class="footer-blurb">Retail AIoT, smart robotics, and manufacturing platform for global B2B buyers, integrators, distributors, and OEM partners.</p>
+        </div>
+        <div class="footer-col">
+          <span class="h">Solutions</span>
+          <a href="/solutions/retail/">Retail Tech</a>
+          <a href="/products/">Smart Robots</a>
+          <a href="https://einksmart.com">Digital Art</a>
+          <a href="/manufacturing/">Manufacturing</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Robot Business</span>
+          <a href="/products/">Robot product range</a>
+          <a href="/manufacturing/">Robot OEM / ODM</a>
+          <a href="/solutions/">Industries</a>
+          <a href="/request-a-quote/">Request a Quote</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Company</span>
+          <a href="/technology/">Technology</a>
+          <a href="/about/">About</a>
+          <a href="/blog/">Blog</a>
+          <a href="/request-a-quote/">Contact</a>
+        </div>
+        <div class="footer-col">
+          <span class="h">Contact</span>
+          <p>Building A1, Yuexiu iPARK Yuegang Zhigu, Nansha District, Guangzhou, Guangdong Province, China</p>
+          <span class="lbl">Email</span>
+          <a href="mailto:info@panpantechnology.com">info@panpantechnology.com</a>
+          <span class="lbl">Phone</span>
+          <a href="tel:+8613925118851">+86-13925118851</a>
+        </div>
+      </div>
+      <div class="footer-brand-row" aria-label="PanPanTech Group brands">
+        <span><a href="https://www.aieinksmart.com" target="_blank" rel="noopener">AiEInkSmart&trade;</a> &mdash; Electronic Shelf Labels</span><span class="sep">|</span><span><a href="https://www.pyroglaux.com" target="_blank" rel="noopener">Pyroglaux&reg;</a> &mdash; Footfall Analytics</span><span class="sep">|</span><span><a href="https://www.aiesl.com" target="_blank" rel="noopener">AiESL&trade;</a> &mdash; Retail Data Platform</span><span class="sep">|</span><span><a href="https://www.einksmart.com" target="_blank" rel="noopener">EinkSmart&trade;</a> &mdash; E-Ink Art Displays</span>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; 2026 PanPanTech&reg; | Retail AIoT &middot; Smart Robotics &middot; Manufacturing | Guangzhou PanPanTech Co., Ltd. All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+</div><script>
+(function () {
+  var ids = ["area","share","freq","manual","wage","burden","robotRate","window","price","running","years","sup"];
+  function num(id) { var v = parseFloat(document.getElementById("roi-" + id).value); return isFinite(v) ? v : 0; }
+  function money(v) { return (v < 0 ? "-" : "") + Math.round(Math.abs(v)).toLocaleString("en-US"); }
+  function out(id, text) { document.getElementById("roi-out-" + id).textContent = text; }
+  function calc() {
+    var v = {};
+    ids.forEach(function (id) { v[id] = num(id); });
+    var robotArea = v.area * Math.min(v.share, 100) / 100;
+    var perYear = v.freq * 52;
+    var robots = Math.max(1, Math.ceil(robotArea / Math.max(v.robotRate * v.window, 1)));
+    var loaded = v.wage * (1 + v.burden / 100);
+    var hours = v.manual > 0 ? robotArea / v.manual * perYear : 0;
+    var labour = hours * loaded;
+    var supCost = v.sup / 60 * perYear * loaded * robots;
+    var capital = v.price * robots;
+    var running = v.running * robots;
+    var robotCost = capital / Math.max(v.years, 1) + running;
+    var net = labour - supCost - robotCost;
+    var cashPerYear = labour - supCost - running;
+    out("robots", String(robots));
+    out("hours", Math.round(hours).toLocaleString("en-US") + " h");
+    out("labour", money(labour));
+    out("supcost", money(supCost));
+    out("robotcost", money(robotCost));
+    out("net", money(net));
+    out("payback", cashPerYear > 0 ? (capital / cashPerYear * 12).toFixed(1) + " months" : "Does not pay back");
+    out("five", money(cashPerYear * Math.max(v.years, 1) - capital));
+  }
+  ids.forEach(function (id) { document.getElementById("roi-" + id).addEventListener("input", calc); });
+  calc();
+})();
+</script>
+<script src="/assets/js/site.js" defer></script></body></html>
