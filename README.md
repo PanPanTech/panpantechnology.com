@@ -23,11 +23,25 @@ npm test
 - obvious mojibake markers from the old prototype
 - CSS constraints for stable typography
 
+## Legacy URL Redirects
+
+Pages removed in earlier site versions are kept alive as static redirect pages
+(instant meta refresh + canonical to the replacement page) so their search
+rankings carry over. The map lives in `scripts/generate-redirects.py`; after
+editing it run:
+
+```bash
+python scripts/generate-redirects.py
+```
+
+Redirect pages must not be listed in `sitemap.xml` or `llms.txt`; `npm test`
+enforces this.
+
 ## Deployment
 
 For GitHub Pages, deploy from the repository root on the `main` branch. The site includes:
 
-- `CNAME` set to `panpantechnology.com`
+- `CNAME` set to `www.panpantechnology.com` (the apex domain must redirect to `www`)
 - `.nojekyll` for direct static hosting
 - `sitemap.xml`, `robots.txt`, and `llms.txt`
 
