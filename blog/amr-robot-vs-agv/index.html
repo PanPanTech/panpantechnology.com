@@ -111,7 +111,7 @@ html, body { margin: 0; padding: 0; background: #F5F6F8; }
             <div class="tbl-row cols-3"><span class="c1">Cross-dock transfer</span><span>Works when staging locations change through the day</span><span>Works when lanes and destinations are highly standardized</span></div>
             <div class="tbl-row cols-3"><span class="c1">Clean-room or restricted area</span><span>Useful if map updates and behavior controls are validated</span><span>Useful if the site prefers strict lanes and minimal route variation</span></div>
           </div>
-          <figure><img src="/assets/images/t300-conveyor-amr-new.jpg" alt="T300 conveyor AMR aligned with a warehouse conveyor station" loading="lazy"><figcaption>Conveyor docking should be validated by real station geometry, load transfer timing, and error recovery rules.</figcaption></figure>
+          <figure><img src="/assets/images/t300-conveyor-amr-new.jpg" alt="AMR-0300 conveyor configuration aligned with a warehouse conveyor station" loading="lazy"><figcaption>Conveyor docking should be validated by real station geometry, load transfer timing, and error recovery rules.</figcaption></figure>
         </section>
 
         <section id="integration" class="mt56">
@@ -119,8 +119,8 @@ html, body { margin: 0; padding: 0; background: #F5F6F8; }
           <p>Payload is not only a maximum kilogram number. A 300 kg rating does not tell you whether the robot can safely carry a tall rack, a shifted center of gravity, an uneven load, or a trolley with poor wheel behavior. Ask for the payload envelope, center-of-gravity limits, acceleration and braking assumptions, ramp and threshold limits, floor flatness requirements, turning radius, and load-retention method.</p>
           <p>Docking is another common failure point. Conveyor transfer, rack lifting, shelf approach, and cart pickup require different tolerances. A robot may navigate well in open aisles but still fail if the station has poor alignment, a low-friction floor, unstable pallets, or inconsistent manual loading. For each docking point, define the final pose tolerance, sensor confirmation, timeout behavior, manual recovery procedure, and who owns the interface if the conveyor or door controller changes.</p>
           <p>Software integration should be staged. A small proof of concept can start with manual task dispatch, but a production fleet usually needs order logic from WMS, MES, ERP, or a middleware layer. The integration plan should define task creation, task priority, cancellation, exception reporting, low-battery behavior, charging rules, map version control, and data export. Without this, the robot becomes a smart vehicle waiting for human dispatch.</p>
-          <div class="spec"><span class="k">PanPanTech fit</span><span class="v">The T300 class supports 300 kg delivery workflows, conveyor variants support station transfer, and the T600 class targets heavier rack and industrial delivery needs. Final selection should be based on real load geometry, aisle clearance, docking tolerance, and integration requirements.</span></div>
-          <figure><img src="/assets/images/t600-heavy-payload-amr-new.jpg" alt="T600 heavy payload AMR for industrial rack and material transport" loading="lazy"><figcaption>Heavy-payload projects need center-of-gravity, rack footprint, floor condition, and braking validation.</figcaption></figure>
+          <div class="spec"><span class="k">PanPanTech fit</span><span class="v">The AMR-0300 supports 300 kg delivery workflows, its conveyor configuration handles station transfer, and the AMR-0600 targets 600 kg rack and industrial delivery needs. Final selection should be based on real load geometry, aisle clearance, docking tolerance, and integration requirements.</span></div>
+          <figure><img src="/assets/images/t600-heavy-payload-amr-new.jpg" alt="AMR-0600 heavy-payload AMR for industrial rack and material transport" loading="lazy"><figcaption>Heavy-payload projects need center-of-gravity, rack footprint, floor condition, and braking validation.</figcaption></figure>
         </section>
 
         <section id="safety" class="mt56">
@@ -178,8 +178,8 @@ html, body { margin: 0; padding: 0; background: #F5F6F8; }
         <div class="related">
           <p class="related-label">Related PanPanTech pages</p>
           <div class="grid3-16">
-            <a href="/products/#amr" class="scp4 rcard"><span class="tag">Product</span><span class="t">T300 Standard AMR</span></a>
-            <a href="/products/#amr" class="scp4 rcard"><span class="tag">Product</span><span class="t">T600 Heavy-Payload AMR</span></a>
+            <a href="/products/amr-0300/" class="scp4 rcard"><span class="tag">Product</span><span class="t">AMR-0300 Industrial Transport AMR</span></a>
+            <a href="/products/amr-0600/" class="scp4 rcard"><span class="tag">Product</span><span class="t">AMR-0600 Heavy-Payload AMR</span></a>
             <a href="/technology/fleet-cloud-platform/" class="scp4 rcard"><span class="tag">Technology</span><span class="t">Fleet cloud platform</span></a>
             <a href="/manufacturing/" class="scp4 rcard"><span class="tag">OEM / ODM</span><span class="t">Robot manufacturing</span></a>
             <a href="/request-a-quote/" class="scp4 rcard"><span class="tag">RFQ</span><span class="t">Request a Quote</span></a>
