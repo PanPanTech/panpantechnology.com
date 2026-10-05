@@ -396,6 +396,33 @@
     });
   }
 
+  // Decorative loop videos use preload="none" so they don't compete with the
+  // first paint; start them only while they are on screen.
+  function initVisibleAutoplay() {
+    const videos = Array.from(document.querySelectorAll("video[data-autoplay-visible]"));
+    if (!videos.length) return;
+
+    const play = (video) => {
+      video.muted = true;
+      const result = video.play();
+      if (result && typeof result.catch === "function") result.catch(() => {});
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      videos.forEach(play);
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) play(entry.target);
+        else entry.target.pause();
+      });
+    }, { rootMargin: "200px 0px" });
+    videos.forEach((video) => observer.observe(video));
+  }
+
   initArticleShare();
   initializeHeroCarousel();
+  initVisibleAutoplay();
 })();

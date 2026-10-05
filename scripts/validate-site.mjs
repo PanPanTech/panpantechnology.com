@@ -117,7 +117,10 @@ for (const filePath of htmlFiles) {
     errors.push(`${relative}: missing or weak <title>`);
   }
 
-  if (!is404 && !/<meta name="description" content="[^"]{50,220}">/.test(content)) {
+  const titleText = (content.match(/<title>([^<]*)<\/title>/)?.[1] ?? "").replaceAll("&amp;", "&");
+  if (titleText.length > 65) warnings.push(`${relative}: title is ${titleText.length} chars; Google truncates around 60`);
+
+  if (!is404 && !/<meta name="description" content="[^"]{50,175}">/.test(content)) {
     errors.push(`${relative}: missing or weak meta description`);
   }
 
@@ -138,7 +141,8 @@ for (const filePath of htmlFiles) {
   }
 
   const jsonLdBlocks = [...content.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  if (!is404 && jsonLdBlocks.length === 0) errors.push(`${relative}: missing JSON-LD`);
+  const isRedirect = content.includes('http-equiv="refresh"');
+  if (!is404 && !isRedirect && jsonLdBlocks.length === 0) errors.push(`${relative}: missing JSON-LD`);
   for (const block of jsonLdBlocks) {
     try {
       JSON.parse(block[1]);
@@ -250,9 +254,15 @@ if (await exists(retailVideoPath)) {
 }
 
 const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
+const llms = await readFile(path.join(root, "llms.txt"), "utf8");
 for (const filePath of generatedHtml) {
   const route = routeForFile(filePath);
-  if (!sitemap.includes(`${domain}${route}`)) {
+  const isRedirect = (await readFile(filePath, "utf8")).includes('http-equiv="refresh"');
+  const listed = sitemap.includes(`<loc>${domain}${route}</loc>`);
+  if (isRedirect) {
+    if (listed) errors.push(`sitemap.xml: redirect page must not be listed: ${route}`);
+    if (llms.includes(`${domain}${route})`)) errors.push(`llms.txt: redirect page must not be listed: ${route}`);
+  } else if (!listed) {
     errors.push(`sitemap.xml: missing ${route}`);
   }
 }
