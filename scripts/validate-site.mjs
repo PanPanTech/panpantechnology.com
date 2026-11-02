@@ -87,6 +87,11 @@ for (const filePath of htmlFiles) {
 
   if (isVerificationHtml) continue;
 
+  const isRedirect = content.includes('http-equiv="refresh"');
+  if (!isRedirect && !content.includes('src="/assets/js/site.js"')) {
+    errors.push(`${relative}: content page does not load /assets/js/site.js`);
+  }
+
   for (const bad of [
     "<x-dc",
     "<sc-",
@@ -141,7 +146,6 @@ for (const filePath of htmlFiles) {
   }
 
   const jsonLdBlocks = [...content.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  const isRedirect = content.includes('http-equiv="refresh"');
   if (!is404 && !isRedirect && jsonLdBlocks.length === 0) errors.push(`${relative}: missing JSON-LD`);
   for (const block of jsonLdBlocks) {
     try {
@@ -238,6 +242,9 @@ if ((home.match(/data-hero-media=/g) ?? []).length !== 4) {
 }
 if (!siteJs.includes("initializeHeroCarousel")) {
   errors.push("assets/js/site.js: home hero carousel script is missing");
+}
+if (!siteJs.includes("G-XP86WHBQRX") || !siteJs.includes("https://www.googletagmanager.com/gtag/js?id=") || !siteJs.includes('gtag("config", measurementId)')) {
+  errors.push("assets/js/site.js: GA4 gtag snippet for G-XP86WHBQRX is missing");
 }
 
 const retailVideoPath = path.join(root, "assets/videos/esl-hero.mp4");
