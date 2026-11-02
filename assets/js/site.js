@@ -1,3 +1,18 @@
+/* Google tag (gtag.js) — GA4 for every page that loads this script. */
+(function () {
+  var measurementId = "G-XP86WHBQRX";
+  if (window.__pptGa4Installed) return;
+  window.__pptGa4Installed = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() { dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId);
+  var script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=" + measurementId;
+  (document.head || document.documentElement).appendChild(script);
+})();
+
 (function () {
   "use strict";
   const inquiryEndpoint = "https://inquiry.panpantechnology.com/api/inquiries";
