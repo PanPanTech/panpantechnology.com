@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"></noscript><title>AMR Navigation Explained: LiDAR, Vision, QR Codes and UWB</title>
+<meta name="description" content="Compare LiDAR SLAM, visual SLAM, QR codes and UWB for warehouse AMRs. See how hybrid navigation works and what to test before buying.">
+<link rel="canonical" href="https://www.panpantechnology.com/blog/amr-navigation/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AMR Navigation Explained: LiDAR, Vision, QR Codes and UWB">
+<meta property="og:description" content="Compare LiDAR SLAM, visual SLAM, QR codes and UWB for warehouse AMRs. See how hybrid navigation works and what to test before buying.">
+<meta property="og:url" content="https://www.panpantechnology.com/blog/amr-navigation/">
+<meta property="og:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AMR Navigation Explained: LiDAR, Vision, QR Codes and UWB">
+<meta name="twitter:description" content="Compare LiDAR SLAM, visual SLAM, QR codes and UWB for warehouse AMRs. See how hybrid navigation works and what to test before buying.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg","url":"https://www.panpantechnology.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.panpantechnology.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.panpantechnology.com/blog/"},{"@type":"ListItem","position":3,"name":"AMR Navigation","item":"https://www.panpantechnology.com/blog/amr-navigation/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"AMR Navigation Explained: LiDAR, Vision, QR Codes and UWB","description":"Compare LiDAR SLAM, visual SLAM, QR codes and UWB for warehouse AMRs. See how hybrid navigation works and what to test before buying.","image":"https://www.panpantechnology.com/assets/images/t600-heavy-payload-amr-new.jpg","datePublished":"2026-11-18","dateModified":"2026-11-18","author":{"@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"},"publisher":{"@type":"Organization","name":"PanPanTech","logo":"https://www.panpantechnology.com/assets/images/panpantech-logo.png","image":"https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"},"articleSection":"Warehouse AMR","mainEntityOfPage":"https://www.panpantechnology.com/blog/amr-navigation/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does a robot with LiDAR automatically qualify as an AMR?","acceptedAnswer":{"@type":"Answer","text":"LiDAR identifies a sensing method. Vehicle classification depends on how the system navigates. A laser-equipped guided vehicle may follow a predefined route. An AMR can use obstacle avoidance and trajectory planning within the operating rules of its site. A3 vehicle definitions"}},{"@type":"Question","name":"Can you add a floor code to a SLAM-based robot?","acceptedAnswer":{"@type":"Answer","text":"Some models offer that option. Ask whether the code is used to initialize position, correct localization in a zone or align at a station. Ask which camera, software option and commissioning steps the configuration requires. ForwardX Max Series positioning options"}},{"@type":"Question","name":"Will changing the rack layout require a new map?","acceptedAnswer":{"@type":"Answer","text":"It depends on how much of the mapped reference geometry changes and which features the vehicle uses. Confirm the update procedure and run a validation route through affected areas before normal traffic resumes."}},{"@type":"Question","name":"Is UWB necessary in a warehouse with AMRs?","acceptedAnswer":{"@type":"Answer","text":"Evaluate UWB against a specific job, such as tracking tagged pallets across a building or adding a position reference in a difficult area. If existing navigation meets the site's operating targets, weigh that additional use against the cost of installing and maintaining anchors."}},{"@type":"Question","name":"Can laser and visual navigation be compared by one accuracy number?","acceptedAnswer":{"@type":"Answer","text":"Compare positioning accuracy and repeatable docking as separate measurements. Use the same load, station and site conditions, then record how often each vehicle completes a transfer on the first attempt."}}]}</script>
+<style>
+.hero-grid > div, .page-grid > article { min-width: 0; }
+.hero-media img { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+article > section + section { margin-top: 48px; }
+.amr-table { margin: 20px 0; overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; background: #fff; }
+.amr-table table { width: 100%; min-width: 525px; border-collapse: collapse; }
+.amr-table th, .amr-table td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); line-height: 1.5; }
+.amr-table th { background: #eef3fa; }
+.amr-table tr:last-child td { border-bottom: 0; }
+.amr-trip ol { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; list-style-position: inside; margin: 0; padding: 16px; }
+.amr-trip li { margin: 0; padding: 14px; border-radius: 8px; background: #eef3fa; }
+.amr-trip span { display: block; margin-top: 6px; }
+.amr-configs > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+.amr-configs img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.amr-configs img + img { border-left: 1px solid var(--border); }
+@media (max-width: 580px) { .amr-trip ol { grid-template-columns: 1fr; } }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/assets/images/favicon-48x48.png" type="image/png" sizes="48x48"><link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/blog.css"><meta name="theme-color" content="#0E5FD9"><meta name="twitter:image" content="https://www.panpantechnology.com/assets/images/panpantech-social-card.jpg"></head>
+<body><div class="site">
+<header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">PanPan<span class="accent">Tech</span></a>
+      <nav class="site-nav">
+        <a href="/solutions/" class="scp0">Solutions</a>
+        <a href="/products/" class="scp0">Smart Robots</a>
+        <a href="/technology/" class="scp0">Technology</a>
+        <a href="/manufacturing/" class="scp0">Manufacturing</a>
+        <a class="active" href="/blog/">Blog</a>
+        <a href="/about/" class="scp0">About</a>
+      </nav>
+      <a href="/request-a-quote/" class="scp1 btn-quote">Request a Quote<span class="mono">→</span></a>
+    </div>
+  </header>
+<section class="dark">
+  <div class="hero-grid">
+    <div>
+      <div class="crumbs"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span class="here">AMR Navigation</span></div>
+      <p class="kicker">Warehouse AMR Technology</p>
+      <h1>AMR Navigation Explained: LiDAR, Vision, QR Codes and UWB</h1>
+      <p class="hero-answer">A warehouse robot delivering a pallet has three jobs. It needs to know where it is, choose a safe route through the building, and line up with the drop-off station. LiDAR, cameras, floor codes and ultra-wideband (UWB) can help solve different parts of that job. A robot can use LiDAR and vision to locate itself in an aisle, replan around a temporary obstruction when the site allows it, and use a local reference to dock at the conveyor. Which combination fits depends on the building, the traffic and the accuracy the handoff requires.</p>
+      <p class="hero-meta">Published 2026-11-18 &middot; 11 min read</p>
+    </div>
+    <div class="hero-media"><img src="/assets/images/t600-heavy-payload-amr-new.jpg" width="1200" height="1200" alt="PanPanTech AMR-0600 low-profile warehouse transport robot" fetchpriority="high"></div>
+  </div>
+</section>
+<section>
+  <div class="page-grid">
+    <aside class="toc"><span class="toc-label">Contents</span>
+<a href="#how-it-works" class="scp3"><span class="n">01</span>Locate, route and dock</a>
+<a href="#history" class="scp3"><span class="n">02</span>Navigation history</a>
+<a href="#comparison" class="scp3"><span class="n">03</span>LiDAR, vision and floor codes</a>
+<a href="#hybrid-navigation" class="scp3"><span class="n">04</span>Hybrid navigation</a>
+<a href="#uwb" class="scp3"><span class="n">05</span>UWB positioning</a>
+<a href="#warehouse-fit" class="scp3"><span class="n">06</span>Warehouse fit and examples</a>
+<a href="#acceptance-test" class="scp3"><span class="n">07</span>What to test</a>
+<a href="#faq" class="scp3"><span class="n">08</span>FAQ</a>
+</aside>
+    <article>
+<section id="how-it-works">
+<h2>How does a warehouse robot know where to go?</h2>
+<p>Imagine an autonomous mobile robot (AMR) carrying a pallet from a staging bay to a production line. At the staging bay, <strong>localization</strong> tells the robot where it is on the site map and which way it is facing. In a shared aisle, <strong>path planning</strong> chooses a permitted route to the destination. At the production line, <strong>docking</strong> aligns the robot and its load with the receiving equipment.</p>
+<figure class="amr-trip">
+  <ol aria-label="A pallet transfer in three steps">
+    <li><strong>Locate at pickup</strong><span>Match the robot to the map near the staging bay.</span></li>
+    <li><strong>Plan around traffic</strong><span>Use a permitted route, or wait if the aisle is blocked.</span></li>
+    <li><strong>Align at drop-off</strong><span>Line up with the actual conveyor or transfer fixture.</span></li>
+  </ol>
+  <figcaption>One pallet move through a warehouse.</figcaption>
+</figure>
+<p>These functions can use different references. The map may locate the robot near the conveyor, while a camera observes a marker at the station to refine its final approach. A safety scanner may monitor the space around the vehicle while the planner evaluates an alternate route. If an aisle is too narrow to pass an obstruction, the vehicle may wait, stop or ask fleet control to reassign the job, depending on site rules and the system configuration.</p>
+<p>This distinction also helps explain why a laser-equipped vehicle can still follow a predefined route. Its positioning system can tell it where it is while the site controller determines which route it may take. For the broader vehicle comparison, see our <a href="/blog/amr-robot-vs-agv/">AMR vs AGV guide</a>. <a href="https://www.automate.org/robotics/blogs/robot-safety-update-faqs-2021">A3 vehicle definitions</a> · <a href="https://docs.nav2.org/rolling/getting_started/navigation_concepts/environmental_representation/">Nav2 documentation on planning and site rules</a></p>
+</section>
+
+<section id="history">
+<h2>How did navigation move from floor wires to environmental maps?</h2>
+<div class="amr-table" role="region" aria-label="Comparison table; scroll horizontally on small screens" tabindex="0"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What the vehicle used</th>
+<th>What changed for the operator</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1950s — buried wire</strong></td>
+<td>A sensor followed the electromagnetic signal from a wire in the floor.</td>
+<td>A tug could repeat the same material movement along a physical guide path. Changing that path involved altering the floor installation.</td>
+</tr>
+<tr>
+<td><strong>1980s — inertial and laser guidance</strong></td>
+<td>Inertial systems estimated motion and could use fixed reference points for correction. Laser systems could locate the vehicle against installed reflectors.</td>
+<td>A vehicle could follow routes defined in software without needing a continuous wire under the whole route.</td>
+</tr>
+<tr>
+<td><strong>2000s — floor-code grids</strong></td>
+<td>A downward-facing camera read markers at known locations. A fleet controller coordinated movements through a grid.</td>
+<td>Many vehicles could share a structured layout and carry racks or inventory pods to workstations.</td>
+</tr>
+<tr>
+<td><strong>2010s onward — natural features and sensor fusion</strong></td>
+<td>LiDAR or cameras used building features to create maps and estimate position. Encoders, inertial sensors and local references could assist.</td>
+<td>More deployments could use the existing building as a reference. Site teams could change destinations or permitted routes in software, subject to mapping and validation.</td>
+</tr>
+</tbody></table></div>
+<p>The stages overlap. Kiva&#39;s warehouse deployments showed how much a structured grid can achieve when the job is moving shelves to picking stations. SLAM, or <strong>simultaneous localization and mapping</strong>, describes how a robot builds a map while estimating its own position. Once a site map exists, the robot can use it as a reference during routine operations. The industry still uses floor codes, laser reflectors and map-based systems where each fits the work. <a href="https://scottautomation.com/assets/Insights/Articles/AGV-Navigation-Pros-Cons-Presentation.pdf">Transbotics navigation history</a> · <a href="https://cdn.aaai.org/AAAI/2007/AAAI07-282.pdf">Kiva engineering paper</a> · <a href="https://arxiv.org/abs/1502.00956">ORB-SLAM research</a></p>
+</section>
+
+<section id="comparison">
+<h2>How do LiDAR SLAM, visual SLAM and floor codes compare?</h2>
+<div class="amr-table" role="region" aria-label="Comparison table; scroll horizontally on small screens" tabindex="0"><table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>What the robot reads</th>
+<th>Where it helps</th>
+<th>What to check at your site</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>LiDAR SLAM</strong></td>
+<td>Distances to surfaces such as walls, columns and rack ends.</td>
+<td>Indoor routes with recognizable geometry, including areas with low visible light. Natural-contour systems can often use existing building features.</td>
+<td>Long aisles that look alike, glass or reflective surfaces, and features that disappear when pallets or people block the scan.</td>
+</tr>
+<tr>
+<td><strong>Visual SLAM</strong></td>
+<td>Camera features such as edges, textures and recognizable structures.</td>
+<td>Facilities where cameras can see distinctive details, including features above the main traffic area when the design uses them.</td>
+<td>Light changes across shifts, glare, camera occlusion and areas with few visual features.</td>
+</tr>
+<tr>
+<td><strong>Floor codes</strong></td>
+<td>A camera reads a code installed at a known position. The vehicle can use odometry or inertial sensing between markers, depending on the model.</td>
+<td>Structured grids, repeated routes and stations that benefit from a fixed reference.</td>
+<td>Where codes must be installed, who replaces damaged labels and what happens when a pallet covers one.</td>
+</tr>
+</tbody></table></div>
+<p>Laser reflector positioning is another option. A robot measures fixed reflectors whose locations are known. LiDAR SLAM estimates position using environmental features such as walls and columns. Ask the supplier which of these its specification means by <em>laser navigation</em>, and ask which parts of the installation must stay in place. <a href="https://www.sick.com/media/docs/8/08/708/flyer_localization_solutions_mobile_platforms_en_im0102708.pdf">SICK LiDAR localization</a> · <a href="https://www.abb.com/global/en/areas/robotics/products/mobile-robots/visual-slam">ABB visual SLAM</a> · <a href="https://journals.sagepub.com/doi/full/10.1177/1729881420919940">Indoor LiDAR and inertial positioning study</a></p>
+</section>
+
+<section id="hybrid-navigation">
+<h2>How does hybrid navigation work in practice?</h2>
+<h3>Combine sensors on one vehicle</h3>
+<p>Consider a route that starts in a bright staging area, continues through identical rack aisles and ends at a conveyor. The integrator maps the route and tests what each sensor can observe along it. A fusion system can combine laser, camera and motion measurements into a position estimate. Other products offer selectable modes or use a local reference only in a defined zone. The supplier should be able to explain which modes your configuration supports and what the robot does when a measurement becomes unreliable.</p>
+<p>At the conveyor, a precise final approach may use a local marker, a view of the station or a mechanical guide, depending on the equipment. Test that step with the actual payload and transfer fixture. Wheel slip or a pallet overhanging the deck makes a loaded run a better test than an empty demonstration.</p>
+<p>PanPanTech&#39;s 600 kg AMR-0600 has two configurations that illustrate the distinction. The mast configuration lists visual SLAM plus LiDAR SLAM. The underride configuration lists LiDAR SLAM. Both have the same rated payload. Compare them against the required load interface, approach clearance and the places where each configuration can see useful features. <a href="/products/amr-0600/">PanPanTech AMR-0600 specifications</a> · <a href="https://support.sick.com/sick-knowledgebase/article/?code=KA-10704">SICK fixed-path travel and precise station positioning</a></p>
+<figure class="amr-configs">
+  <div>
+    <img src="/assets/images/amr0600_v1.jpg" width="1400" height="787" alt="AMR-0600 mast configuration" loading="lazy">
+    <img src="/assets/images/t600-heavy-payload-amr-new.jpg" width="1200" height="1200" alt="AMR-0600 underride configuration" loading="lazy">
+  </div>
+  <figcaption>AMR-0600 configurations. Left, mast with visual and LiDAR SLAM. Right, underride with LiDAR SLAM.</figcaption>
+</figure>
+<h3>Share work between an AGV and an AMR</h3>
+<p>A fixed-route automated guided vehicle (AGV) can keep a production line supplied on a repeatable loop, with AMRs serving multiple request points elsewhere in the same building. Both can drop at a shared buffer, provided the job logic knows who owns the position and when it is free. At shared intersections, lifts or narrow aisles, define who takes priority and where a waiting vehicle can stop without blocking the next job.</p>
+<p>If the fleets come from different vendors, agree on task assignment, position reporting, shared-zone reservations and fault recovery before full deployment. VDA 5050 defines a communication interface between mobile robots and central fleet control. Ask which version and functions each supplier implements, then demonstrate the shared handoff and traffic behavior with the actual vehicles. <a href="https://www.vda.de/en/news/publications/publication/vda-5050">VDA 5050 specification and scope</a></p>
+</section>
+
+<section id="uwb">
+<h2>Is UWB still used for AMR localization?</h2>
+<p>Yes. <strong>Ultra-wideband</strong> uses radio measurements between a tag and fixed anchors at known locations to estimate position. A warehouse may use the same real-time location system to track robots, forklifts or tagged assets. If the controller supports it, UWB measurements can also provide an additional reference for the robot&#39;s onboard position estimate.</p>
+<p>Continental and KINEXON publicly described UWB as a way to connect AMRs and other logistics objects to a location and management system. In a separate 2026 research demonstration, researchers fused UWB measurements with onboard motion sensing on a commercial logistics AMR. Those examples cover two different jobs: locating objects for operations and feeding measurements into vehicle localization. <a href="https://www.continental.com/en/press/press-releases/autonomous-mobile-robots/">Continental and KINEXON deployment description</a> · <a href="https://arxiv.org/abs/2607.15807">2026 industrial AMR research demonstration</a></p>
+<p>Consider UWB when a site already has suitable anchor coverage or needs a location system for both moving equipment and assets. Budget for mounting and surveying the anchors, power or network connections where required, and checking coverage in loaded aisles. Metal racks and stored goods can obstruct or reflect radio signals. Ask the integrator to show how the vehicle handles a poor reading or a coverage gap. Keep obstacle detection and final docking as separate items in the trial. <a href="https://arxiv.org/abs/2403.19706">UWB positioning under obstructed conditions</a></p>
+</section>
+
+<section id="warehouse-fit">
+<h2>Which approach fits your warehouse?</h2>
+<ul>
+<li><strong>Fixed production loop.</strong> Start with the route, stop positions and required cycle time. If pickup points rarely move and the site can accommodate markers, guided travel is a practical candidate. Test how a blocked lane affects the work queue and how quickly staff can resume service.</li>
+<li><strong>Warehouse with changing routes or shared aisles.</strong> Start with a map-based AMR trial on the busiest representative route. Use the actual traffic patterns and storage conditions. Compare how long it takes to change a station or validate a new route, and which changes require remapping.</li>
+<li><strong>Tight transfer tolerances.</strong> Define the acceptance range for side-to-side error, approach angle and handoff height first. Ask for repeated loaded cycles at the exact station. Measure travel performance separately from docking repeatability.</li>
+</ul>
+<p>Compare installation and operating costs at the site. Count time spent surveying markers, creating or updating maps, integrating fleet rules, maintaining references and recovering failed jobs. If a supplier quotes localization accuracy, ask where and under what conditions it was measured. For the conveyor or pallet rack, ask what fraction of loaded transfers completed without a second approach or operator assistance.</p>
+<h3>Representative systems to compare</h3>
+<div class="amr-table" role="region" aria-label="Comparison table; scroll horizontally on small screens" tabindex="0"><table>
+<thead>
+<tr>
+<th>Project type</th>
+<th>Representative examples</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Structured or guided material flow</strong></td>
+<td><a href="https://www.quicktron.com/products/m-series">Quicktron M5E</a> documents QR code plus inertial navigation. <a href="https://www.geekplus.com/technology-detail-page/m-series">Geek+ M Series</a> lists floor-code and laser SLAM options across the series. <a href="https://www.e80group.com/en/agv-lgv-systems">E80 Group LGVs</a> show how laser-guided pallet transport can be integrated into a plant or distribution center.</td>
+</tr>
+<tr>
+<td><strong>Map-based navigation</strong></td>
+<td><a href="https://academy.mobile-industrial-robots.com/free-skill-paths/autonomous-navigation/">MiR</a> documents laser-based mapping. <a href="https://www.abb.com/global/en/areas/robotics/products/mobile-robots/visual-slam">ABB</a> offers visual SLAM for industrial AMRs. <a href="https://seegrid.com/technology/">Seegrid</a> describes combining LiDAR and stereo cameras in its autonomous material handling products.</td>
+</tr>
+</tbody></table></div>
+</section>
+
+<section id="acceptance-test">
+<h2>What should you test before buying?</h2>
+<p>Run the same route on each shortlisted configuration with a representative load. Agree on the route, traffic rules and transfer tolerances before collecting results.</p>
+<div class="amr-table" role="region" aria-label="Comparison table; scroll horizontally on small screens" tabindex="0"><table>
+<thead>
+<tr>
+<th>Trial</th>
+<th>What to record</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Normal operation across shifts</strong></td>
+<td>Completed moves per hour, typical and slow cycle times, and how often a person intervenes.</td>
+</tr>
+<tr>
+<td><strong>Temporarily blocked aisle</strong></td>
+<td>Whether the vehicle waits, takes a permitted alternate route or requests help. Record recovery time and the effect on other jobs.</td>
+</tr>
+<tr>
+<td><strong>Changed surroundings</strong></td>
+<td>After an approved layout change or during different lighting conditions, record failed localization attempts, recovery time and any edits the map or markers need.</td>
+</tr>
+<tr>
+<td><strong>Repeated loaded docking</strong></td>
+<td>Number of attempts, successful first approaches, positional and angular error, and manual corrections. Include the actual pallet or rack variations.</td>
+</tr>
+<tr>
+<td><strong>Shared traffic or localization fault</strong></td>
+<td>In a controlled test agreed with the integrator, verify intersection priority, safe stopping and how the unfinished job is recovered.</td>
+</tr>
+</tbody></table></div>
+<p>A short test on the hardest representative route tells you which features matter for your operation. Bring a route sketch, the peak-shift traffic pattern and the receiving station tolerances to the first site review. <a href="/solutions/warehouse-logistics/">PanPanTech warehouse and logistics robots</a></p>
+</section>
+
+<section id="faq"><h2>Frequently asked questions</h2><div class="vstack">
+<details class="faq-fold"><summary>Does a robot with LiDAR automatically qualify as an AMR?</summary><div class="faq-a">LiDAR identifies a sensing method. Vehicle classification depends on how the system navigates. A laser-equipped guided vehicle may follow a predefined route. An AMR can use obstacle avoidance and trajectory planning within the operating rules of its site. <a href="https://www.automate.org/robotics/blogs/robot-safety-update-faqs-2021">A3 vehicle definitions</a></div></details>
+<details class="faq-fold"><summary>Can you add a floor code to a SLAM-based robot?</summary><div class="faq-a">Some models offer that option. Ask whether the code is used to initialize position, correct localization in a zone or align at a station. Ask which camera, software option and commissioning steps the configuration requires. <a href="https://www.forwardx.com/max-series/">ForwardX Max Series positioning options</a></div></details>
+<details class="faq-fold"><summary>Will changing the rack layout require a new map?</summary><div class="faq-a">It depends on how much of the mapped reference geometry changes and which features the vehicle uses. Confirm the update procedure and run a validation route through affected areas before normal traffic resumes.</div></details>
+<details class="faq-fold"><summary>Is UWB necessary in a warehouse with AMRs?</summary><div class="faq-a">Evaluate UWB against a specific job, such as tracking tagged pallets across a building or adding a position reference in a difficult area. If existing navigation meets the site&#39;s operating targets, weigh that additional use against the cost of installing and maintaining anchors.</div></details>
+<details class="faq-fold"><summary>Can laser and visual navigation be compared by one accuracy number?</summary><div class="faq-a">Compare positioning accuracy and repeatable docking as separate measurements. Use the same load, station and site conditions, then record how often each vehicle completes a transfer on the first attempt.</div></details>
+</div></section>
+      <div class="related">
+        <p class="related-label">Related PanPanTech pages</p>
+        <div class="grid3-16">
+          <a href="/blog/amr-robot-vs-agv/" class="rcard"><span class="tag">Comparison</span><span class="t">AMR vs AGV</span></a>
+          <a href="/products/amr-0600/" class="rcard"><span class="tag">Product</span><span class="t">AMR-0600 Heavy-Payload AMR</span></a>
+          <a href="/technology/navigation-autonomy/" class="rcard"><span class="tag">Technology</span><span class="t">Navigation and autonomy</span></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="dark">
+  <div class="cta-wrap">
+    <div><h2>Plan a loaded AMR trial</h2><p>Share your site layout, heaviest load and handoff requirements so we can identify a route and configuration to test.</p></div>
+    <a href="/request-a-quote/" class="btn-cta">Request a site review <span class="mono">&rarr;</span></a>
+  </div>
+</section>
+<footer style="background: rgb(7, 10, 18); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+  <div style="max-width: 1360px; margin: 0 auto; padding: 64px 40px 40px;">
+    <div style="display: grid; grid-template-columns: 1.35fr .85fr 1fr .85fr 1.25fr; gap: 40px; align-items: start;">
+      <div>
+        <div style='font-family: "Space Grotesk", sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: rgb(255, 255, 255);'>PanPan<span style="color: rgb(14, 95, 217);">Tech</span></div>
+        <p style="margin: 16px 0 0; font-size: 14px; line-height: 1.65; color: rgb(143, 163, 200); max-width: 300px;">Retail AIoT, smart robotics, and manufacturing platform for global B2B buyers, integrators, distributors, and OEM partners.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style='font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(92, 107, 133); margin-bottom: 6px;'>Solutions</span>
+        <a href="/solutions/retail/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Retail Tech</a>
+        <a href="/products/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Smart Robots</a>
+        <a href="https://einksmart.com" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Digital Art</a>
+        <a href="/manufacturing/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Manufacturing</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style='font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(92, 107, 133); margin-bottom: 6px;'>Robot Business</span>
+        <a href="/products/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Robot product range</a>
+        <a href="/manufacturing/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Robot OEM / ODM</a>
+        <a href="/solutions/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Industries</a>
+        <a href="/request-a-quote/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Request a Quote</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style='font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(92, 107, 133); margin-bottom: 6px;'>Company</span>
+        <a href="/technology/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Technology</a>
+        <a href="/about/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">About</a>
+        <a href="/blog/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Blog</a>
+        <a href="/request-a-quote/" class="scp9" style="font-size: 14px; color: rgb(185, 196, 216); text-decoration: none;">Contact</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span style='font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(92, 107, 133); margin-bottom: 6px;'>Contact</span>
+        <p style="margin: 0 0 6px; font-size: 13.5px; line-height: 1.65; color: rgb(185, 196, 216);">Building A1, Yuexiu iPARK Yuegang Zhigu, Nansha District, Guangzhou, Guangdong Province, China</p>
+        <span style='font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(255, 255, 255);'>Email</span>
+        <a href="mailto:info@panpantechnology.com" style="font-size: 13.5px; color: rgb(185, 196, 216); text-decoration: none;">info@panpantechnology.com</a>
+        <span style='font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(255, 255, 255); margin-top: 4px;'>Phone</span>
+        <a href="tel:+8613925118851" style="font-size: 13.5px; color: rgb(185, 196, 216); text-decoration: none;">+86-13925118851</a>
+      </div>
+    </div>
+    <div class="footer-brand-row" aria-label="PanPanTech Group brands" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 48px; padding-top: 18px;">
+      <span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgb(185, 196, 216);'><a href="https://www.aieinksmart.com" target="_blank" rel="noopener" style="color: rgb(185, 196, 216); text-decoration: none;">AiEInkSmart&trade;</a> &mdash; Electronic Shelf Labels</span><span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgba(255, 255, 255, 0.22); margin: 0 10px;'>|</span><span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgb(185, 196, 216);'><a href="https://www.pyroglaux.com" target="_blank" rel="noopener" style="color: rgb(185, 196, 216); text-decoration: none;">Pyroglaux&reg;</a> &mdash; Footfall Analytics</span><span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgba(255, 255, 255, 0.22); margin: 0 10px;'>|</span><span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgb(185, 196, 216);'><a href="https://www.aiesl.com" target="_blank" rel="noopener" style="color: rgb(185, 196, 216); text-decoration: none;">AiESL&trade;</a> &mdash; Retail Data Platform</span><span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgba(255, 255, 255, 0.22); margin: 0 10px;'>|</span><span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgb(185, 196, 216);'><a href="https://www.einksmart.com" target="_blank" rel="noopener" style="color: rgb(185, 196, 216); text-decoration: none;">EinkSmart&trade;</a> &mdash; E-Ink Art Displays</span>
+    </div>
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 28px; padding-top: 24px;">
+      <span style='font-family: "IBM Plex Mono", monospace; font-size: 12px; color: rgb(92, 107, 133); white-space: nowrap;'>&copy; 2026 PanPanTech&reg; | Retail AIoT &middot; Smart Robotics &middot; Manufacturing | Guangzhou PanPanTech Co., Ltd. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer></div><script src="/assets/js/site.js" defer></script></body></html>
