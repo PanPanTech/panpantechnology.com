@@ -240,3 +240,15 @@ figcaption{padding:12px 18px;font-size:12.5px;color:var(--mono-grey);border-top:
   .data-card{padding:16px}
   .data-card .num{font-size:21px}
 }
+
+/* Quick verdict + quote entry in the post hero (AI-cited posts) */
+.hero-verdict{margin:22px 0 0;padding:16px 18px;border:1px solid rgba(255,255,255,.16);border-left:3px solid var(--blue);border-radius:12px;background:rgba(255,255,255,.04);color:var(--hero-sub);font-size:15px;line-height:1.6}
+.hero-verdict .vd-label{display:block;margin:0 0 8px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dk-blue)}
+.hero-verdict ul{margin:0;padding:0 0 0 18px}
+.hero-verdict li{margin:4px 0}
+.hero-verdict strong{color:#fff;font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 0}
+.hero-actions .btn-cta{padding:14px 26px;font-size:15px}
+.hero-actions .btn-ghost{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border:1px solid rgba(255,255,255,.28);border-radius:999px;color:#fff;font-size:15px;font-weight:600}
+.hero-actions .btn-ghost:hover{border-color:#fff}
+@media (max-width:640px){.hero-actions .btn-cta,.hero-actions .btn-ghost{width:100%;justify-content:center}}
