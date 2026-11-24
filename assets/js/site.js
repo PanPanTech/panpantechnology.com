@@ -196,7 +196,44 @@
     return body;
   }
 
+  function trackEvent(name, params) {
+    try {
+      if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+    } catch (error) {
+      /* analytics must never break the form */
+    }
+  }
+
+  function trackLead(payload, method) {
+    trackEvent("generate_lead", {
+      lead_method: method,
+      form_id: "panpantech-rfq",
+      product_interest: payload.product_interest || "",
+      page_location: payload.page_url || window.location.href,
+      page_referrer: document.referrer || ""
+    });
+  }
+
+  /* Direct contact clicks (email / phone / WhatsApp) — tracked as contact_click. */
+  document.addEventListener("click", (event) => {
+    const link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+    if (!link) return;
+    const href = link.getAttribute("href") || "";
+    let method = "";
+    if (href.startsWith("mailto:")) method = "email";
+    else if (href.startsWith("tel:")) method = "phone";
+    else if (/wa\.me|whatsapp\.com/i.test(href)) method = "whatsapp";
+    if (!method) return;
+    trackEvent("contact_click", { contact_method: method, link_url: href.split("?")[0] });
+  });
+
   document.querySelectorAll(".cleanbot-quote-form").forEach((form) => {
+    /* Prefill product interest from ?interest= (set by blog quote buttons). */
+    const interestParam = new URLSearchParams(window.location.search).get("interest");
+    const interestInput = form.querySelector("[name='product_interest']");
+    if (interestParam && interestInput && !interestInput.value) {
+      interestInput.value = interestParam.slice(0, 120);
+    }
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       if (form.reportValidity && !form.reportValidity()) return;
@@ -220,11 +257,13 @@
       }
       try {
         await submitInquiry(payload);
+        trackLead(payload, "form");
         setFormMessage(form, "Submitted. PanPanTech will contact you soon.", false);
         form.reset();
       } catch (error) {
         console.error("[PanPanTech inquiry failed]", error);
         setFormMessage(form, "Online submission is temporarily unavailable. Opening email fallback.", true);
+        trackLead(payload, "email_fallback");
         window.setTimeout(() => {
           window.location.href = mailtoUrl(payload);
         }, 600);
